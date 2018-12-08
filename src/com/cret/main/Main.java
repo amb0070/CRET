@@ -1,8 +1,11 @@
 package com.cret.main;
 	
-import com.cret.interfaces.CANCon;
-import com.cret.interfaces.Utils;
+import java.io.IOException;
 
+import com.cret.interfaces.CANCon;
+import com.cret.interfaces.CanUtils;
+
+import de.fischl.usbtin.USBtinException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -12,7 +15,8 @@ import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
-
+	
+	
 
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -22,14 +26,20 @@ public class Main extends Application {
         Pane root = (Pane)FXMLLoader.load(getClass().getResource("/com/cret/gui/main.fxml"));
         //Create scene and load pane into.
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
         stage.setScene(scene);
         //Show the window maximized
         stage.setMaximized(true);
         stage.show();
+        
+        //INIT DATABASE CONNECTION
 	}
 
-	public static void main(String[]args){
+	public static void main(String[]args) throws IOException, USBtinException{
+		CANCon can = new CANCon();
+		can.start();
 		launch(args);
+		
 	}
 	
 	
