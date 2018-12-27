@@ -2,38 +2,44 @@
 	"ProjectName" : [
 
 		{
+			"Data" : "Acelerador",
 			"ID" : "4AD",
-			"byte": "8",
-			"Data" : "Acelerador"
+			"byte": "8"
+			
 		},
 		{
+			"Data" : "Direccion",
 			"ID" : "875",
-			"Byte" : "5",
-			"Data" : "Direccion"
+			"Byte" : "5"
+			
 		 },
 		{
+			"Data" : "Freno de mano",
 			"ID" : "13D",
-			"Byte" : "0",
-			"Data" : "Freno de mano"
+			"Byte" : "0"
+			
 		}
 	], 
 
 	"ProjectName2" : [
 
 		{
+			"Data" : "Vel. Motor",
 			"ID" : "432",
-			"byte": "5",
-			"Data" : "Vel. Motor"
+			"byte": "5"
+			
 		},
 		{
+			"Data" : "Luces",
 			"ID" : "805",
-			"Byte" : "5",
-			"Data" : "Luces"
+			"Byte" : "5"
+			
 		 },
 		{
+			"Data" : "V. Bat",
 			"ID" : "13A",
-			"Byte" : "0",
-			"Data" : "V. Bat"
+			"Byte" : "0"
+			
 		}
 	]
 }
