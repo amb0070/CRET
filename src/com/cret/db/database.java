@@ -3,41 +3,133 @@ package com.cret.db;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class database {
+import com.cret.gui.GuiUtils;
 
+import javafx.scene.control.Alert.AlertType;
+
+public class Database {
+
+	private String dbName;
 	
-	public database() {
+	private String url = "jdbc:sqlite:";
+	
+	private Connection conn;
+	
+	private Statement stmt;
+	
+	private ResultSet rs;
+	
+	public Database(String dbName) {
 		
+		this.dbName = dbName;
+		url = url + this.dbName;
+		connect();
+	}
+	
+	public String getDatabaseName() {
+		return dbName;
 	}
 	
 	private void connect() {
 		
+		System.out.println("Connecting to " + dbName);
 		
-	}
-	
-	private void disconnect() {
-		
-	}
-	
-	private void query(String query) {
-		
-	}
-	
-	private void createDatabase(String filename) {
-		
-		String url = "jdbc:sqlite:" + filename;
-		try(Connection con = DriverManager.getConnection(url)){
+		try {
+			conn = DriverManager.getConnection(url);
+			 stmt = conn.createStatement();
+			 System.out.println("Connection success");
+			 
+			 
+		} catch (SQLException e) {
+
+			//System.out.println(e.getMessage());
+			GuiUtils.generateAlert(AlertType.ERROR, "FATAL ERROR", "Error connecting to Database");
 			
-			if (con != null) {
-				DatabaseMetaData meta = con.getMetaData();
-				System.out.println("The driver name is " + meta.getDriverName());
-				System.out.println("New database has been created");
-			}
+		}
+		
+	}
+	
+	//Disconnect from DB.
+	public void disconnect() {
+		
+		try {
+			
+			stmt.close();
+			conn.close();
 			
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Dissconnection OK");
 		}
+		
+	}
+	
+	
+	
+	
+	public ResultSet query(String query) {
+		
+		try {
+			rs = stmt.executeQuery(query);
+			
+			return rs;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			GuiUtils.generateAlert(AlertType.ERROR, "Error in query", "Error executing query");
+		}
+		
+		return null;
+		
+	}
+
+	
+	public void createTables(String dbName) {
+
+		/*
+		 * CREATE TABLE projects (
+			name varchar(30) NOT NULL,
+			PRIMARY KEY (name)
+			);
+		
+			CREATE TABLE data (
+			name varchar(20) NOT NULL,
+			ID varchar(10) NOT NULL,
+			byte varchar(20) NOT NULL,
+			projectName varchar(30) NOT NULL,
+			PRIMARY KEY (name, ID, byte, projectName),
+			FOREIGN KEY (projectName) REFERENCES projects(name)
+			);
+			*/
+		
+		String table1 = "CREATE TABLE projects (\n"
+				+ "name varchar(30) NOT NULL,\n"
+				+ "PRIMARY KEY (name)\n"
+				+ ");\r\n";
+		
+		String table2 = "CREATE TABLE data ("
+				+ "name varchar(20) NOT NULL,"
+				+ "ID varchar(10) NOT NULL,"
+				+ "byte varchar(20) NOT NULL,"
+				+ "projectName varchar(30) NOT NULL,"
+				+ "PRIMARY KEY (name, ID, byte, projectName),"
+				+ "FOREIGN KEY (projectName) REFERENCES projects(name)" + 
+				");";
+		
+			try {
+					//DATABASE CREATED OK
+
+					stmt.execute(table1);
+					stmt.execute(table2);
+					GuiUtils.generateAlert(AlertType.INFORMATION, "Database created successful", "Database has been created!");
+					
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+				GuiUtils.generateAlert(AlertType.ERROR, "FATAL ERROR", "Error creating Database");
+			}
+
 	}
 }
