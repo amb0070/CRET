@@ -32,15 +32,14 @@ public class Main extends Application {
         stage.setMaximized(true);
         stage.show();
         
-        //INIT DATABASE CONNECTION
 	}
 
 	public static void main(String[]args) throws IOException, USBtinException{
-		CANCon can = new CANCon();
-		can.start();
+		//(CANCon can = new CANCon();
+		//can.start();
+
 		launch(args);
 		
 	}
-	
 	
 }
