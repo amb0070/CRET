@@ -9,9 +9,9 @@ import com.cret.gui.GuiUtils;
 
 import javafx.scene.control.Alert.AlertType;
 
-public class Project {
+public class project {
 	
-	public Project(String name) {
+	public project(String name) {
 		
 		setProjectName(name);
 		
