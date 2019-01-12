@@ -26,48 +26,17 @@
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#newProject" text="New Project" />
-            <MenuItem mnemonicParsing="false" text="Open Project" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
             <Menu mnemonicParsing="false" text="Project">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#newProject" text="New Project" />
-                  <MenuItem mnemonicParsing="false" text="Open Project" />
+                  <MenuItem fx:id="MenuNewProject" mnemonicParsing="false" onAction="#newProject" text="New Project" />
+                  <MenuItem fx:id="MenuOpenProject" mnemonicParsing="false" onAction="#openProjectList" text="Open Project" />
+                  <MenuItem fx:id="MenuSaveProject" mnemonicParsing="false" onAction="#saveProject" text="Save" />
+                  <MenuItem fx:id="MenuCloseProjects" mnemonicParsing="false" onAction="#closeProject" text="Close" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As…" />
-                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <MenuItem fx:id="MenuListProjects" mnemonicParsing="false" onAction="#openProjectList" text="List projects" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Preferences…" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
+                  <MenuItem fx:id="MenuImportProjects" mnemonicParsing="false" onAction="#importProjects" text="Import projects" />
+                  <MenuItem fx:id="MenuExportProjects" mnemonicParsing="false" onAction="#exportProjects" text="Export projects" />
                </items>
             </Menu>
         <Menu mnemonicParsing="false" text="Help">
@@ -148,10 +117,9 @@
                      </content></Tab>
               </tabs>
             </TabPane>
-            <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#generate" text="Start" />
-            <Button layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="Stop" />
+            <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#connectToCan1" text="Start" />
+            <Button fx:id="stopButton" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" onAction="#disconnectCan1" text="Stop" />
             <Button fx:id="btnConfigure" layoutX="116.0" layoutY="14.0" mnemonicParsing="false" onAction="#openConfigDialog" text="Configure" AnchorPane.leftAnchor="116.0" AnchorPane.topAnchor="14.0" />
-            <TextField fx:id="textNumber" layoutX="228.0" layoutY="14.0" />
             <Label fx:id="lblProjectName" layoutX="838.0" layoutY="10.0" text="Project: No project loaded" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0" />
          </children>
     </AnchorPane>
