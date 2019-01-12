@@ -3,7 +3,7 @@ package com.cret.gui;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-public class Utils {
+public class GuiUtils {
 
 	
 	public static void generateAlert(AlertType type, String title, String msg) {
