@@ -31,6 +31,8 @@ import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtinException;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -61,10 +63,13 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -72,44 +77,54 @@ import javafx.stage.WindowEvent;
 
 public class RootViewController {
 	
-	private static String newProjectName = "";
 	
-	private Project project;
+	public static String mode = "Dashboard"; //Analysis or Dashboard
+	
+	public static boolean test = false;
+	
+	public static StringProperty projectName = new SimpleStringProperty();
+	
+	public static Project project;
 	
 	private Database database;
-
+	
+	public static boolean dashStarted = false;
+	
 	private boolean savedProject = false;
 
-	
-
-
-	
-	//Anchor panes inside grid cells
 	private static List<AnchorPane> dataAnchor;
+	
+	private static List<AnchorPane> dataAnchorDash;
 			
-	//TextFields inside grid cells
 	private static List<TextField> dataText;
+	
+	private static List<TextField> dataTextDash;
 
-	//Checkboxes inside grid cells
 	private static List<CheckBox> dataCheck;
-			
-	//Remove buttons inside grid cells
+
 	private static List<Button> dataRemove;
+	
+	private static List<Button> dataRemoveDash;
+	
+	private static List<EditableLabel> dataEditable;
 	
 	private static List<Button> dataData;
 	
+	private static List<Button> dataDataDash;
 	
-			
-	private static Map<String, List<LineChart<Number,Number>>> dataLineChart;
+	public static Map<String, List<String>> valuesInDashboard; //To save in database
 	
+	private CanConnection can;
 	
 	private static int col = 0;
+	private static int colDash = 0;
 	private static int row = 0;
-
-    private CanConnection can;
-
+	private static int rowDash = 0;
+	
+	
     private static final int MAX_DATA_POINTS = 300;
-	//NODE ID, 0-8 byte data
+    
+    private static Map<String, List<LineChart<Number,Number>>> dataLineChart;
 	
     public static Map<String, List<ConcurrentLinkedQueue<Number>>> dataQ1;
 	
@@ -121,8 +136,36 @@ public class RootViewController {
 
 	private static Map<String, List<Integer>> xSeriesData;
 	
+	
+	
+    private static Map<String, List<LineChart<Number,Number>>> dataLineChartDash;
+	
+    public static Map<String, List<ConcurrentLinkedQueue<Number>>> dataQ1Dash;
+	
+	private static Map<String, List<NumberAxis>> xAxisDash;
+	
+	private static Map<String, List<NumberAxis>> yAxisDash;
+	
+	public static Map<String, List<XYChart.Series<Number,Number>>> xySeriesDash;
+
+	private static Map<String, List<Integer>> xSeriesDataDash;
+	
+	
+	
+	@FXML
+	private Button btnSaveProject;
+	
 	@FXML
 	private Button btnAdd;
+	
+	@FXML
+	private Button btnNewProject;
+	
+	@FXML
+	private Button btnStartDash;
+	
+	@FXML
+	private Button btnStopDash;
 	
 	@FXML
 	private TextField textNumber;
@@ -131,7 +174,13 @@ public class RootViewController {
 	public Button startButton;
 	
 	@FXML
+	private Button btnPause;
+	
+	@FXML
 	public Button stopButton;
+	
+	@FXML
+	private Button btnOpenProject;
 	
 	@FXML
 	private Button generateButton;
@@ -141,6 +190,21 @@ public class RootViewController {
 	
 	@FXML
 	private Tab tabInterface2;
+	
+	@FXML
+	private Tab tabInterface1;
+	
+	@FXML
+	private Tab tabDashboard1;
+	
+	@FXML
+	private Tab tabDashboard2;
+	
+	@FXML
+	private Tab tabRAW1;
+	
+	@FXML
+	private Tab tabRAW2;
 	
 	@FXML
 	private AnchorPane anchorInterface2;
@@ -153,6 +217,9 @@ public class RootViewController {
 	
 	@FXML
 	private static GridPane gridPane2;
+	
+	@FXML
+	private static GridPane gridPaneDash;
 	
 	@FXML
 	private Button btnConfigure;
@@ -181,8 +248,123 @@ public class RootViewController {
 	@FXML
 	private MenuItem MenuCloseProjects;
 	
+	@FXML
+	private Button btnClear;
+	
+	@FXML
+	private ScrollPane scrollDash;
+	
+	@FXML
+	private TableView traceTableInterface1;
+	
+	
 
 	
+
+	
+	
+	@FXML
+	 void sendToDash(ActionEvent event) {
+		//AddGraphOnDashboard
+	}
+	
+	@FXML
+	private void startDash(ActionEvent event) throws IOException, USBtinException {
+		
+		
+		mode = "Dashboard";
+		
+		if (CanUtils.get1State()) { //port set ok
+			
+			String port = CanUtils.getConfigPort1();
+			String speed = CanUtils.getConfigSpeed1();
+			String mode = CanUtils.getConfigMode1();
+			
+			
+			can = new CanConnection(port, speed, mode, this);
+			
+			can.connectToPort();
+			System.out.println("Started");
+			//btnClear.setDisable(true);
+			
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			dashStarted = true;
+		} else {
+			GuiUtils.generateAlert(AlertType.INFORMATION, "CAN disabled", "No correct CAN interface has been configured");
+		}
+		
+	}
+	
+	@FXML
+	private void stopDash(ActionEvent event) {
+		
+	}
+	
+	@FXML
+	private void clearGraphs(ActionEvent event) {
+		
+		
+		
+		
+		dataLineChart = new HashMap<>();
+		dataQ1 = new HashMap<>();
+		xySeries = new HashMap<>();
+		xAxis = new HashMap<>();
+		yAxis = new HashMap<>();
+		xSeriesData = new HashMap<>();
+		
+		dataAnchor = new ArrayList<AnchorPane>();
+		dataAnchorDash = new ArrayList<AnchorPane>();
+		dataText = new ArrayList<TextField>();
+		dataTextDash = new ArrayList<TextField>();
+		dataCheck = new ArrayList<CheckBox>();
+		dataRemove = new ArrayList<Button>();
+		dataRemoveDash = new ArrayList<Button>();
+		dataEditable = new ArrayList<EditableLabel>();
+		dataData = new ArrayList<Button>();
+		
+		col = 0;
+		row = 0;
+		
+		
+		ColumnConstraints column1 = new ColumnConstraints();
+		ColumnConstraints column2 = new ColumnConstraints();
+		ColumnConstraints column3 = new ColumnConstraints();
+		
+		//Set fixed width for the columns
+		column1.setPercentWidth(33.33);
+		column2.setPercentWidth(33.33);
+		column3.setPercentWidth(33.33);
+		gridPaneDash = new GridPane();
+		gridPaneDash.setGridLinesVisible(true);
+		gridPaneDash.getColumnConstraints().add(column1);
+		gridPaneDash.getColumnConstraints().add(column2);
+		gridPaneDash.getColumnConstraints().add(column3);
+		
+		gridPaneDash.setHgap(10.0);
+		gridPaneDash.setVgap(10.0);
+		
+		//GridPane
+		gridPane2 = new GridPane();
+		gridPane2.setGridLinesVisible(true);
+		//Add columns to gridpane
+		gridPane2.getColumnConstraints().add(column1);
+		gridPane2.getColumnConstraints().add(column2);
+		gridPane2.getColumnConstraints().add(column3);
+		
+		gridPane2.setHgap(10.0);
+		gridPane2.setVgap(10.0);
+		scrollTest.setContent(gridPane2);
+		
+		CanUtils.clearInterface1();
+		//DELETE DATA FROM DATA STRUCTRUES
+	}
 	
 	//TO TEST
 	@FXML
@@ -217,14 +399,12 @@ public class RootViewController {
 		}
 		
 	}
-	
-	
 
 	
 	
 	@FXML
 	private void exportProjects(ActionEvent event) {
-		json.exportJSONProjects(database.getDatabaseName());
+		//json.exportJSONProjects(database.getDatabaseName());
 	}
 	
 	
@@ -242,9 +422,14 @@ public class RootViewController {
 	
 	@FXML
 	private void saveProject(ActionEvent event) {
+		
+		project.setCompleteMap(valuesInDashboard);
+		
 		project.saveProject();
 		savedProject = true;
 	}
+	
+	
 	
 	@FXML
 	private void openProjectList(ActionEvent event) {
@@ -266,11 +451,13 @@ public class RootViewController {
 	@FXML
 	private void openConfigDialog(ActionEvent event) throws Exception {
 		 try {
-		        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/cret/gui/configuration.fxml"));
+		        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/cret/gui/ConfigurationView.fxml"));
 		        Parent configDialog = (Parent) fxmlLoader.load();
 		        Stage stage = new Stage();
+		        stage.getIcons().add(new Image("file:resources/icon.png"));
 		        stage.setTitle("CRET - Configuration");
 		        stage.setScene(new Scene(configDialog));  
+		        stage.setResizable(false);
 		        stage.show();
 		        } catch(Exception e) {
 		        	e.printStackTrace();
@@ -278,11 +465,9 @@ public class RootViewController {
 	}
 	
 	public static void returnNewName(String name) {
-		newProjectName = name;
+		 projectName.setValue(name);
 	}
 	
-
-
 	@FXML
 	private void newProject(ActionEvent event) throws Exception {
 		try {
@@ -294,18 +479,20 @@ public class RootViewController {
 	        stage.setTitle("CRET - New project");
 	        stage.setScene(new Scene(configDialog));
 	        stage.show();
+	        
 	        stage.setOnHiding(new EventHandler<WindowEvent>() {
 	            public void handle(WindowEvent we) {
 	            	//CHECK IF PROJECT IS CLOSED AND SAVED
-	            	project = new Project(newProjectName);
+	            	project = new Project(projectName.toString());
 	                System.out.println("Stage is closing");
-	                System.out.println(newProjectName);
-	                project.setProjectName(newProjectName);
-	                lblProjectName.setText("Project: " + project.getProjetName());
+	                System.out.println(projectName.getValue());
+	                project.setProjectName(projectName.getValue());
+	                valuesInDashboard = new HashMap<>();
 	            }
 	        });
 	        System.out.println("Testing bro");
-	         
+	        
+	        btnSaveProject.setDisable(false);
 	        savedProject = false;
 	        
 		} catch (Exception e) {
@@ -322,6 +509,7 @@ public class RootViewController {
 			can = null;
 			startButton.setDisable(false);
 			stopButton.setDisable(true);
+			btnClear.setDisable(false);
 		} else {
 			GuiUtils.generateAlert(AlertType.INFORMATION, "Not running", "No CAN interface is running");
 		}
@@ -331,6 +519,8 @@ public class RootViewController {
 	@FXML
 	private void connectToCan1(ActionEvent event) throws IOException, USBtinException {
 		
+		
+		mode = "Analysis";
 		if (CanUtils.get1State()) { //port set ok
 			
 			String port = CanUtils.getConfigPort1();
@@ -341,11 +531,55 @@ public class RootViewController {
 			can = new CanConnection(port, speed, mode, this);
 			
 			can.connectToPort();
+			
+			btnClear.setDisable(true);
+			
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		} else {
 			GuiUtils.generateAlert(AlertType.INFORMATION, "CAN disabled", "No correct CAN interface has been configured");
 		}
 		 
+	}
+	
+	public static void addIDDash(String id, int length) {
+		
+		
+		dataLineChartDash = new HashMap<>();
+		xySeriesDash = new HashMap<>();
+		dataQ1Dash = new HashMap<>();
+		xAxisDash = new HashMap<>();
+		yAxisDash = new HashMap<>();
+		xSeriesDataDash = new HashMap<>();
+		
+		dataLineChartDash.put(id, new ArrayList<>());
+		xySeriesDash.put(id, new ArrayList<>());
+		dataQ1Dash.put(id, new ArrayList<>());
+		xAxisDash.put(id, new ArrayList<>());
+		yAxisDash.put(id, new ArrayList<>());
+		xSeriesDataDash.put(id, new ArrayList<>());
+		
+		for (int i=0; i <= length; i++) {
+			dataQ1Dash.get(id).add(new ConcurrentLinkedQueue<>());
+			xAxisDash.get(id).add(new NumberAxis(0, MAX_DATA_POINTS, MAX_DATA_POINTS/10));
+			yAxisDash.get(id).add(new NumberAxis());
+			xSeriesDataDash.get(id).add(0);
+			LineChart<Number,Number> lineChart;
+			lineChart = new LineChart<Number, Number>(xAxisDash.get(id).get(i), yAxisDash.get(id).get(i)){
+				@Override
+	            protected void dataItemAdded(Series<Number, Number> series, int itemIndex, Data<Number, Number> item) {
+	            }
+			};
+			dataLineChartDash.get(id).add(lineChart);
+			xySeriesDash.get(id).add(new XYChart.Series<>());
+		}
+		
+		
 	}
 	
 
@@ -378,7 +612,196 @@ public class RootViewController {
 		System.out.println(dataQ1.get(id).size());
 		
 	}
+	
+	public void addNewCellToDashboard(String id, int byteNumber, String dataName) {
+		
+		dataAnchorDash.add(new AnchorPane());
+		dataTextDash.add(new TextField());
+		dataRemoveDash.add(new Button());
+		dataEditable.add(new EditableLabel());
+		
+		if (colDash <=2) {
+			gridPaneDash.add(dataAnchorDash.get(dataAnchorDash.size()-1), colDash, rowDash);
+			colDash++;
+		} else {
+			colDash = 0;
+			rowDash++;
+			gridPaneDash.add(dataAnchorDash.get(dataAnchorDash.size()-1), colDash, rowDash);
+			colDash++;
+		}
+		
+		AnchorPane temp = dataAnchorDash.get(dataAnchorDash.size()-1);
+		TextField tempText = dataTextDash.get(dataTextDash.size()-1);
+		Button tempRemove = dataRemoveDash.get(dataRemoveDash.size()-1);
+		EditableLabel tempEditable = dataEditable.get(dataEditable.size()-1);
+		//Button tempData = dataData.get(dataData.size()-1);
+		
+		tempText.setPrefWidth(Control.USE_COMPUTED_SIZE);
+		tempText.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		
+		
+		tempRemove.setText("Remove");
+		tempRemove.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempRemove.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		
+		tempEditable.setText(dataName);
+		tempEditable.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempEditable.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempEditable.setFont(Font.font(16));
+		
+		
+		//tempData.setText("View RAW");
+		//tempData.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		//tempData.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		
+		tempRemove.setOnAction(arg0 -> {
+			try {
+				temp.getChildren().clear();
+				dataAnchorDash.remove(dataAnchorDash.indexOf(temp));
+				valuesInDashboard.put(tempEditable.getText(), new ArrayList<>());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		});
+		
+		
+		String strByte = Integer.toString(byteNumber);
+		
+		dataLineChartDash.get(id).get(byteNumber).setTitle("Node: " + id + " Byte: " + strByte );
+		dataLineChartDash.get(id).get(byteNumber).setLegendVisible(false);
+		dataLineChartDash.get(id).get(byteNumber).getStyleClass().add("thick-chart");
 
+		dataLineChartDash.get(id).get(byteNumber).getData().add(xySeriesDash.get(id).get(byteNumber));
+
+
+		xAxisDash.get(id).get(byteNumber).setForceZeroInRange(false);
+		xAxisDash.get(id).get(byteNumber).setAutoRanging(false);
+		xAxisDash.get(id).get(byteNumber).setTickLabelsVisible(false);
+		xAxisDash.get(id).get(byteNumber).setTickMarkVisible(false);
+		xAxisDash.get(id).get(byteNumber).setMinorTickVisible(false);
+
+		
+		dataLineChartDash.get(id).get(byteNumber).setCreateSymbols(false);
+	        
+	    AnchorPane.setBottomAnchor(dataLineChartDash.get(id).get(byteNumber), 50.0);
+	    AnchorPane.setTopAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+	    AnchorPane.setLeftAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+	    AnchorPane.setRightAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+
+		AnchorPane.setLeftAnchor(tempEditable, 14.0);
+		AnchorPane.setBottomAnchor(tempEditable, 14.0);
+		
+		
+		AnchorPane.setBottomAnchor(tempRemove, 14.0);
+		AnchorPane.setRightAnchor(tempRemove, 14.0);
+
+		
+		dataLineChartDash.get(id).get(byteNumber).setAnimated(false);
+			
+		temp.getChildren().add(dataLineChartDash.get(id).get(byteNumber));
+		temp.getChildren().add(tempEditable);
+		temp.getChildren().add(tempRemove);
+		//temp.getChildren().add(tempData);
+			
+		scrollDash.setFitToWidth(true);
+		
+		scrollDash.setContent(gridPaneDash);
+		
+	}
+	
+	public void addCellFromTo(String id, int byteNumber, String dataName) {
+		
+		System.out.println("Executing");
+		dataAnchorDash.add(new AnchorPane());
+		dataTextDash.add(new TextField());
+		dataRemoveDash.add(new Button());
+		dataEditable.add(new EditableLabel());
+		
+		if (colDash <=2) {
+			gridPaneDash.add(dataAnchorDash.get(dataAnchorDash.size()-1), colDash, rowDash);
+			colDash++;
+		} else {
+			colDash = 0;
+			rowDash++;
+			gridPaneDash.add(dataAnchorDash.get(dataAnchorDash.size()-1), colDash, rowDash);
+			colDash++;
+		}
+		
+		AnchorPane temp = dataAnchorDash.get(dataAnchorDash.size()-1);
+		TextField tempText = dataTextDash.get(dataTextDash.size()-1);
+		Button tempRemove = dataRemoveDash.get(dataRemoveDash.size()-1);
+		EditableLabel tempEditable = dataEditable.get(dataEditable.size()-1);
+		//Button tempData = dataData.get(dataData.size()-1);
+		
+		tempText.setPrefWidth(Control.USE_COMPUTED_SIZE);
+		tempText.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		
+		
+		tempRemove.setText("Remove");
+		tempRemove.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempRemove.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		
+		tempEditable.setText(dataName);
+		tempEditable.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempEditable.setPrefHeight(Control.USE_COMPUTED_SIZE);
+		tempEditable.setFont(Font.font(16));
+		
+		
+		
+		tempRemove.setOnAction(arg0 -> {
+			try {
+				temp.getChildren().clear();
+				dataAnchorDash.remove(dataAnchorDash.indexOf(temp));
+				valuesInDashboard.put(tempEditable.getText(), new ArrayList<>());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		});
+		
+		
+		String strByte = Integer.toString(byteNumber);
+		
+		dataLineChartDash.get(id).get(byteNumber).setTitle("Node: " + id + " Byte: " + strByte );
+		dataLineChartDash.get(id).get(byteNumber).setLegendVisible(false);
+		dataLineChartDash.get(id).get(byteNumber).getStyleClass().add("thick-chart");
+
+	    //dataLineChartDash.get(id).get(byteNumber).getData().add(xySeries.get(id).get(byteNumber));
+	    System.out.println("DENTRO DONDE");
+
+		xAxisDash.get(id).get(byteNumber).setForceZeroInRange(false);
+		xAxisDash.get(id).get(byteNumber).setAutoRanging(false);
+		xAxisDash.get(id).get(byteNumber).setTickLabelsVisible(false);
+		xAxisDash.get(id).get(byteNumber).setTickMarkVisible(false);
+		xAxisDash.get(id).get(byteNumber).setMinorTickVisible(false);
+
+		
+		dataLineChartDash.get(id).get(byteNumber).setCreateSymbols(false);
+	        
+	    AnchorPane.setBottomAnchor(dataLineChartDash.get(id).get(byteNumber), 50.0);
+	    AnchorPane.setTopAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+	    AnchorPane.setLeftAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+	    AnchorPane.setRightAnchor(dataLineChartDash.get(id).get(byteNumber), 0.0);
+
+		AnchorPane.setLeftAnchor(tempEditable, 14.0);
+		AnchorPane.setBottomAnchor(tempEditable, 14.0);
+		
+		
+		AnchorPane.setBottomAnchor(tempRemove, 14.0);
+		AnchorPane.setRightAnchor(tempRemove, 14.0);
+
+		
+		dataLineChartDash.get(id).get(byteNumber).setAnimated(false);
+			
+		temp.getChildren().add(dataLineChartDash.get(id).get(byteNumber));
+		temp.getChildren().add(tempEditable);
+		temp.getChildren().add(tempRemove);
+		//temp.getChildren().add(tempData);
+			
+		scrollDash.setFitToWidth(true);
+		
+		scrollDash.setContent(gridPaneDash);
+		
+	}
 	
 	public void addNewCell(String id, int byteNumber) {
 		
@@ -388,11 +811,6 @@ public class RootViewController {
 		dataCheck.add(new CheckBox());
 		dataRemove.add(new Button());
 		dataData.add(new Button());
-		
-
-
-		//xAxis.get(id).get(byteNumber).setLabel("");
-		
 		
 		if (col <= 2) {
 			gridPane2.add(dataAnchor.get(dataAnchor.size() - 1), col, row);
@@ -444,8 +862,33 @@ public class RootViewController {
 				tempCheck.setSelected(false);
 				GuiUtils.generateAlert(AlertType.INFORMATION, "Empty value", "You must tag this value!");
 			} else {
-				//TO DOd
-				temp.getChildren().clear();
+				if (project==null) {
+					GuiUtils.generateAlert(AlertType.INFORMATION, "Empty project", "A project must be opened to save this value.");
+					tempCheck.setSelected(false);
+				} else {
+					
+					if (!valuesInDashboard.containsKey(tempText.getText())) {
+						
+						valuesInDashboard.put(tempText.getText(), new ArrayList<String>());
+						valuesInDashboard.get(tempText.getText()).add(0, id);
+						valuesInDashboard.get(tempText.getText()).add(1, String.valueOf(byteNumber));
+						
+						addIDDash(id, byteNumber);
+						//addNewCellToDashboard(id, byteNumber, tempText.getText());
+						addCellFromTo(id, byteNumber, tempText.getText());
+						
+						
+						
+					    dataLineChartDash.get(id).get(byteNumber).getData().add(xySeries.get(id).get(byteNumber));
+
+					   // dashStarted = true;
+						dataAnchor.remove(dataAnchor.indexOf(temp));
+						dataLineChart.remove(dataAnchor.indexOf(temp));
+						temp.getChildren().clear();
+					} else {
+						GuiUtils.generateAlert(AlertType.WARNING, "Invalid name", "The tagged name is duplicated");
+					}
+				}
 			}
 		});
 		
@@ -461,14 +904,21 @@ public class RootViewController {
 		        FrameViewerController controller = fxmlLoader.getController();
 		        controller.byteNumber = byteNumber;
 		        controller.id = tempid;
-		        Thread.sleep(200);
+		        
 		        Stage stage = new Stage();
+		        stage.getIcons().add(new Image("file:resources/icon.png"));
 		        Platform.runLater(()->{
-
+		        	try {
+						Thread.sleep(200);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 		        });
 		        
 		        stage.setResizable(false);
 		        stage.setTitle("CRET - CAN Frame Viewer");
+		        
 		        stage.setScene(new Scene(frameDialog));
 
 		        stage.show();
@@ -562,17 +1012,35 @@ public class RootViewController {
 		
 		//SETUP PROJECT
 		
-		project = new Project("Empty");
 		
-		lblProjectName.setText("Project: " + project.getProjetName());
+		//tabInterface1.setGraphic(new Image("file:resources/icon.png"));
+		tabInterface1.setGraphic(GuiUtils.buildImage("file:resources/analyze.png"));
+		tabInterface2.setGraphic(GuiUtils.buildImage("file:resources/analyze.png"));
+		tabDashboard1.setGraphic(GuiUtils.buildImage("file:resources/dash.png"));
+		tabDashboard2.setGraphic(GuiUtils.buildImage("file:resources/dash.png"));
 		
+		btnConfigure.setGraphic(GuiUtils.buildImage("file:resources/config.png"));
+		btnNewProject.setGraphic(GuiUtils.buildImage("file:resources/project.png"));
+		startButton.setGraphic(GuiUtils.buildImage("file:resources/start.png"));
+		stopButton.setGraphic(GuiUtils.buildImage("file:resources/stop.png"));
+		btnClear.setGraphic(GuiUtils.buildImage("file:resources/delete.png"));
+		btnPause.setGraphic(GuiUtils.buildImage("file:resources/pause.png"));
+		
+		//project = new Project("-");
+		
+		lblProjectName.setText("Project: -");
+		btnSaveProject.setDisable(true);
 		
 		//INITALIZE ELEMENTS
 		
 		dataAnchor = new ArrayList<AnchorPane>();
+		dataAnchorDash = new ArrayList<AnchorPane>();
 		dataText = new ArrayList<TextField>();
+		dataTextDash = new ArrayList<TextField>();
 		dataCheck = new ArrayList<CheckBox>();
 		dataRemove = new ArrayList<Button>();
+		dataEditable = new ArrayList<EditableLabel>();
+		dataRemoveDash = new ArrayList<Button>();
 		dataData = new ArrayList<Button>();
 		
 		dataLineChart = new HashMap<>();
@@ -593,6 +1061,17 @@ public class RootViewController {
 		column2.setPercentWidth(33.33);
 		column3.setPercentWidth(33.33);
 		
+		
+		
+		gridPaneDash = new GridPane();
+		gridPaneDash.setGridLinesVisible(true);
+		gridPaneDash.getColumnConstraints().add(column1);
+		gridPaneDash.getColumnConstraints().add(column2);
+		gridPaneDash.getColumnConstraints().add(column3);
+		
+		gridPaneDash.setHgap(10.0);
+		gridPaneDash.setVgap(10.0);
+		
 		//GridPane
 		gridPane2 = new GridPane();
 		gridPane2.setGridLinesVisible(true);
@@ -606,10 +1085,12 @@ public class RootViewController {
 		
 		startButton.setDisable(false);
 		stopButton.setDisable(true);
+		btnPause.setDisable(true);
 		prepareTimeline();
 		
 		
-
+		lblProjectName.textProperty().bind(projectName);
+		projectName.setValue("Project: -");
 
 		
 	}
@@ -630,6 +1111,26 @@ public class RootViewController {
     	        xAxis.get(id).get(byteNumber).setUpperBound(xSeriesData.get(id).get(byteNumber) - 1);
     		}
     		
+    	}
+    	
+    	if (dashStarted) {
+    		
+    	for (String id : dataQ1Dash.keySet()) {
+    		for (int byteNumber = 0; byteNumber < dataQ1Dash.get(id).size(); byteNumber++) {
+    	        for (int i = 0; i < 20; i++) { //-- add 20 numbers to the plot+
+    	            if (dataQ1Dash.get(id).get(byteNumber).isEmpty()) break;
+    	            xySeriesDash.get(id).get(byteNumber).getData().add(new XYChart.Data<>(xSeriesDataDash.get(id).set(byteNumber, xSeriesDataDash.get(id).get(byteNumber)+1), dataQ1Dash.get(id).get(byteNumber).remove()));
+    	        }
+    	        // remove points to keep us at no more than MAX_DATA_POINTS
+    	        if (xySeriesDash.get(id).get(byteNumber).getData().size() > MAX_DATA_POINTS) {
+    	            xySeriesDash.get(id).get(byteNumber).getData().remove(0, xySeriesDash.get(id).get(byteNumber).getData().size() - MAX_DATA_POINTS);
+    	        }
+    	        // update
+    	        xAxisDash.get(id).get(byteNumber).setLowerBound(xSeriesDataDash.get(id).get(byteNumber) - MAX_DATA_POINTS);
+    	        xAxisDash.get(id).get(byteNumber).setUpperBound(xSeriesDataDash.get(id).get(byteNumber) - 1);
+    		}
+    		
+    	}
     	}
 
     }
