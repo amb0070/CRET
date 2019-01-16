@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="301.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.ConfigurationViewController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="280.0" prefWidth="349.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Accordion fx:id="accordationConfigure" layoutX="14.0" layoutY="40.0" prefHeight="301.0" prefWidth="349.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <panes>
+                <TitledPane fx:id="paneInterface1" animated="false" text="Interface 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="18.0" text="Port:" />
+                              <Label layoutX="33.0" layoutY="53.0" text="Speed:" />
+                              <ComboBox fx:id="comboxPortsInterface1" disable="true" layoutX="78.0" layoutY="14.0" prefHeight="25.0" prefWidth="192.0" />
+                              <ToggleButton fx:id="btnEnableInterface1" layoutX="77.0" layoutY="124.0" mnemonicParsing="false" onAction="#enableElementsInterface1" prefHeight="25.0" prefWidth="193.0" text="Enabled" />
+                              <Button fx:id="btnSaveInterface1" layoutX="77.0" layoutY="177.0" mnemonicParsing="false" onAction="#saveInterface1" prefHeight="25.0" prefWidth="69.0" text="Save" />
+                              <Button fx:id="btnCloseInterface1" layoutX="197.0" layoutY="177.0" mnemonicParsing="false" onAction="#closeConfigurationWindow" prefHeight="25.0" prefWidth="72.0" text="Close" />
+                              <ComboBox fx:id="comboxSpeedInterface1" disable="true" editable="true" layoutX="78.0" layoutY="49.0" prefHeight="25.0" prefWidth="191.0" />
+                              <ComboBox fx:id="comboxModeInterface1" disable="true" layoutX="77.0" layoutY="84.0" prefHeight="25.0" prefWidth="192.0" />
+                              <Label layoutX="33.0" layoutY="88.0" text="Mode:" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Interface 2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="18.0" text="Port:" />
+                              <Label layoutX="33.0" layoutY="53.0" text="Speed:" />
+                              <ComboBox fx:id="comboxPortsInterface2" disable="true" layoutX="78.0" layoutY="14.0" prefHeight="25.0" prefWidth="192.0" />
+                              <ToggleButton fx:id="btnEnableInterface2" layoutX="77.0" layoutY="124.0" mnemonicParsing="false" onAction="#enableElementsInterface2" prefHeight="25.0" prefWidth="193.0" text="Enabled" />
+                              <Button fx:id="btnSaveInterface2" layoutX="77.0" layoutY="177.0" mnemonicParsing="false" onAction="#saveInterface2" prefHeight="25.0" prefWidth="69.0" text="Save" />
+                              <Button fx:id="btnCloseInterface2" layoutX="197.0" layoutY="177.0" mnemonicParsing="false" onAction="#closeConfigurationWindow" prefHeight="25.0" prefWidth="72.0" text="Close" />
+                              <ComboBox fx:id="comboxSpeedInterface2" disable="true" editable="true" layoutX="78.0" layoutY="49.0" prefHeight="25.0" prefWidth="191.0" />
+                              <ComboBox fx:id="comboxModeInterface2" disable="true" layoutX="77.0" layoutY="84.0" prefHeight="25.0" prefWidth="192.0" />
+                              <Label layoutX="33.0" layoutY="88.0" text="Mode:" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="225.0" prefWidth="349.0" text="Configuration">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="371.0">
+                           <children>
+                              <CheckBox fx:id="checkIgnoreZeroBytes" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Ignore zero bytes" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                              <CheckBox fx:id="checkSplitBytes" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" text="Split bytes" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="55.0" />
+                              <Button fx:id="btnSaveConfig" layoutX="173.0" layoutY="169.0" mnemonicParsing="false" onAction="#saveConfiguration" prefHeight="25.0" prefWidth="68.0" text="Save" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="106.0" />
+                              <Button fx:id="btnCloseConfig" layoutX="268.0" layoutY="171.0" mnemonicParsing="false" onAction="#closeConfigurationWindow" prefHeight="25.0" prefWidth="65.0" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
