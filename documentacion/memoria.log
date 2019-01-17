@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  13 JAN 2019 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  17 JAN 2019 21:02
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -831,7 +831,7 @@ LaTeX Info: Redefining \nameref on input line 364.
 \@outlinefile=\write4
 \openout4 = `memoria.out'.
 
-<./img/cabecera.pdf, id=71, 617.67549pt x 135.51413pt>
+<./img/cabecera.pdf, id=83, 617.67549pt x 135.51413pt>
 File: ./img/cabecera.pdf Graphic file (type pdf)
 <use ./img/cabecera.pdf>
 Package pdftex.def Info: ./img/cabecera.pdf  used on input line 366.
@@ -866,7 +866,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 366.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 366.
-<./img/escudoInfor.pdf, id=72, 618.11432pt x 737.07487pt>
+<./img/escudoInfor.pdf, id=84, 618.11432pt x 737.07487pt>
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
 Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 366.
@@ -934,22 +934,33 @@ Package spanish Warning: Replacing `T1/lmr/bx/sc' by
 
 ) [3
 
-] (memoria.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
-) [4
+]
+LaTeX Info: Redefining \. on input line 458.
+LaTeX Info: Redefining \% on input line 458.
 
-] (memoria.lot
+
+Class memoir Warning: The material used in the headers is too large
+(15.35403pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 458.
+
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[4] (memoria.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) [5
 
-] [6
-
+] (memoria.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+) [6
 
 ]
 \openout2 = `./tex/1_Introduccion.aux'.
@@ -958,8 +969,11 @@ LaTeX Info: Redefining \% on input line 2.
 fier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 	F
-       otos del hardware desarrollado. [1
+l.22 C
+      onceptos teóricos: Conceptos básicos y necesarios para entender el p...
+[1
+
+
 
 
 ])
@@ -973,77 +987,78 @@ l.468 \include{./tex/1_Introduccion}
                                      [2]
 \openout2 = `./tex/2_Objetivos_del_proyecto.aux'.
 
- (tex/2_Objetivos_del_proyecto.tex)pdfTeX warning (ext4): destination with the 
-same identifier (name{page.3}) has been already used, duplicate ignored
+ (tex/2_Objetivos_del_proyecto.texpdfTeX warning (ext4): destination with the s
+ame identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45   P
+        rofundizar en el conocimiento del análisis de datos y monitorizaci�...
+[3
+
+
+
+])
+LaTeX Info: Redefining \. on input line 469.
+LaTeX Info: Redefining \% on input line 469.
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.469 \include{./tex/2_Objetivos_del_proyecto}
-                                               [3
-
-
-
-]
+                                               [4]
 \openout2 = `./tex/3_Conceptos_teoricos.aux'.
 
 
 (tex/3_Conceptos_teoricos.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.4}) has been already used, duplicate ignored
+dentifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \capitulo{3}{Conceptos teóricos}
-                                      [4
+l.32 S
+      iguiendo el modelo OSI, el estándar bus CAN especifica únicamente la...
+[5
 
 
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 5.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 5.
+
+LaTeX Warning: Citation `wiki:latex' on page 6 undefined on input line 69.
 
 
-LaTeX Warning: Citation `wiki:latex' on page 5 undefined on input line 22.
-
-
-LaTeX Warning: Citation `koza92' on page 5 undefined on input line 22.
+LaTeX Warning: Citation `koza92' on page 6 undefined on input line 69.
 
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
-Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 29.
+Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 76.
 (pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.29 ...for}{Autómata para una expresión vacía}
-                                                   [5]
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 	\item s
-             egundo item. [6])
-LaTeX Info: Redefining \. on input line 470.
-LaTeX Info: Redefining \% on input line 470.
- [7]
+l.76 ...for}{Autómata para una expresión vacía}
+                                                   [6]
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [7])
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
  [8]
 \openout2 = `./tex/4_Tecnicas_y_herramientas.aux'.
 
- (tex/4_Tecnicas_y_herramientas.tex)
-[9
+
+(tex/4_Tecnicas_y_herramientas.tex) [9
 
 
 
 ]
 \openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
 
- (tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [10
+
+(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [10
 
 
 
@@ -1065,6 +1080,12 @@ LaTeX Info: Redefining \% on input line 470.
 
 ]) [15]
 No file memoria.bbl.
+
+Class memoir Warning: The material used in the headers is too large
+(15.35403pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 480.
+
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
 
@@ -1088,34 +1109,25 @@ LaTeX Info: Redefining \% on input line 25.
 (tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 480.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 480.
+Package rerunfilecheck Info: File `memoria.out' has not changed.
+(rerunfilecheck)             Checksum: DC06A9BDE400527E308E99783435C51E;1270.
 
-
-Package rerunfilecheck Warning: File `memoria.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `memoria.out':
-(rerunfilecheck)             Before: 3251491985EF333AB2B4B1940756AE10;1063
-(rerunfilecheck)             After:  DC06A9BDE400527E308E99783435C51E;1270.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
  ) 
 Here is how much of TeX's memory you used:
- 12737 strings out of 492946
- 191285 string characters out of 3126711
- 370388 words of memory out of 3000000
- 16267 multiletter control sequences out of 15000+200000
- 95729 words of font info for 100 fonts, out of 3000000 for 9000
+ 12704 strings out of 492946
+ 190798 string characters out of 3126711
+ 369604 words of memory out of 3000000
+ 16252 multiletter control sequences out of 15000+200000
+ 78637 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,38p,552b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,38p,552b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
 }<C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
 pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
@@ -1125,14 +1137,13 @@ mbx8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
 c/lm/lmr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmr12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmr7.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmssbx10.pfb>
-Output written on memoria.pdf (27 pages, 668636 bytes).
+/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmssbx10.pfb>
+Output written on memoria.pdf (27 pages, 655858 bytes).
 PDF statistics:
- 638 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 27795 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 22187 words of extra memory for PDF output out of 24883 (max. 10000000)
 

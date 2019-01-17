@@ -1,8 +1,55 @@
 \capitulo{3}{Conceptos teóricos}
 
-En aquellos proyectos que necesiten para su comprensión y desarrollo de unos conceptos teóricos de una determinada materia o de un determinado dominio de conocimiento, debe existir un apartado que sintetice dichos conceptos.
+Las partes del proyecto con mayor desconocimiento y complejidad están enfocadas principalmente en el funcionamiento del bus CAN y en el desarrollo del hardware, el cual requiere de unos conocimientos básicos y unas metodologías específicas las cuales serán detalladas a continuación:
 
-Algunos conceptos teóricos de \LaTeX \footnote{Créditos a los proyectos de Álvaro López Cantero: Configurador de Presupuestos y Roberto Izquierdo Amo: PLQuiz}.
+Bus CAN
+
+El bus CAN (\emph{Controller Area Network}) es un protocolo desarrollado para la comunicación entre los distintos micro-controladores y dispositivos que son necesarios para el funcionamiento de un vehículo. Este protocolo no necesita de un host principal, sino que sigue una topología de tipo "bus".
+
+Es utilizado en multitud de escenarios como la aviación, la navegación, la automatización industrial, instrumentos médicos, maquinaria pesada y ascensores entre otros.
+
+Este protocolo está basado en el uso de mensajes para el intercambio de información entre los distintos dispositivos que lo componen.
+
+Nodo:
+Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
+
+
+Cada uno de los nodos es capaz de enviar y recibir mensajes, pero no simultáneamente. 
+
+FOTO DE UN SOLO NODO.
+
+Frame:
+Cada uno de los mensajes enviados a través de la red CAN. 
+
+ID:
+
+Length:
+
+Data:
+
+
+
+Siguiendo el modelo OSI, el estándar bus CAN especifica únicamente las dos primeras capas:
+
+Capa física:
+
+Capa de enlace de datos:
+
+
+CanBus
+Esquemas can
+Explicación ID
+Explicación Velocidad
+Explicación hardware
+Explicación señales low-level
+Explicación capas del canbus
+Explicación modo activo-listenonly
+
+Explicación conceptos de hardware:
+footprint
+scheme
+gerber files
+
 
 \section{Secciones}
 
