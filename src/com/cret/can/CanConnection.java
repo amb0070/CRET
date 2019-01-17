@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 
 import com.cret.gui.GuiUtils;
 import com.cret.gui.RootViewController;
+import com.cret.staticData.structures;
 
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
@@ -34,7 +35,11 @@ public class CanConnection{
 	
 	protected USBtin connection;
 	
-	private CanListener listener;
+	private CanListenerAnalysis listenerAnalysis;
+	
+	private CanListenerDashboard listenerDashboard;
+	
+	private CanListenerRAW listenerRAW;
 	
 	RootViewController controller;
 
@@ -63,8 +68,17 @@ public class CanConnection{
 		
 		connection = new USBtin();
 		
-		listener = new CanListener(controller);
-		connection.addMessageListener(listener);
+		if (structures.mode.equals("Dashboard")) {
+			listenerDashboard = new CanListenerDashboard(controller);
+			connection.addMessageListener(listenerDashboard);
+		} else if (structures.mode.equals("Analysis")) {
+			listenerAnalysis = new CanListenerAnalysis(controller);
+			connection.addMessageListener(listenerAnalysis);
+		} else {
+			listenerRAW = new CanListenerRAW();
+			connection.addMessageListener(listenerRAW);
+		}
+
 
 	}
 	
@@ -91,6 +105,9 @@ public class CanConnection{
 		connection.closeCANChannel();
 		connection.disconnect();
 		connection = null;
+		
+		listenerAnalysis = null;
+		listenerDashboard = null;
 	}
 	
 	public void disconnectAll() {
