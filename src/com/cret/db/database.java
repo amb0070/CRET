@@ -27,14 +27,14 @@ public class Database {
 		
 		this.dbName = dbName;
 		url = url + this.dbName;
-		connect();
+		connect2();
 	}
 	
 	public String getDatabaseName() {
 		return dbName;
 	}
 	
-	private void connect() {
+	private void connect2() {
 		
 		System.out.println("Connecting to " + dbName);
 		
@@ -68,6 +68,13 @@ public class Database {
 	}
 	
 	
+	public Connection connect() throws SQLException {
+		
+		conn = DriverManager.getConnection(url);
+		
+		
+		return conn;
+	}
 	
 	
 	public ResultSet query(String query) {
