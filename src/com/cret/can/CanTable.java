@@ -18,7 +18,6 @@ public class CanTable {
 		this.id = new SimpleStringProperty(id);
 		this.length = new SimpleStringProperty(length);
 		this.data = new SimpleStringProperty(data);
-		
 	}
 	
 	/**

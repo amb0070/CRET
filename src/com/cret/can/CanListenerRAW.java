@@ -9,14 +9,15 @@ public class CanListenerRAW implements CANMessageListener {
 
 	@Override
 	public void receiveCANMessage(CANMessage msg) {
-		String id = String.valueOf(msg.getId());
+		String id = CanUtils.decToHex(msg.getId());
 		String length = String.valueOf(msg.getData().length);
 		String data = "";
 		for (Byte b : msg.getData()) {
-			data = data + b.toString();
+			data = data + CanUtils.decToHex(b);
 		}
 		
-		System.out.println("ID " + id + " LENGTH " + length + " DATA " + data);
+		//System.out.println("ID " + id + " LENGTH " + length + " DATA " + data);
+		
 		structures.dataTable.add(new CanTable("TIME", id, length, data));
 		
 	}
