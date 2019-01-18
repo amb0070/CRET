@@ -6,9 +6,10 @@ Bus CAN
 
 El bus CAN (\emph{Controller Area Network}) es un protocolo desarrollado para la comunicación entre los distintos micro-controladores y dispositivos que son necesarios para el funcionamiento de un vehículo. Este protocolo no necesita de un host principal, sino que sigue una topología de tipo "bus".
 
+Este protocolo está basado en el uso de mensajes para el intercambio de información entre los distintos dispositivos que lo componen.
+
 Es utilizado en multitud de escenarios como la aviación, la navegación, la automatización industrial, instrumentos médicos, maquinaria pesada y ascensores entre otros.
 
-Este protocolo está basado en el uso de mensajes para el intercambio de información entre los distintos dispositivos que lo componen.
 
 Nodo:
 Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
@@ -19,13 +20,20 @@ Cada uno de los nodos es capaz de enviar y recibir mensajes, pero no simultánea
 FOTO DE UN SOLO NODO.
 
 Frame:
-Cada uno de los mensajes enviados a través de la red CAN. 
+Cada uno de los mensajes enviados a través de la red CAN. Estos contienen 3 campos en los que nos centraremos: ID, Length y Data.
 
-ID:
+ID: Se trata del identificador del Frame. A través de el, se establece la prioridad que tiene ese Frame durante el acceso al bus de datos.
 
-Length:
+Length: En este campo, se define la longitud del campo de datos del Frame. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 bytes de datos.
 
 Data:
+
+
+Bitriate: Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad. Esta, puede cambiar dependiendo de los sistemas. Los valores más comunes son 			     10000 bit/s, 20000 bit/s, 50000 bit/s, 100000 bit/s, 125000 bit/s, 250000 bit/s, 500000 bit/s, 800000 bit/s y  1000000 bit/s.
+
+Además, el estándar dispone de varias medidas para la detección de errores y seguridad las cuales no son relevantes para la exposición de este proyecto.
+
+A través del bus CAN, es posible el flujo de datos a distintas velocidades de forma simultanea, a través de los mismos cables. Lo que no es posible, es la lectura de datos a dos velocidades distintas, por lo que se desarrolló un hardware específico para dicha tarea.
 
 
 

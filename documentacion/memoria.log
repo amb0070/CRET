@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  17 JAN 2019 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  17 JAN 2019 21:06
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -987,12 +987,15 @@ l.468 \include{./tex/1_Introduccion}
                                      [2]
 \openout2 = `./tex/2_Objetivos_del_proyecto.aux'.
 
- (tex/2_Objetivos_del_proyecto.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{page.3}) has been already used, duplicate ignored
+ (tex/2_Objetivos_del_proyecto.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45   P
-        rofundizar en el conocimiento del anÃ¡lisis de datos y monitorizaciÃ...
+l.44   A
+        dquirir conocimiento sobre el funcionamiento del bus CAN en distinto...
 [3
 
 
@@ -1118,6 +1121,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
  ) 
 Here is how much of TeX's memory you used:
@@ -1141,7 +1147,7 @@ ublic/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/lm/lmssbx10.pfb>
-Output written on memoria.pdf (27 pages, 655858 bytes).
+Output written on memoria.pdf (27 pages, 655957 bytes).
 PDF statistics:
  643 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
