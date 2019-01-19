@@ -187,7 +187,7 @@ public class CanListenerAnalysis implements CANMessageListener {
 
 				} else { // Ya esta añadido, solo meto los datos en el observablelist
 
-					controller.analysisProgress.setVisible(false);
+					controller.progressRoot.setVisible(false);
 					//RootViewController.dataQ1.get(id).get(index * 2).add(CanUtils.hexToDec(firstNibble));
 					//RootViewController.dataQ1.get(id).get((index * 2) + 1).add(CanUtils.hexToDec(secondNibble));
 					structures.dataQ1.get(id).get(index).add(CanUtils.hexToDec(b));

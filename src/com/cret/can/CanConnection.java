@@ -90,8 +90,8 @@ public class CanConnection{
 			
 			connection.connect(port);
 			connection.openCANChannel(speed, mode);
-			controller.startButton.setDisable(true);
-			controller.stopButton.setDisable(false);
+			controller.btnStartAnalysis1.setDisable(true);
+			controller.btnStopAnalysis1.setDisable(false);
 			//Connected
 			
 		} catch (USBtinException e) {
