@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  17 JAN 2019 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  20 JAN 2019 02:58
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1016,72 +1016,79 @@ l.469 \include{./tex/2_Objetivos_del_proyecto}
 dentifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 S
-      iguiendo el modelo OSI, el estándar bus CAN especifica únicamente la...
-[5
+l.28 
+      [5
 
 
 
 ]
-
-LaTeX Warning: Citation `wiki:latex' on page 6 undefined on input line 69.
-
-
-LaTeX Warning: Citation `koza92' on page 6 undefined on input line 69.
-
-File: ./img/escudoInfor.pdf Graphic file (type pdf)
-<use ./img/escudoInfor.pdf>
-Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 76.
-(pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 ...for}{Autómata para una expresión vacía}
-                                                   [6]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
- [7])
+l.74 \subsubsection
+                   {Subsubsecciones} [6]
+
+LaTeX Warning: Citation `wiki:latex' on page 7 undefined on input line 81.
+
+
+LaTeX Warning: Citation `koza92' on page 7 undefined on input line 81.
+
+File: ./img/escudoInfor.pdf Graphic file (type pdf)
+<use ./img/escudoInfor.pdf>
+Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 88.
+(pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+[7]
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
+ [8])
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
- [8]
+ [9]
 \openout2 = `./tex/4_Tecnicas_y_herramientas.aux'.
 
-
-(tex/4_Tecnicas_y_herramientas.tex) [9
-
+ (tex/4_Tecnicas_y_herramientas.tex [10
 
 
-]
+
+] [11]
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+ [12])
+LaTeX Info: Redefining \. on input line 471.
+LaTeX Info: Redefining \% on input line 471.
+ [13]
 \openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
 
 
-(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [10
-
-
-
-]) [11]
-\openout2 = `./tex/6_Trabajos_relacionados.aux'.
-
-
-(tex/6_Trabajos_relacionados.tex [12
-
-
-
-]) [13]
-\openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
-
-
-(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [14
+(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [14
 
 
 
 ]) [15]
+\openout2 = `./tex/6_Trabajos_relacionados.aux'.
+
+
+(tex/6_Trabajos_relacionados.tex [16
+
+
+
+]) [17]
+\openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
+
+
+(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [18
+
+
+
+]) [19]
 No file memoria.bbl.
 
 Class memoir Warning: The material used in the headers is too large
@@ -1121,19 +1128,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
  ) 
 Here is how much of TeX's memory you used:
- 12704 strings out of 492946
- 190798 string characters out of 3126711
- 369604 words of memory out of 3000000
- 16252 multiletter control sequences out of 15000+200000
- 78637 words of font info for 85 fonts, out of 3000000 for 9000
+ 12726 strings out of 492946
+ 191031 string characters out of 3126711
+ 369605 words of memory out of 3000000
+ 16255 multiletter control sequences out of 15000+200000
+ 82262 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,38p,552b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,38p,552b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
 }<C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
 pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
@@ -1143,13 +1147,14 @@ mbx8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
 c/lm/lmr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmr12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/lm/lmssbx10.pfb>
-Output written on memoria.pdf (27 pages, 655957 bytes).
+/public/lm/lmr6.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmssbx10.pfb>
+Output written on memoria.pdf (31 pages, 681634 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 22187 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 22699 words of extra memory for PDF output out of 24883 (max. 10000000)
 

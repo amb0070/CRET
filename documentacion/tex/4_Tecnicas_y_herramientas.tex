@@ -2,31 +2,84 @@
 
 Metodologías
 
-Scrum
+Scrum: A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio.
+
+
+Pomodoro: El uso de este método de gestión de tiempo ayuda a incrementar la productividad. Esta técnica consiste en realizar una división del tiempo en fragmentos. Estos fragmentos son periodos de tiempo de 25 minutos (llamados pomodoros). A su vez, estos fragmentos están separados entre ellos por pausas de 5 minutos. Cuando se han realizado 4 periodos de 25 minutos (es decir, 4 pomodoros), se realiza una pausa más larga de unos 30 minutos. 
+
+
+Patrones de diseño:
+MVC (Model, View, Controller): Aplicando este patrón de arquitectura, se utilizan 3 componentes, las vistas, los modelos y los controladores, de tal forma que se separa la lógica de la vista de la aplicación. De esta forma, si realizamos una modificación en una parte de nuestro código, la otra parte no se ve afectada. Por ejemplo, si modificamos la base de datos, solo modificaríamos el modelo encargado de esa acción, sin tocar el resto de la aplicación.
 
 
 
-Pomodoro
+Control de versiones:
+
+Git: Con el uso de este sistema de control de versiones, se realiza de manera eficiente y confiable el mantenimiento de versiones de aplicaciones o proyectos, cuando estas poseen una gran cantidad de código fuente. Además, guarda un registro de los cambios realizados en la aplicación o proyecto, de forma que podemos volver a una versión anterior en cualquier momento.
+
+
+Hosting:
+GitHub: Se trata de una plataforma de desarrollo colaborativo en la cual es posible alojar proyectos de forma gratuita a través Git (el sistema de control de versiones utilizado por GitHub). Con el uso de una cuenta de estudiante, es posible crear un repositorio privado en esta plataforma.
+
+
+Gestión del proyecto:
+
+Zenhub: Es una herramienta integrada con GitHub desde la cual se puede realizar una gestión de proyectos. Para ello dispone de un tablero con tarjetas, las cuales son tareas del proyecto. Estas tareas pueden estar en diversos estados a lo largo del proceso. (RELLENAR MÁS)
+
+Entorno de desarrollo:
+
+Eclipse: Es un IDE para el desarrollo de aplicaciones Java. Dispone de un gran número de plugins para facilitar el desarrollo, refactorización y revisión del código fuente.
+
+SceneBuilder: Es una interfaz de usuario con la cual a través del método darg and drop, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
+
+SQLite:
+
+Documentación:
+
+TextMaker: Editor de LaTeX multiplataforma, el cual integra diversas herramientas necesarias para la generación de documentos LaTeX.
+
+
+Impresión 3D:
+
+Solidworks: Software de tipo CAD (Computer Aided Design) el cual es utilizado para modelar piezas en 3D. En este caso ha sido utilizado para el desarrollo de la caja que contiene el hardware utilizado para conectarse al bus CAN.
+
+Ultimaker Cura: Se trata de un silicer gratuito para la impresión 3D. Es el encargado de transformar el diseño 3D en un formato que la impresora 3D sea capaz de procesar, en este caso un fichero gcode.
+
+Librerías:
+
+USBtinLib: Librería utilizada para mediar entre el hardware utilizado para conectarse al bus CAN y Java. Es la encargada de realizar al conexión, además de que nos permite tanto enviar como recibir datos del bus. 
+
+sqlite-jdbc: Librería para realizar conexiones con bases de datos SQLite.
+
+JSSC (Java Simple Serial Connector): Librería multiplataforma a través de la cual es posible obtener los puertos serie de comunicación disponibles en el equipo en el que se ejecute.
+
+JavaFX: Se trata de una librería para Java, enfocada a la creación de interfaces gráficas.
+
+Medusa: Conjunto de componentes los cuales pueden ser añadidos a JavaFX para ampliar sus funcionalidades y características visuales.
+
+Diseño de hardware:
+
+KiCAD: Está compuesto por un conjunto de herramientas para el diseño de circuitos electrónicos. Esto incluye la creación de esquemas para circuitos electrónicos así como la conversión de esos esquemas a diseños de PCB (Printed Circuit Board). Además nos permite exportar los ficheros necesarios para la producción de dichos componentes.
+
+PAGINA WEB JLCPCB?
+
+CAN bus:
+
+canAlyser3 mini: Herramienta privada desarrollada para la utilización de un hardware concreto (USB-to-CAN), la cual ha sido utilizada para la generación de tramas (Frames) CAN para la realización de las pruebas y los test correspondientes durante el desarrollo de la aplicación.
+
+SocketCAN: Se trata de un conjunto de herramientas y drivers "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir hardware CAN como si de una tarjeta de red se tratase.
+
+Can-utils: Se trata de un set de herramientas con las cuales podemos interactuar con el bus CAN. A continuación se describen las dos herramientas utilizadas y más interesantes.
+
+candump: Nos permite capturar todo el tráfico que es transmitido a través del bus, y almacenarlo en un fichero.
+
+canplayer: Esta herramienta nos permite generar tramas (Frames) y enviarlas al bus CAN. También es posible enviar un fichero capturado anteriormente con la herramienta candump.
+
 
 https://tomato-timer.com/
 
 
 
-Patrones de diseño:
-MVC
-
 Esquema global del programa, con input de can, etc
-Control de versiones con GIT
-Gestión del proyecto con zenhub
-Entorno de desarrollo eclipse + scenebuilder
-latex
-javafx
 
-Librerias:
-usbtin
-serial ports
 
-Hardware:
-kicad
-Canalyzer
-hardware usb-to-can
