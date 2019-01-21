@@ -1,7 +1,7 @@
 \capitulo{6}{Trabajos relacionados}
 
-Cada fabricante dispone de sus propias herramientas (al igual que muchos de ellos disponen de su propio hardware). Estas herramientas, como se ha mencionado en la introducción, tienen un coste muy elevado en la mayoría de los casos.
 
+Cada fabricante dispone de sus propias herramientas (al igual que muchos de ellos disponen de su propio \emph{hardware}). Estas herramientas, como se ha mencionado en la introducción, tienen un coste muy elevado en la mayoría de los acasos.
 
 Las principales ventajas de este proyecto sobre los otros mencionados anteriormente son:
 
@@ -16,4 +16,22 @@ Es la única herramienta libre que permite "graficar" los datos que fluyen por e
 
 Las principales desventajas son:
 
-Actualmente solo funciona con un hardware en concreto. Como se menciona en la sección --Lineas futuras de trabajo--, el desarrollo de este proyecto continuaría con la incorporación de un módulo para el soporte de los drivers SocketCAN en sistemas linux.
+Actualmente solo funciona con un hardware en concreto. Como se menciona en la sección --Lineas futuras de trabajo--, el desarrollo de este proyecto continuaría con la incorporación de un módulo para el soporte de los drivers SocketCAN en sistemas Linux.
+
+A parte, cabe destacar la presencia del proyecto CANalyzat0r, el cual nos permite también el análisis de los datos que pasan por el bus CAN, pero que no nos permite una rápida identificación a través de la visualización de los datos.
+
+Además a través de CRET, se facilita mucho la identificación de las señales, pudiendo etiquetarlas y almacenarlas en el dashboard, y a su vez en una base de datos, para su utilización más adelante. En CANalyzat0r, el etiquetado de los datos identificados tiene que hacerse introduciendo la ID específica, además de que no nos permite separar los bytes del campo de datos.
+
+A continuación se realiza una pequeña comparación entre las herramientas:
+
+
+\tablaSmall{Comparación entre CRET y otras herramientas del mercado}{l c c c c}{herramientasportipodeuso}
+{ \multicolumn{1}{l}{Herramientas} & CRET & CANalyzat0r & PCAN Explorer \\}{
+Visualización de los datos en RAW & X & X &X\\
+Multiplataforma & X & X &\\
+Hardware libre & X & N/A &\\
+Representación gráfica de los datos & X & & X\\
+Etiquetado con un \emph{click} & X & &\\
+Importar y exportar proyectos JSON & X & &\\
+} 
+

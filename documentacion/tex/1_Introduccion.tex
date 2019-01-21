@@ -1,38 +1,60 @@
 \capitulo{1}{Introducción}
 
-Todos los vehículos que utilizamos en el día a día, maquinaria utilizada en las empresas, el sector náutico o de la aviación utilizan el bus CAN para la inter-conexión de los componentes electrónicos que hacen funcionar dichas máquinas.
+Todos los vehículos que utilizamos en el día a día, maquinaria utilizada en las empresas, el sector náutico o de la aviación utilizan el bus CAN para la \emph{interconexión} de los componentes electrónicos que hacen funcionar dichas máquinas.
 
-Durante los años se han desarrollado nuevos protocolos, todos ellos basados en  (habiéndose incrementado, por ejemplo, la velocidad en los buses actuales), pero utilizando las bases del protocolo que en su primer desarrollo.
+Los estándares del protocolo son públicos de forma que cualquier desarrollador pueda ceñirse a ellos, pero no sucede así con los datos que circulan por el bus, ni la forma en la que lo hacen.
 
-El estándar CAN (CITA) es 
+La forma en la que se envían y reciben esos datos, al igual que el propio dato en si, es definido por cada fabricante, y no se suelen hacer públicos.
 
-El estándar del bus CAN únicamente hace referencia a las dos primeras capas del protocolo, la capa física, y la capa de enlace de datos (siguiendo el modelo OSI).
+Lo que se intenta conseguir a través del uso de esta herramienta, es la posibilidad identificar, clasificar y monitorizar los datos que los distintos elementos de la máquina (un vehículo, por ejemplo) utilizan para su funcionamiento interno y para el intercambio de datos como señales o textos.
+
+De esta manera, por ejemplo, si necesitásemos realizar una aplicación para la monitorización de un vehículo, no sería necesario introducir nuevos sensores (para la velocidad, las revoluciones del motor, el GPS), sino que estos datos serían extraídos del bus CAN, ahorrando costes, facilitando el desarrollo y evitando posibles problemas.
 
 
-A través del uso de esta herramienta, sería posible identificar y clasificar los datos que los distintos elementos del vehículo analizado comparten entre ellos, para su funcionamiento. De esta manera, por ejemplo, si necesitásemos realizar una aplicación para la monitorización de un vehículo, no sería necesario introducir nuevos sensores (para la velocidad, las revoluciones del motor, el GPS), sino que estos datos serían extraídos del bus CAN, ahorrando costes y posibles problemas.
+Para realizar ese análisis existen algunos programas y proyectos disponibles pero que requieren de un \emph{hardware} con un precio elevado además de es necesario una gran cantidad de conocimientos previos para el uso de dichas herramientas.
+
+Con este proyecto, se propone realizar dicha clasificación y monitorización de manera rápida e interactiva, representando los datos visualmente, permitiendo etiquetarlos y almacenarlos de manera que puedan ser utilizados más adelante.
+
+//PARTE DE LA RASPI
 
 \section{Estructura de la memoria}\label{estructura-de-la-memoria}
 
+A continuación se describe la estructura de la memoria:
 
+\begin{itemize}
 
-Introducción: Descripción breve sobre el proyecto, motivación por la que se ha realizado y soluciones propuestas. Estructura de la memoria y listado de materiales adjuntos proporcionados.
+\item
 
-Objetivos del proyecto: Exposición de los objetivos, clasificados en objetivos generales, objetivos técnicos y objetivos personales.
+\textbf{Introducción}: Descripción breve sobre el proyecto, motivación por la que se ha realizado y soluciones propuestas. Estructura de la memoria y listado de materiales adjuntos proporcionados.
 
-Conceptos teóricos: Conceptos básicos y necesarios para entender el propósito del proyecto. 
+\item
 
-Técnicas y herramientas: Metodologías y herramientas utilizadas durante el desarrollo del proyecto.
+\textbf{Objetivos del proyecto:} Exposición de los objetivos, clasificados en objetivos generales, objetivos técnicos y objetivos personales.
 
-Trabajos relacionados: Aplicaciones, proyectos y empresas que ofrecen soluciones en el mismo campo que el estudiado.
+\item
 
-Conclusiones y líneas de trabajo futuras: Conclusiones a las que se ha llegado tras la realización del proyecto, así como mejoras  y futuro desarrollo de la aplicación.
+\textbf{Conceptos teóricos:} Conceptos básicos y necesarios para entender el propósito del proyecto así como su desarrollo.
+
+\item
+
+\textbf{Técnicas y herramientas:} Metodologías y herramientas utilizadas durante el desarrollo del proyecto.
+
+\item
+
+\textbf{Trabajos relacionados:} Aplicaciones, proyectos y empresas que ofrecen soluciones en el mismo campo que el estudiado.
+
+\item
+
+\textbf{Conclusiones y líneas de trabajo futuras:} Conclusiones a las que se ha llegado tras la realización del proyecto, así como mejoras  y futuro desarrollo de la aplicación.
+
+\end{itemize}
 
 \section{Materiales adjuntos}\label{materiales-adjuntos}
 
 Los materiales adjuntos a la memoria son los siguientes:
 
 \begin{itemize}
-\tightlist
+
 \item
 	Aplicación desarrollada en Java: CRET.
 \item	
@@ -41,12 +63,13 @@ Los materiales adjuntos a la memoria son los siguientes:
 	Esquemas del hardware desarrollado.
 \item	
 	JavaDoc.
+\item
+	Vídeos de prueba del proyecto.
 \end{itemize}
 
 Además, los siguientes recursos están accesibles a través de internet:
 
 \begin{itemize}
-\tightlist
 \item
-  Repositorio del proyecto TODO----.
+  Repositorio del proyecto: https://github.com/amb0070/CRET/
 \end{itemize}

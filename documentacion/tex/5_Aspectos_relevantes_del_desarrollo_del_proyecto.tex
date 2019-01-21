@@ -1,19 +1,108 @@
 \capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
 
-Inicio del proyecto
+A continuación se desarrollan los aspectos más importantes que influyeron en el desarrollo del proyecto.
 
-Motivacioens ,etc
-logo
+\section{Inicio del proyecto}\label{inicio_del_proyecto}
 
-Metodologías
+La idea de desarrollar esta aplicación surgió unos meses atrás, tras trabajar en una empresa que de dedicaba a la reparación de maquinaria.
+
+Tras investigar y leer algunos manuales de reparación de esas máquinas, era de destacar que existía una característica en común, que era el uso del bus CAN en muchas de ellas, por no decir todas. A partir de ahí surgió el interés y las ganas de indagar sobre su funcionamiento.
+
+Una vez fue posible la lectura de dichos datos, quedaba clara la dificultad para la identificación de los mismos, ya que todos ellos estaban en hexadecimal, lo cual dificultaba su identificación.
+
+Tras el desarrollo de un pequeños \emph{script} en python los cuales eran capaces de realizar una gráfica con los datos previamente adquiridos del bus CAN y detectar la mayor facilidad a la hora de identificar esos datos, surgió la idea de realizar este proyecto.
+
+Existía la necesidad de que, al contrario que en el caso anterior, este proyecto permitiera realizar ese proceso en tiempo real, no con una muestra de datos tomada anteriormente.
+
+Otra de las principales motivaciones fue el hecho de que si por ejemplo, existiera la necesidad de recoger los datos de un sensor (de velocidad de una rueda) para su monitorización y este dato es transmitido a través del bus CAN, no es necesaria la instalación de un nuevo sensor, abaratando costes y facilitando realizar la tarea necesaria.
+
+\section{Metodologías}\label{metodologias}
+
+Se decidió utilizar la metodología \emph{Scrum}, una metodología ágil, de forma que no era necesario definir el proyecto desde el principio (no se conocía el alcance del mismo, ni si iba a ser posible realizar ciertas propuestas planteadas).
+
+La duración aproximada de los \emph{sprints} era de una semana, a la vez que al finalizar dicho \emph{sprint}, se planificaba el de la semana siguiente.
+
+A través del uso de la herramienta \emph{ZenHub}, se generaban \emph{issues}, es decir, tareas a realizar en ese \emph{sprint}, y se cambiaban de estado según se iban finalizando.
+
+\section{Formación}\label{formacion}
+
+El proyecto requería conceptos tanto de funcionamiento como de la implementación del bus CAN, los cuales desconocía en un principio. A través de los siguientes documentos, se adquirieron conocimientos sobre la materia:
 
 
-Formación
+LINKS CAN BUS
 
 
-Desarrollo del software
+\section{Desarrollo del \emph{hardware}}\label{desarrollo_del_hardware}
 
-Desarrollo de la app
+Se decidió comenzar por esta fase por los siguientes motivos:
 
 
-Desarrollo del hardware
+No era seguro que el \emph{hardware} fuera a funcionar con lo que no se podía crear una dependencia por parte del software en caso de que esa parte no se realizase satisfactoriamente.
+
+La producción del \emph{hardware} requiere de unas semanas desde que envías el pedido hasta que el material llega.
+
+Era la parte más desconocida y en la cual habría que invertir más tiempo para aplicar la metodología sugerida a la hora del desarrollo de este tipo de proyectos.
+
+Se podrían definir 4 etapas las cuales se han llevado a cabo para el desarrollo:
+
+\subsection{Diseño del esquema eléctrico}\label{diseño_del_esquema_electrico}
+
+El primer paso para el desarrollo de una placa de circuito impreso, es diseñar el esquema en el que se incluyen los componentes, y la conexión que se va a realizar entre ellos. En este caso, el objetivo era duplicar un esquema existente, introduciéndole un \emph{Hub USB}, todo ello en la misma placa.
+
+En este esquema se especifican los componentes utilizados (resistencias, condensadores, circuitos integrados, etc). Además se define que entradas y salidas de esos componentes van conectados al resto de componentes.
+
+FOTO ESQUEMA ELECTRICO PEQUEÑO
+
+\subsection{Generación del \emph{netlist}}\
+
+Una vez realizado el esquema eléctrico, necesitamos generar el fichero \emph{Netlist}. En este fichero se almacenan los siguientes datos:
+
+Por cada componente:
+	
+	Se describen las conexiones de cada uno de los elementos del circuito.
+	El tipo de elemento que es cada componente.
+	La huella (footprint} que va a utilizar, es decir, en función de cada encapsulado (forma física del \emph{chip}), será necesario que la zona de soldadura de la PCB sea adaptada al mismo, tanto en tamaño como en forma.
+
+
+\subsection{Posicionamiento y enrutado de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
+
+Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs. Para que nos hagamos una idea, ese es el resultado:
+
+FOTO NETLIST TAL CUAL
+
+
+
+\section{Desarrollo del \emph{software}}
+
+Lo primero que había que decidir era el lenguaje en el que se iba a desarrollar la aplicación. Se barajó la posibilidad de realizarlo en Java o Python. La decisión de Java se debió a la disposición de una librería compatible con el \emph{hardware} y a la librería JavaFX la cual nos permite realizar una aplicación muy visual y amigable de forma sencilla y eficiente.
+
+Una vez elegido el lenguaje de desarrollo, se comenzó con la modelación de la interfaz gráfica, es decir, de la estructura de la aplicación a nivel visual. Una vez estaba claro, se comenzó con el desarrollo del código.
+
+Para la base de datos, se decidió utilizar SQLite, ya que no requiere de ningún motor de base de datos, sino simplemente la utilización de una librería interna en la aplicación. Además, la información almacenada iba a ser muy pequeña y era más que suficiente.
+
+Principalmente surgieron dos grandes problemas durante el desarrollo de la parte del software, ambos relacionados con la parte de la interfaz gráfica.
+
+\subsection{Generación de gráficas de forma dinámica}\label{generacion_de_graficas_de_forma_dinamica}
+
+Era necesario que las gráficas se fueran creando de manera dinámica cuando existiera un nuevo dato a representar, no tener una estructura estática creada previamente. Para ello, cada vez que un nuevo \emph{Frame} del bus CAN fuera detectado, había que proceder a la creación de dichos elementos, así como de un \emph{listener} en ese objeto, el cual consultase la estructura en la que son almacenados los datos, para su posterior representación gráfica.
+
+Para ello se decidió utilizar una estructura gráfica de tipo \emph{GridPane}, dividiendo la pantalla en el eje horizontal en 3 celdas. Cada una de estas celdas se iría rellenando en función de las necesidades e iría incrementandose de arriba a abajo si fuera necesario. Para conseguir ese efecto, el elemento padre del \emph{GridPane} tenía que ser un \emph{ScrollPane} es decir, lo que conocemos como un \emph{Scroll}.
+
+Todo esto tenía que ir de la mano con una serie de estructuras, también generadas dinámicamente, para realizar la lectura y escritura de los datos que tienen que ser representados.
+
+De esa manera, se decidió utilizar estructuras de tipo \emph{HashMap}, las cuales identificaban el dato por el par \emph{ID} y \emph{número de byte representado}.
+
+\subsection{Problemas de concurrencia}\label{problemas_de_concurrencia}
+
+Los elementos que representan gráficamente los datos (LineChart), realizan una lectura de un tipo de datos llamado \emph{ObservableList}. Durante la ejecución de la aplicación existen 2 \emph{threads}, uno para la ejecución de la parte gráfica, y el otro para la lectura de los datos del bus CAN.
+
+El problema surge cuando se intenta realizar una escritura en el objeto de tipo \emph{ObservableList} desde el \emph{thread} que lee el bus CAN al mismo tiempo que el \emph{thread} de la interfaz gráfica realiza una lectura de los datos del mismo objeto.
+
+Para la resolución de este problema se decidió utilizar un modelo de tipo Productor/Consumidor. Para ello se definió un objeto de tipo \emph{ConcurrentLinkedQueue} en el cual el \emph{thread} encargado de la lectura del bus CAN, iba introduciendo la información que le llegaba al tiempo que el \emph{thread} de la interfaz gráfica iba cargando esos datos en el objeto de tipo \emph{ObservableList}. De esta manera, se consiguieron solucionar los problemas de concurrencia.
+
+\section{Diseño e impresión de la caja}\label{desarrollo_e_impresion_de_la_caja}
+
+Para la protección de \emph{hardware} desarrollado, se vió la necesidad de crear una caja la cual almacenase dentro la placa, pero que además permitiera la conexión de los elementos necesarios.
+
+
+

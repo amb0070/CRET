@@ -1,82 +1,145 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Metodologías
+\section{Metodologías}\label{metodologias}
 
-Scrum: A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio.
+\subsection{Scrum}\label{scrum}
 
+A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio. Esto se consigue con el uso de\emph{sprints}.
 
-Pomodoro: El uso de este método de gestión de tiempo ayuda a incrementar la productividad. Esta técnica consiste en realizar una división del tiempo en fragmentos. Estos fragmentos son periodos de tiempo de 25 minutos (llamados pomodoros). A su vez, estos fragmentos están separados entre ellos por pausas de 5 minutos. Cuando se han realizado 4 periodos de 25 minutos (es decir, 4 pomodoros), se realiza una pausa más larga de unos 30 minutos. 
+\subsection{Pomodoro}\label{pomodoro}
 
+El uso de este método de gestión de tiempo ayuda a incrementar la productividad. Esta técnica consiste en realizar una división del tiempo en fragmentos. Estos fragmentos son periodos de tiempo de 25 minutos (llamados \emph{pomodoros}). A su vez, estos fragmentos están separados entre ellos por pausas de 5 minutos. Cuando se han realizado 4 periodos de 25 minutos (es decir, 4 \emph{pomodoros}), se realiza una pausa más larga de unos 30 minutos.
 
-Patrones de diseño:
-MVC (Model, View, Controller): Aplicando este patrón de arquitectura, se utilizan 3 componentes, las vistas, los modelos y los controladores, de tal forma que se separa la lógica de la vista de la aplicación. De esta forma, si realizamos una modificación en una parte de nuestro código, la otra parte no se ve afectada. Por ejemplo, si modificamos la base de datos, solo modificaríamos el modelo encargado de esa acción, sin tocar el resto de la aplicación.
+Para realizar el seguimiento de esta técnica, se ha utilizado el siguiente recurso web: \href{https://tomato-timer.com/}{https://tomato-timer.com/}
 
+\section{Patrones de diseño}\label{patrones_de_diseño}
 
+\subsection{MVC (\emph{Model-View-Controller})}\label{mode-view-conroller}
 
-Control de versiones:
+Aplicando este patrón de arquitectura, se utilizan 3 componentes, las vistas, los modelos y los controladores, de tal forma que se separa la lógica de la vista de la aplicación. De esta forma, si realizamos una modificación en una parte de nuestro código, la otra parte no se ve afectada. Por ejemplo, si modificamos la base de datos, solo modificaríamos el modelo encargado de esa acción, sin tocar el resto de la aplicación.
 
-Git: Con el uso de este sistema de control de versiones, se realiza de manera eficiente y confiable el mantenimiento de versiones de aplicaciones o proyectos, cuando estas poseen una gran cantidad de código fuente. Además, guarda un registro de los cambios realizados en la aplicación o proyecto, de forma que podemos volver a una versión anterior en cualquier momento.
-
-
-Hosting:
-GitHub: Se trata de una plataforma de desarrollo colaborativo en la cual es posible alojar proyectos de forma gratuita a través Git (el sistema de control de versiones utilizado por GitHub). Con el uso de una cuenta de estudiante, es posible crear un repositorio privado en esta plataforma.
-
-
-Gestión del proyecto:
-
-Zenhub: Es una herramienta integrada con GitHub desde la cual se puede realizar una gestión de proyectos. Para ello dispone de un tablero con tarjetas, las cuales son tareas del proyecto. Estas tareas pueden estar en diversos estados a lo largo del proceso. (RELLENAR MÁS)
-
-Entorno de desarrollo:
-
-Eclipse: Es un IDE para el desarrollo de aplicaciones Java. Dispone de un gran número de plugins para facilitar el desarrollo, refactorización y revisión del código fuente.
-
-SceneBuilder: Es una interfaz de usuario con la cual a través del método darg and drop, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
-
-SQLite:
-
-Documentación:
-
-TextMaker: Editor de LaTeX multiplataforma, el cual integra diversas herramientas necesarias para la generación de documentos LaTeX.
+Está compuesto por 3 componentes:
+\begin{itemize}
+\tightlist
+\item
+\textit{\textbf{Model: }} Texto1
+\item
+\textit{\textbf{View: }} Texto2
+\item
+\textbf{\textbf{Controller: }} Texto3
+\end{itemize}
 
 
-Impresión 3D:
+INTRODUCIR ESQUEMA DE ESTA ARQUITECTURA
 
-Solidworks: Software de tipo CAD (Computer Aided Design) el cual es utilizado para modelar piezas en 3D. En este caso ha sido utilizado para el desarrollo de la caja que contiene el hardware utilizado para conectarse al bus CAN.
 
-Ultimaker Cura: Se trata de un silicer gratuito para la impresión 3D. Es el encargado de transformar el diseño 3D en un formato que la impresora 3D sea capaz de procesar, en este caso un fichero gcode.
+\section{Control de versiones}\label{control_de_versiones}
 
-Librerías:
+\subsection{Git}\label{git}
 
-USBtinLib: Librería utilizada para mediar entre el hardware utilizado para conectarse al bus CAN y Java. Es la encargada de realizar al conexión, además de que nos permite tanto enviar como recibir datos del bus. 
+Con el uso de este sistema de control de versiones, se realiza de manera eficiente y confiable el mantenimiento de versiones de aplicaciones o proyectos, cuando estas poseen una gran cantidad de código fuente. Además, guarda un registro de los cambios realizados en la aplicación o proyecto, de forma que podemos volver a una versión anterior en cualquier momento.
 
-sqlite-jdbc: Librería para realizar conexiones con bases de datos SQLite.
+\section{Hosting}\label{hosting}
 
-JSSC (Java Simple Serial Connector): Librería multiplataforma a través de la cual es posible obtener los puertos serie de comunicación disponibles en el equipo en el que se ejecute.
+\subsection{GitHub}\label{github}
 
-JavaFX: Se trata de una librería para Java, enfocada a la creación de interfaces gráficas.
+Se trata de una plataforma de desarrollo colaborativo en la cual es posible alojar proyectos de forma gratuita a través Git (el sistema de control de versiones utilizado por GitHub). Con el uso de una cuenta de estudiante, es posible crear un repositorio privado en esta plataforma.
 
-Medusa: Conjunto de componentes los cuales pueden ser añadidos a JavaFX para ampliar sus funcionalidades y características visuales.
+\section{Gestión del proyecto}\label{gestion_del_proyecto}
 
-Diseño de hardware:
+\subsection{ZenHub}\label{zenhub}
 
-KiCAD: Está compuesto por un conjunto de herramientas para el diseño de circuitos electrónicos. Esto incluye la creación de esquemas para circuitos electrónicos así como la conversión de esos esquemas a diseños de PCB (Printed Circuit Board). Además nos permite exportar los ficheros necesarios para la producción de dichos componentes.
+Es una herramienta web integrada con \emph{GitHub} desde la cual se puede realizar una gestión de proyectos. Para ello dispone de un tablero con tarjetas, las cuales son tareas del proyecto. Estas tareas pueden estar en diversos estados a lo largo del proceso. (RELLENAR MÁS)
+
+\section{Entorno de desarrollo}\label{entorno_de_desarrollo}
+
+\subsection{Eclipse IDE}\label{eclipse_ide}
+
+Es un IDE (\emph{Integrated Development Environment}) para el desarrollo de aplicaciones Java. Dispone de un gran número de \emph{plugins} para facilitar el desarrollo, refactorización y revisión del código fuente.
+
+\subsection{SceneBuilder}\label{scenebuilder}
+
+Es una interfaz de usuario con la cual a través del método darg and drop, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
+
+\subsection{SQLite}\label{sqlite}
+
+Es un sistema de gestión de bases de datos de tamaño reducido, la cual no necesita de un servidor para ser utilizada, sino que los datos son almacenados en un único fichero en el sistema \emph{host}.
+
+\section{Documentación}\label{documentacion}
+
+\subsection{TextMaker}\label{textmaker}
+
+Editor de LaTeX multiplataforma, el cual integra diversas herramientas necesarias para la generación de documentos LaTeX.
+
+\section{Impresión 3D}\label{impresion3d}
+
+\subsection{SolidWorks}\label{solidworks}
+
+Software de tipo CAD (Computer Aided Design) el cual es utilizado para modelar piezas en 3D. En este caso ha sido utilizado para el desarrollo de la caja que contiene el hardware utilizado para conectarse al bus CAN.
+
+\subsection{Ultimaker Cura}\label{ultimaker_cura}
+
+Se trata de un \emph{silicer} gratuito para la impresión 3D. Es el encargado de transformar el diseño 3D en un formato que la impresora 3D sea capaz de procesar, en este caso un fichero \emph{gcode}.
+
+\section{Librerias}\label{librerias}
+
+\subsection{USBtinLib}\label{usbtinlib}
+
+Librería utilizada para mediar entre el \emph{hardware} utilizado para conectarse al bus CAN y Java. Es la encargada de realizar al conexión, además de que nos permite tanto enviar como recibir datos del bus. 
+
+\subsection{SQLite-JDBC}\label{sqlite-jdbc}
+
+Librería para realizar conexiones con bases de datos SQLite.
+
+
+\subsection{JSSC (\emph{Java Simple Serial Connector})}\label{jssc_java_simple_serial_connector}
+
+Librería multiplataforma a través de la cual es posible obtener los puertos serie de comunicación disponibles en el equipo en el que se ejecute.
+
+\subsection{JavaFX}\label{javafx}
+Se trata de una librería para Java, enfocada a la creación de interfaces gráficas.
+
+\subsection{Medusa}\label{medusa}
+
+Conjunto de componentes los cuales pueden ser añadidos a \emph{JavaFX} para ampliar sus funcionalidades y características visuales.
+PONER WEB
+
+\section{Diseño de hardware}\label{diseño_de_hardware}
+
+\subsection{KiCAD}\label{kicad}
+
+Está compuesto por un conjunto de herramientas para el diseño de circuitos electrónicos. Esto incluye la creación de esquemas para circuitos electrónicos así como la conversión de esos esquemas a diseños de PCB (Printed Circuit Board). Además nos permite exportar los ficheros necesarios para la producción de dichos componentes.
 
 PAGINA WEB JLCPCB?
 
-CAN bus:
+\section{Bus CAN}\label{bus_can}
 
-canAlyser3 mini: Herramienta privada desarrollada para la utilización de un hardware concreto (USB-to-CAN), la cual ha sido utilizada para la generación de tramas (Frames) CAN para la realización de las pruebas y los test correspondientes durante el desarrollo de la aplicación.
+\subsection{canAlyser3 mini}\label{canalyser3_mini}
 
-SocketCAN: Se trata de un conjunto de herramientas y drivers "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir hardware CAN como si de una tarjeta de red se tratase.
+Herramienta privada desarrollada para la utilización de un hardware concreto (USB-to-CAN), la cual ha sido utilizada para la generación de tramas (\emph{Frames}) CAN para la realización de las pruebas y los test correspondientes durante el desarrollo de la aplicación.
 
-Can-utils: Se trata de un set de herramientas con las cuales podemos interactuar con el bus CAN. A continuación se describen las dos herramientas utilizadas y más interesantes.
+PONER LA MARCA QUE ES
 
-candump: Nos permite capturar todo el tráfico que es transmitido a través del bus, y almacenarlo en un fichero.
+\subsection{SocketCAN}\label{socketcan}
 
-canplayer: Esta herramienta nos permite generar tramas (Frames) y enviarlas al bus CAN. También es posible enviar un fichero capturado anteriormente con la herramienta candump.
+Se trata de un conjunto de herramientas y drivers "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir hardware CAN como si de una tarjeta de red se tratase.
+
+PONER WOLSWAGEN RESEARCH
+
+\subsection{Can-Utils}\label{can-utils}
+
+Se trata de un set de herramientas con las cuales podemos interactuar con el bus CAN. A continuación se describen las dos herramientas utilizadas y más interesantes.
+PONER GITHUB
+
+\subsection{candump}\label{candump}
+
+Nos permite capturar todo el tráfico que es transmitido a través del bus, y almacenarlo en un fichero.
+
+\subsection{canplayer}\label{canplayer}
+
+Esta herramienta nos permite generar tramas (Frames) y enviarlas al bus CAN. También es posible enviar un fichero capturado anteriormente con la herramienta \emph{candump}.
 
 
-https://tomato-timer.com/
 
 
 

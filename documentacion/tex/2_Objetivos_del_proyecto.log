@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  17 JAN 2019 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  21 JAN 2019 13:06
 entering extended mode
 **./2_Objetivos_del_proyecto.tex
 (2_Objetivos_del_proyecto.tex
@@ -236,15 +236,6 @@ If that doesn't work, type  X <return>  to quit.
 Overfull \hbox (20.0pt too wide) in paragraph at lines 8--8
 [] 
  []
-
-! Undefined control sequence.
-l.9 \tightlist
-              
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 Missing character: There is no D in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -497,15 +488,6 @@ Overfull \hbox (4.44444pt too wide) in paragraph at lines 18--19
 Overfull \hbox (20.0pt too wide) in paragraph at lines 20--20
 [] 
  []
-
-! Undefined control sequence.
-l.21 \tightlist
-               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 Missing character: There is no D in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1246,5 +1228,5 @@ Here is how much of TeX's memory you used:
  4016 multiletter control sequences out of 15000+200000
  3986 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 16i,1n,16p,199b,111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 16i,1n,16p,199b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
