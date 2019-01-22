@@ -1,18 +1,18 @@
 ![header](https://github.com/amb0070/CRET/blob/master/LOGO.png?raw=true)
-![Alt text]
+
 CRET - Can Bus Reverse Engineering Toolkit
 
-#Why another CAN tool?
+###Why another CAN tool?
 
-*Built from scratch with new ideas for analysis mechanisms.
-*The unique tool with easy identification and tagging of the packets.
-*Comfortable analysis using a GUI.
-*Internal project management qith SQLite database.
-*RAW Sniffing.
-*Real-time graphical Sniffing
-*Posibility to configure to ignore unusefull packets when sniffing.
-*Posibility to split byte values to help identification of the data.
-*JSON import and export for identified packets.
+- Built from scratch with new ideas for analysis mechanisms.
+- The unique tool with easy identification and tagging of the packets.
+- Comfortable analysis using a GUI.
+- Internal project management qith SQLite database.
+- RAW Sniffing.
+- Real-time graphical Sniffing
+- Posibility to configure to ignore unusefull packets when sniffing.
+- Posibility to split byte values to help identification of the data.
+- JSON import and export for identified packets.
 
 #Setup and running:
 
