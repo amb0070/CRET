@@ -2,7 +2,7 @@
 
 CRET - Can Bus Reverse Engineering Toolkit
 
-### Why another CAN tool?
+# Why another CAN tool?
 
 - Built from scratch with new ideas for analysis mechanisms.
 - The unique tool with easy identification and tagging of the packets.
@@ -16,20 +16,20 @@ CRET - Can Bus Reverse Engineering Toolkit
 
 # Setup and running:
 
-*Just run .jar file. Custom hardware is needed. You can find gerber files in hardware folder to DIY.
+- Just run .jar file. Custom hardware is needed. You can find gerber files in hardware folder to DIY.
 
 # Features
 
-*2-Interface support at the same time.
-*RAW Sniffing.
-*Internal proyect management with SQLite database.
-*Real-time graphical sniffing.
-*Dashboard with identified packets.
-*Posibility to import and export JSON files with the identified packets.
-*Posibility to ignore unuseful packets (packets with value 00).
-*Posibility to split bytes to help identification of the data.
-*Threaded sniffing and GUI.
-*Clean tabs for each analysis.
+- 2-Interface support at the same time.
+- RAW Sniffing.
+- Internal proyect management with SQLite database.
+- Real-time graphical sniffing.
+- Dashboard with identified packets.
+- Posibility to import and export JSON files with the identified packets.
+- Posibility to ignore unuseful packets (packets with value 00).
+- Posibility to split bytes to help identification of the data.
+- Threaded sniffing and GUI.
+- Clean tabs for each analysis.
 
 
 CAPTURITAS DEL PROGRAMA.
