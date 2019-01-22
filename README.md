@@ -7,10 +7,10 @@ CRET - Can Bus Reverse Engineering Toolkit
 - Built from scratch with new ideas for analysis mechanisms.
 - The unique tool with easy identification and tagging of the packets.
 - Comfortable analysis using a GUI.
-- Internal project management qith SQLite database.
+- Internal project management with SQLite database.
 - RAW Sniffing.
-- Real-time graphical Sniffing
-- Posibility to configure to ignore unusefull packets when sniffing.
+- Real-time graphical sniffing.
+- Posibility to configure to ignore unuseful packets when sniffing.
 - Posibility to split byte values to help identification of the data.
 - JSON import and export for identified packets.
 
@@ -21,15 +21,18 @@ CRET - Can Bus Reverse Engineering Toolkit
 # Features
 
 - 2-Interface support at the same time.
-- RAW Sniffing.
-- Internal proyect management with SQLite database.
+- RAW sniffing on trace mode (shows all packet changes).
+- RAW sniffing on monitor mode (updates all packet changes).
 - Real-time graphical sniffing.
+- Remove option to hide unuseful plotted packets.
+- Internal project management with SQLite database.
 - Dashboard with identified packets.
 - Posibility to import and export JSON files with the identified packets.
 - Posibility to ignore unuseful packets (packets with value 00).
 - Posibility to split bytes to help identification of the data.
 - Threaded sniffing and GUI.
-- Clean tabs for each analysis.
+- Clean tabs option for each analysis.
+- Comfortable and intuitive GUI.
 
 
 CAPTURITAS DEL PROGRAMA.
