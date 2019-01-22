@@ -36,12 +36,15 @@ LINKS CAN BUS
 
 Se decidió comenzar por esta fase por los siguientes motivos:
 
-
+\begin{itemize}
+\item
 No era seguro que el \emph{hardware} fuera a funcionar con lo que no se podía crear una dependencia por parte del software en caso de que esa parte no se realizase satisfactoriamente.
 
-La producción del \emph{hardware} requiere de unas semanas desde que envías el pedido hasta que el material llega.
-
+\item
+La producción de la PCB requiere de unas semanas desde que envías el pedido hasta que el material llega.
+\item
 Era la parte más desconocida y en la cual habría que invertir más tiempo para aplicar la metodología sugerida a la hora del desarrollo de este tipo de proyectos.
+\end{itemize}
 
 Se podrían definir 4 etapas las cuales se han llevado a cabo para el desarrollo:
 
@@ -51,26 +54,48 @@ El primer paso para el desarrollo de una placa de circuito impreso, es diseñar 
 
 En este esquema se especifican los componentes utilizados (resistencias, condensadores, circuitos integrados, etc). Además se define que entradas y salidas de esos componentes van conectados al resto de componentes.
 
-FOTO ESQUEMA ELECTRICO PEQUEÑO
+\imagen{scheme}{Vista general del esquema.}
 
 \subsection{Generación del \emph{netlist}}\
 
 Una vez realizado el esquema eléctrico, necesitamos generar el fichero \emph{Netlist}. En este fichero se almacenan los siguientes datos:
 
 Por cada componente:
-	
-	Se describen las conexiones de cada uno de los elementos del circuito.
-	El tipo de elemento que es cada componente.
-	La huella (footprint} que va a utilizar, es decir, en función de cada encapsulado (forma física del \emph{chip}), será necesario que la zona de soldadura de la PCB sea adaptada al mismo, tanto en tamaño como en forma.
+
+\begin{itemize}
+\item
+Se describen las conexiones de cada uno de los elementos del circuito.
+\item
+El tipo de elemento que es cada componente.
+\item
+La huella (\emph{footprint}) que va a utilizar, es decir, en función de cada encapsulado (forma física del \emph{chip}), será necesario que la zona de soldadura de la PCB sea adaptada al mismo, tanto en tamaño como en forma.
+\end{itemize}
 
 
 \subsection{Posicionamiento y enrutado de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
 
 Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs. Para que nos hagamos una idea, ese es el resultado:
 
-FOTO NETLIST TAL CUAL
+
+En este momento, es cuando tenemos que decidir:
+
+\begin{itemize}
+\item
+El número de capas que va a tener nuestra PCB: En este caso se utilizaron 2 capas al tratarse de un proyecto sencillo, pero en el que necesitaban hacerse cruces de pistas.
+\item
+La posición de los componentes y el enrutado de las pistas.
+\end{itemize}
+
+FOTO DEL ESQUEMA TERMINADO.
 
 
+\imagen{fotoPCB}{PCB del proyecto sin los componentes}
+
+
+Tras limpiar la PCB, posicionar y soldar los componentes, obtenemos el siguiente resultado:
+
+
+\imagen{finishedPCB}{PCB del proyecto con los componentes soldados}
 
 \section{Desarrollo del \emph{software}}
 
@@ -100,9 +125,47 @@ El problema surge cuando se intenta realizar una escritura en el objeto de tipo 
 
 Para la resolución de este problema se decidió utilizar un modelo de tipo Productor/Consumidor. Para ello se definió un objeto de tipo \emph{ConcurrentLinkedQueue} en el cual el \emph{thread} encargado de la lectura del bus CAN, iba introduciendo la información que le llegaba al tiempo que el \emph{thread} de la interfaz gráfica iba cargando esos datos en el objeto de tipo \emph{ObservableList}. De esta manera, se consiguieron solucionar los problemas de concurrencia.
 
-\section{Diseño e impresión de la caja}\label{desarrollo_e_impresion_de_la_caja}
+\section{Diseño de la interfaz gráfica}\label{diseño_de_la_interfaz_grafica}
 
-Para la protección de \emph{hardware} desarrollado, se vió la necesidad de crear una caja la cual almacenase dentro la placa, pero que además permitiera la conexión de los elementos necesarios.
+Para el desarrollo de la interfaz gráfica, se ha utilizado la herramienta \emph{SceneBuilder}.
+
+Esta herramienta nos permite crear interfaces gráficas de forma fácil e intuitiva. Una vez realizado el diseño, la herramienta genera un fichero FXML (basado en una estructura XML), el cual será utilizado para mostrar los elementos en pantalla.
+
+En este fichero es importante tener en cuenta los siguientes aspectos:
+
+\begin{itemize}
+
+\item
+Debemos de indicarle que controlador se va a encargar de manejar esa vista. Es decir, siempre tiene que existir una relación vista-controlador.
+\item
+Todos los componentes que vayan a ser utilizados desde el controlador, tiene que tener como mínimo la descripción \emph{fx:id} para su identificación. Esta id tiene que ser única en el documento FXML.
+\item
+Además, en este fichero se indican las acciones que queremos que tengan los elementos. Por ejemplo, que al pulsar un botón o modificar un texto, el controlador ejecute una función establecida.
+
+\end{itemize}
 
 
+
+\section{Testing}\label{testing}
+
+Para realizar las pruebas correspondientes durante el desarrollo de la aplicación y no depender del acceso físico a una máquina o vehículo, se ha desarrollado una pequeña placa la cual simularía una red CAN, en la que se pueden conectar dos nodos, uno para enviar datos al bus y el otro para recibir.
+
+Para ello simplemente se han colocado dos resistencias de 120 \emph{ohmns} (definidas por el estándar del CAN), y unos de tipo DB9, ya que son los más habituales en este tipo de \emph{hardware}.
+
+\imagen{hardwareRedCan}{Placa casera para simular una red CAN}.
+
+\section{Diseño e impresión 3D de una caja protectora}\label{desarrollo_e_impresion_3d_de_una_caja_protectora}
+
+Para la protección de \emph{hardware} desarrollado, se vio la necesidad de crear una caja la cual almacenase dentro la placa, pero que además permitiera la conexión de los elementos necesarios para su funcionamiento.
+
+Para ello se ha utilizado el \emph{software} \emph{SolidWorks} para el diseño de la misma.
+
+FOTO CAJA EN 3D EN EL PC
+
+Una vez concluido el diseño, el fichero 3D ha sido introducido en \emph{Ultimaker CURA}, un \emph{silicer} el cual nos transforma el objeto 3D en un fichero el cual la impresora 3D sea capaz de interpretar.
+
+Para realizar la impresión, se ha utilizado una impresora 3D \emph{BQ Prusa i3 Hephestos} y plástico de tipo ABS (\emph{Acrylonitrile Butadiene Styrene}) el cual resulta más difícil de imprimir, pero es adecuado para un uso intensivo como puede ser el de la industria, teniendo más resistencia a golpes y a temperatura que uno de sus competidores como puede ser el PLA ( Polylactic acid).
+
+
+FOTO DEL A CAJA TERMINADA
 

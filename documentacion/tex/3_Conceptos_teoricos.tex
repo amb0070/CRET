@@ -6,45 +6,95 @@ Las partes del proyecto con mayor desconocimiento y complejidad están enfocadas
 
 El bus CAN (\emph{Controller Area Network}) es un protocolo desarrollado para la comunicación entre los distintos micro-controladores y dispositivos que son necesarios para el funcionamiento de una máquina (un vehículo, por ejemplo). Este protocolo no necesita de un host principal, sino que sigue una topología de tipo "bus".
 
+\imagen{canNetwork}{Ejemplo de dispositivos conectados a un bus CAN}
+
 Dicho protocolo está basado en el uso de mensajes para el intercambio de información entre los distintos dispositivos que lo componen.
 
 Es utilizado en multitud de escenarios como la aviación, la navegación, la automatización industrial, instrumentos médicos, maquinaria pesada y ascensores entre otros.
 
 Una de las características que nos interesa conocer, es que al ser una topología de tipo BUS, todos los nodos tienen acceso a la información que es transmitida a través del bus, con lo que nos es suficiente con conectarnos a dicho bus y capturar los datos que transcurren a través de el para analizarlos posteriormente.
 
-El principal elemento que compone una red de tipo CAN son los nodos
+\imagen{canbusTopology}{Esquema de conexión de los nodos en el bus CAN}
 
-Nodo:
-Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
+El principal elemento que compone una red de tipo CAN son los nodos, además de los cables de conexión entre los mismos:
 
-Wire: Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables, los cuales tienen las siguientes características:
+\begin{itemize}
+\item
+\textbf{Nodo:} Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
+
+\textbf{Cable:} Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables. Estos son identificados por CAN-H (CAN High) y CAN-L (CAN-Low).
+
+Esto es debido a que las señales que circulan por los mismos, son señales diferenciales, como se puede apreciar en la siguiente figura.
+
+\imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio}
+
+\end{itemize}
+
 
 
 Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
 
-ACTIVE: Cuando un nodo es conectado en modo "active", esto significa que si envía un mensaje a través del bus, al no ser que el transciver esté conectado en modo "Single Shot", el mensaje será enviado continuamente por el bus hasta que se reciba un ACK (Acknonolowment). De manera que este modo si que tiene influencias sobre el bus. 
+\begin{itemize}
+\item
+\textbf{Active:} Cuando un nodo es conectado en modo "active", esto significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo "Single Shot", el mensaje será enviado continuamente por el bus hasta que se reciba un ACK (Acknonolowment). De manera que este modo si que tiene influencias sobre el bus.
 
-LISTENONLY: Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en este modo, dicho nodo no tiene influencia sobre el resto de nodos. Si llega un Frame erroneo, no genera flags de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
+\item
+\textbf{Listen-Only:} Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en modo \emph{listenonly}, dicho nodo no tiene influencia sobre el resto. Si por ejemplo llega un \emph{Frame} erróneo, no genera \emph{flags} de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
 
-LOOPBACK: Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{loopback}, significa que este nodo es capaz "hablar" consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
+\item
+\textbf{LoopBack:} Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{LoopBack}, significa que este nodo es capaz "hablar" consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
 
-
+\end{itemize}
 
 Cada uno de los nodos es capaz de enviar y recibir mensajes, pero no de forma simultanea.
 
-FOTO DE UN SOLO NODO.
+\imagen{canNode}{Anatomía de un nodo CAN}
 
-Frame:
-Cada uno de los mensajes enviados a través de la red CAN. Estos contienen 3 campos en los que nos centraremos: ID, Length y Data.
+A continuación se describen los elementos de una trama CAN, así como la descripción de la misma.
 
-ID: Se trata del identificador del Frame. A través de el, se establece la prioridad que tiene ese Frame durante el acceso al bus de datos.
+Trama (\emph{Frame}: Cada uno de los mensajes enviados a través de la red CAN. Con relación a la figura anterior, correspondería a cada una de las líneas mostradas.
 
-Length: En este campo, se define la longitud del campo de datos del Frame. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 bytes de datos.
+La estructura interna es más compleja, pero no nos centraremos en ella ya que no tiene relevancia en este caso. Únicamente nos centraremos en los 3 elementos identificados en la figura.
 
-Data:
+Cada uno de las tramas contiene 3 campos en los que nos centraremos: ID, Length y Data.
+
+\begin{itemize}
+\item
+\textbf{ID (Identificador):} Se trata del identificador del Frame. A través de el, se establece la prioridad que tiene ese Frame durante el acceso al bus de datos.
+\item
+\textbf{Length (Longitud):} En este campo, se define la longitud del campo de datos del Frame. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 bytes de datos.
+\item
+\textbf{Data (Datos):} Campo en el que se transportan los datos que son enviados por el nodo correspondiente. La longitud de este campo puede ir desde 0 bytes hasta un total de 8 bytes.
+\end{itemize}
+
+\imagen{candump}{Identificación de los elementos de la salida del comando \emph{candump}}
 
 
-Bitriate: Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad. Esta, puede cambiar dependiendo de los sistemas. Los valores más comunes son 			     10000 bit/s, 20000 bit/s, 50000 bit/s, 100000 bit/s, 125000 bit/s, 250000 bit/s, 500000 bit/s, 800000 bit/s y  1000000 bit/s.
+\textbf{Bitriate:} Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad para entenderse entre ellos. Esta, puede cambiar dependiendo de los sistemas y de su desarrollo.
+Los valores más comunes son:
+
+\begin{itemize}
+\tightlist
+\item
+10000 bit/s
+\item
+20000 bit/s
+\item
+50000 bit/s
+\item
+100000 bit/s
+\item
+125000 bit/s
+\item
+250000 bit/s
+\item
+500000 bit/s
+\item
+800000 bit/s
+\item
+1000000 bit/s
+\end{itemize}
+
 
 Además, el estándar dispone de varias medidas para la detección de errores y seguridad las cuales no son relevantes para la exposición de este proyecto.
 
@@ -54,24 +104,31 @@ A través del bus CAN, es posible el flujo de datos a distintas velocidades de f
 
 Siguiendo el modelo OSI, el estándar bus CAN especifica únicamente las 3 primeras capas:
 
+\begin{itemize}
+
+\item
 Capa física: Esta capa define como son transmitidas las señales a nivel eléctrico, es decir, los niveles de las señales en su representación como bits, y el medio de transmisión que va a ser utilizado. Además, se encargaría de gestionar la sincronización de los mensajes, así como su "bit encoding".
 
+\item
 Capa de enlace de datos:
 
+\item
 Capa de red: Esta se encargaría de los aspectos como los filtros de aceptación, 
 
-
-
-Esquemas can
-Explicación Velocidad
-Explicación hardware
-Explicación señales low-level
-Explicación capas del canbus
+\end{itemize}
 
 
 \section{Desarrollo del hardware}\label{desarrollo_del_hardware}
 
 A continuación se describen distintos conceptos básicos sobre el hardware desarrollado y alguno de sus componentes:
+
+\subsection{Esquema}\label{esquema}
+
+Representación esquemática de los componentes de un circuito, así como sus entradas y salidas, y conexión entre ellos.
+
+A continuación se muestra un ejemplo visual de un varios componentes en un esquema para el diseño de una PCB:
+
+\imagen{esquema}{Ejemplo de un componente en un esquema}
 
 \subsection{PCB - Printed Circuit Board}\label{pcb_printed_circuit_board}
 
@@ -81,17 +138,25 @@ Hace referencia a la placa sobre la que van soldados todos los componentes eléc
 
 Cada una de las conexiones entre los componentes. Hacen el trabajo de un cable, solo que integrado en la placa.
 
+\imagen{pistas}{Esquema de pistas de una PCB.}
+
 \subsection{Pad}\label{pad}
 
 Cada uno de los espacios en los cuales se sueldan los distintos  elementos que componen el circuito.
+
+\imagen{pad}{Ilustración con 4 \emph{pads} en una PCB.}
 
 \subsection{Vía}\label{via}
 
 Al tratarse de PCBs de doble capa ( es decir, que tiene pistas o elementos en ambos lados), a veces es necesario realizar un cruce entre vías, o conectar un componente que está en el otro lado de la placa. Para ello se utilizan las vías, a través de ellas se consiguen conectar ambas capas de la PCB.
 
+\imagen{via}{Visión de una vía a través de un corte de una PCB.}
+
 \subsection{Footprint}\label{footprint}
 
 Hace referencia al espacio necesario para colocar un elemento del hardware. Existen estándares que definen los tamaños y formas de dichos espacios.
+
+\imagen{footprint}{Ejemplo de una huella de un IC.}
 
 \subsection{Gerber}\label{gerber}
 Es un formato de fichero el cual contiene la información necesaria para realizar la fabricación de una PCB (Placa de Circuito Impreso).
@@ -102,40 +167,5 @@ Es un formato de fichero el cual contiene la información necesaria para realiza
 
 Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
 
-
-\section{Imágenes}
-
-Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
-
-\imagen{escudoInfor}{Autómata para una expresión vacía}
-
-
-
-\section{Listas de items}
-
-Existen tres posibilidades:
-
-\begin{itemize}
-	\item primer item.
-	\item segundo item.
-\end{itemize}
-
-\begin{enumerate}
-	\item primer item.
-	\item segundo item.
-\end{enumerate}
-
-\begin{description}
-	\item[Primer item] más información sobre el primer item.
-	\item[Segundo item] más información sobre el segundo item.
-\end{description}
-	
-\begin{itemize}
-\item 
-\end{itemize}
-
-\section{Tablas}
-
-Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
 
 

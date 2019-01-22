@@ -2,6 +2,7 @@
 
 \section{Metodologías}\label{metodologias}
 
+
 \subsection{Scrum}\label{scrum}
 
 A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio. Esto se consigue con el uso de\emph{sprints}.
@@ -20,18 +21,16 @@ Aplicando este patrón de arquitectura, se utilizan 3 componentes, las vistas, l
 
 Está compuesto por 3 componentes:
 \begin{itemize}
-\tightlist
 \item
-\textit{\textbf{Model: }} Texto1
+\textit{\textbf{Model: }} Normalmente esta parte se encarga de los datos (no siempre). Esto puede ser por ejemplo, consultando a una base de datos o cualquier otra estructura de datos utilizada en el desarrollo.
 \item
-\textit{\textbf{View: }} Texto2
+\textit{\textbf{View: }} Componen la representación visual de los datos, es decir, todo lo que tenga que ver con la interfaz gráfica.
 \item
-\textbf{\textbf{Controller: }} Texto3
+\textbf{\textbf{Controller: }} Es un mediador entre los modelos y las vistas. Se encarga de recibir las órdenes del usuario a través de las vista, realizar la petición de datos al modelo, y devolverlo de nuevo a la vista.
 \end{itemize}
 
 
-INTRODUCIR ESQUEMA DE ESTA ARQUITECTURA
-
+\imagen{modeloMVC}{Modelo MVC}.
 
 \section{Control de versiones}\label{control_de_versiones}
 
@@ -57,9 +56,11 @@ Es una herramienta web integrada con \emph{GitHub} desde la cual se puede realiz
 
 Es un IDE (\emph{Integrated Development Environment}) para el desarrollo de aplicaciones Java. Dispone de un gran número de \emph{plugins} para facilitar el desarrollo, refactorización y revisión del código fuente.
 
+Una de las decisiones del uso de esta IDE es la integración fácil y rápida que tiene con JavaFX, además de estar acostumbrado a utilizarla durante toda la carrera.
+
 \subsection{SceneBuilder}\label{scenebuilder}
 
-Es una interfaz de usuario con la cual a través del método darg and drop, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
+Es una interfaz de usuario con la cual a través del método \emph{Darg and Drop}, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
 
 \subsection{SQLite}\label{sqlite}
 
@@ -96,13 +97,20 @@ Librería para realizar conexiones con bases de datos SQLite.
 
 Librería multiplataforma a través de la cual es posible obtener los puertos serie de comunicación disponibles en el equipo en el que se ejecute.
 
+Puede encontrarse información en el siguiente enlace: https://github.com/scream3r/java-simple-serial-connector
+
+
 \subsection{JavaFX}\label{javafx}
-Se trata de una librería para Java, enfocada a la creación de interfaces gráficas.
+Se trata de una librería para Java, enfocada a la creación de interfaces gráficas. Dispone de multitud elementos predefinidos los cuales nos permiten la creación de una interfaz de uso fácil e intuitivo, además de ser agradable a la vista.
+
+Puede encontrarse información en el siguiente enlace: https://docs.oracle.com/javase/8/javase-clienttechnologies.htm
 
 \subsection{Medusa}\label{medusa}
 
 Conjunto de componentes los cuales pueden ser añadidos a \emph{JavaFX} para ampliar sus funcionalidades y características visuales.
-PONER WEB
+
+Puede encontrarse en el siguiente enlace: https://community.oracle.com/docs/DOC-992746
+
 
 \section{Diseño de hardware}\label{diseño_de_hardware}
 
@@ -122,14 +130,15 @@ PONER LA MARCA QUE ES
 
 \subsection{SocketCAN}\label{socketcan}
 
-Se trata de un conjunto de herramientas y drivers "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir hardware CAN como si de una tarjeta de red se tratase.
+Se trata de un conjunto de herramientas y \emph{drivers} "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir \emph{hardware} CAN como si de una tarjeta de red se tratase.
 
 PONER WOLSWAGEN RESEARCH
 
 \subsection{Can-Utils}\label{can-utils}
 
 Se trata de un set de herramientas con las cuales podemos interactuar con el bus CAN. A continuación se describen las dos herramientas utilizadas y más interesantes.
-PONER GITHUB
+
+Puede encontrarse en el siguiente enlace: https://github.com/linux-can/can-utils
 
 \subsection{candump}\label{candump}
 

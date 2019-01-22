@@ -1,3 +1,17 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Aut\IeC {\'o}mata para una expresi\IeC {\'o}n vac\IeC {\'\i }a}}{11}{figure.3.1}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de dispositivos conectados a un bus CAN}}{7}{figure.3.1}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema de conexi\IeC {\'o}n de los nodos en el bus CAN}}{8}{figure.3.2}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Se\IeC {\~n}ales el\IeC {\'e}ctricas del bus CAN vistas por un osciloscopio}}{9}{figure.3.3}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Anatom\IeC {\'\i }a de un nodo CAN}}{10}{figure.3.4}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Identificaci\IeC {\'o}n de los elementos de la salida del comando \emph {candump}}}{11}{figure.3.5}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de un componente en un esquema}}{13}{figure.3.6}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema de pistas de una PCB.}}{13}{figure.3.7}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustraci\IeC {\'o}n con 4 \emph {pads} en una PCB.}}{14}{figure.3.8}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Visi\IeC {\'o}n de una v\IeC {\'\i }a a trav\IeC {\'e}s de un corte de una PCB.}}{14}{figure.3.9}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de una huella de un IC.}}{15}{figure.3.10}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Modelo MVC}}{18}{figure.4.11}% 
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Vista general del esquema.}}{25}{figure.5.12}% 
+\contentsline {figure}{\numberline {5.13}{\ignorespaces PCB del proyecto sin los componentes}}{26}{figure.5.13}% 
+\contentsline {figure}{\numberline {5.14}{\ignorespaces PCB del proyecto con los componentes soldados}}{27}{figure.5.14}% 
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Placa casera para simular una red CAN}}{29}{figure.5.15}% 
