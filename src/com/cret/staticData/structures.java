@@ -12,6 +12,10 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
+/**
+ * @author Adrian Marcos
+ *
+ */
 public class structures {
 	
 	public static String mode = "RAW"; 
@@ -54,6 +58,9 @@ public class structures {
 	//RAW
 	public static ObservableList<CanTable> dataTable;
 	
+	public static boolean monitor = true;
+	
+	
 	public static void resetDashboardStructures() {
 		
 		dataLineChartDash = new HashMap<>();
@@ -73,6 +80,11 @@ public class structures {
 		xySeries = new HashMap<>();
 		xSeriesData = new HashMap<>();
 		
+		
+	}
+
+	public static void resetRAWStructures() {
+		//TODO
 		
 	}
 }
