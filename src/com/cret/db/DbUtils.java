@@ -1,25 +1,59 @@
 package com.cret.db;
 
 import com.cret.gui.GuiUtils;
-
 import javafx.scene.control.Alert.AlertType;
-
 import java.io.File;
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 
+/**
+ * 
+ * Database utilities.
+ * 
+ * Used to check if the database exists, and method to connect.
+ * 
+ * @author Adrian Marcos
+ * @version 1.0
+ *
+ */
 public class DbUtils {
+	
+	  /**
+	 * @return
+	 */
+	public static Connection connect() {
 
-	//Checks if database exists.
+	        String url = "jdbc:sqlite:cret.db";
+	        
+	        Connection conn = null;
+	        
+	        try {
+	            conn = DriverManager.getConnection(url);
+	        } catch (SQLException e) {
+	        	GuiUtils.generateAlert(AlertType.ERROR, "INTERNAL ERROR", "Error connecting to database.");
+	        }
+	        return conn;
+	    }
+
+
+	/**
+	 * 
+	 * Checks if the database exists and has correct structure.
+	 * 
+	 * @param dbName Database file name.
+	 * @return True if database exists.
+	 */
 	public static boolean checkDatabaseExist(String dbName) {
 
 		File f = new File(dbName);
 		
+		/**
+		 * Check if file exists.
+		 */
 		if (!f.exists()) {
 			return false;
 		}
@@ -29,6 +63,10 @@ public class DbUtils {
 		String table1 = "SELECT name FROM sqlite_master WHERE type='table' AND name='data'";
 		
 		String table2 = "SELECT name FROM sqlite_master WHERE type='table' AND name='projects'";
+		
+		/**
+		 * Checks if it's possible to connect and checks the structure.
+		 */
 		
 		try (Connection con = DriverManager.getConnection(url)){
 			
