@@ -21,9 +21,12 @@ import java.sql.Statement;
  *
  */
 public class DbUtils {
+
 	
-	  /**
-	 * @return
+	/**
+	 * Connects to database and returns the connection.
+	 * 
+	 * @return Connection to database.
 	 */
 	public static Connection connect() {
 
