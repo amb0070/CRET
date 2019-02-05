@@ -31,28 +31,29 @@
 \contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{21}{appendix.Alph3}% 
 \contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{21}{section.Alph3.1}% 
 \contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{21}{section.Alph3.2}% 
+\contentsline {subsection}{Base de datos}{21}{section*.20}% 
 \contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{22}{section.Alph3.3}% 
-\contentsline {subsection}{Model-View-Controller (MVC)}{22}{section*.20}% 
-\contentsline {subsection}{Arquitectura general}{22}{section*.21}% 
-\contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{23}{section*.22}% 
-\contentsline {subsection}{Dise\IeC {\~n}o de clases}{24}{section*.23}% 
-\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o de interfaces}{26}{section.Alph3.4}% 
+\contentsline {subsection}{Model-View-Controller (MVC)}{22}{section*.21}% 
+\contentsline {subsection}{Arquitectura general}{23}{section*.22}% 
+\contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{24}{section*.23}% 
+\contentsline {subsection}{Dise\IeC {\~n}o de clases}{25}{section*.24}% 
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o de interfaces}{27}{section.Alph3.4}% 
 \contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{29}{appendix.Alph4}% 
 \contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{29}{section.Alph4.1}% 
 \contentsline {section}{\numberline {D.2}Estructura de directorios}{29}{section.Alph4.2}% 
 \contentsline {section}{\numberline {D.3}Manual del programador}{30}{section.Alph4.3}% 
-\contentsline {subsection}{Entorno de desarrollo}{30}{section*.24}% 
-\contentsline {subsection}{Java JDK 8}{30}{section*.25}% 
-\contentsline {subsection}{JavaFX}{30}{section*.26}% 
-\contentsline {subsection}{Git}{30}{section*.27}% 
-\contentsline {subsection}{SceneBuilder}{31}{section*.28}% 
-\contentsline {subsection}{Eclipse}{31}{section*.29}% 
-\contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{32}{section*.30}% 
-\contentsline {subsection}{Importar proyecto a Eclipse}{33}{section*.31}% 
-\contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{33}{section*.32}% 
+\contentsline {subsection}{Entorno de desarrollo}{30}{section*.25}% 
+\contentsline {subsection}{Java JDK 8}{30}{section*.26}% 
+\contentsline {subsection}{JavaFX}{30}{section*.27}% 
+\contentsline {subsection}{Git}{30}{section*.28}% 
+\contentsline {subsection}{SceneBuilder}{31}{section*.29}% 
+\contentsline {subsection}{Eclipse}{31}{section*.30}% 
+\contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{32}{section*.31}% 
+\contentsline {subsection}{Importar proyecto a Eclipse}{33}{section*.32}% 
+\contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{33}{section*.33}% 
 \contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{34}{section.Alph4.4}% 
-\contentsline {subsection}{Compilaci\IeC {\'o}n}{34}{section*.33}% 
-\contentsline {subsection}{Ejecuci\IeC {\'o}n}{34}{section*.34}% 
+\contentsline {subsection}{Compilaci\IeC {\'o}n}{34}{section*.34}% 
+\contentsline {subsection}{Ejecuci\IeC {\'o}n}{34}{section*.35}% 
 \contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{35}{appendix.Alph5}% 
 \contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{35}{section.Alph5.1}% 
 \contentsline {section}{\numberline {E.2}Requisitos de usuarios}{35}{section.Alph5.2}% 

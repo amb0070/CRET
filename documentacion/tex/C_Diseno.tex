@@ -8,6 +8,28 @@ Se define los datos que va a utilizar la aplicación, el diseño de sus interfac
 
 \section{Diseño de datos}
 
+\subsection{Base de datos}
+
+La aplicación utiliza una base de datos SQLite para almacenar los proyectos. La estructura de la base de datos se compone de dos tablas:
+
+\begin{itemize}
+\item
+\textbf{projects}: En esta tabla se almacenan los nombres de los proyectos. Dispone de un único campo llamado \emph{name}, el cual es clave primaria de la tabla.
+\item
+\textbf{data}: Esta tabla almacena los datos identificados en cada proyecto. Dispone de 4 campos:
+\begin{itemize}
+\item
+\textbf{name}: Almacena la etiqueta con la que se ha identificado al dato.
+\item
+\textbf{ID}: Almacena la ID del \emph{frame} que contiene el dato identificado.
+\item
+\textbf{byte}: Almacena el \emph{byte} del frame que contiene el dato identificado.
+\item
+\textbf{projectName}: Clave foránea a la tabla \emph{projects}. Nos indica el proyecto al que pertenece el dato identificado.
+\end{itemize}
+\end{itemize}
+
+A continuación se expone un diagrama de la base de datos:
 
 \imagen{databaseDiagram}{Diagrama de la base de datos}
 
@@ -31,7 +53,13 @@ Está compuesto por tres componentes:
 
 \subsection{Arquitectura general}
 
-ESQUEMA DE LA ARQUITECTURA
+A continuación se describe de manera general la arquitectura de la aplicación.
+
+Como se ha indicado anteriormente, se utiliza el modelo MVC para el funcionamiento interno de la aplicación.
+
+Además de eso, cabe destacar la interacción con la base de datos, tanto de lectura y escritura, como la interacción con la interfaz CAN encargada de leer los datos que fluyen por el bus.
+
+\imagen{arquitectura}{Arquitectura general del proyecto.}
 
 \subsection{Diseño de paquetes}
 
