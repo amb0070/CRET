@@ -2,10 +2,129 @@
 
 \section{Introducción}
 
+En esta sección se expone cómo se han resuelto las especificaciones indicadas anteriormente.
+
+Se define los datos que va a utilizar la aplicación, el diseño de sus interfaces y su arquitectura.
+
 \section{Diseño de datos}
 
-\section{Diseño procedimental}
+
+\imagen{databaseDiagram}{Diagrama de la base de datos}
 
 \section{Diseño arquitectónico}
 
+\subsection{Model-View-Controller (MVC)}
 
+Aplicando este patrón de diseño, se utilizan 3 componentes, las vistas, los modelos y los controladores, de tal forma que se separa la lógica de la vista de la aplicación. Con el uso de este método, si realizamos una modificación en una parte de nuestro código, la otra parte no se ve afectada.
+
+Por ejemplo, si modificamos la base de datos, solo modificaríamos el modelo encargado de esa acción, sin tener que modificar por ejemplo, la parte de la vista.
+
+Está compuesto por tres componentes:
+
+\textbf{Model:} Normalmente esta parte se encarga de los datos (no siempre). Esto puede ser por ejemplo, consultando a una base de datos para obtener información.
+
+\textbf{View:} Componen la representación visual de los datos, es decir, todo lo que tenga que ver con la interfaz gráfica.
+
+\textbf{Controller:} Es un mediador entre los modelos y las vistas. Se encarga de recibir las órdenes del usuario a través de la vista, realizar la petición de datos al modelo y devolverlo de nuevo a la vista para que sea mostrado al usuario.
+
+\imagen{modeloMVC}{Modelo MVC}.
+
+\subsection{Arquitectura general}
+
+ESQUEMA DE LA ARQUITECTURA
+
+\subsection{Diseño de paquetes}
+
+Para conseguir una organización interna del proyecto, se agruparon las distintas funcionalidades de la aplicación en paquetes. De esta manera se consigue una aplicación modular y con funcionalidades independientes.
+
+\imagen{paquetes}{Paquetes de la aplicación}
+
+A continuación se describen cada uno de los paquetes:
+
+\begin{itemize}
+\item
+\textbf{can}: En este paquete se almacena todo lo relacionado con la interacción con las interfaces CAN.
+\item
+\textbf{db}: En este paquete se almacena todo lo relacionado con la conexión a la base de datos, la obtención y la inserción de datos en la misma.
+\item
+\textbf{gui}: En este paquete se almacena todo lo relacionado con la interfaz gráfica. 
+\item
+\textbf{main}: En este paquete se encuentra el \emph{main} de la aplicación, así como el \emph{preloader}.
+\item
+\textbf{projects}: En ete paquete se almacena todo lo relacionado con la gestión de proyectos de la aplicación.
+\item
+\textbf{staticData}: En este paquete se almacenan una serie de estructuras las cuales son utilizadas por distintos componentes del proyecto. En el se almacenan todos los datos que son representados por las gráficas de la aplicación.
+\end{itemize}
+
+
+\subsection{Diseño de clases}
+
+En este apartado se describe cada una de las clases que forman la aplicación y su funcionamiento.
+
+\imagen{paquetesClases}{Diagrama de clases y paquetes de la aplicación.}
+
+\imagen{paquetesClasesGui}{Diagrama de clases y paquetes de la interfaz gráfica.}
+
+
+\begin{itemize}
+\item
+\textbf{CanConnection:} -
+\item
+\textbf{CanListenerAnalysis:} -
+\item
+\textbf{CanListenerDashboard:} -
+\item
+\textbf{CanListenerRAW:} -
+\item
+\textbf{CanTable:} -
+\item
+\textbf{CanUtils:} -
+\item
+\textbf{database:} -
+\item
+\textbf{DbUtils:} -
+\item
+\textbf{Main:} -
+\item
+\textbf{Preloader:} -
+\item
+\textbf{json:} -
+\item
+\textbf{Project:} -
+\item
+\textbf{structures:} -
+\item
+\textbf{AboutController:} -
+\item
+\textbf{ConfigurationViewController:} -
+\item
+\textbf{EditableLabel:} -
+\item
+\textbf{ExportController:} -
+\item
+\textbf{FrameViewerController:} -
+\item
+\textbf{GuiUtils:} -
+\item
+\textbf{ImportController:} -
+\item
+\textbf{NewProjectController:} -
+\item
+\textbf{ProjectListController:} -
+\item
+\textbf{RootViewController:} -
+\end{itemize}
+
+
+\section{Diseño de interfaces}
+
+El diseño de las interfaces se ha llevado a cabo a través de la utilidad SceneBuilder. Se ha intentado seguir una estructura limpia y clara, para facilitar su interacción con el usuario.
+
+A continuación se muestran algunas de las vistas de la aplicación:
+
+CAPTURAS DE LA APP
+
+El siguiente diagrama nos muestra el flujo de navegabilidad por la aplicación.
+
+
+\imagen{navegacion}{Diagrama de navegabilidad}.

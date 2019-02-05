@@ -2,12 +2,368 @@
 
 \section{Introducción}
 
+Una de las fases más importantes de cualquier proyecto es la planificación. En esta fase se estima el tiempo y los requisitos necesarios para la realización del proyecto. Para ello es necesaria una idea clara de lo que se quiere realizar de manera que todas las partes que componen el proyecto puedan ser analizadas individualmente.
+
+Podemos dividir la fase de planificación en dos fases más pequeñas:
+
+\begin{itemize}
+\item
+  Planificación temporal.
+\item
+  Estudio de viabilidad.
+\end{itemize}
+
+En la primera fase se realiza una planificación de los tiempos esperados. Se especifican los tiempos necesarios para cada una de las partes que componen el proyecto, a la vez que una fecha de inicio y de fin de las mismas.
+
+La segunda fase se centra en un estudio de la viabilidad del proyecto. En esta fase se pueden diferenciar dos partes:
+
+\begin{itemize}
+\item
+\textbf{Viabilidad económica:} Estimación de los costes y beneficios del proyecto.
+
+\textbf{Viabilidad legal:} Regulaciones legales que pueden afectar al proyecto. En este caso serían la Ley de Protección de Datos y las licencias del software.
+\end{itemize}
+
 \section{Planificación temporal}
+
+Para realizar una planificación del proyecto adecuada, se decidió aplicar \emph{Scrum} (una metodología ágil).
+
+Para ello, se dividió el trabajo en \emph{sprints} los cuales iban siendo planificados según se terminaba el anterior. La duración media de estos era de una semana de trabajo.
+
+En cada uno de los \emph{sprint} se generaban una serie de tareas las cuales tenían que ser realizadas en ese intervalo de tiempo. Para ello se utilizó la plataforma \emph{Zenhub}, en la cual las \emph{issues} hacen de tareas, y los \emph{Milestones} de \emph{Sprints}.
+
+\subsection{Sprint 0}
+
+Este primer \emph{sprint} fue en el que más complicado de planificar. Estaba incluido el desarrollo del \emph{hardware} el cual no sabíamos seguro si se conseguirían los conocimientos necesarios para diseñarlo, ni si después funcionaría correctamente. Además, el desarrollo de la aplicación dependía del resultado de esta parte ya que iba a basarse en ello.
+
+Al final, sobrepasando un poco el tiempo planificado, se consiguió poner el \emph{hardware} en marcha, con lo que se podía comenzar con el desarrollo del \emph{software}.
+
+\subsection{Sprint 1}
+
+Los objetivos de este \emph{sprint} fueron asentar la idea general de la aplicación a desarrollar, su estructura principal y funcionalidades.
+
+Además se comenzó a diseñar la estructura de la base de datos y el acceso al \emph{hardware} a través de la comunicación con los puertos serie.
+
+Las horas de trabajo estimadas fueron cumplidas como estaba planificado en el \emph{Sprint}.
+
+\subsection{Sprint 2}
+
+Los objetivos de este \emph{sprint} fueron comenzar con el desarrollo de la interfaz gráfica. Para ello era necesario la creación de gráficas de forma dinámica. Estas serían utilizadas para monitorizar los datos que fluían por el bus CAN en tiempo real.
+
+Esta fase llevó un poco más tiempo de lo esperado.
+
+
+\subsection{Sprint 3}
+
+En este \emph{sprint} se planteó la posibilidad de poder importar y exportar un proyecto de la aplicación. Para ello, se decidió usar ficheros JSON, los cuales contendrían todos los datos del proyecto.
+
+En este punto se planteó la posibilidad de realizar una parte de la aplicación sobre una tecnología web. La idea era generar los ficheros JSON desde la aplicación Java para posteriormente poder importarlos a la web para su monitorización desde la misma. Por falta de tiempo, no se realizó esta segunda aplicación.
+
+
+\subsection{Sprint 4}
+
+El objetivo de este \emph{sprint} era la generación de un gestor de proyectos interno en la aplicación. Para ello era necesario diseñar las funcionalidades para la creación de un nuevo proyecto, la asignación de valores identificados al mismo, así como sus opciones de guardar y eliminar de la base de datos.
+
+
+\subsection{Sprint 5}
+
+En este \emph{sprint} se desarrolló la interacción con la base de datos, tanto para obtener datos de ella como para recuperarlos. Además se realizó un tratado de las posibles excepciones que puedan surgir por problemas internos de la aplicación.
+
+
+\subsection{Sprint 6}
+
+
+a
+
+a
+
+
+a
+a
+aaaa
+a
+a
+a
+
+a
+aa
+aa
+a
+
+a
+
+
+
+
+\subsection{Sprint 7}
+
+
+\subsection{Resumen}
+
+En la siguiente tabla se muestran los tiempos dedicados a cada uno de los distintos tipos de tareas:
+
+
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule
+\begin{minipage}[b]{0.37\columnwidth}\raggedright\strut
+Categoría\strut
+\end{minipage} & \begin{minipage}[b]{0.37\columnwidth}\raggedright\strut
+Tiempo (horas)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+\emph{Documentation}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+50\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+\emph{Features}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+150\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+\emph{Research}\strut
+\end{minipage}& \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+20\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+\emph{Bug Fix}\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+20\strut
+\end{minipage}\tabularnewline
+\midrule
+\begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+TOTAL\strut
+\end{minipage} & \begin{minipage}[t]{0.37\columnwidth}\raggedright\strut
+240\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\caption{Horas dedicadas al proyecto.}
+\end{longtable}
+
+
+\imagen{resumenHoras}{Resumen de horas dedicadas al proyecto.}
+
 
 \section{Estudio de viabilidad}
 
+En este punto se van a analizar por separado la viabilidad económica y la viabilidad legal del proyecto.
+
 \subsection{Viabilidad económica}
 
+\subsection{Costes}\label{costes}
+
+Los costes van a ser desglosados en dos partes:
+
+\textbf{Costes de personal:}
+
+El proyecto ha sido desarrollado por una sola persona, empleada a tiempo completo durante tres meses. Considerando los siguientes valores:
+
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule
+\begin{minipage}[b]{0.38\columnwidth}\raggedright\strut
+\textbf{Concepto}\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+\textbf{Coste}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Salario mensual neto\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+1008,15 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+IRPF (9,64\%)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+115,68 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+SS (30 \%)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+360 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Salario mensual bruto\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+1200 \euro{}\strut
+\end{minipage}\tabularnewline
+\midrule
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+\textbf{Total tres meses}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+3600 \euro{}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\caption{Costes de personal.}
+\end{longtable}
+
+\textbf{Costes de \emph{hardware}:}
+
+En este apartado se revisan los costes del \emph{hardware} desarrollado en el proyecto.
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule
+\begin{minipage}[b]{0.38\columnwidth}\raggedright\strut
+\textbf{Concepto}\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+\textbf{Coste}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+PCB (10 prototipos)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+1,75 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Transporte\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+7,11 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Componentes (para 2 uds)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+51,90 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Aduanas\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+15 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Soldador\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+15 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Estaño\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+5 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Flux\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+3 \euro{}\strut
+\end{minipage}\tabularnewline
+\midrule
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+\textbf{Total}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+98,76 \euro{}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\caption{Costes de personal.}
+\end{longtable}
+
+
+
+\textbf{Costes totales:}
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule
+\begin{minipage}[b]{0.38\columnwidth}\raggedright\strut
+\textbf{Concepto}\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+\textbf{Coste}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+Personal\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+3600 \euro{}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+\emph{Hardware}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+98,76 \euro{}\strut
+\end{minipage}\tabularnewline
+\midrule
+\begin{minipage}[t]{0.38\columnwidth}\raggedright\strut
+\textbf{Total}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+3698,76 \euro{}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\caption{Costes totales.}
+\end{longtable}
+
+
 \subsection{Viabilidad legal}
+
+A continuación se exponen todos los temas relacionados con las licencias del software y \emph{hardware} de proyecto, así como de la documentación e imágenes.
+
+Tabla de licencias de las dependencias utilizadas:
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.18\columnwidth}\raggedright\strut
+Dependencia\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
+Versión\strut
+\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright\strut
+Descripción\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+Licencia\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+Java\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+8.0.191\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright\strut
+JDK\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+------\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+USBtinLib\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+1.2.0\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright\strut
+Librería para la conexión con el \emph{hardware}.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+-----\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+JSSC\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+2.8.0\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright\strut
+Librería para la búsqueda de puertos serie.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+-----\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+sqlite-jdbc\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+3.23.1\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright\strut
+Librería para realizar la conexión con la base de datos.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+-----\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+json\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+1.6\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright\strut
+Librería para la importación y exportación de ficheros JSON.\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+-----\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\caption{Dependencias del proyecto y sus licencias}
+\end{longtable}
+
+
+
+
+
 
 

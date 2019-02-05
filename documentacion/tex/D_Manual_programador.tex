@@ -2,10 +2,146 @@
 
 \section{Introducción}
 
+En este anexo se describe la documentación técnica de programación, incluyendo la preparación del entorno de desarrollo, la estructura de la aplicación y las configuraciones necesarias.
+
 \section{Estructura de directorios}
+
+El proyecto tiene la siguiente estructura:
+
+\begin{itemize}
+\item
+\textbf{/documentacion/:} Documentación del proyecto.
+\item
+\textbf{/documentacion/img/:} Imágenes utilizadas en la documentación.
+\item
+\textbf{/documentacion/javadoc/:} Documentación \emph{Javadoc}.
+\item
+\textbf{/hardware/:} Esquemas del \emph{hardware} realizado en formato para KiCAD.
+\item
+\textbf{/hardware/gerber/:} Ficheros \emph{gerber} para la producción del hardware.
+\item
+\textbf{/src/:} Código fuente de la aplicación Java
+\item
+\textbf{/resources/:} Recursos de la aplicación.
+
+\end{itemize}
+
 
 \section{Manual del programador}
 
+El siguiente manual tiene como objetivo servir de referencia para futuros programadores. Se explica como montar el entorno de desarrollo, las dependencias necesarias así como su compilación y ejecución.
+
+\subsection{Entorno de desarrollo}
+
+Para el proyecto se necesita tener instaladas las siguientes dependencias:
+
+\begin{itemize}
+\item
+Java JDK 8
+\item
+JavaFX
+\item
+Git
+\item
+SceneBuilder
+\item
+Eclipse
+\end{itemize}
+
+\subsection{Java JDK 8}
+
+Es uno de los lenguajes más utilizados hoy en día. El uso del lenguaje Java nos permite la compatibilidad de la aplicación en distintas plataformas. Se puede obtener del siguiente enlace:
+
+ENLACE A JAVA JDK8
+
+\subsection{JavaFX}
+
+Se trata de un conjunto de productos y tecnologías para la creación de interfaces gráficas en Java. Para la ejecución de estas aplicaciones solamente es necesaria la instalación de JRE en la máquina.
+
+Se puede obtener del siguiente enlace:
+ENLACE A JAVAFX
+
+\subsection{Git}
+
+Para utilizar el repositorio en el que se encuentra la aplicación, es necesario el uso de Git. Este programa nos permitirá clonar el repositorio a nuestra máquina y empezar a trabajar con ello.
+
+Podemos instalarlo en Windows habilitando el WSL (Windows Subsystem for Linux), y ejecutando el comando \emph{apt-get install git} con permisos de \emph{root}.
+
+\imagen{gitClone}{Comando Git sobre WSL.}
+
+\subsection{SceneBuilder}
+
+Se trata de una interfaz gráfica creada para el desarrollo de interfaces gráficas en JavaFX. Sigue el modelo drag and drop, y toda la información es almacenada en un fichero FXML, un formato especial que extiende de XML.
+
+\imagen{sceneBuilder}{SceneBuilder 10.0}
+
+\subsection{Eclipse}
+
+Para el desarrollo del código Java, se ha utilizado la IDE Eclipse. En ella se han importado las librerías correspondientes, e instalado plugins para el soporte de JavaFX. De esta manera, es posible llamar a SceneBuilder desde Eclipse.
+
+\imagen{eclipse}{IDE Eclipse}
+
+\subsection{Obtención del código fuente}
+
+El código fuente de la aplicación está hospedado en un repositorio Git en GitHub. Para obtener una copia de este código, se pueden seguir los siguientes pasos:
+
+Abrir el WSL en Windows.
+
+Posicionarse en el directorio en el que se desea copiar el código. (Si deseamos acceder al sistema de ficheros de Windows desde WSL, la ruta será /mnt/c).
+
+Introducir el siguiente comando:
+
+\emph{git clone https://github.com/amb0070/CRET.git}
+
+Una vez finalizada la descarga del repositorio, se podrá acceder al código fuente y a los recursos del proyecto.
+
+\imagen{gitClone}{Comando Git sobre WSL.}
+
+\subsection{Importar proyecto a Eclipse}
+
+Una vez descargado el proyecto, abrimos Eclipse.
+
+Hacemos \emph{click} en \emph{File} > \emph{Import...}
+
+Seleccionamos \emph{Projects from File System or Archive}, y seleccionamos el directorio donde hemos clonado el repositorio.
+
+De esta manera, queda importado el proyecto a nuestro \emph{workspace} de Eclipse.
+
+CAPTURAS
+
+\subsection{Importar librerías necesarias}
+
+Para importar las librerías necesarias y utilizadas por el proyecto, podemos seguir los siguientes pasos:
+
+Sobre la carpeta del proyecto, en el árbol izquierdo, hacer click derecho.
+
+Seleccionar sub-menú \emph{Build Path} > \emph{Configure Build Path}.
+
+Hacemos \emph{click} en el botón \emph{Add External JARs...} y seleccionamos los ficheros .jar de las librerías.
+
+CAPTURAS
+
+
 \section{Compilación, instalación y ejecución del proyecto}
 
-\section{Pruebas del sistema}
+
+\subsection{Compilación}
+La compilación del proyecto se realiza desde Eclipse. 
+
+Para exportarlo como un fichero .jar, podemos hacer click derecho sobre el árbol izquierdo del proyecto, y \emph{click} en \emph{Export...}.
+
+Seleccionamos \emph{Java} > \emph{Runnable JAR file}.
+
+Incluimos las librerías en el fichero .jar, y exportamos.
+
+CAPTURAS
+
+\subsection{Ejecución}
+
+No es necesario realizar una instalación de la aplicación. Simplemente tener instalado en la máquina el JRE.
+
+La ejecución de la aplicación no requiere de ningún elemento externo, pero si que es necesario tener el \emph{hardware} conectado a la máquina para su funcionamiento.
+
+De igual manera, el proyecto puede ser ejecutado desde Eclipse, pero para su funcionamiento es necesario el \emph{hardware} que se ha diseñado.
+
+

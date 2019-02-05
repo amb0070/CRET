@@ -1,0 +1,60 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {chapter}{\'{I}ndice general}{\es@scroman {i}}{section*.1}% 
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {iii}}{section*.2}% 
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {iv}}{section*.3}% 
+\contentsline {appendix}{\chapternumberline {A}Plan de Proyecto Software}{1}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Introducci\IeC {\'o}n}{1}{section.Alph1.1}% 
+\contentsline {section}{\numberline {A.2}Planificaci\IeC {\'o}n temporal}{2}{section.Alph1.2}% 
+\contentsline {subsection}{Sprint 0}{2}{section*.4}% 
+\contentsline {subsection}{Sprint 1}{2}{section*.5}% 
+\contentsline {subsection}{Sprint 2}{2}{section*.6}% 
+\contentsline {subsection}{Sprint 3}{3}{section*.7}% 
+\contentsline {subsection}{Sprint 4}{3}{section*.8}% 
+\contentsline {subsection}{Sprint 5}{3}{section*.9}% 
+\contentsline {subsection}{Sprint 6}{3}{section*.10}% 
+\contentsline {subsection}{Sprint 7}{3}{section*.11}% 
+\contentsline {subsection}{Resumen}{3}{section*.12}% 
+\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{4}{section.Alph1.3}% 
+\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{4}{section*.13}% 
+\contentsline {subsection}{Costes}{4}{section*.14}% 
+\contentsline {subsection}{Viabilidad legal}{5}{section*.15}% 
+\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{7}{appendix.Alph2}% 
+\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{7}{section.Alph2.1}% 
+\contentsline {section}{\numberline {B.2}Objetivos generales}{7}{section.Alph2.2}% 
+\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{7}{section.Alph2.3}% 
+\contentsline {subsection}{Requisitos funcionales}{7}{section*.16}% 
+\contentsline {subsection}{Requisitos no funcionales}{9}{section*.17}% 
+\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{9}{section.Alph2.4}% 
+\contentsline {subsection}{Actores}{9}{section*.18}% 
+\contentsline {subsection}{Casos de uso}{9}{section*.19}% 
+\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{21}{appendix.Alph3}% 
+\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{21}{section.Alph3.1}% 
+\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{21}{section.Alph3.2}% 
+\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{22}{section.Alph3.3}% 
+\contentsline {subsection}{Model-View-Controller (MVC)}{22}{section*.20}% 
+\contentsline {subsection}{Arquitectura general}{22}{section*.21}% 
+\contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{23}{section*.22}% 
+\contentsline {subsection}{Dise\IeC {\~n}o de clases}{24}{section*.23}% 
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o de interfaces}{26}{section.Alph3.4}% 
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{29}{appendix.Alph4}% 
+\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{29}{section.Alph4.1}% 
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{29}{section.Alph4.2}% 
+\contentsline {section}{\numberline {D.3}Manual del programador}{30}{section.Alph4.3}% 
+\contentsline {subsection}{Entorno de desarrollo}{30}{section*.24}% 
+\contentsline {subsection}{Java JDK 8}{30}{section*.25}% 
+\contentsline {subsection}{JavaFX}{30}{section*.26}% 
+\contentsline {subsection}{Git}{30}{section*.27}% 
+\contentsline {subsection}{SceneBuilder}{31}{section*.28}% 
+\contentsline {subsection}{Eclipse}{31}{section*.29}% 
+\contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{32}{section*.30}% 
+\contentsline {subsection}{Importar proyecto a Eclipse}{33}{section*.31}% 
+\contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{33}{section*.32}% 
+\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{34}{section.Alph4.4}% 
+\contentsline {subsection}{Compilaci\IeC {\'o}n}{34}{section*.33}% 
+\contentsline {subsection}{Ejecuci\IeC {\'o}n}{34}{section*.34}% 
+\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{35}{appendix.Alph5}% 
+\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{35}{section.Alph5.1}% 
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{35}{section.Alph5.2}% 
+\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{35}{section.Alph5.3}% 
+\contentsline {section}{\numberline {E.4}Manual del usuario}{35}{section.Alph5.4}% 

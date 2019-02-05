@@ -1,0 +1,1444 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  6 FEB 2019 00:30
+entering extended mode
+**./anexos.tex
+(anexos.tex
+LaTeX2e <2018-12-01>
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memoir.cls"
+Document Class: memoir 2018/12/12 v3.7h configurable book, report, article docu
+ment class
+\onelineskip=\skip41
+\lxvchars=\skip42
+\xlvchars=\skip43
+\@memcnta=\count80
+\c@@memmarkcntra=\count81
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.st
+y"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifetex\ifetex.sty"
+Package: ifetex 2018/03/31 v1.2a ifetex
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/plain/ifetex\ifetex.tex")
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.s
+ty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluatex
+.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+\stockheight=\skip44
+\stockwidth=\skip45
+\trimtop=\skip46
+\trimedge=\skip47
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\mem12.clo"
+File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
+)
+\binding=\skip48
+\spinemargin=\skip49
+\foremargin=\skip50
+\uppermargin=\skip51
+\lowermargin=\skip52
+\headdrop=\skip53
+\normalrulethickness=\skip54
+\mem@maxheadheight=\skip55
+\mem@maxfootheight=\skip56
+\headwidth=\skip57
+\c@storedpagenumber=\count82
+\memPD=\dimen102
+\m@mabparskip=\skip58
+\thanksmarkwidth=\skip59
+\thanksmarksep=\skip60
+\droptitle=\skip61
+\c@book=\count83
+\c@part=\count84
+\c@chapter=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\beforechapskip=\skip62
+\midchapskip=\skip63
+\afterchapskip=\skip64
+\chapindent=\skip65
+\bottomsectionskip=\skip66
+\secindent=\skip67
+\beforesecskip=\skip68
+\aftersecskip=\skip69
+\subsecindent=\skip70
+\beforesubsecskip=\skip71
+\aftersubsecskip=\skip72
+\subsubsecindent=\skip73
+\beforesubsubsecskip=\skip74
+\aftersubsubsecskip=\skip75
+\paraindent=\skip76
+\beforeparaskip=\skip77
+\afterparaskip=\skip78
+\subparaindent=\skip79
+\beforesubparaskip=\skip80
+\aftersubparaskip=\skip81
+\pfbreakskip=\skip82
+\c@@ppsavesec=\count91
+\c@@ppsaveapp=\count92
+\ragrparindent=\dimen103
+\everylistparindent=\dimen104
+\parsepi=\skip83
+\topsepi=\skip84
+\itemsepi=\skip85
+\parsepii=\skip86
+\topsepii=\skip87
+\topsepiii=\skip88
+\itemsepii=\skip89
+\itemsepiii=\skip90
+\partopsepii=\skip91
+\partopsepiii=\skip92
+\m@msavetopsep=\skip93
+\m@msavepartopsep=\skip94
+\@enLab=\toks14
+\abstitleskip=\skip95
+\absleftindent=\skip96
+\abs@leftindent=\dimen105
+\absrightindent=\skip97
+\absparindent=\skip98
+\absparsep=\skip99
+\c@vslineno=\count93
+\c@poemline=\count94
+\c@modulo@vs=\count95
+\c@memfvsline=\count96
+\vleftskip=\skip100
+\vrightskip=\skip101
+\stanzaskip=\skip102
+\versewidth=\skip103
+\vgap=\skip104
+\vindent=\skip105
+\vleftmargin=\dimen106
+\c@verse=\count97
+\c@chrsinstr=\count98
+\beforepoemtitleskip=\skip106
+\afterpoemtitleskip=\skip107
+\c@poem=\count99
+\beforePoemTitleskip=\skip108
+\midPoemTitleskip=\skip109
+\afterPoemTitleskip=\skip110
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
+\col@sep=\dimen107
+\ar@mcellbox=\box27
+\extrarowheight=\dimen108
+\NC@list=\toks15
+\extratabsurround=\skip111
+\backup@length=\skip112
+\ar@cellbox=\box28
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\dcolumn.sty"
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\delarray.st
+y"
+Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+\TX@col@width=\dimen109
+\TX@old@table=\dimen110
+\TX@old@col=\dimen111
+\TX@target=\dimen112
+\TX@delta=\dimen113
+\TX@cols=\count100
+\TX@ftn=\toks16
+)
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count101
+\@cmidlb=\count102
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count103
+\@lastruleclass=\count104
+\@thisrulewidth=\dimen126
+\ctableftskip=\skip113
+\ctabrightskip=\skip114
+\abovecolumnspenalty=\count105
+\@linestogo=\count106
+\@cellstogo=\count107
+\@cellsincolumn=\count108
+\crtok=\toks17
+\@mincolumnwidth=\dimen127
+\c@newflo@tctr=\count109
+\mem@margin@floatbox=\box29
+\@contcwidth=\skip115
+\@contindw=\skip116
+\abovecaptionskip=\skip117
+\belowcaptionskip=\skip118
+\subfloattopskip=\skip119
+\subfloatcapskip=\skip120
+\subfloatcaptopadj=\skip121
+\subfloatbottomskip=\skip122
+\subfloatlabelskip=\skip123
+\subfloatcapmargin=\dimen128
+\c@@contsubnum=\count110
+\m@mscap@capbox=\box30
+\m@mscap@fbox=\box31
+\sidecapsep=\dimen129
+\sidecapwidth=\dimen130
+\m@m@tempdima=\dimen131
+\m@mscapraise=\dimen132
+\sidecapraise=\dimen133
+\m@mscapmainwidth=\dimen134
+\m@mscaplkern=\dimen135
+\beforeepigraphskip=\skip124
+\afterepigraphskip=\skip125
+\epigraphwidth=\skip126
+\epigraphrule=\skip127
+LaTeX Info: Redefining \em on input line 7592.
+LaTeX Info: Redefining \emph on input line 7600.
+\tocentryskip=\skip128
+\tocbaseline=\skip129
+\cftparskip=\skip130
+\cftbeforebookskip=\skip131
+\cftbookindent=\dimen136
+\cftbooknumwidth=\dimen137
+\cftbeforepartskip=\skip132
+\cftpartindent=\skip133
+\cftpartnumwidth=\skip134
+\cftbeforechapterskip=\skip135
+\cftchapterindent=\skip136
+\cftchapternumwidth=\skip137
+\cftbeforesectionskip=\skip138
+\cftsectionindent=\skip139
+\cftsectionnumwidth=\skip140
+\cftbeforesubsectionskip=\skip141
+\cftsubsectionindent=\skip142
+\cftsubsectionnumwidth=\skip143
+\cftbeforesubsubsectionskip=\skip144
+\cftsubsubsectionindent=\skip145
+\cftsubsubsectionnumwidth=\skip146
+\cftbeforeparagraphskip=\skip147
+\cftparagraphindent=\skip148
+\cftparagraphnumwidth=\skip149
+\cftbeforesubparagraphskip=\skip150
+\cftsubparagraphindent=\skip151
+\cftsubparagraphnumwidth=\skip152
+\prechapterprecisshift=\dimen138
+\c@maxsecnumdepth=\count111
+\bibindent=\dimen139
+\bibitemsep=\skip153
+\indexcolsep=\skip154
+\indexrule=\skip155
+\indexmarkstyle=\toks18
+\@indexbox=\insert199
+\glossarycolsep=\dimen140
+\glossaryrule=\dimen141
+\sideparvshift=\skip156
+\sideins=\insert198
+\sidebartopsep=\skip157
+\sidebarhsep=\skip158
+\sidebarvsep=\skip159
+\sidebarwidth=\skip160
+\footmarkwidth=\skip161
+\footmarksep=\skip162
+\footparindent=\skip163
+\footinsdim=\skip164
+\footinsv@r=\insert197
+\@mpfootinsv@r=\insert196
+\m@m@k=\count112
+\m@m@h=\dimen142
+\m@mipn@skip=\skip165
+\sidefootins=\insert195
+\sidefootadjust=\skip166
+\sidefootheight=\skip167
+\sidefoothsep=\skip168
+\sidefootvsep=\skip169
+\sidefootwidth=\skip170
+\m@mdownsf=\skip171
+\c@sidefootnote=\count113
+\sidefootmarkwidth=\skip172
+\sidefootmarksep=\skip173
+\sidefootparindent=\skip174
+\c@pagenote=\count114
+\c@pagenoteshadow=\count115
+\mem@pn@lastkern=\skip175
+\every@verbatim=\toks19
+\afterevery@verbatim=\toks20
+\verbatim@line=\toks21
+\tab@position=\count116
+\verbatim@in@stream=\read1
+\verbatimindent=\skip176
+\verbatim@out=\write3
+\bvboxsep=\skip177
+\c@memfbvline=\count117
+\c@bvlinectr=\count118
+\bvnumlength=\skip178
+\fb@frw=\dimen143
+\fb@frh=\dimen144
+\FrameRule=\dimen145
+\FrameSep=\dimen146
+\c@cp@cntr=\count119
+LaTeX Info: Redefining \: on input line 12114.
+LaTeX Info: Redefining \! on input line 12116.
+\c@ism@mctr=\count120
+\c@xsm@mctr=\count121
+\c@csm@mctr=\count122
+\c@ksm@mctr=\count123
+\c@xksm@mctr=\count124
+\c@cksm@mctr=\count125
+\c@msm@mctr=\count126
+\c@xmsm@mctr=\count127
+\c@cmsm@mctr=\count128
+\c@bsm@mctr=\count129
+\c@workm@mctr=\count130
+\c@sheetsequence=\count131
+\c@lastsheet=\count132
+\c@lastpage=\count133
+\c@figure=\count134
+\c@lofdepth=\count135
+\cftbeforefigureskip=\skip179
+\cftfigureindent=\skip180
+\cftfigurenumwidth=\skip181
+\c@table=\count136
+\c@lotdepth=\count137
+\cftbeforetableskip=\skip182
+\cfttableindent=\skip183
+\cfttablenumwidth=\skip184
+Package abstract [2008/07/23] emulated by memoir.
+Package appendix [2008/07/23] emulated by memoir.
+Package booktabs [2016/05/16] emulated by memoir.
+Package ccaption [2008/07/23] emulated by memoir.
+Package changepage [2008/07/23] emulated by memoir.
+Package chngcntr [2008/07/23] emulated by memoir.
+Package chngpage [2008/07/23] emulated by memoir.
+Package crop emulated by memoir.
+Package enumerate [2008/07/23] emulated by memoir.
+Package epigraph [2008/07/23] emulated by memoir.
+Package ifmtarg [2008/07/23] emulated by memoir.
+Package index [2008/07/23] emulated by memoir.
+Package makeidx [2008/07/23] emulated by memoir.
+Package moreverb [2008/07/23] emulated by memoir.
+Package mparhack [2008/07/23] emulated by memoir.
+Package needspace [2008/07/23] emulated by memoir.
+Package newfile [2008/07/23] emulated by memoir.
+Package nextpage [2008/07/23] emulated by memoir.
+Package pagenote [2008/07/23] emulated by memoir.
+Package parskip [2008/07/23] emulated by memoir.
+Package patchcmd [2008/07/23] emulated by memoir.
+Package setspace [2008/07/23] emulated by memoir.
+Package shortvrb [2008/07/23] emulated by memoir.
+Package showidx [2008/07/23] emulated by memoir.
+Package titleref [2008/07/23] emulated by memoir.
+Package titling [2008/07/23] emulated by memoir.
+Package tocbibind [2008/07/23] emulated by memoir.
+Package tocloft [2008/07/23] emulated by memoir.
+Package tocvsec2 [2008/07/23] emulated by memoir.
+Package verbatim [2008/07/23] emulated by memoir.
+Package verse [2008/07/23] emulated by memoir.
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty
+"
+Package: babel 2018/11/13 3.27 The Babel package
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanish\spani
+sh.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count138
+\U@D=\dimen147
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.de
+f")
+\bbl@dirlevel=\count139
+)
+\es@quottoks=\toks22
+\es@quotdepth=\count140
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+LaTeX Info: Redefining \. on input line 5.
+LaTeX Info: Redefining \% on input line 5.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype
+.sty"
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\MT@toks=\toks26
+\MT@count=\count141
+LaTeX Info: Redefining \textls on input line 793.
+\MT@outer@kern=\dimen148
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+\MT@listname@count=\count142
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype
+-pdftex.def"
+File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 913.
+LaTeX Info: Redefining \lslig on input line 913.
+\MT@outer@space=\skip185
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype
+.cfg"
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+))
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/placeins\placeins.s
+ty"
+Package: placeins 2005/04/18  v 2.2
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.sty
+"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip186
+\LTright=\skip187
+\LTpre=\skip188
+\LTpost=\skip189
+\LTchunksize=\count143
+\LTcapwidth=\dimen149
+\LT@head=\box32
+\LT@firsthead=\box33
+\LT@foot=\box34
+\LT@lastfoot=\box35
+\LT@cols=\count144
+\LT@rows=\count145
+\c@LT@tables=\count146
+\c@LT@chunks=\count147
+\LT@p@ftn=\toks27
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty
+"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
+cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.s
+ty"
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+\everycr=\toks28
+\minrowclearance=\skip190
+)
+\rownum=\count148
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xtab\xtab.sty"
+Package: xtab 2011/07/31 v2.3f Extended supertabular package
+\c@tracingst=\count149
+\PWSTcapht=\dimen150
+\ST@wd=\dimen151
+\ST@rightskip=\skip191
+\ST@leftskip=\skip192
+\ST@parfillskip=\skip193
+\c@PWSTtable=\count150
+\PWSTlastpage=\count151
+\PWSTpenultimate=\count152
+\PWSTcurpage=\count153
+\PWSTtempc=\count154
+\PWSTlines=\count155
+\PWST@lastht=\dimen152
+\PWST@generalht=\dimen153
+\PWST@ht=\dimen154
+\ST@pageleft=\dimen155
+\ST@headht=\dimen156
+\ST@tailht=\dimen157
+\ST@pagesofar=\dimen158
+\ST@pboxht=\dimen159
+\ST@lineht=\dimen160
+\ST@stretchht=\dimen161
+\ST@prevht=\dimen162
+\ST@toadd=\dimen163
+\ST@dimen=\dimen164
+\ST@pbox=\box36
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.s
+ty"
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+\multirow@colwidth=\skip194
+\multirow@cntb=\count156
+\multirow@dima=\skip256
+\bigstrutjot=\dimen165
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
+ty"
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-h
+yperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-g
+eneric.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.st
+y"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.
+sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen166
+\Hy@linkcounter=\count157
+\Hy@pagecounter=\count158
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
+"
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count159
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.c
+fg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4393.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count160
+ ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen167
+\Fld@menulength=\count161
+\Field@Width=\dimen168
+\Fld@charsize=\dimen169
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring ON on input line 6398.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count162
+\c@Item=\count163
+\c@Hfootnote=\count164
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memhfixc.s
+ty"
+Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
+ass
+\c@memhycontfloat=\count165
+\c@Hpagenote=\count166
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.de
+f"
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count167
+\c@bookmark@seq@number=\count168
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilec
+heck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip257
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eurosym\eurosym.sty
+"
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box37
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
+"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip258
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
+"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen170
+))
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen171
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count169
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count170
+\leftroot@=\count171
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count172
+\DOTSCASE@=\count173
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box38
+\strutbox@=\box39
+\big@size=\dimen172
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count174
+\c@MaxMatrixCols=\count175
+\dotsspace@=\muskip11
+\c@parentequation=\count176
+\dspbrk@lvl=\count177
+\tag@help=\toks30
+\row@=\count178
+\column@=\count179
+\maxfields@=\count180
+\andhelp@=\toks31
+\eqnshift@=\dimen173
+\alignsep@=\dimen174
+\tagshift@=\dimen175
+\tagwidth@=\dimen176
+\totwidth@=\dimen177
+\lineht@=\dimen178
+\@envbody=\toks32
+\multlinegap=\skip259
+\multlinetaggap=\skip260
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen179
+\Gin@req@width=\dimen180
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count181
+\float@exts=\toks34
+\float@box=\box40
+\@float@everytoks=\toks35
+\@floatcapt=\box41
+)
+(anexos.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux) (tex/C_Diseno.aux) (tex/D_Man
+ual_programador.aux
+
+LaTeX Warning: Label `fig:gitClone' multiply defined.
+
+) (tex/E_Manual_usuario.aux))
+\openout1 = `anexos.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 359.
+LaTeX Font Info:    ... okay on input line 359.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 359.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \. on input line 359.
+LaTeX Info: Redefining \% on input line 359.
+LaTeX Info: Redefining \microtypecontext on input line 359.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cf
+g"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf.mki
+i"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count182
+\scratchdimen=\dimen181
+\scratchbox=\box42
+\nofMPsegments=\count183
+\nofMParguments=\count184
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count185
+\MPscratchDim=\dimen182
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
+\everyMPtoPDFconversion=\toks37
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-b
+ase.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty
+"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\AtBeginShipoutBox=\box43
+Package hyperref Info: Link coloring ON on input line 359.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
+y"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitle
+string.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count188
+)
+Redoing nameref's sectioning
+Redoing nameref's label
+LaTeX Info: Redefining \nameref on input line 359.
+LaTeX Info: Redefining \ref on input line 359.
+LaTeX Info: Redefining \pageref on input line 359.
+LaTeX Info: Redefining \nameref on input line 359.
+(anexos.out) (anexos.out)
+\@outlinefile=\write4
+\openout4 = `anexos.out'.
+
+<./img/cabecera.pdf, id=111, 617.67549pt x 135.51413pt>
+File: ./img/cabecera.pdf Graphic file (type pdf)
+<use ./img/cabecera.pdf>
+Package pdftex.def Info: ./img/cabecera.pdf  used on input line 361.
+(pdftex.def)             Requested size: 383.0pt x 84.02823pt.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 361.
+
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 361.
+
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 361
+.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 361
+.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 361.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 361.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 361.
+<./img/escudoInfor.pdf, id=112, 618.11432pt x 737.07487pt>
+File: ./img/escudoInfor.pdf Graphic file (type pdf)
+<use ./img/escudoInfor.pdf>
+Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 361.
+(pdftex.def)             Requested size: 76.59883pt x 91.3356pt.
+
+Overfull \hbox (27.54143pt too wide) in paragraph at lines 361--361
+[][][][][][][] $[]$ 
+ []
+
+[1
+
+{C:/Users/MS02/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/cabece
+ra.pdf> <./img/escudoInfor.pdf
+
+pdfTeX warning: pdflatex.exe (file ./img/escudoInfor.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [2
+
+]
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 380.
+
+ ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (anexos.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+
+
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 3.
+
+
+Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
+(spanish)                faked small caps on input line 3.
+
+
+Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
+(spanish)                faked small caps on input line 4.
+
+
+Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
+(spanish)                faked small caps on input line 5.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+[1
+
+
+
+])
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
+
+
+Class memoir Warning: The material used in the headers is too large
+(15.35403pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 381.
+
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[2] (anexos.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+) [3
+
+] (anexos.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+) [4
+
+]
+\openout2 = `./tex/A_Plan_proyecto.aux'.
+
+ (tex/A_Plan_proyecto.tex
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.31 P
+      ara ello, se dividió el trabajo en \emph{sprints} los cuales iban sie...
+[1
+
+
+
+
+]
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.59 
+      [2]
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[3]
+<./img/resumenHoras.png, id=612, 578.91281pt x 267.24844pt>
+File: ./img/resumenHoras.png Graphic file (type png)
+<use ./img/resumenHoras.png>
+Package pdftex.def Info: ./img/resumenHoras.png  used on input line 147.
+(pdftex.def)             Requested size: 344.69766pt x 159.12694pt.
+LaTeX Info: Redefining \. on input line 202.
+LaTeX Info: Redefining \% on input line 202.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.202 \end{longtable}
+                      <./img/resumenHoras.png>]
+LaTeX Info: Redefining \. on input line 300.
+LaTeX Info: Redefining \% on input line 300.
+ [5]
+Overfull \hbox (4.54419pt too wide) in paragraph at lines 317--319
+[]|\T1/lmr/m/n/12 (-20) 8.0.191|  
+ []
+
+)
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[6]
+\openout2 = `./tex/B_Requisitos.aux'.
+
+ (tex/B_Requisitos.tex
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 31.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 31.
+
+[7
+
+
+
+]
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[8]
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[9]
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[10]
+LaTeX Info: Redefining \. on input line 336.
+LaTeX Info: Redefining \% on input line 336.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[11]
+LaTeX Info: Redefining \. on input line 399.
+LaTeX Info: Redefining \% on input line 399.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[12]
+LaTeX Info: Redefining \. on input line 462.
+LaTeX Info: Redefining \% on input line 462.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[13]
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[14]
+LaTeX Info: Redefining \. on input line 588.
+LaTeX Info: Redefining \% on input line 588.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[15]
+LaTeX Info: Redefining \. on input line 645.
+LaTeX Info: Redefining \% on input line 645.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[16]
+LaTeX Info: Redefining \. on input line 707.
+LaTeX Info: Redefining \% on input line 707.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[17]
+LaTeX Info: Redefining \. on input line 841.
+LaTeX Info: Redefining \% on input line 841.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[18])
+LaTeX Info: Redefining \. on input line 396.
+LaTeX Info: Redefining \% on input line 396.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[19]
+\openout2 = `./tex/C_Diseno.aux'.
+
+ (tex/C_Diseno.tex [20
+
+
+
+]
+<./img/databaseDiagram.png, id=746, 381.67593pt x 213.04594pt>
+File: ./img/databaseDiagram.png Graphic file (type png)
+<use ./img/databaseDiagram.png>
+Package pdftex.def Info: ./img/databaseDiagram.png  used on input line 12.
+(pdftex.def)             Requested size: 344.69766pt x 192.41248pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ph3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.19 
+      <./img/databaseDiagram.png>]
+<./img/modeloMVC.png, id=752, 583.42969pt x 181.42781pt>
+File: ./img/modeloMVC.png Graphic file (type png)
+<use ./img/modeloMVC.png>
+Package pdftex.def Info: ./img/modeloMVC.png  used on input line 30.
+(pdftex.def)             Requested size: 344.69766pt x 107.19374pt.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 
+      <./img/modeloMVC.png>]
+<./img/paquetes.png, id=760, 502.87875pt x 231.86626pt>
+File: ./img/paquetes.png Graphic file (type png)
+<use ./img/paquetes.png>
+Package pdftex.def Info: ./img/paquetes.png  used on input line 40.
+(pdftex.def)             Requested size: 344.69766pt x 158.93002pt.
+<./img/paquetesClases.png, id=761, 693.59125pt x 402.50375pt>
+File: ./img/paquetesClases.png Graphic file (type png)
+<use ./img/paquetesClases.png>
+Package pdftex.def Info: ./img/paquetesClases.png  used on input line 64.
+(pdftex.def)             Requested size: 344.69766pt x 200.04146pt.
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.64 ...a de clases y paquetes de la aplicación.}
+                                                   <./img/paquetes.png>]
+<./img/paquetesClasesGui.png, id=768, 663.47874pt x 522.95375pt>
+File: ./img/paquetesClasesGui.png Graphic file (type png)
+<use ./img/paquetesClasesGui.png>
+Package pdftex.def Info: ./img/paquetesClasesGui.png  used on input line 66.
+(pdftex.def)             Requested size: 344.69766pt x 271.69014pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.66 ...lases y paquetes de la interfaz gráfica.}
+                                                   <./img/paquetesClases.png>]
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 \textbf
+            {AboutController:} - <./img/paquetesClasesGui.png>]
+<./img/navegacion.png, id=781, 804.00375pt x 472.76625pt>
+File: ./img/navegacion.png Graphic file (type png)
+<use ./img/navegacion.png>
+Package pdftex.def Info: ./img/navegacion.png  used on input line 130.
+(pdftex.def)             Requested size: 344.69766pt x 202.68677pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[26])
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ph3.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.397 \include{./tex/C_Diseno}
+                               <./img/navegacion.png>]
+\openout2 = `./tex/D_Manual_programador.aux'.
+
+
+(tex/D_Manual_programador.tex [28
+
+
+
+] [29]
+<./img/gitClone.png, id=799, 642.90187pt x 236.38312pt>
+File: ./img/gitClone.png Graphic file (type png)
+<use ./img/gitClone.png>
+Package pdftex.def Info: ./img/gitClone.png  used on input line 70.
+(pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[30]
+<./img/sceneBuilder.png, id=808, 1204.5pt x 654.19406pt>
+File: ./img/sceneBuilder.png Graphic file (type png)
+<use ./img/sceneBuilder.png>
+Package pdftex.def Info: ./img/sceneBuilder.png  used on input line 76.
+(pdftex.def)             Requested size: 344.69766pt x 187.21587pt.
+<./img/eclipse.png, id=809, 1204.5pt x 656.4525pt>
+File: ./img/eclipse.png Graphic file (type png)
+<use ./img/eclipse.png>
+Package pdftex.def Info: ./img/eclipse.png  used on input line 82.
+(pdftex.def)             Requested size: 344.69766pt x 187.86218pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.82 \imagen{eclipse}{IDE Eclipse}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.Alph4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.82 \imagen{eclipse}{IDE Eclipse}
+                                   <./img/gitClone.png> <./img/sceneBuilder.png
+>]
+File: ./img/gitClone.png Graphic file (type png)
+<use ./img/gitClone.png>
+Package pdftex.def Info: ./img/gitClone.png  used on input line 98.
+(pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.98 \imagen{gitClone}{Comando Git sobre WSL.}
+                                               <./img/eclipse.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+ [33pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ph4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.131 P
+       ara exportarlo como un fichero .jar, podemos hacer click derecho sobr...
+])
+LaTeX Info: Redefining \. on input line 398.
+LaTeX Info: Redefining \% on input line 398.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[34]
+\openout2 = `./tex/E_Manual_usuario.aux'.
+
+ (tex/E_Manual_usuario.tex) [35
+
+
+
+]
+No file anexos.bbl.
+
+Class memoir Warning: The material used in the headers is too large
+(15.35403pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 405.
+
+\tf@toc=\write5
+\openout5 = `anexos.toc'.
+
+\tf@lof=\write6
+\openout6 = `anexos.lof'.
+
+\tf@lot=\write7
+\openout7 = `anexos.lot'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+(anexos.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux) (tex/C_Diseno.aux) (tex/D_Man
+ual_programador.aux) (tex/E_Manual_usuario.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
+Package rerunfilecheck Info: File `anexos.out' has not changed.
+(rerunfilecheck)             Checksum: BE608408230E9A366E5C7ABD0D23CF60;2033.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
+ ) 
+Here is how much of TeX's memory you used:
+ 13121 strings out of 492946
+ 195171 string characters out of 3126711
+ 374476 words of memory out of 3000000
+ 16510 multiletter control sequences out of 15000+200000
+ 83828 words of font info for 97 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 45i,12n,45p,437b,685s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
+.enc}{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
+enc}<C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym
+/feymr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmbx12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmbx8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmbxi10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmcsc10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmr12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Users/MS02/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
+Output written on anexos.pdf (41 pages, 861808 bytes).
+PDF statistics:
+ 921 PDF objects out of 1000 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
+ 21269 words of extra memory for PDF output out of 24883 (max. 10000000)
+
