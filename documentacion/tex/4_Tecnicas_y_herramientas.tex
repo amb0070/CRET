@@ -5,7 +5,7 @@
 
 \subsection{Scrum}\label{scrum}
 
-A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio. Esto se consigue con el uso de\emph{sprints}.
+A través del uso de esta metodología, se adopta una estrategia de desarrollo incremental, en lugar de realizar una planificación y ejecución completa del proyecto desde el principio. Esto se consigue con el uso de \emph{sprints}.
 
 \subsection{Pomodoro}\label{pomodoro}
 
@@ -19,7 +19,7 @@ Para realizar el seguimiento de esta técnica, se ha utilizado el siguiente recu
 
 Aplicando este patrón de arquitectura, se utilizan 3 componentes, las vistas, los modelos y los controladores, de tal forma que se separa la lógica de la vista de la aplicación. De esta forma, si realizamos una modificación en una parte de nuestro código, la otra parte no se ve afectada. Por ejemplo, si modificamos la base de datos, solo modificaríamos el modelo encargado de esa acción, sin tocar el resto de la aplicación.
 
-Está compuesto por 3 componentes:
+Está compuesto por tres componentes:
 \begin{itemize}
 \item
 \textit{\textbf{Model: }} Normalmente esta parte se encarga de los datos (no siempre). Esto puede ser por ejemplo, consultando a una base de datos o cualquier otra estructura de datos utilizada en el desarrollo.
@@ -32,13 +32,23 @@ Está compuesto por 3 componentes:
 
 \imagen{modeloMVC}{Modelo MVC}.
 
+\subsection{Arquitectura de la aplicación}\label{arquitectura_app}
+
+A continuación se muestra un esquema de la arquitectura simplificada de la aplicación.
+
+\imagen{arquitectura}{Representación de la arquitectura de la aplicación.}
+
+A grandes rasgos podemos observar la interacción con la base de datos a través de la librería \emph{sqlite-jdbc}. Del mismo modo, se interacciona con la interfaz CAN a través del uso de la librería \emph{USBtinLib}.
+
+La librería \emph{jssc} es la encargada de encontrar los puertos serie disponibles en el equipo.
+
+Todo lo mencionado anteriormente es manejado por el modelo de la aplicación el cual interactúa con las el controlador y las vistas.
+
 \section{Control de versiones}\label{control_de_versiones}
 
 \subsection{Git}\label{git}
 
 Con el uso de este sistema de control de versiones, se realiza de manera eficiente y confiable el mantenimiento de versiones de aplicaciones o proyectos, cuando estas poseen una gran cantidad de código fuente. Además, guarda un registro de los cambios realizados en la aplicación o proyecto, de forma que podemos volver a una versión anterior en cualquier momento.
-
-\section{Hosting}\label{hosting}
 
 \subsection{GitHub}\label{github}
 
@@ -54,7 +64,7 @@ Estas tareas pueden estar en diversos estados a lo largo del proceso, y se les p
 
 Además, estas tareas pueden ser asignadas a un \emph{sprint} concreto, y establecer un tiempo estimado para realizarlas.
 
-Es gratuita para pequeños proyectos, y se puede encontrar en el siguiente enlace: https://www.zenhub.com/
+Es gratuita para pequeños proyectos, y se puede encontrar en el siguiente enlace: \url{https://www.zenhub.com/}
 
 \section{Entorno de desarrollo}\label{entorno_de_desarrollo}
 
@@ -66,7 +76,7 @@ Una de las decisiones del uso de esta IDE es la integración fácil y rápida qu
 
 \subsection{SceneBuilder}\label{scenebuilder}
 
-Es una interfaz de usuario con la cual a través del método \emph{Darg and Drop}, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
+Es una interfaz de usuario con la cual a través del método \emph{Drag and Drop}, es posible maquetar interfaces gráficas las cuales son utilizadas por JavaFX. Esa información es almacenada en ficheros FXML, un formato especial de XML.
 
 \subsection{SQLite}\label{sqlite}
 
@@ -74,53 +84,64 @@ Es un sistema de gestión de bases de datos de tamaño reducido, la cual no nece
 
 \section{Documentación}\label{documentacion}
 
-\subsection{TextMaker}\label{textmaker}
+\subsection{TeXMaker}\label{textmaker}
 
-Editor de LaTeX multiplataforma, el cual integra diversas herramientas necesarias para la generación de documentos LaTeX.
+Editor de \LaTeX{} multiplataforma, el cual integra diversas herramientas necesarias para la generación de documentos \LaTeX{}.
 
 \section{Impresión 3D}\label{impresion3d}
 
 \subsection{SolidWorks}\label{solidworks}
 
-Software de tipo CAD (Computer Aided Design) el cual es utilizado para modelar piezas en 3D. En este caso ha sido utilizado para el desarrollo de la caja que contiene el hardware utilizado para conectarse al bus CAN.
+Software de tipo CAD (Computer Aided Design) el cual es utilizado para modelar piezas en 3D. En este caso ha sido utilizado para el desarrollo de la caja que contiene el \emph{hardware} utilizado para conectarse al bus CAN.
 
 \subsection{Ultimaker Cura}\label{ultimaker_cura}
 
 Se trata de un \emph{silicer} gratuito para la impresión 3D. Es el encargado de transformar el diseño 3D en un formato que la impresora 3D sea capaz de procesar, en este caso un fichero \emph{gcode}.
 
-Página oficial: https://ultimaker.com/en/products/ultimaker-cura-software
+Página oficial:
 
-\section{Librerias}\label{librerias}
+\url{https://ultimaker.com/en/products/ultimaker-cura-software}
+
+\section{Librerías}\label{librerias}
 
 \subsection{USBtinLib}\label{usbtinlib}
 
 Librería utilizada para mediar entre el \emph{hardware} utilizado para conectarse al bus CAN y Java. Es la encargada de realizar al conexión, además de que nos permite tanto enviar como recibir datos del bus. 
 
-Puede encontrarse más información sobre esta librería en el siguiente enlace: https://github.com/EmbedME/USBtinLib
+Puede encontrarse más información sobre esta librería en el siguiente enlace:
+\url{https://github.com/EmbedME/USBtinLib}
 
 \subsection{SQLite-JDBC}\label{sqlite-jdbc}
 
 Librería para realizar conexiones con bases de datos SQLite.
 
-Puede encontrarse más información en el siguiente enlace: https://bitbucket.org/xerial/sqlite-jdbc
+Puede encontrarse más información en el siguiente enlace: 
+
+\url{https://bitbucket.org/xerial/sqlite-jdbc}
 
 \subsection{JSSC (\emph{Java Simple Serial Connector})}\label{jssc_java_simple_serial_connector}
 
 Librería multiplataforma a través de la cual es posible obtener los puertos serie de comunicación disponibles en el equipo en el que se ejecute.
 
-Puede encontrarse información en el siguiente enlace: https://github.com/scream3r/java-simple-serial-connector
+Puede encontrarse información en el siguiente enlace:
+
+\url{https://github.com/scream3r/java-simple-serial-connector}
 
 
 \subsection{JavaFX}\label{javafx}
 Se trata de una librería para Java, enfocada a la creación de interfaces gráficas. Dispone de multitud elementos predefinidos los cuales nos permiten la creación de una interfaz de uso fácil e intuitivo, además de ser agradable a la vista.
 
-Puede encontrarse información en el siguiente enlace: https://docs.oracle.com/javase/8/javase-clienttechnologies.htm
+Puede encontrarse información en el siguiente enlace:
+
+\url{https://docs.oracle.com/javase/8/javase-clienttechnologies.htm}
 
 \subsection{Medusa}\label{medusa}
 
 Conjunto de componentes los cuales pueden ser añadidos a \emph{JavaFX} para ampliar sus funcionalidades y características visuales.
 
-Puede encontrarse en el siguiente enlace: https://community.oracle.com/docs/DOC-992746
+Puede encontrarse en el siguiente enlace:
+
+\url{https://community.oracle.com/docs/DOC-992746}
 
 
 \section{Diseño de hardware}\label{diseño_de_hardware}
@@ -129,40 +150,36 @@ Puede encontrarse en el siguiente enlace: https://community.oracle.com/docs/DOC-
 
 Está compuesto por un conjunto de herramientas para el diseño de circuitos electrónicos. Esto incluye la creación de esquemas para circuitos electrónicos así como la conversión de esos esquemas a diseños de PCB (Printed Circuit Board). Además nos permite exportar los ficheros necesarios para la producción de dichos componentes.
 
-PAGINA WEB JLCPCB?
 
 \section{Bus CAN}\label{bus_can}
 
-\subsection{canAlyser3 mini}\label{canalyser3_mini}
+\subsection{canAnalyser3 mini}\label{canalyser3_mini}
 
-Herramienta privada desarrollada para la utilización de un hardware concreto (USB-to-CAN), la cual ha sido utilizada para la generación de tramas (\emph{Frames}) CAN para la realización de las pruebas y los test correspondientes durante el desarrollo de la aplicación.
+Herramienta privada desarrollada para la utilización de un \emph{hardware} concreto (USB-to-CAN), la cual ha sido utilizada para la generación de \emph{Frames} CAN para la realización de las pruebas y los test correspondientes durante el desarrollo de la aplicación.
 
-PONER LA MARCA QUE ES
+Se puede encontrar más información en el siguiente enlace:
 
-\subsection{SocketCAN}\label{socketcan}
+\url{https://www.ixxat.com/products/products-industrial/tools/cananalyser/cananalyser-overview}
 
-Se trata de un conjunto de herramientas y \emph{drivers} "Open Source" para el bus CAN, desarrollado para Linux. Es posible la creación de interfaces CAN virtuales, o añadir \emph{hardware} CAN como si de una tarjeta de red se tratase.
+\subsection{SocketCAN}\label{socketcan}\cite{socket:can}
 
-PONER WOLSWAGEN RESEARCH
+Se trata de un conjunto de herramientas y \emph{drivers} \emph{Open Source} para el bus CAN, desarrollado para \emph{Linux}. Es posible la creación de interfaces CAN virtuales o añadir \emph{hardware} CAN como si de una tarjeta de red se tratase.
+
 
 \subsection{Can-Utils}\label{can-utils}
 
 Se trata de un set de herramientas con las cuales podemos interactuar con el bus CAN. A continuación se describen las dos herramientas utilizadas y más interesantes.
 
-Puede encontrarse en el siguiente enlace: https://github.com/linux-can/can-utils
+Puede encontrarse en el siguiente enlace:
+\url{https://github.com/linux-can/can-utils}
 
-\subsection{candump}\label{candump}
+\subsection{candump}\label{candump-utils}
 
-Nos permite capturar todo el tráfico que es transmitido a través del bus, y almacenarlo en un fichero.
+Utilidad perteneciente al paquete de \emph{can-utils}. Nos permite capturar todo el tráfico que es transmitido a través del bus, y almacenarlo en un fichero, entre otras opciones.
 
 \subsection{canplayer}\label{canplayer}
 
-Esta herramienta nos permite generar tramas (Frames) y enviarlas al bus CAN. También es posible enviar un fichero capturado anteriormente con la herramienta \emph{candump}.
+Utilidad perteneciente al paquete \emph{can-utils}. Esta herramienta nos permite generar \emph{Frames} y enviarlas al bus CAN. También es posible enviar un fichero capturado anteriormente con la herramienta \emph{candump}.
 
-
-
-
-
-Esquema global del programa, con input de can, etc
 
 

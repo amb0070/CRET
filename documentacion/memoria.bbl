@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{osi:can}
+BOSCH.
+\newblock Osi layers in automotive networks, 2013.
+\newblock [Internet].
+
+\bibitem{marco:can}
+Marco Guardigli.
+\newblock Hacking your car, 2012.
+\newblock [Internet].
+
+\bibitem{socket:can}
+Volkswagen Research.
+\newblock Socketcan, 2010.
+\newblock [Internet].
+
+\bibitem{preloader:javafx}
+Aron Sreder.
+\newblock How to easily implement an application preloader, 2015.
+
+\bibitem{canalyzator:can}
+sw~pschmied.
+\newblock Canalyzat0r, 2018.
+
+\bibitem{wiki:can}
+Wikipedia.
+\newblock Can bus - wikipedia, 2019.
+\newblock [Internet].
+
+\end{thebibliography}

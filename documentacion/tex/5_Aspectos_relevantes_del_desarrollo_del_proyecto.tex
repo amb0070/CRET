@@ -1,20 +1,20 @@
 \capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
 
-A continuación se desarrollan los aspectos más importantes que influyeron en el desarrollo del proyecto.
+A continuación se tratan los aspectos más importantes que influyeron en el desarrollo del proyecto.
 
 \section{Inicio del proyecto}\label{inicio_del_proyecto}
 
-La idea de desarrollar esta aplicación surgió unos meses atrás, tras trabajar en una empresa que de dedicaba a la reparación de maquinaria.
+La idea de desarrollar esta aplicación surgió unos meses atrás, tras trabajar en una empresa que se dedicaba a la reparación de maquinaria.
 
 Tras investigar y leer algunos manuales de reparación de esas máquinas, era de destacar que existía una característica en común, que era el uso del bus CAN en muchas de ellas, por no decir todas. A partir de ahí surgió el interés y las ganas de indagar sobre su funcionamiento.
 
 Una vez fue posible la lectura de dichos datos, quedaba clara la dificultad para la identificación de los mismos, ya que todos ellos estaban en hexadecimal, lo cual dificultaba su identificación.
 
-Tras el desarrollo de un pequeños \emph{script} en python los cuales eran capaces de realizar una gráfica con los datos previamente adquiridos del bus CAN y detectar la mayor facilidad a la hora de identificar esos datos, surgió la idea de realizar este proyecto.
+Tras el desarrollo de un pequeños \emph{script} en \emph{Python}, los cuales eran capaces de realizar una gráfica con los datos previamente adquiridos del bus CAN y detectar la mayor facilidad a la hora de identificar esos datos, surgió la idea de realizar este proyecto.
 
 Existía la necesidad de que, al contrario que en el caso anterior, este proyecto permitiera realizar ese proceso en tiempo real, no con una muestra de datos tomada anteriormente.
 
-Otra de las principales motivaciones fue el hecho de que si por ejemplo, existiera la necesidad de recoger los datos de un sensor (de velocidad de una rueda) para su monitorización y este dato es transmitido a través del bus CAN, no es necesaria la instalación de un nuevo sensor, abaratando costes y facilitando realizar la tarea necesaria.
+Otra de las principales motivaciones fue el hecho de que si, por ejemplo, existiera la necesidad de recoger los datos de un sensor (de velocidad de una rueda) para su monitorización y este dato es transmitido a través del bus CAN, no es necesaria la instalación de un nuevo sensor, abaratando costes y facilitando realizar la tarea necesaria.
 
 \section{Metodologías}\label{metodologias}
 
@@ -33,6 +33,17 @@ LINKS CAN BUS
 
 
 \section{Desarrollo del \emph{hardware}}\label{desarrollo_del_hardware}
+
+Existieron principalmente dos motivaciones para el diseño y desarrollo de un \emph{hardware} propio:
+
+\begin{itemize}
+\item
+El elevado precio de las interfaces que existen actualmente en el mercado, las cuales pueden llegar a costar miles de euros.
+\item
+La posibilidad de conectarse a dos buses distintos de forma simultanea. Una interfaz CAN únicamente puede conectarse a un bus de datos. Existen alternativas más baratas como \emph{usbtin} REFERENCIA, pero que únicamente permiten conectarse a un bus.
+\end{itemize}
+
+Con este desarrollo propio, se consigue la conexión a dos buses e datos de forma simultánea y económica.
 
 Se decidió comenzar por esta fase por los siguientes motivos:
 
@@ -72,7 +83,7 @@ La huella (\emph{footprint}) que va a utilizar, es decir, en función de cada en
 \end{itemize}
 
 
-\subsection{Posicionamiento y enrutado de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
+\subsection{Posicionamiento y \textit{enrutado} de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
 
 Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs. Para que nos hagamos una idea, ese es el resultado:
 
@@ -83,10 +94,10 @@ En este momento, es cuando tenemos que decidir:
 \item
 El número de capas que va a tener nuestra PCB: En este caso se utilizaron 2 capas al tratarse de un proyecto sencillo, pero en el que necesitaban hacerse cruces de pistas.
 \item
-La posición de los componentes y el enrutado de las pistas.
+La posición de los componentes y el \textit{enrutado} de las pistas.
 \end{itemize}
 
-FOTO DEL ESQUEMA TERMINADO.
+\imagen{finalFootprint}{Esquema de la PCB del proyecto.}
 
 
 \imagen{fotoPCB}{PCB del proyecto sin los componentes}
@@ -119,7 +130,7 @@ De esa manera, se decidió utilizar estructuras de tipo \emph{HashMap}, las cual
 
 \subsection{Problemas de concurrencia}\label{problemas_de_concurrencia}
 
-Los elementos que representan gráficamente los datos (LineChart), realizan una lectura de un tipo de datos llamado \emph{ObservableList}. Durante la ejecución de la aplicación existen 2 \emph{threads}, uno para la ejecución de la parte gráfica, y el otro para la lectura de los datos del bus CAN.
+Los elementos que representan gráficamente los datos (LineChart), realizan una lectura de un tipo de datos llamado \emph{ObservableList}. Durante la ejecución de la aplicación existen dos \emph{threads}, uno para la ejecución de la parte gráfica, y el otro para la lectura de los datos del bus CAN.
 
 El problema surge cuando se intenta realizar una escritura en el objeto de tipo \emph{ObservableList} desde el \emph{thread} que lee el bus CAN al mismo tiempo que el \emph{thread} de la interfaz gráfica realiza una lectura de los datos del mismo objeto.
 
@@ -136,7 +147,7 @@ En este fichero es importante tener en cuenta los siguientes aspectos:
 \begin{itemize}
 
 \item
-Debemos de indicarle que controlador se va a encargar de manejar esa vista. Es decir, siempre tiene que existir una relación vista-controlador.
+Debemos indicarle qué controlador se va a encargar de manejar esa vista. Es decir, siempre tiene que existir una relación vista-controlador.
 \item
 Todos los componentes que vayan a ser utilizados desde el controlador, tiene que tener como mínimo la descripción \emph{fx:id} para su identificación. Esta id tiene que ser única en el documento FXML.
 \item
@@ -150,7 +161,7 @@ Además, en este fichero se indican las acciones que queremos que tengan los ele
 
 Para realizar las pruebas correspondientes durante el desarrollo de la aplicación y no depender del acceso físico a una máquina o vehículo, se ha desarrollado una pequeña placa la cual simularía una red CAN, en la que se pueden conectar dos nodos, uno para enviar datos al bus y el otro para recibir.
 
-Para ello simplemente se han colocado dos resistencias de 120 \emph{ohmns} (definidas por el estándar del CAN), y unos de tipo DB9, ya que son los más habituales en este tipo de \emph{hardware}.
+Para ello simplemente se han colocado dos resistencias de 120 \emph{ohmns} (definidas por el estándar del CAN), y unos conectores de tipo DB9, ya que son los más habituales en este tipo de \emph{hardware}.
 
 \imagen{hardwareRedCan}{Placa casera para simular una red CAN}.
 
@@ -160,11 +171,11 @@ Para la protección de \emph{hardware} desarrollado, se vio la necesidad de crea
 
 Para ello se ha utilizado el \emph{software} \emph{SolidWorks} para el diseño de la misma.
 
-FOTO CAJA EN 3D EN EL PC
+\imagen{render}{Renderizado de la caja en \emph{SolidWorks}}.
 
 Una vez concluido el diseño, el fichero 3D ha sido introducido en \emph{Ultimaker CURA}, un \emph{silicer} el cual nos transforma el objeto 3D en un fichero el cual la impresora 3D sea capaz de interpretar.
 
-Para realizar la impresión, se ha utilizado una impresora 3D \emph{BQ Prusa i3 Hephestos} y plástico de tipo ABS (\emph{Acrylonitrile Butadiene Styrene}) el cual resulta más difícil de imprimir, pero es adecuado para un uso intensivo como puede ser el de la industria, teniendo más resistencia a golpes y a temperatura que uno de sus competidores como puede ser el PLA ( Polylactic acid).
+Para realizar la impresión, se ha utilizado una impresora 3D \emph{BQ~Prusa~i3~Hephestos} y plástico de tipo ABS (\emph{Acrylonitrile Butadiene Styrene}) el cual resulta más difícil de imprimir, pero es adecuado para un uso intensivo como puede ser el de la industria, teniendo más resistencia a golpes y a temperatura que uno de sus competidores como puede ser el PLA ( Polylactic acid).
 
 
 FOTO DEL A CAJA TERMINADA

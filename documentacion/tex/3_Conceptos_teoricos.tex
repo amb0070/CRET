@@ -4,15 +4,15 @@ Las partes del proyecto con mayor desconocimiento y complejidad están enfocadas
 
 \section{Bus CAN}\label{bus_can}
 
-El bus CAN (\emph{Controller Area Network}) es un protocolo desarrollado para la comunicación entre los distintos micro-controladores y dispositivos que son necesarios para el funcionamiento de una máquina (un vehículo, por ejemplo). Este protocolo no necesita de un host principal, sino que sigue una topología de tipo "bus".
+El bus CAN (\emph{Controller Area Network})\cite{wiki:can} es un protocolo desarrollado para la comunicación entre los distintos micro-controladores y dispositivos que son necesarios para el funcionamiento de una máquina (un vehículo, por ejemplo). Este protocolo no necesita de un host principal, sino que sigue una topología de tipo "bus".
 
-\imagen{canNetwork}{Ejemplo de dispositivos conectados a un bus CAN}
+\imagen{canNetwork}{Ejemplo de dispositivos conectados a un bus CAN.}
 
 Dicho protocolo está basado en el uso de mensajes para el intercambio de información entre los distintos dispositivos que lo componen.
 
-Es utilizado en multitud de escenarios como la aviación, la navegación, la automatización industrial, instrumentos médicos, maquinaria pesada y ascensores entre otros.
+Es utilizado en multitud de escenarios como la aviación, la navegación, la automatización industrial, instrumentos médicos, maquinaria pesada y ascensores, entre otros.
 
-Una de las características que nos interesa conocer, es que al ser una topología de tipo BUS, todos los nodos tienen acceso a la información que es transmitida a través del bus, con lo que nos es suficiente con conectarnos a dicho bus y capturar los datos que transcurren a través de el para analizarlos posteriormente.
+Una de las características que nos interesa conocer, es que al ser una topología de tipo BUS, todos los nodos tienen acceso a la información que es transmitida a través del bus, con lo que es suficiente con conectarnos a dicho bus y capturar los datos que viajan a través de él para analizarlos posteriormente.
 
 \imagen{canbusTopology}{Esquema de conexión de los nodos en el bus CAN}
 
@@ -21,53 +21,50 @@ El principal elemento que compone una red de tipo CAN son los nodos, además de 
 \begin{itemize}
 \item
 \textbf{Nodo:} Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
-
+\item
 \textbf{Cable:} Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables. Estos son identificados por CAN-H (CAN High) y CAN-L (CAN-Low).
+\end{itemize}
 
 Esto es debido a que las señales que circulan por los mismos, son señales diferenciales, como se puede apreciar en la siguiente figura.
 
-\imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio}
-
-\end{itemize}
-
-
+\imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio \cite{marco:can}}
 
 Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
 
 \begin{itemize}
 \item
-\textbf{Active:} Cuando un nodo es conectado en modo "active", esto significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo "Single Shot", el mensaje será enviado continuamente por el bus hasta que se reciba un ACK (Acknonolowment). De manera que este modo si que tiene influencias sobre el bus.
+\textbf{Active:} Cuando un nodo es conectado en modo \emph{active}, significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo \emph{Single Shot}, el mensaje será enviado continuamente por el bus hasta que se reciba un ACK \emph{(Acknonolowment)}. De manera que este modo si que tiene influencias sobre el bus.
 
 \item
 \textbf{Listen-Only:} Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en modo \emph{listenonly}, dicho nodo no tiene influencia sobre el resto. Si por ejemplo llega un \emph{Frame} erróneo, no genera \emph{flags} de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
 
 \item
-\textbf{LoopBack:} Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{LoopBack}, significa que este nodo es capaz "hablar" consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
+\textbf{LoopBack:} Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{LoopBack}, significa que este nodo es capaz comunicarse consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
 
 \end{itemize}
 
-Cada uno de los nodos es capaz de enviar y recibir mensajes, pero no de forma simultanea.
+Cada uno de los nodos es capaz de enviar y recibir mensajes. La prioridad de los mensajes de un nodo viene dada por la ID(identificador) del \emph{Frame} enviado al bus.
 
 \imagen{canNode}{Anatomía de un nodo CAN}
 
 A continuación se describen los elementos de una trama CAN, así como la descripción de la misma.
 
-Trama (\emph{Frame}: Cada uno de los mensajes enviados a través de la red CAN. Con relación a la figura anterior, correspondería a cada una de las líneas mostradas.
+\textbf{\emph{Frame} (Trama):} Cada uno de los mensajes enviados a través de la red CAN. En la Figura \ref{candump} puede asociarse a cada una de las líneas de datos horizontales.
 
-La estructura interna es más compleja, pero no nos centraremos en ella ya que no tiene relevancia en este caso. Únicamente nos centraremos en los 3 elementos identificados en la figura.
+La estructura interna es más compleja, pero no nos centraremos en ella ya que no tiene relevancia en este caso. Únicamente nos centraremos en los tres elementos identificados en la figura.
 
-Cada uno de las tramas contiene 3 campos en los que nos centraremos: ID, Length y Data.
+Cada uno de las tramas contiene tres campos en los que nos centraremos: ID, Length y Data.
 
 \begin{itemize}
 \item
-\textbf{ID (Identificador):} Se trata del identificador del Frame. A través de el, se establece la prioridad que tiene ese Frame durante el acceso al bus de datos.
+\textbf{ID (Identificador):} Se trata del identificador del \emph{Frame}. A través de él, se establece la prioridad que tiene ese \emph{Frame} durante el acceso al bus de datos.
 \item
 \textbf{Length (Longitud):} En este campo, se define la longitud del campo de datos del Frame. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 bytes de datos.
 \item
 \textbf{Data (Datos):} Campo en el que se transportan los datos que son enviados por el nodo correspondiente. La longitud de este campo puede ir desde 0 bytes hasta un total de 8 bytes.
 \end{itemize}
 
-\imagen{candump}{Identificación de los elementos de la salida del comando \emph{candump}}
+\imagen{candump}{Identificación de los datos que circulan por el bus CAN.}
 
 
 \textbf{Bitriate:} Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad para entenderse entre ellos. Esta, puede cambiar dependiendo de los sistemas y de su desarrollo.
@@ -76,44 +73,39 @@ Los valores más comunes son:
 \begin{itemize}
 \tightlist
 \item
-10000 bit/s
+10\,000 bit/s
 \item
-20000 bit/s
+20\,000 bit/s
 \item
-50000 bit/s
+50\,000 bit/s
 \item
-100000 bit/s
+100\,000 bit/s
 \item
-125000 bit/s
+125\,000 bit/s
 \item
-250000 bit/s
+250\,000 bit/s
 \item
-500000 bit/s
+500\,000 bit/s
 \item
-800000 bit/s
+800\,000 bit/s
 \item
-1000000 bit/s
+1\,000\,000 bit/s
 \end{itemize}
 
 
 Además, el estándar dispone de varias medidas para la detección de errores y seguridad las cuales no son relevantes para la exposición de este proyecto.
 
-A través del bus CAN, es posible el flujo de datos a distintas velocidades de forma simultanea, a través de los mismos cables. Lo que no es posible, es la lectura de datos a dos velocidades distintas, por lo que se desarrolló un hardware específico para dicha tarea.
+El desarrollo del \emph{hardware} con dos interfaces viene motivado a la posibilidad de que exista más de un bus en una misma máquina. De esta manera, sería posible el análisis de dos buses de forma simultánea.
 
-
-
-Siguiendo el modelo OSI, el estándar bus CAN especifica únicamente las 3 primeras capas:
+Siguiendo el modelo OSI\cite{osi:can}, el estándar bus CAN especifica únicamente las tres primeras capas:
 
 \begin{itemize}
 
 \item
-Capa física: Esta capa define como son transmitidas las señales a nivel eléctrico, es decir, los niveles de las señales en su representación como bits, y el medio de transmisión que va a ser utilizado. Además, se encargaría de gestionar la sincronización de los mensajes, así como su "bit encoding".
+\textbf{Capa física:} Esta capa define como son transmitidas las señales a nivel eléctrico, es decir, los niveles de las señales en su representación como bits, y el medio de transmisión que va a ser utilizado. Además, se encargaría de gestionar la sincronización de los mensajes, así como su \emph{bit encoding}.
 
 \item
-Capa de enlace de datos:
-
-\item
-Capa de red: Esta se encargaría de los aspectos como los filtros de aceptación, 
+\textbf{Capa de enlace de datos:} Esta capa se encarga de la parte lógica del protocolo. Entre sus funciones se encuentra el filtrado de los \emph{Frames}, detección de sobrecarga del bus y la detección de errores.
 
 \end{itemize}
 
@@ -126,13 +118,22 @@ A continuación se describen distintos conceptos básicos sobre el hardware desa
 
 Representación esquemática de los componentes de un circuito, así como sus entradas y salidas, y conexión entre ellos.
 
-A continuación se muestra un ejemplo visual de un varios componentes en un esquema para el diseño de una PCB:
+A continuación se muestra un ejemplo visual de un varios componentes en un esquema para el diseño de una PCB \emph{(Printed Circuit Board)}:
 
-\imagen{esquema}{Ejemplo de un componente en un esquema}
+\imagen{esquema}{Ejemplo de varios componentes a nivel esquemático.}
 
 \subsection{PCB - Printed Circuit Board}\label{pcb_printed_circuit_board}
 
 Hace referencia a la placa sobre la que van soldados todos los componentes eléctricos necesarios para hacer funcionar el circuito. Suele tener 3 componentes principales:
+
+\begin{itemize}
+\item
+Pistas
+\item
+\emph{Pads}
+\item
+Vías
+\end{itemize}
 
 \subsection{Pistas}\label{pistas}
 
@@ -148,7 +149,7 @@ Cada uno de los espacios en los cuales se sueldan los distintos  elementos que c
 
 \subsection{Vía}\label{via}
 
-Al tratarse de PCBs de doble capa ( es decir, que tiene pistas o elementos en ambos lados), a veces es necesario realizar un cruce entre vías, o conectar un componente que está en el otro lado de la placa. Para ello se utilizan las vías, a través de ellas se consiguen conectar ambas capas de la PCB.
+Al tratarse de una PCB de doble capa (es decir, que tiene pistas o elementos en ambos lados), a veces es necesario realizar un cruce entre vías, o conectar un componente que está en el otro lado de la placa. Para ello se utilizan las vías, a través de ellas se consiguen conectar ambas capas de la PCB.
 
 \imagen{via}{Visión de una vía a través de un corte de una PCB.}
 
@@ -156,19 +157,51 @@ Al tratarse de PCBs de doble capa ( es decir, que tiene pistas o elementos en am
 
 Hace referencia al espacio necesario para colocar un elemento del hardware. Existen estándares que definen los tamaños y formas de dichos espacios.
 
-\imagen{footprint}{Ejemplo de una huella de un IC.}
+\imagen{footprint}{Ejemplo de una huella de un IC \emph{(Integrated Circuit)}.}
 
 \subsection{Gerber}\label{gerber}
-Es un formato de fichero el cual contiene la información necesaria para realizar la fabricación de una PCB (Placa de Circuito Impreso).
+Es un formato de fichero el cual contiene la información necesaria para realizar la fabricación de una PCB.
+
+Estos ficheros son aceptados por todos los fabricantes de placas de circuito impreso. Además es soportado por la mayoría de programas utilizados para el diseño de las mismas.
 
 \section{Desarrollo del software}\label{desarrollo_del_software}
 
 
+Para el desarrollo del \emph{software} se ha utilizado el lenguaje de programación Java. Además, para la mejora de la interacción con el usuario también se ha utilizado el módulo JavaFX.
 
+Existen distintos elementos utilizados durante el desarrollo de la aplicación los cuales es interesante destacar:
 
-\section{Referencias}
+\begin{itemize}
+\item
+\textbf{GridPane}: Se trata de una estructura implementada en JavaFX la cual nos permite una distribución de los elementos que forman la interfaz gráfica en forma de cuadrícula.
 
-Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
+En cada una de las celdas de esta cuadrícula se incluyen distintos elementos que se mencionarán a continuación.
+\item
+\textbf{LineChart}: Se trata de un módulo perteneciente a JavaFX el cual nos permite representar gráficamente un dato. Es utilizado para mostrar los datos al usuario y que estos puedan ser identificados.
 
+\emph{LineChart} recoge los datos de una estructura de tipo \emph{ObservableList}, en la cual se encuentran todos los datos a representar.
+
+Este tipo de datos no permite el acceso concurrente de varios \emph{threads} al mismo tiempo.
+
+\imagen{lineChart}{Ejemplo del tipo \emph{LineChart} en JavaFX.}
+
+\item
+\textbf{ConcurrentLinkedQueue}: A través del uso de esta estructura ha sido posible recoger los datos del bus CAN con un \emph{thread} a la vez que el \emph{thread} de la interfaz gráfica se encargaba de insertarlos en los objetos de tipo \emph{ObservableList}.
+\item
+\textbf{FXML Document}: Se trata de documentos con un formato que extiende de XML. En estos documentos se encuentra la estructura de las interfaces gráficas y la distribución de los elementos en la misma. Este tipo de documentos pueden ser escritos a mano o generados con la ayuda de la herramienta \emph{SceneBuilder}.
+
+A este documento se le indica el \emph{Controller} que va a manejarlo, de forma que se crea la conexión \emph{View-Controller}.
+
+Esto se hace a través del campo \emph{fx:controller} del documento FXML.
+\item
+\textbf{Preloader}: Debido a la cantidad de tiempo requerido para el arranque de la aplicación (comprobación de la base de datos, preparación de la interfaz gráfica), se decidió introducir un \emph{preloader}. Este se encarga de mostrarnos una pantalla de carga mientras la aplicación realiza las tareas necesarias. En el momento en el que la pantalla principal está lista para mostrarse, esta manda una señal al \emph{preloader} para que se cierre.
+
+\imagen{preloaderArchitecture}{Etapas del arranque de una aplicación JavaFX\cite{preloader:javafx}}
+\item
+\textbf{ToolTips}: Se trata de una descripción emergente de un elemento. Esta ayuda al usuario a entender la funcionalidad de un elemento simplemente arrastrando el cursor sobre el elemento.
+
+\imagen{tooltip}{Ejemplo de ToolTip en JavaFX}
+
+\end{itemize}
 
 
