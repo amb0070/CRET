@@ -17,9 +17,9 @@
 \contentsline {subsection}{PCB - Printed Circuit Board}{12}{section*.8}% 
 \contentsline {subsection}{Pistas}{13}{section*.9}% 
 \contentsline {subsection}{Pad}{13}{section*.10}% 
-\contentsline {subsection}{V\IeC {\'\i }a}{14}{section*.11}% 
+\contentsline {subsection}{V\IeC {\'\i }a}{13}{section*.11}% 
 \contentsline {subsection}{Footprint}{14}{section*.12}% 
-\contentsline {subsection}{Gerber}{15}{section*.13}% 
+\contentsline {subsection}{Gerber}{14}{section*.13}% 
 \contentsline {section}{\numberline {3.3}Desarrollo del software}{15}{section.3.3}% 
 \contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{19}{chapter*.14}% 
 \contentsline {section}{\numberline {4.1}Metodolog\IeC {\'\i }as}{19}{section.4.1}% 
@@ -31,27 +31,27 @@
 \contentsline {section}{\numberline {4.3}Control de versiones}{21}{section.4.3}% 
 \contentsline {subsection}{Git}{21}{section*.19}% 
 \contentsline {subsection}{GitHub}{21}{section*.20}% 
-\contentsline {section}{\numberline {4.4}Gesti\IeC {\'o}n del proyecto}{21}{section.4.4}% 
-\contentsline {subsection}{ZenHub}{21}{section*.21}% 
+\contentsline {section}{\numberline {4.4}Gesti\IeC {\'o}n del proyecto}{22}{section.4.4}% 
+\contentsline {subsection}{ZenHub}{22}{section*.21}% 
 \contentsline {section}{\numberline {4.5}Entorno de desarrollo}{22}{section.4.5}% 
 \contentsline {subsection}{Eclipse IDE}{22}{section*.22}% 
 \contentsline {subsection}{SceneBuilder}{22}{section*.23}% 
-\contentsline {subsection}{SQLite}{22}{section*.24}% 
-\contentsline {section}{\numberline {4.6}Documentaci\IeC {\'o}n}{22}{section.4.6}% 
-\contentsline {subsection}{TeXMaker}{22}{section*.25}% 
+\contentsline {subsection}{SQLite}{23}{section*.24}% 
+\contentsline {section}{\numberline {4.6}Documentaci\IeC {\'o}n}{23}{section.4.6}% 
+\contentsline {subsection}{TeXMaker}{23}{section*.25}% 
 \contentsline {section}{\numberline {4.7}Impresi\IeC {\'o}n 3D}{23}{section.4.7}% 
 \contentsline {subsection}{SolidWorks}{23}{section*.26}% 
 \contentsline {subsection}{Ultimaker Cura}{23}{section*.27}% 
 \contentsline {section}{\numberline {4.8}Librer\IeC {\'\i }as}{23}{section.4.8}% 
 \contentsline {subsection}{USBtinLib}{23}{section*.28}% 
-\contentsline {subsection}{SQLite-JDBC}{23}{section*.29}% 
-\contentsline {subsection}{JSSC (\emph {Java Simple Serial Connector})}{23}{section*.30}% 
+\contentsline {subsection}{SQLite-JDBC}{24}{section*.29}% 
+\contentsline {subsection}{JSSC (\emph {Java Simple Serial Connector})}{24}{section*.30}% 
 \contentsline {subsection}{JavaFX}{24}{section*.31}% 
 \contentsline {subsection}{Medusa}{24}{section*.32}% 
 \contentsline {section}{\numberline {4.9}Dise\IeC {\~n}o de hardware}{24}{section.4.9}% 
 \contentsline {subsection}{KiCAD}{24}{section*.33}% 
-\contentsline {section}{\numberline {4.10}Bus CAN}{24}{section.4.10}% 
-\contentsline {subsection}{canAnalyser3 mini}{24}{section*.34}% 
+\contentsline {section}{\numberline {4.10}Bus CAN}{25}{section.4.10}% 
+\contentsline {subsection}{canAnalyser3 mini}{25}{section*.34}% 
 \contentsline {subsection}{SocketCAN}{25}{section*.35}% 
 \contentsline {subsection}{Can-Utils}{25}{section*.36}% 
 \contentsline {subsection}{candump}{25}{section*.37}% 
@@ -64,14 +64,15 @@
 \contentsline {subsection}{Dise\IeC {\~n}o del esquema el\IeC {\'e}ctrico}{29}{section*.40}% 
 \contentsline {subsection}{Generaci\IeC {\'o}n del \emph {netlist}}{30}{section*.41}% 
 \contentsline {subsection}{Posicionamiento y \textit {enrutado} de los componentes y las pistas en la PCB}{30}{section*.42}% 
-\contentsline {section}{\numberline {5.5}Desarrollo del \emph {software}}{32}{section.5.5}% 
-\contentsline {subsection}{Generaci\IeC {\'o}n de gr\IeC {\'a}ficas de forma din\IeC {\'a}mica}{33}{section*.43}% 
-\contentsline {subsection}{Problemas de concurrencia}{33}{section*.44}% 
-\contentsline {section}{\numberline {5.6}Dise\IeC {\~n}o de la interfaz gr\IeC {\'a}fica}{34}{section.5.6}% 
-\contentsline {section}{\numberline {5.7}Testing}{34}{section.5.7}% 
-\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o e impresi\IeC {\'o}n 3D de una caja protectora}{35}{section.5.8}% 
-\contentsline {chapter}{Trabajos relacionados}{37}{chapter*.45}% 
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{39}{chapter*.46}% 
-\contentsline {section}{\numberline {7.1}Conclusiones}{39}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}L\IeC {\'\i }neas de trabajo futuras}{39}{section.7.2}% 
-\contentsline {chapter}{Bibliograf\'{\i }a}{41}{chapter*.47}% 
+\contentsline {subsection}{Carga del \emph {firmware} en los IC}{32}{section*.43}% 
+\contentsline {section}{\numberline {5.5}Desarrollo del \emph {software}}{33}{section.5.5}% 
+\contentsline {subsection}{Generaci\IeC {\'o}n de gr\IeC {\'a}ficas de forma din\IeC {\'a}mica}{34}{section*.44}% 
+\contentsline {subsection}{Problemas de concurrencia}{34}{section*.45}% 
+\contentsline {section}{\numberline {5.6}Dise\IeC {\~n}o de la interfaz gr\IeC {\'a}fica}{35}{section.5.6}% 
+\contentsline {section}{\numberline {5.7}Testing}{35}{section.5.7}% 
+\contentsline {section}{\numberline {5.8}Dise\IeC {\~n}o e impresi\IeC {\'o}n 3D de una caja protectora}{36}{section.5.8}% 
+\contentsline {chapter}{Trabajos relacionados}{39}{chapter*.46}% 
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{41}{chapter*.47}% 
+\contentsline {section}{\numberline {7.1}Conclusiones}{41}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}L\IeC {\'\i }neas de trabajo futuras}{41}{section.7.2}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.48}% 

@@ -3,8 +3,8 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de dispositivos conectados a un bus CAN.}}{7}{figure.3.1}% 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema de conexi\IeC {\'o}n de los nodos en el bus CAN}}{8}{figure.3.2}% 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Se\IeC {\~n}ales el\IeC {\'e}ctricas del bus CAN vistas por un osciloscopio \cite {marco:can}}}{9}{figure.3.3}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Anatom\IeC {\'\i }a de un nodo CAN}}{10}{figure.3.4}% 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Identificaci\IeC {\'o}n de los datos que circulan por el bus CAN.}}{11}{figure.3.5}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Anatom\IeC {\'\i }a de un nodo CAN}}{9}{figure.3.4}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Identificaci\IeC {\'o}n de los campos que componen un \emph {Frame}.}}{10}{figure.3.5}% 
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de varios componentes a nivel esquem\IeC {\'a}tico.}}{12}{figure.3.6}% 
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema de pistas de una PCB.}}{13}{figure.3.7}% 
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustraci\IeC {\'o}n con 4 \emph {pads} en una PCB.}}{13}{figure.3.8}% 
@@ -19,5 +19,6 @@
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Esquema de la PCB del proyecto.}}{31}{figure.5.17}% 
 \contentsline {figure}{\numberline {5.18}{\ignorespaces PCB del proyecto sin los componentes}}{32}{figure.5.18}% 
 \contentsline {figure}{\numberline {5.19}{\ignorespaces PCB del proyecto con los componentes soldados}}{32}{figure.5.19}% 
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Placa casera para simular una red CAN}}{35}{figure.5.20}% 
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Renderizado de la caja en \emph {SolidWorks}}}{36}{figure.5.21}% 
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Pines conectados al microcontrolador PIC para la carga del \emph {firmware}.}}{33}{figure.5.20}% 
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Placa casera para simular una red CAN}}{36}{figure.5.21}% 
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Renderizado de la caja en \emph {SolidWorks}}}{36}{figure.5.22}% 

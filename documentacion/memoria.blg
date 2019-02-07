@@ -6,8 +6,12 @@ A level-1 auxiliary file: ./tex/4_Tecnicas_y_herramientas.aux
 A level-1 auxiliary file: ./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux
 A level-1 auxiliary file: ./tex/6_Trabajos_relacionados.aux
 A level-1 auxiliary file: ./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux
-The style file: plain.bst
+The style file: plainnat.bst
 Database file #1: bibliografia.bib
+Repeated entry---line 124 of file bibliografia.bib
+ : @misc{ kvaser:can
+ :                  ,
+I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 152 of file bibliografia.bib
  :        
  :        url = "https://github.com/schutzwerk/CANalyzat0r",
@@ -18,4 +22,34 @@ I was expecting a `,' or a `}'---line 160 of file bibliografia.bib
  :        url = "https://blog.codecentric.de/en/2015/09/javafx-how-to-easily-implement-application-preloader-2/",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-(There were 2 error messages)
+I was expecting a `,' or a `}'---line 169 of file bibliografia.bib
+ :        
+ :        url = "https://www.fischl.de/usbtin/",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 177 of file bibliografia.bib
+ :        
+ :        url = "https://github.com/ltomov/4-port-usb-hub",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 185 of file bibliografia.bib
+ :        
+ :        url = "https://www.microchip.com/Developmenttools/ProductDetails/PG164130",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 193 of file bibliografia.bib
+ :        
+ :        url = "https://www.microchip.com/mplab/mplab-x-ide",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 201 of file bibliografia.bib
+ :        
+ :        url = "http://ww1.microchip.com/downloads/en/devicedoc/40001350f.pdf",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 209 of file bibliografia.bib
+ :        
+ :        url = "https://www.fischl.de/usbtin/#bootloader",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There were 9 error messages)

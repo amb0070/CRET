@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  6 FEB 2019 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  7 FEB 2019 00:59
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -962,6 +962,12 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
+
+Overfull \hbox (29.83769pt too wide) in paragraph at lines 5--5
+ [][] [][][]\T1/lmr/m/n/12 (-20) Señales eléc-tri-cas del bus CAN vis-tas por u
+n os-ci-los-co-pio [[]][][] []  
+ []
+
 ) [5
 
 ] (memoria.lot
@@ -978,16 +984,16 @@ LaTeX Info: Redefining \% on input line 2.
 fier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \section
-             {Estructura de la memoria}\label{estructura-de-la-memoria}
-[1
+l.17 
+      [1
 
 
 
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 74.
- ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1040,7 +1046,7 @@ l.479 \include{./tex/2_Objetivos_del_proyecto}
 
 
 (tex/3_Conceptos_teoricos.tex
-<./img/canNetwork.png, id=692, 583.42969pt x 278.54062pt>
+<./img/canNetwork.png, id=697, 583.42969pt x 278.54062pt>
 File: ./img/canNetwork.png Graphic file (type png)
 <use ./img/canNetwork.png>
 Package pdftex.def Info: ./img/canNetwork.png  used on input line 9.
@@ -1050,12 +1056,12 @@ Package pdftex.def Info: ./img/canNetwork.png  used on input line 9.
 
 
  <./img/canNetwork.png>]
-<./img/canbusTopology.png, id=701, 583.42969pt x 278.54062pt>
+<./img/canbusTopology.png, id=706, 583.42969pt x 278.54062pt>
 File: ./img/canbusTopology.png Graphic file (type png)
 <use ./img/canbusTopology.png>
 Package pdftex.def Info: ./img/canbusTopology.png  used on input line 17.
 (pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
-<./img/canSignals.png, id=702, 791.95876pt x 278.54062pt>
+<./img/canSignals.png, id=707, 791.95876pt x 278.54062pt>
 File: ./img/canSignals.png Graphic file (type png)
 <use ./img/canSignals.png>
 Package pdftex.def Info: ./img/canSignals.png  used on input line 30.
@@ -1067,71 +1073,69 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
 [8 <./img/canbusTopology.png>]
-<./img/canNode.png, id=710, 583.42969pt x 277.035pt>
+<./img/canNode.png, id=715, 583.42969pt x 277.035pt>
 File: ./img/canNode.png Graphic file (type png)
 <use ./img/canNode.png>
-Package pdftex.def Info: ./img/canNode.png  used on input line 48.
+Package pdftex.def Info: ./img/canNode.png  used on input line 34.
 (pdftex.def)             Requested size: 344.69766pt x 163.68172pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `candump' on page 9 undefined on input line 38.
 
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
-[9 <./img/canSignals.png>]
-
-LaTeX Warning: Reference `candump' on page 10 undefined on input line 52.
-
-<./img/candump.png, id=716, 583.42969pt x 278.54062pt>
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+[9 <./img/canSignals.png> <./img/canNode.png>]
+<./img/candump.png, id=723, 583.42969pt x 278.54062pt>
 File: ./img/candump.png Graphic file (type png)
 <use ./img/candump.png>
-Package pdftex.def Info: ./img/candump.png  used on input line 67.
+Package pdftex.def Info: ./img/candump.png  used on input line 53.
 (pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+ [10 <./img/candump.png>]
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 67.
-LaTeX Info: Redefining \% on input line 67.
-[10 <./img/canNode.png>]
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
- [11 <./img/candump.png>]
-<./img/esquema.png, id=730, 602.25pt x 278.54062pt>
+[11]
+<./img/esquema.png, id=735, 602.25pt x 278.54062pt>
 File: ./img/esquema.png Graphic file (type png)
 <use ./img/esquema.png>
 Package pdftex.def Info: ./img/esquema.png  used on input line 123.
 (pdftex.def)             Requested size: 344.69766pt x 159.42857pt.
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
- [12 <./img/esquema.png>]
-<./img/pistas.png, id=738, 777.90625pt x 376.40625pt>
+<./img/pistas.png, id=736, 777.90625pt x 376.40625pt>
 File: ./img/pistas.png Graphic file (type png)
 <use ./img/pistas.png>
 Package pdftex.def Info: ./img/pistas.png  used on input line 142.
 (pdftex.def)             Requested size: 344.69766pt x 166.79092pt.
-<./img/pad.png, id=739, 93.5046pt x 16.64986pt>
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+ [12 <./img/esquema.png>]
+<./img/pad.png, id=744, 93.5046pt x 16.64986pt>
 File: ./img/pad.png Graphic file (type png)
 <use ./img/pad.png>
 Package pdftex.def Info: ./img/pad.png  used on input line 148.
 (pdftex.def)             Requested size: 344.69766pt x 61.38112pt.
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
-
-[13 <./img/pistas.png> <./img/pad.png>]
-<./img/via.png, id=748, 186.6975pt x 72.27pt>
+<./img/via.png, id=745, 186.6975pt x 72.27pt>
 File: ./img/via.png Graphic file (type png)
 <use ./img/via.png>
 Package pdftex.def Info: ./img/via.png  used on input line 154.
 (pdftex.def)             Requested size: 344.69766pt x 133.43712pt.
-<./img/footprint.png, id=749, 583.42969pt x 278.54062pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+[13 <./img/pistas.png> <./img/pad.png>]
+<./img/footprint.png, id=755, 583.42969pt x 278.54062pt>
 File: ./img/footprint.png Graphic file (type png)
 <use ./img/footprint.png>
 Package pdftex.def Info: ./img/footprint.png  used on input line 160.
 (pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
+LaTeX Info: Redefining \. on input line 171.
+LaTeX Info: Redefining \% on input line 171.
  [14 <./img/via.png> <./img/footprint.png>]
-<./img/lineChart.png, id=758, 393.72093pt x 304.88907pt>
+<./img/lineChart.png, id=764, 393.72093pt x 304.88907pt>
 File: ./img/lineChart.png Graphic file (type png)
 <use ./img/lineChart.png>
 Package pdftex.def Info: ./img/lineChart.png  used on input line 186.
@@ -1146,13 +1150,13 @@ LaTeX Info: Redefining \% on input line 186.
 LaTeX Info: Redefining \. on input line 198.
 LaTeX Info: Redefining \% on input line 198.
  [16 <./img/lineChart.png>]
-<./img/preloaderArchitecture.png, id=769, 1233.60875pt x 1093.08376pt>
+<./img/preloaderArchitecture.png, id=774, 1233.60875pt x 1093.08376pt>
 File: ./img/preloaderArchitecture.png Graphic file (type png)
 <use ./img/preloaderArchitecture.png>
 Package pdftex.def Info: ./img/preloaderArchitecture.png  used on input line 19
 9.
 (pdftex.def)             Requested size: 344.69766pt x 305.42755pt.
-<./img/tooltip.png, id=772, 314.67563pt x 90.3375pt>
+<./img/tooltip.png, id=777, 314.67563pt x 90.3375pt>
 File: ./img/tooltip.png Graphic file (type png)
 <use ./img/tooltip.png>
 Package pdftex.def Info: ./img/tooltip.png  used on input line 203.
@@ -1168,12 +1172,12 @@ LaTeX Info: Redefining \% on input line 480.
 
 
 ] [19]
-<./img/modeloMVC.png, id=792, 583.42969pt x 181.42781pt>
+<./img/modeloMVC.png, id=797, 583.42969pt x 181.42781pt>
 File: ./img/modeloMVC.png Graphic file (type png)
 <use ./img/modeloMVC.png>
 Package pdftex.def Info: ./img/modeloMVC.png  used on input line 33.
 (pdftex.def)             Requested size: 344.69766pt x 107.19374pt.
-<./img/arquitectura.png, id=793, 804.75656pt x 450.9347pt>
+<./img/arquitectura.png, id=798, 804.75656pt x 450.9347pt>
 File: ./img/arquitectura.png Graphic file (type png)
 <use ./img/arquitectura.png>
 Package pdftex.def Info: ./img/arquitectura.png  used on input line 39.
@@ -1185,34 +1189,36 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
 [20 <./img/modeloMVC.png>]
-LaTeX Info: Redefining \. on input line 58.
-LaTeX Info: Redefining \% on input line 58.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
  [21 <./img/arquitectura.png>]
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
  [22]
-LaTeX Info: Redefining \. on input line 127.
-LaTeX Info: Redefining \% on input line 127.
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [23]
-Overfull \hbox (17.975pt too wide) in paragraph at lines 130--131
+Overfull \hbox (17.975pt too wide) in paragraph at lines 136--137
 [][][]$\T1/lmtt/m/n/12 https : / / docs . oracle . com / javase / 8 / javase-[]
 clienttechnologies . htm$[][] 
  []
 
-
-Overfull \hbox (59.96503pt too wide) in paragraph at lines 156--157
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
+[24]
+Overfull \hbox (59.96503pt too wide) in paragraph at lines 162--163
 [][][]$\T1/lmtt/m/n/12 https : / / www . ixxat . com / products / products-[]in
 dustrial / tools / cananalyser /
  []
 
-LaTeX Info: Redefining \. on input line 160.
-LaTeX Info: Redefining \% on input line 160.
-[24]
-Overfull \hbox (14.42624pt too wide) in paragraph at lines 167--169
+
+Overfull \hbox (14.42624pt too wide) in paragraph at lines 173--175
 []\T1/lmr/m/n/12 (-20) Puede en-con-trar-se en el si-guien-te en-la-ce: [][]$\T
 1/lmtt/m/n/12 https : / / github . com / linux-[]can /
  []
@@ -1228,128 +1234,196 @@ LaTeX Info: Redefining \% on input line 481.
 
 
 ] [27]
-LaTeX Info: Redefining \. on input line 52.
-LaTeX Info: Redefining \% on input line 52.
+Overfull \hbox (3.82462pt too wide) in paragraph at lines 35--37
+[]\T1/lmr/m/it/12 (-20) Introduction to the Con-tro-ller Area Net-work (CAN) \T
+1/lmr/m/n/12 (-20) [[]] 
+ []
 
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
 [28]
-<./img/scheme.png, id=869, 713.66624pt x 499.11469pt>
+<./img/scheme.png, id=887, 713.66624pt x 499.11469pt>
 File: ./img/scheme.png Graphic file (type png)
 <use ./img/scheme.png>
-Package pdftex.def Info: ./img/scheme.png  used on input line 68.
+Package pdftex.def Info: ./img/scheme.png  used on input line 82.
 (pdftex.def)             Requested size: 344.69766pt x 241.07265pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
 [29]
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
  [30 <./img/scheme.png>]
-<./img/finalFootprint.png, id=882, 642.90187pt x 411.78844pt>
+<./img/finalFootprint.png, id=902, 642.90187pt x 411.78844pt>
 File: ./img/finalFootprint.png Graphic file (type png)
 <use ./img/finalFootprint.png>
-Package pdftex.def Info: ./img/finalFootprint.png  used on input line 100.
+Package pdftex.def Info: ./img/finalFootprint.png  used on input line 113.
 (pdftex.def)             Requested size: 344.69766pt x 220.79158pt.
-<./img/fotoPCB.png, id=883, 777.90625pt x 370.38374pt>
+<./img/fotoPCB.png, id=903, 777.90625pt x 370.38374pt>
 File: ./img/fotoPCB.png Graphic file (type png)
 <use ./img/fotoPCB.png>
-Package pdftex.def Info: ./img/fotoPCB.png  used on input line 103.
+Package pdftex.def Info: ./img/fotoPCB.png  used on input line 116.
 (pdftex.def)             Requested size: 344.69766pt x 164.12227pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
-[31 <./img/finalFootprint.png>]
-<./img/finishedPCB.png, id=890, 777.90625pt x 371.3875pt>
-File: ./img/finishedPCB.png Graphic file (type png)
-<use ./img/finishedPCB.png>
-Package pdftex.def Info: ./img/finishedPCB.png  used on input line 109.
-(pdftex.def)             Requested size: 344.69766pt x 164.56705pt.
 LaTeX Info: Redefining \. on input line 116.
 LaTeX Info: Redefining \% on input line 116.
- [32 <./img/fotoPCB.png> <./img/finishedPCB.png>]
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
- [33]
-<./img/hardwareRedCan.png, id=903, 777.90625pt x 371.3875pt>
-File: ./img/hardwareRedCan.png Graphic file (type png)
-<use ./img/hardwareRedCan.png>
-Package pdftex.def Info: ./img/hardwareRedCan.png  used on input line 166.
+[31 <./img/finalFootprint.png>]
+<./img/finishedPCB.png, id=910, 777.90625pt x 371.3875pt>
+File: ./img/finishedPCB.png Graphic file (type png)
+<use ./img/finishedPCB.png>
+Package pdftex.def Info: ./img/finishedPCB.png  used on input line 122.
 (pdftex.def)             Requested size: 344.69766pt x 164.56705pt.
-LaTeX Info: Redefining \. on input line 166.
-LaTeX Info: Redefining \% on input line 166.
- [34]
-<./img/render.png, id=908, 462.528pt x 209.583pt>
-File: ./img/render.png Graphic file (type png)
-<use ./img/render.png>
-Package pdftex.def Info: ./img/render.png  used on input line 174.
-(pdftex.def)             Requested size: 344.69766pt x 156.19867pt.
+<./img/cargaFirmware.png, id=913, 1459.4525pt x 780.9175pt>
+File: ./img/cargaFirmware.png Graphic file (type png)
+<use ./img/cargaFirmware.png>
+Package pdftex.def Info: ./img/cargaFirmware.png  used on input line 130.
+(pdftex.def)             Requested size: 344.69766pt x 184.43315pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+[32 <./img/fotoPCB.png> <./img/finishedPCB.png>]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [33 <./img/cargaFirmware.png>]
+Underfull \vbox (badness 2790) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [34]
+<./img/hardwareRedCan.png, id=938, 777.90625pt x 371.3875pt>
+File: ./img/hardwareRedCan.png Graphic file (type png)
+<use ./img/hardwareRedCan.png>
+Package pdftex.def Info: ./img/hardwareRedCan.png  used on input line 190.
+(pdftex.def)             Requested size: 344.69766pt x 164.56705pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 190.
+LaTeX Info: Redefining \% on input line 190.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[35 <./img/hardwareRedCan.png>])
+[35]
+<./img/render.png, id=943, 462.528pt x 209.583pt>
+File: ./img/render.png Graphic file (type png)
+<use ./img/render.png>
+Package pdftex.def Info: ./img/render.png  used on input line 198.
+(pdftex.def)             Requested size: 344.69766pt x 156.19867pt.
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+ [36 <./img/hardwareRedCan.png> <./img/render.png>])
 LaTeX Info: Redefining \. on input line 482.
 LaTeX Info: Redefining \% on input line 482.
- [36 <./img/render.png>]
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[37]
 \openout2 = `./tex/6_Trabajos_relacionados.aux'.
 
-
-(tex/6_Trabajos_relacionados.tex [37
+ (tex/6_Trabajos_relacionados.tex [38
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Overfull \hbox (53.05508pt too wide) in paragraph at lines 27--29
+[]\T1/lmr/m/n/12 (-20) A par-te, ca-be des-ta-car la pre-sen-cia del pro-yec-to
+ \T1/lmr/m/it/12 (-20) CA-Naly-zat0r\T1/lmr/m/n/12 (-20) [[]],
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
 []|\T1/lmr/m/n/12 (+20) Visualización
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
 []|\T1/lmr/m/n/12 (+20) Representación
  []
 
 
-Underfull \hbox (badness 7981) in paragraph at lines 44--44
+Underfull \hbox (badness 7981) in paragraph at lines 42--42
 \T1/lmr/m/n/12 (+20) grá-fi-ca de los
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 44--44
+Underfull \hbox (badness 2469) in paragraph at lines 42--42
 []|\T1/lmr/m/n/12 (+20) Etiquetado con
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 44--44
+Underfull \hbox (badness 1789) in paragraph at lines 42--42
 []|\T1/lmr/m/n/12 (+20) Importar y ex-
  []
+
+
+LaTeX Warning: Reference `herramientasportipodeuso' on page 40 undefined on inp
+ut line 44.
 
 )
 LaTeX Info: Redefining \. on input line 483.
 LaTeX Info: Redefining \% on input line 483.
- [38]
+ [40]
 \openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
 
- (tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex) [39
+ (tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex) [41
 
-
-
-] (memoria.bbl
-[40
 
 
 ]
+LaTeX Info: Redefining \. on input line 484.
+LaTeX Info: Redefining \% on input line 484.
+ [42]
+(memoria.bbl
 bibitemlist
+
+Underfull \hbox (badness 1226) in paragraph at lines 14--19
+[]\T1/lmr/m/n/12 (+20) BOSCH.  Osi la-yers in au-to-mo-ti-ve net-works, 2013.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+\T1/lmr/m/n/12 (+20) URL [][]$\T1/lmtt/m/n/12 http : / / www . ieee802 . org / 
+1 / files / public / docs2013 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+\T1/lmtt/m/n/12 new-[]tsn-[]diarra-[]osi-[]layers-[]in-[]automotive-[]networks-
+[]0313-[]v01 .
+ []
+
+[43
+
+
+]
+Underfull \hbox (badness 5022) in paragraph at lines 69--74
+[]\T1/lmr/m/n/12 (+20) NXP.  Bosch con-tro-ller area net-work (can) pro-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+\T1/lmr/m/n/12 (+20) URL [][]$\T1/lmtt/m/n/12 https : / / vector-[]academy . co
+m / portal / medien / cmc / press /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+\T1/lmtt/m/n/12 PTR / SerialBusSystems _ Part2 _ ElektronikAutomotive _ 200612 
+_
+ []
+
 )
 
 Class memoir Warning: The material used in the headers is too large
@@ -1357,7 +1431,13 @@ Class memoir Warning: The material used in the headers is too large
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 490.
 
-[41]
+LaTeX Info: Redefining \. on input line 490.
+LaTeX Info: Redefining \% on input line 490.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[44]
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
 
@@ -1381,15 +1461,9 @@ LaTeX Info: Redefining \% on input line 25.
 (tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
+Package rerunfilecheck Info: File `memoria.out' has not changed.
+(rerunfilecheck)             Checksum: A72CC90453A1B0666089091C6BA4817F;2624.
 
-
-Package rerunfilecheck Warning: File `memoria.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `memoria.out':
-(rerunfilecheck)             Before: 46D464362861B90173255EE06137228B;2624
-(rerunfilecheck)             After:  9D4D706EE30567786610F20F9C16D0A6;2624.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1402,41 +1476,32 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 490.
  ) 
 Here is how much of TeX's memory you used:
- 13172 strings out of 492946
- 197864 string characters out of 3126711
- 370595 words of memory out of 3000000
- 16489 multiletter control sequences out of 15000+200000
- 104126 words of font info for 138 fonts, out of 3000000 for 9000
+ 13209 strings out of 492946
+ 198372 string characters out of 3126711
+ 372691 words of memory out of 3000000
+ 16511 multiletter control sequences out of 15000+200000
+ 104264 words of font info for 138 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,39p,583b,710s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{figure.5.15} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.44} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.38} has been referenced but does not exist
-, replaced by a fixed one
-
-{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<
-C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12
-.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmb
-x8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mbxi10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-lm/lmcsc10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmr12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmri10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on memoria.pdf (53 pages, 3674459 bytes).
+{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+}<C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
+pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mbx8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
+/lmbxi10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmcsc10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmr12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmr17.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmr8.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmri10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on memoria.pdf (56 pages, 4524959 bytes).
 PDF statistics:
- 1025 PDF objects out of 1200 (max. 8388607)
- 154 named destinations out of 1000 (max. 500000)
- 27052 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1091 PDF objects out of 1200 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 27057 words of extra memory for PDF output out of 29859 (max. 10000000)
 

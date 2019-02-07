@@ -1,31 +1,102 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{osi:can}
+\bibitem[BOSCH(1991)]{bosch:can}
+BOSCH.
+\newblock Can specification, 1991.
+\newblock URL \url{http://esd.cs.ucr.edu/webres/can20.pdf}.
+
+\bibitem[BOSCH(2013)]{osi:can}
 BOSCH.
 \newblock Osi layers in automotive networks, 2013.
+\newblock URL
+  \url{http://www.ieee802.org/1/files/public/docs2013/new-tsn-diarra-osi-layers-in-automotive-networks-0313-v01.pdf}.
 \newblock [Internet].
 
-\bibitem{marco:can}
+\bibitem[Devices(2017)]{analog:can}
+Analog Devices.
+\newblock Controller area network (can) implementation guide, 2017.
+\newblock URL
+  \url{https://www.analog.com/media/en/technical-documentation/application-notes/AN-1123.pdf}.
+\newblock [Internet].
+
+\bibitem[Fischl(2014)]{usbtin}
+Thomas Fischl.
+\newblock Usbtin - usb to can interface, 2014.
+
+\bibitem[Fischl(2017)]{firmwarePic}
+Thomas Fischl.
+\newblock Bootloader usbtin, 2017.
+
+\bibitem[Guardigli(2012)]{marco:can}
 Marco Guardigli.
 \newblock Hacking your car, 2012.
+\newblock URL \url{https://marco.guardigli.it/2010/10/hacking-your-car.html}.
 \newblock [Internet].
 
-\bibitem{socket:can}
+\bibitem[Instruments(2016)]{texas:can}
+Texas Instruments.
+\newblock Introduction to the controller area network (can), 2016.
+\newblock URL \url{http://www.ti.com/lit/an/sloa101b/sloa101b.pdf}.
+
+\bibitem[Kvaser(2016)]{kvaser:can}
+Kvaser.
+\newblock Can protocol tutorial, 2016.
+\newblock URL \url{https://www.kvaser.com/can-protocol-tutorial/}.
+\newblock [Internet].
+
+\bibitem[Ltomov(2016)]{hubusb}
+Ltomov.
+\newblock Osh 4 port usb hub, 2016.
+
+\bibitem[Microchip(2013)]{pickit}
+Microchip.
+\newblock Pickit 3 in-circuit debugger, 2013.
+
+\bibitem[Microchip(2015)]{pic18}
+Microchip.
+\newblock Pic18(l)f1xk50, 2015.
+
+\bibitem[Microchip(2018)]{mplab}
+Microchip.
+\newblock Mplab ide, 2018.
+
+\bibitem[NXP(2010)]{nxp:can}
+NXP.
+\newblock Bosch controller area network (can) protocol standard, 2010.
+\newblock URL
+  \url{https://www.nxp.com/files-static/microcontrollers/doc/data_sheet/BCANPSV2.pdf}.
+\newblock [Internet].
+
+\bibitem[Research(2010)]{socket:can}
 Volkswagen Research.
 \newblock Socketcan, 2010.
+\newblock URL
+  \url{https://www.kernel.org/doc/Documentation/networking/can.txt}.
 \newblock [Internet].
 
-\bibitem{preloader:javafx}
+\bibitem[Sreder(2015)]{preloader:javafx}
 Aron Sreder.
 \newblock How to easily implement an application preloader, 2015.
 
-\bibitem{canalyzator:can}
+\bibitem[sw~pschmied(2018)]{canalyzator:can}
 sw~pschmied.
 \newblock Canalyzat0r, 2018.
 
-\bibitem{wiki:can}
+\bibitem[Vector(2006)]{vector:can}
+Vector.
+\newblock Data communication in the automobile, 2006.
+\newblock URL
+  \url{https://vector-academy.com/portal/medien/cmc/press/PTR/SerialBusSystems_Part2_ElektronikAutomotive_200612_PressArticle_EN.pdf}.
+\newblock [Internet].
+
+\bibitem[Wikipedia(2019)]{wiki:can}
 Wikipedia.
 \newblock Can bus - wikipedia, 2019.
-\newblock [Internet].
+\newblock URL \url{https://en.wikipedia.org/wiki/CAN_bus}.
 
 \end{thebibliography}

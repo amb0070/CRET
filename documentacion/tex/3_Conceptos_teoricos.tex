@@ -25,23 +25,9 @@ El principal elemento que compone una red de tipo CAN son los nodos, además de 
 \textbf{Cable:} Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables. Estos son identificados por CAN-H (CAN High) y CAN-L (CAN-Low).
 \end{itemize}
 
-Esto es debido a que las señales que circulan por los mismos, son señales diferenciales, como se puede apreciar en la siguiente figura.
+Esto es debido a que las señales que circulan por los mismos, son señales diferenciales, de las cuales el valor efectivo interpretado por el nodo es extraído tras aplicar la diferencia entre ambas como se puede ver en la figura.
 
 \imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio \cite{marco:can}}
-
-Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
-
-\begin{itemize}
-\item
-\textbf{Active:} Cuando un nodo es conectado en modo \emph{active}, significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo \emph{Single Shot}, el mensaje será enviado continuamente por el bus hasta que se reciba un ACK \emph{(Acknonolowment)}. De manera que este modo si que tiene influencias sobre el bus.
-
-\item
-\textbf{Listen-Only:} Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en modo \emph{listenonly}, dicho nodo no tiene influencia sobre el resto. Si por ejemplo llega un \emph{Frame} erróneo, no genera \emph{flags} de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
-
-\item
-\textbf{LoopBack:} Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{LoopBack}, significa que este nodo es capaz comunicarse consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
-
-\end{itemize}
 
 Cada uno de los nodos es capaz de enviar y recibir mensajes. La prioridad de los mensajes de un nodo viene dada por la ID(identificador) del \emph{Frame} enviado al bus.
 
@@ -53,21 +39,21 @@ A continuación se describen los elementos de una trama CAN, así como la descri
 
 La estructura interna es más compleja, pero no nos centraremos en ella ya que no tiene relevancia en este caso. Únicamente nos centraremos en los tres elementos identificados en la figura.
 
-Cada uno de las tramas contiene tres campos en los que nos centraremos: ID, Length y Data.
+Cada uno de los \emph{Frames} contiene tres campos en los que nos centraremos: ID, Length y Data.
 
 \begin{itemize}
 \item
 \textbf{ID (Identificador):} Se trata del identificador del \emph{Frame}. A través de él, se establece la prioridad que tiene ese \emph{Frame} durante el acceso al bus de datos.
 \item
-\textbf{Length (Longitud):} En este campo, se define la longitud del campo de datos del Frame. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 bytes de datos.
+\textbf{Length (Longitud):} En este campo, se define la longitud del campo de datos del \emph{Frame}. En las versiones estándar, esta longitud puede ir desde 0 hasta 8 \emph{bytes} de datos.
 \item
-\textbf{Data (Datos):} Campo en el que se transportan los datos que son enviados por el nodo correspondiente. La longitud de este campo puede ir desde 0 bytes hasta un total de 8 bytes.
+\textbf{Data (Datos):} Campo en el que se transportan los datos que son enviados por el nodo correspondiente. La longitud de este campo puede ir desde 0 \emph{bytes} hasta un total de 8 \emph{bytes}.
 \end{itemize}
 
-\imagen{candump}{Identificación de los datos que circulan por el bus CAN.}
+\imagen{candump}{Identificación de los campos que componen un \emph{Frame}.}
 
 
-\textbf{Bitriate:} Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad para entenderse entre ellos. Esta, puede cambiar dependiendo de los sistemas y de su desarrollo.
+\textbf{Bitrate:} Se trata de la velocidad a la que los datos son transmitidos a través del bus. Todos los nodos deben de transmitir a la misma velocidad para entenderse entre ellos. Esta, puede cambiar dependiendo de los sistemas y de su desarrollo.
 Los valores más comunes son:
 
 \begin{itemize}
@@ -102,10 +88,24 @@ Siguiendo el modelo OSI\cite{osi:can}, el estándar bus CAN especifica únicamen
 \begin{itemize}
 
 \item
-\textbf{Capa física:} Esta capa define como son transmitidas las señales a nivel eléctrico, es decir, los niveles de las señales en su representación como bits, y el medio de transmisión que va a ser utilizado. Además, se encargaría de gestionar la sincronización de los mensajes, así como su \emph{bit encoding}.
+\textbf{Capa física:} Esta capa define cómo son transmitidas las señales a nivel eléctrico, es decir, los niveles de las señales en su representación como bits, y el medio de transmisión que va a ser utilizado. Además, se encargaría de gestionar la sincronización de los mensajes, así como su \emph{bit encoding}.
 
 \item
 \textbf{Capa de enlace de datos:} Esta capa se encarga de la parte lógica del protocolo. Entre sus funciones se encuentra el filtrado de los \emph{Frames}, detección de sobrecarga del bus y la detección de errores.
+
+\end{itemize}
+
+Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
+
+\begin{itemize}
+\item
+\textbf{Active:} Cuando un nodo es conectado en modo \emph{active}, significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo \emph{Single Shot}, el mensaje será enviado continuamente por el bus hasta que se reciba un ACK \emph{(Acknonolowment)}. De manera que este modo si que tiene influencias sobre el bus.
+
+\item
+\textbf{Listen-Only:} Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en modo \emph{listenonly}, dicho nodo no tiene influencia sobre el resto. Si por ejemplo llega un \emph{Frame} erróneo, no genera \emph{flags} de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
+
+\item
+\textbf{LoopBack:} Se podría considerar una especie de modo \emph{debug}. Cuando un nodo se conecta en modo \emph{LoopBack}, significa que este nodo es capaz comunicarse consigo mismo, sin enviar ni recibir mensajes del bus. Es un modo utilizado solo para la realización de pruebas, no para aplicaciones finales.
 
 \end{itemize}
 

@@ -28,8 +28,21 @@ A través del uso de la herramienta \emph{ZenHub}, se generaban \emph{issues}, e
 
 El proyecto requería conceptos tanto de funcionamiento como de la implementación del bus CAN, los cuales desconocía en un principio. A través de los siguientes documentos, se adquirieron conocimientos sobre la materia:
 
+\begin{itemize}
+\item
+\emph{CAN Specification 2.0} \cite{bosch:can}.
+\item
+\emph{Introduction to the Controller Area Network (CAN)} \cite{texas:can}
+\item
+\emph{Controller Area Network (CAN) Implementation Guide}\cite{analog:can}
+\item
+\emph{Bosch Controller Area Network (CAN) Protocol Standard}\cite{nxp:can}
+\item
+\emph{Data Communication in the Automobile}\cite{vector:can}
+\item
+\emph{CAN Protocol Tutorial}\cite{kvaser:can}
 
-LINKS CAN BUS
+\end{itemize}
 
 
 \section{Desarrollo del \emph{hardware}}\label{desarrollo_del_hardware}
@@ -40,7 +53,7 @@ Existieron principalmente dos motivaciones para el diseño y desarrollo de un \e
 \item
 El elevado precio de las interfaces que existen actualmente en el mercado, las cuales pueden llegar a costar miles de euros.
 \item
-La posibilidad de conectarse a dos buses distintos de forma simultanea. Una interfaz CAN únicamente puede conectarse a un bus de datos. Existen alternativas más baratas como \emph{usbtin} REFERENCIA, pero que únicamente permiten conectarse a un bus.
+La posibilidad de conectarse a dos buses distintos de forma simultanea. Una interfaz CAN únicamente puede conectarse a un bus de datos. Existen alternativas más baratas como \emph{USBtin}\cite{usbtin}, pero que únicamente permiten conectarse a un bus.
 \end{itemize}
 
 Con este desarrollo propio, se consigue la conexión a dos buses e datos de forma simultánea y económica.
@@ -61,7 +74,8 @@ Se podrían definir 4 etapas las cuales se han llevado a cabo para el desarrollo
 
 \subsection{Diseño del esquema eléctrico}\label{diseño_del_esquema_electrico}
 
-El primer paso para el desarrollo de una placa de circuito impreso, es diseñar el esquema en el que se incluyen los componentes, y la conexión que se va a realizar entre ellos. En este caso, el objetivo era duplicar un esquema existente, introduciéndole un \emph{Hub USB}, todo ello en la misma placa.
+El primer paso para el desarrollo de una placa de circuito impreso, es diseñar el esquema en el que se incluyen los componentes, y la conexión que se va a realizar entre ellos. En este caso, el objetivo era duplicar un esquema existente basado en USBtin\cite{usbtin}, introduciéndole un \emph{Hub USB}\cite{hubusb}, todo ello en la misma placa.
+
 
 En este esquema se especifican los componentes utilizados (resistencias, condensadores, circuitos integrados, etc). Además se define que entradas y salidas de esos componentes van conectados al resto de componentes.
 
@@ -85,14 +99,13 @@ La huella (\emph{footprint}) que va a utilizar, es decir, en función de cada en
 
 \subsection{Posicionamiento y \textit{enrutado} de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
 
-Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs. Para que nos hagamos una idea, ese es el resultado:
-
+Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs.
 
 En este momento, es cuando tenemos que decidir:
 
 \begin{itemize}
 \item
-El número de capas que va a tener nuestra PCB: En este caso se utilizaron 2 capas al tratarse de un proyecto sencillo, pero en el que necesitaban hacerse cruces de pistas.
+El número de capas que va a tener nuestra PCB: En este caso se utilizaron dos capas al tratarse de un proyecto sencillo, pero en el que necesitaban hacerse cruces de pistas.
 \item
 La posición de los componentes y el \textit{enrutado} de las pistas.
 \end{itemize}
@@ -107,6 +120,17 @@ Tras limpiar la PCB, posicionar y soldar los componentes, obtenemos el siguiente
 
 
 \imagen{finishedPCB}{PCB del proyecto con los componentes soldados}
+
+\subsection{Carga del \emph{firmware} en los IC}\label{carga_firm_pic}
+
+Uno de los problemas que surgieron una vez terminado el \emph{hardware} fue la carga del \emph{firmware}\cite{firmwarePic} en los microcontroladores PIC.
+
+Para realizar la carga del \emph{firmware}, fue necesario desoldar ambos componentes y conectarlos a un programador para este tipo de dispositivos (\emph{PICkit3}\cite{pickit}).
+
+\imagen{cargaFirmware}{Pines conectados al microcontrolador PIC para la carga del \emph{firmware}.}
+Para cargar el \emph{firmware} fue necesario el programa \emph{MPLAB X IPE v5.10}\cite{mplab}
+
+Conectando los pines del \emph{PICkit3} al \emph{PIC18F14K50} siguiendo su \emph{datasheet}\cite{pic18} fue posible la carga del \emph{firmware} con éxito.
 
 \section{Desarrollo del \emph{software}}
 
