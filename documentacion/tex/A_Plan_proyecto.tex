@@ -4,7 +4,7 @@
 
 Una de las fases más importantes de cualquier proyecto es la planificación. En esta fase se estima el tiempo y los requisitos necesarios para la realización del proyecto. Para ello es necesaria una idea clara de lo que se quiere realizar de manera que todas las partes que componen el proyecto puedan ser analizadas individualmente.
 
-Podemos dividir la fase de planificación en dos fases más pequeñas:
+Podemos dividir este anexo en dos apartados más pequeños:
 
 \begin{itemize}
 \item
@@ -20,23 +20,25 @@ La segunda fase se centra en un estudio de la viabilidad del proyecto. En esta f
 \begin{itemize}
 \item
 \textbf{Viabilidad económica:} Estimación de los costes y beneficios del proyecto.
-
+\item
 \textbf{Viabilidad legal:} Regulaciones legales que pueden afectar al proyecto. En este caso serían la Ley de Protección de Datos y las licencias del software.
 \end{itemize}
 
 \section{Planificación temporal}
 
-Para realizar una planificación del proyecto adecuada, se decidió aplicar \emph{Scrum} (una metodología ágil).
+Para realizar una planificación del proyecto adecuada, se decidió aplicar \emph{Scrum} (una metodología ágil de desarrollo, explicada en la memoria).
 
 Para ello, se dividió el trabajo en \emph{sprints} los cuales iban siendo planificados según se terminaba el anterior. La duración media de estos era de una semana de trabajo.
 
-En cada uno de los \emph{sprint} se generaban una serie de tareas las cuales tenían que ser realizadas en ese intervalo de tiempo. Para ello se utilizó la plataforma \emph{Zenhub}, en la cual las \emph{issues} hacen de tareas, y los \emph{Milestones} de \emph{Sprints}.
+En cada uno de los \emph{sprint} se generan una serie de tareas las cuales tienen que ser realizadas en ese intervalo de tiempo. Para ello se utiliza la plataforma \emph{Zenhub}, en la cual las \emph{issues} hacen de tareas, y los \emph{Milestones} de \emph{Sprints}.
 
 \subsection{Sprint 0}
 
-Este primer \emph{sprint} fue en el que más complicado de planificar. Estaba incluido el desarrollo del \emph{hardware} el cual no sabíamos seguro si se conseguirían los conocimientos necesarios para diseñarlo, ni si después funcionaría correctamente. Además, el desarrollo de la aplicación dependía del resultado de esta parte ya que iba a basarse en ello.
+Este primer \emph{sprint} fue el más complicado de planificar. Estaba incluido el desarrollo del \emph{hardware} el cual no sabíamos seguro si se conseguirían los conocimientos necesarios para diseñarlo, ni si después funcionaría correctamente. Además, el desarrollo de la aplicación dependía del resultado de esta parte ya que iba a basarse en ello.
 
 Al final, sobrepasando un poco el tiempo planificado, se consiguió poner el \emph{hardware} en marcha, con lo que se podía comenzar con el desarrollo del \emph{software}.
+
+\imagen{sprint0}{\emph{Sprint} 0}
 
 \subsection{Sprint 1}
 
@@ -44,7 +46,9 @@ Los objetivos de este \emph{sprint} fueron asentar la idea general de la aplicac
 
 Además se comenzó a diseñar la estructura de la base de datos y el acceso al \emph{hardware} a través de la comunicación con los puertos serie.
 
-Las horas de trabajo estimadas fueron cumplidas como estaba planificado en el \emph{Sprint}.
+Las horas de trabajo fueron sobrepasadas sobre lo planificado en el \emph{Sprint}.
+
+\imagen{sprint1}{\emph{Sprint} 1}
 
 \subsection{Sprint 2}
 
@@ -57,7 +61,7 @@ Esta fase llevó un poco más tiempo de lo esperado.
 
 En este \emph{sprint} se planteó la posibilidad de poder importar y exportar un proyecto de la aplicación. Para ello, se decidió usar ficheros JSON, los cuales contendrían todos los datos del proyecto.
 
-En este punto se planteó la posibilidad de realizar una parte de la aplicación sobre una tecnología web. La idea era generar los ficheros JSON desde la aplicación Java para posteriormente poder importarlos a la web para su monitorización desde la misma. Por falta de tiempo, no se realizó esta segunda aplicación.
+En este punto se planteó la posibilidad de realizar una parte de la aplicación sobre una tecnología web. La idea era generar los ficheros JSON desde la aplicación Java para posteriormente poder importarlos a la web para su monitorización desde la misma.
 
 
 \subsection{Sprint 4}
@@ -72,30 +76,12 @@ En este \emph{sprint} se desarrolló la interacción con la base de datos, tanto
 
 \subsection{Sprint 6}
 
-
-a
-
-a
-
-
-a
-a
-aaaa
-a
-a
-a
-
-a
-aa
-aa
-a
-
-a
-
-
+En este \emph{sprint} se centraron los esfuerzos en tener un borrador de la memoria y los anexos. Además, el desarrollo de la aplicación continuaba añadiendo opciones como la de ver los datos de una ID y un \emph{byte} concretos, en tiempo real. Esta opción estaría disponible para todos los datos mostrados por pantalla.
 
 
 \subsection{Sprint 7}
+
+En este último \emph{sprint} se trató de concluir con la documentación y terminar de pulir las pequeñas características que quedaban pendientes del proyecto. También se centraron esfuerzos en concluir la documentación y los vídeos de prueba de la aplicación.
 
 
 \subsection{Resumen}
@@ -292,6 +278,7 @@ Personal\strut
 \caption{Costes totales.}
 \end{longtable}
 
+Teniendo en cuenta los datos anteriores, para hacer rentable el proyecto con un periodo de tiempo de un año, sería necesario vender tanto el \emph{hardware} como licencias de la aplicación. 
 
 \subsection{Viabilidad legal}
 

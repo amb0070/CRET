@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  6 FEB 2019 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  8 FEB 2019 02:16
 entering extended mode
 **./anexos.tex
 (anexos.tex
@@ -766,12 +766,41 @@ LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux) (tex/C_Diseno.aux) (tex/D_Man
-ual_programador.aux
+ (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux
 
-LaTeX Warning: Label `fig:gitClone' multiply defined.
+LaTeX Warning: Label `tabla:b1' multiply defined.
 
-) (tex/E_Manual_usuario.aux))
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+) (tex/C_Diseno.aux) (tex/D_Manual_programador.aux) (tex/E_Manual_usuario.aux))
 \openout1 = `anexos.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 359.
@@ -789,7 +818,6 @@ LaTeX Font Info:    ... okay on input line 359.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 359.
 LaTeX Font Info:    ... okay on input line 359.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 359.
-
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -864,7 +892,7 @@ LaTeX Info: Redefining \nameref on input line 359.
 \@outlinefile=\write4
 \openout4 = `anexos.out'.
 
-<./img/cabecera.pdf, id=111, 617.67549pt x 135.51413pt>
+<./img/cabecera.pdf, id=119, 617.67549pt x 135.51413pt>
 File: ./img/cabecera.pdf Graphic file (type pdf)
 <use ./img/cabecera.pdf>
 Package pdftex.def Info: ./img/cabecera.pdf  used on input line 361.
@@ -899,7 +927,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 361.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 361.
-<./img/escudoInfor.pdf, id=112, 618.11432pt x 737.07487pt>
+<./img/escudoInfor.pdf, id=120, 618.11432pt x 737.07487pt>
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
 Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 361.
@@ -976,14 +1004,39 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-) [3
 
-] (anexos.lot
+Overfull \hbox (0.2272pt too wide) detected at line 30
+\T1/lmr/m/n/12 D.10. 
+ []
+
+
+Overfull \hbox (0.2272pt too wide) detected at line 31
+\T1/lmr/m/n/12 D.11. 
+ []
+
+[3
+
+]
+Overfull \hbox (0.2272pt too wide) detected at line 32
+\T1/lmr/m/n/12 D.12. 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 385.
+LaTeX Info: Redefining \% on input line 385.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[4] (anexos.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-) [4
+) [5
+
+] [6
+
 
 ]
 \openout2 = `./tex/A_Plan_proyecto.aux'.
@@ -1000,11 +1053,17 @@ l.31 P
 [1
 
 
-
-
 ]
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
+<./img/sprint0.png, id=645, 703.12688pt x 301.8778pt>
+File: ./img/sprint0.png Graphic file (type png)
+<use ./img/sprint0.png>
+Package pdftex.def Info: ./img/sprint0.png  used on input line 41.
+(pdftex.def)             Requested size: 344.69766pt x 147.99051pt.
+
+Underfull \vbox (badness 2772) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -1012,51 +1071,78 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 
-      [2]
-LaTeX Info: Redefining \. on input line 144.
-LaTeX Info: Redefining \% on input line 144.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
-[3]
-<./img/resumenHoras.png, id=614, 578.91281pt x 267.24844pt>
-File: ./img/resumenHoras.png Graphic file (type png)
-<use ./img/resumenHoras.png>
-Package pdftex.def Info: ./img/resumenHoras.png  used on input line 147.
-(pdftex.def)             Requested size: 344.69766pt x 159.12694pt.
-LaTeX Info: Redefining \. on input line 202.
-LaTeX Info: Redefining \% on input line 202.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+l.47 A
+      demás se comenzó a diseñar la estructura de la base de datos y el a...
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
 1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.202 \end{longtable}
-                      <./img/resumenHoras.png>]
-LaTeX Info: Redefining \. on input line 300.
-LaTeX Info: Redefining \% on input line 300.
- [5]
-Overfull \hbox (4.54419pt too wide) in paragraph at lines 317--319
-[]|\T1/lmr/m/n/12 (-20) 8.0.191|  
- []
-
-)
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
+l.47 A
+      demás se comenzó a diseñar la estructura de la base de datos y el a...
+ <./img/sprint0.png>]
+<./img/sprint1.png, id=652, 703.12688pt x 299.61937pt>
+File: ./img/sprint1.png Graphic file (type png)
+<use ./img/sprint1.png>
+Package pdftex.def Info: ./img/sprint1.png  used on input line 51.
+(pdftex.def)             Requested size: 344.69766pt x 146.88335pt.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[6]
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.70 
+      <./img/sprint1.png>]
+Overfull \vbox (7.813pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[4]
+<./img/resumenHoras.png, id=670, 578.91281pt x 267.24844pt>
+File: ./img/resumenHoras.png Graphic file (type png)
+<use ./img/resumenHoras.png>
+Package pdftex.def Info: ./img/resumenHoras.png  used on input line 133.
+(pdftex.def)             Requested size: 344.69766pt x 159.12694pt.
+LaTeX Info: Redefining \. on input line 193.
+LaTeX Info: Redefining \% on input line 193.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h1.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.193 
+       <./img/resumenHoras.png>]
+Overfull \hbox (4.54419pt too wide) in paragraph at lines 304--306
+[]|\T1/lmr/m/n/12 (-20) 8.0.191|  
+ []
+
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[6])
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+ [7]
 \openout2 = `./tex/B_Requisitos.aux'.
 
- (tex/B_Requisitos.tex
+ (tex/B_Requisitos.tex [8
+
+
+
+]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 31.
 
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
@@ -1065,234 +1151,732 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 31.
 
-[7
-
-
-
-]
+[9]
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[8]
-LaTeX Info: Redefining \. on input line 154.
-LaTeX Info: Redefining \% on input line 154.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
-[9]
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
 [10]
-LaTeX Info: Redefining \. on input line 336.
-LaTeX Info: Redefining \% on input line 336.
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
+ [11]
+<./img/umlCasosUso.png, id=710, 362.10281pt x 484.05844pt>
+File: ./img/umlCasosUso.png Graphic file (type png)
+<use ./img/umlCasosUso.png>
+Package pdftex.def Info: ./img/umlCasosUso.png  used on input line 100.
+(pdftex.def)             Requested size: 344.69766pt x 460.79832pt.
 
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11]
-LaTeX Info: Redefining \. on input line 399.
-LaTeX Info: Redefining \% on input line 399.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [12]
-LaTeX Info: Redefining \. on input line 462.
-LaTeX Info: Redefining \% on input line 462.
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 142--142
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 142--142
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 142--142
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 142--142
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 142--142
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 142--142
+ [] 
+ []
+
+
+Overfull \vbox (312.40154pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 143.
+LaTeX Info: Redefining \% on input line 143.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[13]
-LaTeX Info: Redefining \. on input line 526.
-LaTeX Info: Redefining \% on input line 526.
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.143 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.A
+lph2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.143 
+       <./img/umlCasosUso.png>]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 164--164
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 164--164
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 164--164
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 164--164
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 164--164
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 164--164
+ [] 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 190--190
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 190--190
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 190--190
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 190--190
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 190--190
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 190--190
+ [] 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 216--216
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 216--216
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 216--216
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 216--216
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 216--216
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 216--216
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[14]
-LaTeX Info: Redefining \. on input line 588.
-LaTeX Info: Redefining \% on input line 588.
+[14pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.217 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.A
+lph2.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.217 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 241--241
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 241--241
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 241--241
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 241--241
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 241--241
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 241--241
+ [] 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 269--269
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 269--269
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 269--269
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 269--269
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 269--269
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 269--269
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[15]
-LaTeX Info: Redefining \. on input line 645.
-LaTeX Info: Redefining \% on input line 645.
+[15pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.270 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.A
+lph2.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.270 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 297--297
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 297--297
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 297--297
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 297--297
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 297--297
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 297--297
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 298.
+LaTeX Info: Redefining \% on input line 298.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[16]
-LaTeX Info: Redefining \. on input line 707.
-LaTeX Info: Redefining \% on input line 707.
+[16pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.298 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 324--324
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 324--324
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 324--324
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 324--324
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 324--324
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 324--324
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 325.
+LaTeX Info: Redefining \% on input line 325.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[17]
-LaTeX Info: Redefining \. on input line 841.
-LaTeX Info: Redefining \% on input line 841.
+[17pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.325 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 349--349
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 349--349
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 349--349
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 349--349
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 349--349
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 349--349
+ [] 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 389--389
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 389--389
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 389--389
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 389--389
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 389--389
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[18])
+[18pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.390 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.A
+lph2.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.390 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 421--421
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 421--421
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 421--421
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 421--421
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 421--421
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 421--421
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 422.
+LaTeX Info: Redefining \% on input line 422.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.422 
+      ]
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 449--449
+[]|[]| 
+ []
+
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 449--449
+[]|[]| 
+ []
+
+
+Overfull \hbox (2.22562pt too wide) in paragraph at lines 449--449
+[]|\T1/lmr/m/n/12 (-20) Paso| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 449--449
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 449--449
+[]|\T1/lmr/m/n/12 (-20) Alta| 
+ []
+
+
+Overfull \hbox (29.999pt too wide) in paragraph at lines 449--449
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 450.
+LaTeX Info: Redefining \% on input line 450.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.450 
+      ])
 LaTeX Info: Redefining \. on input line 396.
 LaTeX Info: Redefining \% on input line 396.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[19]
+[21pdfTeX warning (ext4): destination with the same identifier (name{table.Alph
+2.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.396 \include{./tex/B_Requisitos}
+                                  ]
 \openout2 = `./tex/C_Diseno.aux'.
 
- (tex/C_Diseno.tex [20
+ (tex/C_Diseno.tex [22
 
 
 
 ]
-<./img/databaseDiagram.png, id=748, 381.67593pt x 213.04594pt>
+<./img/databaseDiagram.png, id=759, 381.67593pt x 213.04594pt>
 File: ./img/databaseDiagram.png Graphic file (type png)
 <use ./img/databaseDiagram.png>
 Package pdftex.def Info: ./img/databaseDiagram.png  used on input line 34.
 (pdftex.def)             Requested size: 344.69766pt x 192.41248pt.
- [21]
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
-h3.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.51 
-      <./img/databaseDiagram.png>]
-<./img/modeloMVC.png, id=760, 583.42969pt x 181.42781pt>
-File: ./img/modeloMVC.png Graphic file (type png)
-<use ./img/modeloMVC.png>
-Package pdftex.def Info: ./img/modeloMVC.png  used on input line 52.
-(pdftex.def)             Requested size: 344.69766pt x 107.19374pt.
-<./img/arquitectura.png, id=761, 831.105pt x 426.09187pt>
-File: ./img/arquitectura.png Graphic file (type png)
-<use ./img/arquitectura.png>
-Package pdftex.def Info: ./img/arquitectura.png  used on input line 62.
-(pdftex.def)             Requested size: 344.69766pt x 176.7208pt.
+ [23]
+<./img/processDiagram.png, id=766, 753.5653pt x 463.7325pt>
+File: ./img/processDiagram.png Graphic file (type png)
+<use ./img/processDiagram.png>
+Package pdftex.def Info: ./img/processDiagram.png  used on input line 38.
+(pdftex.def)             Requested size: 344.69766pt x 212.11661pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.38 ...{Diagrama de secuencia de la aplicación.}
+                                                   <./img/databaseDiagram.png>]
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.62 ...ctura}{Arquitectura general del proyecto.}
-                                                   <./img/modeloMVC.png>]
-<./img/paquetes.png, id=768, 502.87875pt x 231.86626pt>
-File: ./img/paquetes.png Graphic file (type png)
-<use ./img/paquetes.png>
-Package pdftex.def Info: ./img/paquetes.png  used on input line 68.
-(pdftex.def)             Requested size: 344.69766pt x 158.93002pt.
+l.60 P
+      or ejemplo, si modificamos la base de datos, solo modificaríamos el m...
+ <./img/processDiagram.png>]
+<./img/modeloMVC.png, id=778, 583.42969pt x 181.42781pt>
+File: ./img/modeloMVC.png Graphic file (type png)
+<use ./img/modeloMVC.png>
+Package pdftex.def Info: ./img/modeloMVC.png  used on input line 70.
+(pdftex.def)             Requested size: 344.69766pt x 107.19374pt.
+<./img/arquitectura.png, id=779, 804.75656pt x 450.9347pt>
+File: ./img/arquitectura.png Graphic file (type png)
+<use ./img/arquitectura.png>
+Package pdftex.def Info: ./img/arquitectura.png  used on input line 78.
+(pdftex.def)             Requested size: 344.69766pt x 193.14125pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.78 \textbf
-            {gui}: En este paquete se almacena todo lo relacionado con la in...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph3.
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.78 \textbf
-            {gui}: En este paquete se almacena todo lo relacionado con la in...
- <./img/arquitectura.png> <./img/paquetes.png>]
-<./img/paquetesClases.png, id=776, 693.59125pt x 402.50375pt>
-File: ./img/paquetesClases.png Graphic file (type png)
-<use ./img/paquetesClases.png>
-Package pdftex.def Info: ./img/paquetesClases.png  used on input line 92.
-(pdftex.def)             Requested size: 344.69766pt x 200.04146pt.
-<./img/paquetesClasesGui.png, id=777, 663.47874pt x 522.95375pt>
-File: ./img/paquetesClasesGui.png Graphic file (type png)
-<use ./img/paquetesClasesGui.png>
-Package pdftex.def Info: ./img/paquetesClasesGui.png  used on input line 94.
-(pdftex.def)             Requested size: 344.69766pt x 271.69014pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+l.78 ...ctura}{Arquitectura general del proyecto.}
+                                                   <./img/modeloMVC.png>]
+<./img/paquetes.png, id=786, 502.87875pt x 231.86626pt>
+File: ./img/paquetes.png Graphic file (type png)
+<use ./img/paquetes.png>
+Package pdftex.def Info: ./img/paquetes.png  used on input line 84.
+(pdftex.def)             Requested size: 344.69766pt x 158.93002pt.
 LaTeX Info: Redefining \. on input line 94.
 LaTeX Info: Redefining \% on input line 94.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[25pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
-h3.5}) has been already used, duplicate ignored
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 ...lases y paquetes de la interfaz gráfica.}
-                                                   <./img/paquetesClases.png>]
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
-
-Overfull \vbox (0.85403pt too high) has occurred while \output is active []
-
-
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
-h3.6}) has been already used, duplicate ignored
+l.94 \textbf
+            {gui}: En este paquete se almacena todo lo relacionado con la in...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph3.
+5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.125 \textbf
-             {AboutController:} - <./img/paquetesClasesGui.png>]
-<./img/navegacion.png, id=790, 804.00375pt x 472.76625pt>
-File: ./img/navegacion.png Graphic file (type png)
-<use ./img/navegacion.png>
-Package pdftex.def Info: ./img/navegacion.png  used on input line 158.
-(pdftex.def)             Requested size: 344.69766pt x 202.68677pt.
+l.94 \textbf
+            {gui}: En este paquete se almacena todo lo relacionado con la in...
+ <./img/arquitectura.png> <./img/paquetes.png>]
+<./img/paquetesClases.png, id=794, 693.59125pt x 402.50375pt>
+File: ./img/paquetesClases.png Graphic file (type png)
+<use ./img/paquetesClases.png>
+Package pdftex.def Info: ./img/paquetesClases.png  used on input line 103.
+(pdftex.def)             Requested size: 344.69766pt x 200.04146pt.
+<./img/paquetesClasesGui.png, id=795, 663.47874pt x 522.95375pt>
+File: ./img/paquetesClasesGui.png Graphic file (type png)
+<use ./img/paquetesClasesGui.png>
+Package pdftex.def Info: ./img/paquetesClasesGui.png  used on input line 105.
+(pdftex.def)             Requested size: 344.69766pt x 271.69014pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
-[27])
-LaTeX Info: Redefining \. on input line 397.
-LaTeX Info: Redefining \% on input line 397.
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [28pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.105 ...ases y paquetes de la interfaz gráfica.}
+                                                   <./img/paquetesClases.png>]
+<./img/umlClases.png, id=801, 629.35126pt x 487.8225pt>
+File: ./img/umlClases.png Graphic file (type png)
+<use ./img/umlClases.png>
+Package pdftex.def Info: ./img/umlClases.png  used on input line 113.
+(pdftex.def)             Requested size: 344.69766pt x 267.17921pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h3.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.113 ...de las clases general de la aplicación.}
+                                                   <./img/paquetesClasesGui.png
+>]
+<./img/clasesCan.png, id=809, 520.19344pt x 210.03468pt>
+File: ./img/clasesCan.png Graphic file (type png)
+<use ./img/clasesCan.png>
+Package pdftex.def Info: ./img/clasesCan.png  used on input line 115.
+(pdftex.def)             Requested size: 344.69766pt x 139.17455pt.
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h3.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 A
+        continuación se muestran algunas de las vistas de la aplicación:pdfTe
+X warning (ext4): destination with the same identifier (name{figure.Alph3.9}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 A
+        continuación se muestran algunas de las vistas de la aplicación: <./i
+mg/umlClases.png> <./img/clasesCan.png>]
+<./img/navegacion.png, id=816, 804.00375pt x 472.76625pt>
+File: ./img/navegacion.png Graphic file (type png)
+<use ./img/navegacion.png>
+Package pdftex.def Info: ./img/navegacion.png  used on input line 128.
+(pdftex.def)             Requested size: 344.69766pt x 202.68677pt.
+)
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ph3.10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1301,100 +1885,262 @@ l.397 \include{./tex/C_Diseno}
 \openout2 = `./tex/D_Manual_programador.aux'.
 
 
-(tex/D_Manual_programador.tex [29
+(tex/D_Manual_programador.tex [32
 
 
 
-]
-<./img/gitClone.png, id=804, 642.90187pt x 236.38312pt>
+] [33]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 55.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (131.47755pt too wide) in paragraph at lines 55--56
+[][][]$\T1/lmtt/m/n/12 https : / / www . oracle . com / technetwork / java / ja
+vase / \downloads / jdk8-[]downloads-[]2133151 .
+ []
+
+
+Overfull \hbox (36.36795pt too wide) in paragraph at lines 61--63
+[]\T1/lmr/m/n/12 (-20) Se pue-de ob-te-ner del si-guien-te en-la-ce: [][]$\T1/l
+mtt/m/n/12 https : / / www . oracle . com / technetwork /
+ []
+
+<./img/gitClone.png, id=832, 642.90187pt x 236.38312pt>
 File: ./img/gitClone.png Graphic file (type png)
 <use ./img/gitClone.png>
 Package pdftex.def Info: ./img/gitClone.png  used on input line 70.
 (pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[30]
-<./img/sceneBuilder.png, id=813, 1204.5pt x 654.19406pt>
+[34]
+<./img/sceneBuilder.png, id=844, 1204.5pt x 654.19406pt>
 File: ./img/sceneBuilder.png Graphic file (type png)
 <use ./img/sceneBuilder.png>
 Package pdftex.def Info: ./img/sceneBuilder.png  used on input line 76.
 (pdftex.def)             Requested size: 344.69766pt x 187.21587pt.
-<./img/eclipse.png, id=814, 1204.5pt x 656.4525pt>
-File: ./img/eclipse.png Graphic file (type png)
-<use ./img/eclipse.png>
-Package pdftex.def Info: ./img/eclipse.png  used on input line 82.
-(pdftex.def)             Requested size: 344.69766pt x 187.86218pt.
 
+Underfull \vbox (badness 1424) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
-[31pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
-h4.1}) has been already used, duplicate ignored
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ph4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 \imagen{eclipse}{IDE Eclipse}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.Alph4.2}) has been already used, duplicate ignored
+l.81 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.A
+lph4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 \imagen{eclipse}{IDE Eclipse}
-                                   <./img/gitClone.png> <./img/sceneBuilder.png
->]
-File: ./img/gitClone.png Graphic file (type png)
-<use ./img/gitClone.png>
-Package pdftex.def Info: ./img/gitClone.png  used on input line 98.
-(pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
+l.81 
+      <./img/gitClone.png> <./img/sceneBuilder.png>]
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[32pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[36]
+<./img/esquemaAnexo.png, id=861, 613.54219pt x 395.22656pt>
+File: ./img/esquemaAnexo.png Graphic file (type png)
+<use ./img/esquemaAnexo.png>
+Package pdftex.def Info: ./img/esquemaAnexo.png  used on input line 151.
+(pdftex.def)             Requested size: 344.69766pt x 222.043pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 151.
+LaTeX Info: Redefining \% on input line 151.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[37]
+<./img/iconoFootprint.png, id=868, 225.84375pt x 30.1125pt>
+File: ./img/iconoFootprint.png Graphic file (type png)
+<use ./img/iconoFootprint.png>
+Package pdftex.def Info: ./img/iconoFootprint.png  used on input line 158.
+(pdftex.def)             Requested size: 344.69766pt x 45.9658pt.
+<./img/asignamiento.png, id=869, 572.1375pt x 191.21437pt>
+File: ./img/asignamiento.png Graphic file (type png)
+<use ./img/asignamiento.png>
+Package pdftex.def Info: ./img/asignamiento.png  used on input line 162.
+(pdftex.def)             Requested size: 344.69766pt x 115.20216pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.98 \imagen{gitClone}{Comando Git sobre WSL.}
-                                               <./img/eclipse.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
- [33pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
-ph4.4}) has been already used, duplicate ignored
+l.162 ...e los componentes y su \emph{footprint}.}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.Alph4.4}) has been already used, du
+plicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.131 P
-       ara exportarlo como un fichero .jar, podemos hacer click derecho sobr...
-])
+l.162 ...e los componentes y su \emph{footprint}.}
+                                                   <./img/esquemaAnexo.png> <./
+img/iconoFootprint.png>]
+<./img/iconoNetlist.png, id=876, 225.84375pt x 26.34843pt>
+File: ./img/iconoNetlist.png Graphic file (type png)
+<use ./img/iconoNetlist.png>
+Package pdftex.def Info: ./img/iconoNetlist.png  used on input line 184.
+(pdftex.def)             Requested size: 344.69766pt x 40.22008pt.
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.187 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+Alph4.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.187 
+       <./img/asignamiento.png> <./img/iconoNetlist.png>]
+<./img/firstFootprint.png, id=883, 583.42969pt x 278.54062pt>
+File: ./img/firstFootprint.png Graphic file (type png)
+<use ./img/firstFootprint.png>
+Package pdftex.def Info: ./img/firstFootprint.png  used on input line 188.
+(pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
+<./img/finalFootprint.png, id=884, 642.90187pt x 411.78844pt>
+File: ./img/finalFootprint.png Graphic file (type png)
+<use ./img/finalFootprint.png>
+Package pdftex.def Info: ./img/finalFootprint.png  used on input line 192.
+(pdftex.def)             Requested size: 344.69766pt x 220.79158pt.
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.200 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+Alph4.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.200 
+       <./img/firstFootprint.png> <./img/finalFootprint.png>]
+Overfull \hbox (103.42184pt too wide) in paragraph at lines 205--260
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[41]
+<./img/conexionPickit.png, id=900, 294.34969pt x 145.29282pt>
+File: ./img/conexionPickit.png Graphic file (type png)
+<use ./img/conexionPickit.png>
+Package pdftex.def Info: ./img/conexionPickit.png  used on input line 272.
+(pdftex.def)             Requested size: 344.69766pt x 170.14708pt.
+<./img/cargaFirmware.png, id=901, 1459.4525pt x 780.9175pt>
+File: ./img/cargaFirmware.png Graphic file (type png)
+<use ./img/cargaFirmware.png>
+Package pdftex.def Info: ./img/cargaFirmware.png  used on input line 275.
+(pdftex.def)             Requested size: 344.69766pt x 184.43315pt.
+LaTeX Info: Redefining \. on input line 281.
+LaTeX Info: Redefining \% on input line 281.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.281 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+Alph4.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.281 
+       <./img/conexionPickit.png> <./img/cargaFirmware.png>]
+<./img/pickit3.png, id=908, 619.56468pt x 395.97937pt>
+File: ./img/pickit3.png Graphic file (type png)
+<use ./img/pickit3.png>
+Package pdftex.def Info: ./img/pickit3.png  used on input line 282.
+(pdftex.def)             Requested size: 344.69766pt x 220.30286pt.
+<./img/mphidflash.png, id=910, 374.90062pt x 109.1578pt>
+File: ./img/mphidflash.png Graphic file (type png)
+<use ./img/mphidflash.png>
+Package pdftex.def Info: ./img/mphidflash.png  used on input line 296.
+(pdftex.def)             Requested size: 344.69766pt x 100.36975pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 296.
+LaTeX Info: Redefining \% on input line 296.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.296 ...h}{Salida del comando \emph{mphidflash}.}
+                                                   <./img/pickit3.png>])
 LaTeX Info: Redefining \. on input line 398.
 LaTeX Info: Redefining \% on input line 398.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[34]
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h4.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.398 \include{./tex/D_Manual_programador}
+                                           <./img/mphidflash.png>]
 \openout2 = `./tex/E_Manual_usuario.aux'.
 
- (tex/E_Manual_usuario.tex) [35
+
+(tex/E_Manual_usuario.tex) [45
 
 
 
@@ -1427,7 +2173,7 @@ ual_programador.aux) (tex/E_Manual_usuario.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
 Package rerunfilecheck Info: File `anexos.out' has not changed.
-(rerunfilecheck)             Checksum: BE608408230E9A366E5C7ABD0D23CF60;2033.
+(rerunfilecheck)             Checksum: D6E6A7555C654888CD46ED892B667723;2196.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1438,15 +2184,15 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 13129 strings out of 492946
- 195337 string characters out of 3126711
- 374579 words of memory out of 3000000
- 16515 multiletter control sequences out of 15000+200000
- 83828 words of font info for 97 fonts, out of 3000000 for 9000
+ 13266 strings out of 492946
+ 198489 string characters out of 3126711
+ 383043 words of memory out of 3000000
+ 16626 multiletter control sequences out of 15000+200000
+ 89995 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,45p,437b,685s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
-.enc}{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
+ 46i,12n,43p,430b,710s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+}{C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.
 enc}<C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym
 /feymr10.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmbx12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
@@ -1459,10 +2205,11 @@ fonts/type1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Users/MS02/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on anexos.pdf (41 pages, 880468 bytes).
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/MS02/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on anexos.pdf (53 pages, 2219194 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 21274 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 1004 PDF objects out of 1200 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 22389 words of extra memory for PDF output out of 24883 (max. 10000000)
 

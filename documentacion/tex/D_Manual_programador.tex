@@ -10,19 +10,19 @@ El proyecto tiene la siguiente estructura:
 
 \begin{itemize}
 \item
-\textbf{/documentacion/:} Documentación del proyecto.
+\textit{/documentacion/:} Documentación del proyecto.
 \item
-\textbf{/documentacion/img/:} Imágenes utilizadas en la documentación.
+\textit{/documentacion/img/:} Imágenes utilizadas en la documentación.
 \item
-\textbf{/documentacion/javadoc/:} Documentación \emph{Javadoc}.
+\textit{/documentacion/javadoc/:} Documentación \emph{Javadoc}.
 \item
-\textbf{/hardware/:} Esquemas del \emph{hardware} realizado en formato para KiCAD.
+\textit{/hardware/:} Esquemas del \emph{hardware} realizado en formato para KiCAD.
 \item
-\textbf{/hardware/gerber/:} Ficheros \emph{gerber} para la producción del hardware.
+\textit{/hardware/gerber/:} Ficheros \emph{gerber} para la producción del hardware.
 \item
-\textbf{/src/:} Código fuente de la aplicación Java
+\textit{/src/:} Código fuente de la aplicación Java
 \item
-\textbf{/resources/:} Recursos de la aplicación.
+\textit{/resources/:} Recursos de la aplicación.
 
 \end{itemize}
 
@@ -52,14 +52,14 @@ Eclipse
 
 Es uno de los lenguajes más utilizados hoy en día. El uso del lenguaje Java nos permite la compatibilidad de la aplicación en distintas plataformas. Se puede obtener del siguiente enlace:
 
-ENLACE A JAVA JDK8
+\url{https://www.oracle.com/technetwork/java/javase/\\downloads/jdk8-downloads-2133151.html}
 
 \subsection{JavaFX}
 
 Se trata de un conjunto de productos y tecnologías para la creación de interfaces gráficas en Java. Para la ejecución de estas aplicaciones solamente es necesaria la instalación de JRE en la máquina.
 
 Se puede obtener del siguiente enlace:
-ENLACE A JAVAFX
+\url{https://www.oracle.com/technetwork/java/javafx/overview/index.html}
 
 \subsection{Git}
 
@@ -79,7 +79,6 @@ Se trata de una interfaz gráfica creada para el desarrollo de interfaces gráfi
 
 Para el desarrollo del código Java, se ha utilizado la IDE Eclipse. En ella se han importado las librerías correspondientes, e instalado plugins para el soporte de JavaFX. De esta manera, es posible llamar a SceneBuilder desde Eclipse.
 
-\imagen{eclipse}{IDE Eclipse}
 
 \subsection{Obtención del código fuente}
 
@@ -91,11 +90,9 @@ Posicionarse en el directorio en el que se desea copiar el código. (Si deseamos
 
 Introducir el siguiente comando:
 
-\emph{git clone https://github.com/amb0070/CRET.git}
+\textit{git clone https://github.com/amb0070/CRET.git}
 
 Una vez finalizada la descarga del repositorio, se podrá acceder al código fuente y a los recursos del proyecto.
-
-\imagen{gitClone}{Comando Git sobre WSL.}
 
 \subsection{Importar proyecto a Eclipse}
 
@@ -107,7 +104,6 @@ Seleccionamos \emph{Projects from File System or Archive}, y seleccionamos el di
 
 De esta manera, queda importado el proyecto a nuestro \emph{workspace} de Eclipse.
 
-CAPTURAS
 
 \subsection{Importar librerías necesarias}
 
@@ -118,8 +114,6 @@ Sobre la carpeta del proyecto, en el árbol izquierdo, hacer click derecho.
 Seleccionar sub-menú \emph{Build Path} > \emph{Configure Build Path}.
 
 Hacemos \emph{click} en el botón \emph{Add External JARs...} y seleccionamos los ficheros .jar de las librerías.
-
-CAPTURAS
 
 
 \section{Compilación, instalación y ejecución del proyecto}
@@ -134,7 +128,7 @@ Seleccionamos \emph{Java} > \emph{Runnable JAR file}.
 
 Incluimos las librerías en el fichero .jar, y exportamos.
 
-CAPTURAS
+MAVEN
 
 \subsection{Ejecución}
 
@@ -144,4 +138,162 @@ La ejecución de la aplicación no requiere de ningún elemento externo, pero si
 
 De igual manera, el proyecto puede ser ejecutado desde Eclipse, pero para su funcionamiento es necesario el \emph{hardware} que se ha diseñado.
 
+\section{Producción del \emph{hardware}}
 
+A continuación se expone el procedimiento para la producción del \emph{hardware} desarrollado.
+
+El proyecto puede ser abierto con KiCAD de forma que tenemos acceso a la modificación de los esquemas y del diseño de la PCB.
+
+El flujo básico de trabajo en KiCAD, a rasgos muy generales sería el siguiente:
+\begin{itemize}
+\item
+\textbf{Esquema}: Desarrollo del esquema del circuito. En éste esquema indicaríamos los componentes a utilizar y su conexión entre ellos.
+\imagen{esquemaAnexo}{Ejemplo del diseño de uno de los elementos en el esquema.}
+
+\item
+\textbf{Asignación de huellas}: El siguiente paso en el desarrollo sería asignar a cada uno de los elementos del esquema el \emph{footprint}, es decir, la forma y tamaño del componente que se va a incluir en la \emph{PCB}.
+
+Para ello, podemos hacer \emph{click} en el siguiente botón:
+
+\imagen{iconoFootprint}{Icono para asignar las huellas al esquema.}
+
+En la siguiente ventana tenemos una relación entre el nombre del componente y el \emph{footprint} asignado.
+
+\imagen{asignamiento}{Relación entre los componentes y su \emph{footprint}.}
+
+Analizando el primer elemento marcado en la lista, podemos obtener la siguiente información:
+
+\begin{itemize}
+\item
+\textit{C1}: Hace referencia al nombre del elemento.
+\item
+\textit{100nF}: Hace referencia a la capacidad del elemento. En este caso al ser un condensador, la medida está indicada en nano faradios.
+\item
+\textit{Capacitor SMD:} Hace referencia al tipo de componente. En este caso un condensador para montaje sobre superficie (\emph{SMD - Surface Mount Device}).
+\item
+\textit{1206}: Este dato hace referencia a la tecnología de montaje superficial. Se podría decir que nos indican el tamaño del encapsulado del componente.
+\item
+\textit{Pad1.42x.75mm HandSolder}: En este caso, nos indica el tamaño de los \emph{pads}, es decir, de la superficie en la que es soldado el componente. En este caso tienen un tamaño un poco más grande de lo normal para facilitar la soldadura a mano (\emph{HandSolder}).
+\end{itemize}
+
+\item
+\textbf{Netlist:} Una vez concluido el diseño del esquema y su asignación de huellas, deberíamos de generar el fichero \emph{netlist}. Este fichero será el que posteriormente se importe al diseñador de \emph{PCBs} y el cual contiene todos los elementos del esquema y sus conexiones.
+
+En \emph{KiCAD} podemos generarlo con el siguiente botón:
+
+\imagen{iconoNetlist}{Icono para generar el fichero \emph{netlist}.}
+
+Importamos dicho fichero en el editor de \emph{PCBs} y obtendremos algo parecido a esto:
+
+\imagen{firstFootprint}{Diseño inicial de la \emph{PCB}}
+
+Insertando las vías y \emph{enrutando} todo el diseño, obtenemos el siguiente resultado:
+
+\imagen{finalFootprint}{Diseño final de la \emph{PCB}.}
+
+\end{itemize}
+
+Con el diseño concluido, generamos los ficheros \emph{Gerber} para su producción.
+
+En este caso, los prototipos han sido producidos en:
+\url{https://jlcpcb.com/}.
+
+El listado de componentes necesarios para la producción del \emph{hardware} son los siguientes:
+
+
+\begin{center}
+ \begin{tabular}{||c c c||} 
+ \hline
+ Cantidad & Componente & Elemento \\ [0.8ex] 
+ \hline\hline
+ 2 & PIC18F14K50T-I/SO & IC1-1, IC1-2 \\ 
+ \hline
+ 2 & MCP2515T-I/SOCT-ND & IC2-1, IC2-2\\
+  \hline
+ 1 & GL850G & U2\\
+   \hline
+ 1 & SY6280 & U1\\
+ \hline
+ 2 & MCP2551-I/SN-ND & IC3-1, IC3-2\\
+ \hline
+ 2 & CRYSTAL 24.0000MHZ 18PF SMD & Q1, Q2\\
+ \hline
+ 2 & FERRITE BEAD 600 OHM 1206 1LN & L1, L2, L3, L4\\
+  \hline
+ 2 & LED RED DIFFUSED 1206 SMD & LED1, LED2\\
+  \hline
+ 1 & CAP CER 1UF 10V X7R 1206 & C17\\
+   \hline
+ 2 & CAP CER 33PF 50V C0G/NP0 1206 & C13, C14\\
+  \hline
+ 1 & CONN RCPT USB2.0 MICRO B SMD R/A & J7\\
+  \hline
+ 2 & CONN D-SUB PLUG 9POS R/A SOLDER & CAN1, CAN2\\
+  \hline
+ 4 & CAP CER 22PF 10V C0G/NP0 1206 & C10, C11, C18, C19\\
+  \hline
+ 3 & CAP CER 10UF 10V X7R 1206 & C7, C15, C22\\
+  \hline
+ 2 & CAP CER 0.1UF 10V X7R 1206 & C8, C9\\
+  \hline
+ 15 & CAP CER 100UF 6.3V X5R 1206 & C(1-6,12,16,20,21,23-25),CP(3,4)\\
+  \hline
+ 2 & CAP CER 4.7UF 10V X5R 1206 & CP1, CP2\\
+   \hline
+ 2 & RES 47K OHM 5\% 1/4W 1206  & R9, R12\\
+   \hline
+ 1 & RES 5.1K OHM 5\% 1/4W 1206  & R8\\
+   \hline
+ 3 & RES 10K OHM 0.1\% 1/8W 1206  & R7, R10, R11\\
+   \hline
+ 1 &  CRGCQ 1206 680R 1\% & R6\\
+   \hline
+ 2 &  RES SMD 120 OHM 5\% 1/2W 1206  & R4, R15\\
+    \hline
+ 8 &  RES 1K OHM 1\% 1/2W 1206  & R2,R3,R5,R13,R14,R16-R18\\
+ \hline
+ 1 &  RES SMD 4.7K OHM 1\% 1/4W 1206 & R1 \\ 
+  \hline
+ 1 &  DIODE 1206 & D1 \\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+
+Todos estos componentes han sido comprados en \url{https://www.digikey.es/} aunque pueden ser obtenidos en otras tiendas.
+
+El formato de todas las resistencias, condensadores y ferritas ha sido SMD 1206, debido a su reducido tamaño pero a la vez suficiente para soldarlo a mano.
+
+Una vez disponemos de la PCB y de los componentes, es necesario realizar un paso previo antes de soldarlos. Es necesario programar los PIC con el \emph{bootloader} para posteriormente cargar el \emph{firmware} en los mismos.
+
+Para ello, teniendo en cuenta el \emph{datasheet} del microcontrolador, podemos realizar la siguiente conexión:
+
+
+\imagen{conexionPickit}{\emph{Pinout} del \emph{PICKit3}.}
+
+
+\imagen{cargaFirmware}{Cargando \emph{firmware} en el PIC.}
+
+
+Una vez detectado el dispositivo por el equipo, es necesario conectarse a el, e indicar el fichero .hex que queremos cargar, en este caso, el \emph{bootloader} referenciado en la página oficial.
+
+Es importante configurar el programador para que alimente el microcontrolador, sino la carga del \emph{bootloader} no será posible. Para ello, hay que acceder al modo avanzado del programador.
+
+\imagen{pickit3}{Configuración avanzada de \emph{MPLAB}.}
+
+Seleccionamos la opción para que el programador alimente el controlador.
+
+Ya podemos grabar el \emph{bootloader} en el microcontrolador.
+
+Una vez realizados estos pasos, ya se pueden soldar todos los componentes en la placa.
+
+Para hacerla funcionar es necesario un paso más. Cargar el \emph{firmware}.
+
+Para ello, conectamos la placa al USB del equipo, con el \emph{jumper} JP3 o JP4 (cada uno es para su microcontrolador), y ejecutamos la siguiente utilidad:
+
+mphidflash - \url{https://github.com/ApertureLabsLtd/mphidflash}
+
+\imagen{mphidflash}{Salida del comando \emph{mphidflash}.}
+
+
+Una vez completada la carga, podemos comprobar el dispositivo y estaría listo para su uso.

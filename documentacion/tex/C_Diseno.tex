@@ -4,7 +4,7 @@
 
 En esta sección se expone cómo se han resuelto las especificaciones indicadas anteriormente.
 
-Se define los datos que va a utilizar la aplicación, el diseño de sus interfaces y su arquitectura.
+Se definen los datos que va a utilizar la aplicación, el diseño de sus interfaces y su arquitectura.
 
 \section{Diseño de datos}
 
@@ -29,9 +29,27 @@ La aplicación utiliza una base de datos SQLite para almacenar los proyectos. La
 \end{itemize}
 \end{itemize}
 
-A continuación se expone un diagrama de la base de datos:
+A continuación se expone un diagrama relacional de la base de datos:
 
-\imagen{databaseDiagram}{Diagrama de la base de datos}
+\imagen{databaseDiagram}{Diagrama relacional de la base de datos}
+
+\section{Diseño procedimental}
+
+\imagen{processDiagram}{Diagrama de secuencia de la aplicación.}
+
+Como podemos observar en el diagrama de secuencia, desde el puto de inicio del programa, podemos seleccionar tres ramas:
+\begin{itemize}
+\item
+Comenzar un análisis
+\item
+Comenzar una monitorización.
+\item
+Comenzar una lectura de los datos en formato \emph{bruto}.
+\end{itemize}
+
+Para llegar a todas las opciones anteriores, es necesario haber configurado la interfaz con la que nos vamos a conectar al bus CAN.
+
+Tanto la primera como la segunda línea del procedimiento hacen uso de la base de datos y de la gestión de proyectos, sin embargo la última rama no hace uso de la base de datos, ya que simplemente se encarga de monitorizar todos los datos en tiempo real en una tabla, sin almacenarlos.
 
 \section{Diseño arquitectónico}
 
@@ -53,9 +71,7 @@ Está compuesto por tres componentes:
 
 \subsection{Arquitectura general}
 
-A continuación se describe de manera general la arquitectura de la aplicación.
-
-Como se ha indicado anteriormente, se utiliza el modelo MVC para el funcionamiento interno de la aplicación.
+A continuación se describe de manera general la arquitectura de la aplicación. Como se ha indicado anteriormente, se utiliza el modelo MVC para el funcionamiento interno de la aplicación.
 
 Además de eso, cabe destacar la interacción con la base de datos, tanto de lectura y escritura, como la interacción con la interfaz CAN encargada de leer los datos que fluyen por el bus.
 
@@ -84,65 +100,19 @@ A continuación se describen cada uno de los paquetes:
 \textbf{staticData}: En este paquete se almacenan una serie de estructuras las cuales son utilizadas por distintos componentes del proyecto. En el se almacenan todos los datos que son representados por las gráficas de la aplicación.
 \end{itemize}
 
-
-\subsection{Diseño de clases}
-
-En este apartado se describe cada una de las clases que forman la aplicación y su funcionamiento.
-
 \imagen{paquetesClases}{Diagrama de clases y paquetes de la aplicación.}
 
 \imagen{paquetesClasesGui}{Diagrama de clases y paquetes de la interfaz gráfica.}
 
 
-\begin{itemize}
-\item
-\textbf{CanConnection:} -
-\item
-\textbf{CanListenerAnalysis:} -
-\item
-\textbf{CanListenerDashboard:} -
-\item
-\textbf{CanListenerRAW:} -
-\item
-\textbf{CanTable:} -
-\item
-\textbf{CanUtils:} -
-\item
-\textbf{database:} -
-\item
-\textbf{DbUtils:} -
-\item
-\textbf{Main:} -
-\item
-\textbf{Preloader:} -
-\item
-\textbf{json:} -
-\item
-\textbf{Project:} -
-\item
-\textbf{structures:} -
-\item
-\textbf{AboutController:} -
-\item
-\textbf{ConfigurationViewController:} -
-\item
-\textbf{EditableLabel:} -
-\item
-\textbf{ExportController:} -
-\item
-\textbf{FrameViewerController:} -
-\item
-\textbf{GuiUtils:} -
-\item
-\textbf{ImportController:} -
-\item
-\textbf{NewProjectController:} -
-\item
-\textbf{ProjectListController:} -
-\item
-\textbf{RootViewController:} -
-\end{itemize}
 
+\subsection{Diseño de clases}
+
+En este apartado se describe cada una de las clases que forman la aplicación y su funcionamiento.
+
+\imagen{umlClases}{Diagrama UML de las clases general de la aplicación.}
+
+\imagen{clasesCan}{Diagrama UML de las clases dedicadas a la comunicación con el bus CAN.}
 
 \section{Diseño de interfaces}
 
@@ -156,3 +126,5 @@ El siguiente diagrama nos muestra el flujo de navegabilidad por la aplicación.
 
 
 \imagen{navegacion}{Diagrama de navegabilidad}.
+
+

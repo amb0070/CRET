@@ -13,12 +13,12 @@ Los objetivos generales del proyecto son los siguientes:
 \item
 Desarrollar una aplicación para el análisis y monitorización de los datos que fluyen por el bus CAN.
 \item
-Desarrollo de un \emph{hardware} libre el cual permita conectarse y monitorizar dos buses de datos de forma simultanea.
+Desarrollo de un \emph{hardware} libre el cual permita conectarse y monitorizar dos buses de datos de forma simultánea.
 \end{itemize}
 
 \section{Catalogo de requisitos}
 
-En este apartado se describen los requisitos específicos del proyecto.
+En este apartado se describen los requisitos específicos del proyecto, divididos en funcionales y no funcionales.
 
 \subsection{Requisitos funcionales}
 
@@ -38,7 +38,7 @@ En este apartado se describen los requisitos específicos del proyecto.
 \item
 \textbf{RF-1.3: Eliminar proyectos:} El usuario debe de poder eliminar los proyectos existentes en la aplicación.
 \item
-\textbf{RF-1.3.1:} Confirmar la eliminación: El usuario debe de poder confirmar si desea eliminar el proyecto.
+\textbf{RF-1.3.1: Confirmar la eliminación:} El usuario debe de poder confirmar si desea eliminar el proyecto.
 \item
 \textbf{RF-1.4: Abrir proyecto:} El usuario debe de poder abrir un proyecto existente en la aplicación.
 \item
@@ -50,22 +50,28 @@ En este apartado se describen los requisitos específicos del proyecto.
 \end{itemize}
 \item
 \textbf{RF-2: Configuración de las interfaces:} El usuario debe de poder configurar las interfaces CAN correspondientes.
+\begin{itemize}
 \item
 \textbf{RF-2.1: Obtención de los puertos serie:} El usuario debe de poder obtener un listado de los puertos serie disponibles en el equipo que ejecuta la aplicación.
 \item
 \textbf{RF-2.2: Configuración de velocidad:} El usuario debe de ser capaz de configurar la velocidad con la que una interfaz va a ser conectada.
 \item
 \textbf{RF-2.3: Configuración del modo:} El usuario debe de ser capaz de configurar el modo con el que quiere conectarse al bus CAN.
+\end{itemize}
 \item
 \textbf{RF-3: Configuración del análisis:} El usuario debe de ser capaz de configurar el tipo de análisis que quiere realizar.
+\begin{itemize}
 \item
 \textbf{RF-3.1: Ignorar \emph{bytes} con valor cero:} El usuario debe ser capaz de seleccionar si desea ignorar los \emph{bytes} que no envíen ningún valor por el bus.
 \item
 \textbf{RF-3.2: Separar los \emph{bytes} en dos partes:} El usuario debe de ser capaz de separar los \emph{bytes} en dos partes para mejorar el análisis si fuera necesario.
+\end{itemize}
 \item
 \textbf{RF-4: Etiquetado de datos:} El usuario debe de ser capaz de etiquetar los datos una vez identificados.
 \item
+\begin{itemize}
 \textbf{RF-4.1: Monitorización de los datos:} El usuario debe de ser capaz de monitorizar los datos una vez han sido etiquetados.
+\end{itemize}
 \end{itemize}
 
 
@@ -75,13 +81,13 @@ En este apartado se describen los requisitos específicos del proyecto.
 \item
 \textbf{RNF-1: Monitorización:} La aplicación debe monitorizar correctamente los datos que están siendo analizados siempre que se esté conectado al bus.
 \item
-\textbf{RNF-2: Rendimiento:} La aplicación debe de funcionar fluidamente, sin que la interfaz gráfica se quede bloqueada.
+\textbf{RNF-2: Rendimiento:} La aplicación debe funcionar fluidamente, sin que la interfaz gráfica se quede bloqueada.
 \item
-\textbf{RNF-3: Escalabilidad:} La aplicación debe de permitir la incorporación de módulos de forma sencilla.
+\textbf{RNF-3: Escalabilidad:} La aplicación debe permitir la incorporación de módulos de forma sencilla.
 \item
 \textbf{RNF-4: Usabilidad:} La aplicación debe ser fácil de utilizar, intuitiva y con una estructura clara.
 \end{itemize}
-
+\newpage
 \section{Especificación de requisitos}
 
 En esta sección se exponen los casos de uso de la aplicación.
@@ -91,751 +97,354 @@ En esta sección se exponen los casos de uso de la aplicación.
 El único actor del sistema será la persona que maneja la aplicación y que identificará las señales importantes.
 
 \subsection{Casos de uso}
+\imagen{umlCasosUso}{Diagrama UML general de los casos de uso.}
+
+\tablaSmallSinColores{Caso de uso 1: Gestión de proyectos }{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 1: Gestión de proyectos} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite gestionar los proyectos de la aplicación.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1} \\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.1}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.2}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.3}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.4}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.5}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.6}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.7}
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe una conexión a la base de datos}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & Se listan los proyectos disponibles.
+\\\cline{2-3}
+& 3 & Por cada proyecto, existe la opción de abrir y eliminar.
+\\\cline{2-3}
+& 4 & Es posible importar un poryecto.
+\\\cline{2-3}
+& 5 & Es posible exportar un poryecto.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se muestran todos los proyectos.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{Error en la conexión con la base de datos.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-1}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Gestión de proyectos}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1, RF-1.1, RF-1.1.1, RF-1.2, RF-1.3, RF-1.4, RF-1.5, RF-1.6, RF-1.7\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite gestionar los proyectos de la aplicación.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-Se listan los proyectos disponibles.
-\item
-Por cada proyecto, existe la opción de abrir y eliminar.
-\item
-Es posible importar un nuevo proyecto.
-\item
-Es posible exportar un proyecto.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\tightlist
-\item
-Error en la conexión con la base de datos.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-1 Gestión de proyectos.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 2: Listar proyectos }{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 2: Listar proyectos} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite listar los proyectos de la aplicación.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1.2} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe una conexión a la base de datos}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario lista los proyectos disponibles.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se muestran todos los proyectos.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{Error en la conexión con la base de datos.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-1}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Listar proyectos}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite listar los proyectos de la aplicación.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
-
-Hay uno o más proyectos.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario lista los proyectos disponibles.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-No existe ningún proyecto.
-\item
-Error en la conexión con la base de datos.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-2 Listar proyectos.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 3: Crear proyecto }{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 3: Crear proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite crear un nuevo proyecto y añadirle datos.} \\\hline
+\multirow{2}{3.5cm}{Requisitos}&\multicolumn{2}{p{10.25cm}}{RF-1.1}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.2}
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe una conexión a la base de datos}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & Se crea un nuevo proyecto.
+\\\cline{2-3}
+& 3 & Se guardan los datos del proyecto.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se muestran todos los proyectos.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{Error en la conexión con la base de datos.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-3}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Crear proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.1, RF-1.1.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite crear un nuevo proyecto y añadirle datos.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-Se crea un nuevo proyecto.
-\item
-Se guardan los datos del proyecto.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-Error en la conexión con la base de datos.
-\item
-Proyecto con el mismo nombre existente.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-3 Crear proyecto.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 4: Eliminar proyecto}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 4: Eliminar proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite eliminar un proyecto existente.} \\\hline
+\multirow{2}{3.5cm}{Requisitos}&\multicolumn{2}{p{10.25cm}}{RF-1.3}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-1.3.1}
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe una conexión a la base de datos}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & Se crea un nuevo proyecto.
+\\\cline{2-3}
+& 3 & Se guardan los datos del proyecto.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se elimina el proyecto seleccionado.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{El proyecto no existe.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-4}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Eliminar proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.3, RF-1.3.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite eliminar un proyecto existente.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos
-
-Existe el proyecto a eliminar.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario lista los proyectos.
-\item
-El usuario selecciona el proyecto a eliminar.
-\item
-El usuario confirma la eliminación del proyecto.
-\item
-El proyecto se borra de la base de datos.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-Error en la conexión con la base de datos.
-\item
-El proyecto no existe.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-4 Eliminar proyecto.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 5: Abrir proyecto}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 5: Abrir proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite abrir un proyecto existente.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1.4} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe una conexión a la base de datos}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario lista los proyectos disponibles.
+\\\cline{2-3}
+& 3 & El usuario selecciona el proyecto que desea abrir.
+\\\cline{2-3}
+& 4 & El usuario abre el proyecto.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se abre el proyecto seleccionado.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{El proyecto no existe.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-5}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Abrir proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite abrir proyecto existente.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
-
-Existe un proyecto.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-Lista los proyectos disponibles.
-\item
-El usuario selecciona el proyecto que desea abrir.
-\item
-El usuario abre el proyecto.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-Error en la conexión con la base de datos.
-\item
-El proyecto no existe.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-5 Abrir proyecto.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 6: Cerrar proyecto}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 6: Cerrar proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite cerrar un proyecto abierto.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1.5} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe un proyecto abierto.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario tiene un proyecto abierto en la aplicación.
+\\\cline{2-3}
+& 3 & El usuario cierra el proyecto.
+\\\cline{2-3}
+& 4 & El usuario confirma que desea guardar los cambios.
+\\\cline{2-3}
+& 5 & Se cierra el proyecto.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se cierra el proyecto abierto.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No hay conexión con la base de datos.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-6}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Cerrar proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite abrir proyecto existente.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
+\tablaSmallSinColores{Caso de uso 7: Importar proyecto}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 7: Importar proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite importar un proyecto.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1.6} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe conexión a la base de datos.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario lista los proyectos disponibles.
+\\\cline{2-3}
+& 3 & El usuario selecciona el fichero que desea importar
+\\\cline{2-3}
+& 4 & El usuario lista los proyectos disponibles de nuevo.
+\\\cline{2-3}
+& 5 & El proyecto importado se encuentra en la aplicación.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Existe un nuevo proyecto en la aplicación.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No hay conexión con la base de datos.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
-Hay un proyecto abierto.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario tiene un proyecto abierto en la aplicación.
-\item
-El usuario cierra el proyecto.
-\item
-El usuario confirma que desea guardar los cambios.
-\item
-Se cierra el proyecto.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-El proyecto no está abierto.
-\item
-Error en la conexión con la base de datos.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-6 Cerrar proyecto.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 8: Exportar proyecto}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 8: Exportar proyecto} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite exportar un proyecto.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-1.7} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe conexión a la base de datos.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario lista los proyectos disponibles.
+\\\cline{2-3}
+& 3 & El usuario selecciona el proyecto que desea exportar.
+\\\cline{2-3}
+& 4 & El usuario selecciona dónde desea guardar el proyecto.
+\\\cline{2-3}
+& 5 & El proyecto es exportado a un fichero.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se exporta un proyecto de la aplicación.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No existe ningún proyecto}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
-
-
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-7}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Importar proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.6\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite importar un proyecto.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
-
-Existe un fichero para importar.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario lista los proyectos disponibles.
-\item
-El usuario selecciona el fichero que desea importar.
-\item
-El usuario lista los proyectos disponibles de nuevo.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-Error en la conexión con la base de datos.
-\item
-Existe otro proyecto con el mismo nombre.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-7 Importar proyecto.}
-\end{longtable}
-
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-8}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Exportar proyecto}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-1.7\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite exportar un proyecto.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe una conexión a la base de datos.
-
-Hay 1 o más proyectos disponibles.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario lista los proyectos disponibles.
-\item
-El usuario selecciona el proyecto que desea exportar.
-\item
-El usuario guarda el fichero con el proyecto.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-Error en la conexión con la base de datos.
-\item
-No existen proyectos en la aplicación.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-8 Exportar proyecto.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 9: Obtención de puertos serie disponibles}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 9: Obtención de puertos serie disponibles} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite obtener los puertos series disponibles en el equipo.} \\\hline
+\multirow{2}{3.5cm}{Requisitos}&\multicolumn{2}{p{10.25cm}}{RF-2}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-2.1}
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe conexión a la base de datos.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario se dispone a configurar una de las interfaces.
+\\\cline{2-3}
+& 3 & El usuario lista los puertos serie disponibles.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se listan los puertos serie.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No existe ningún puerto serie disponible}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-9}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Obtención de los puertos serie disponibles.}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-2, RF-2.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite obtener los puertos serie disponibles en el equipo.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Puertos serie disponibles en el equipo.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación
-\item
-El usuario se dispone a configurar una de las interfaces.
-\item
-El usuario lista los puertos serie disponibles.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-No existe ningún puerto serie disponible.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-9 Obtención de los puertos serie disponibles.}
-\end{longtable}
-
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-10}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Configuración de la interfaz CAN}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-2.1, RF-2.2, RF-2.3, RF-3, RF-3.1, RF-3.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite conectarse a una interfaz CAN.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe un puerto serie en la máquina.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario selecciona un puerto serie de la máquina.
-\item
-El usuario configura la velocidad de conexión.
-\item
-El usuario configura el modo de conexión.
-\item
-El usuario configura si desea ignorar los \emph{bytes} con valor cero.
-\item
-El usuario configura si desea separar los \emph{bytes} en dos partes.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-No existe un puerto serie en la máquina.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-10 Obtención de los puertos serie disponibles..}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 10: Configuración de la interfaz CAN}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 10: Configuración de la interfaz CAN} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite configurar y conectarse a una interfaz CAN.} \\\hline
+\multirow{2}{3.5cm}{Requisitos}&\multicolumn{2}{p{10.25cm}}{RF-2.1}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-2.2}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-2.3}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-3}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-3.1}
+\\\cline{2-3}
+& \multicolumn{2}{p{10.25cm}}{RF-3.2}
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe un puerto serie en la máquina.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario selecciona un puerto serie de la máquina.
+\\\cline{2-3}
+& 4 & El usuario configura la velocidad de conexión.
+\\\cline{2-3}
+& 5 & El usuario configura el modo de conexión.
+\\\cline{2-3}
+& 6 & El usuario configura si desea ignorar los \emph{bytes} con valor cero.
+\\\cline{2-3}
+& 7 & El usuario configura si desea dividir los \emph{bytes} en dos partes.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se conecta a una interfaz CAN.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{El puerto serie está en uso}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-11}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Etiquetado de datos}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite asignar etiquetas a los datos identificados por el usuario.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe un puerto serie en la máquina.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario configura una interfaz.
-\item
-El usuario crea un nuevo proyecto.
-\item
-El usuario comienza el análisis.
-\item
-El usuario identifica uno de los datos, le establece una etiqueta y lo envía al \emph{dashboard}.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-No existe un puerto serie.
-\item
-No se puede iniciar la comunicación con el bus CAN.
-\item
-No existe un proyecto.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-11 Etiquetado de datos.}
-\end{longtable}
+\tablaSmallSinColores{Caso de uso 11: Etiquetado de datos}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 11: Etiquetado de datos} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite asignar etiquetas a los datos identificados por el usuario.} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-4} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existe un dato en el programa.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario configura una interfaz.
+\\\cline{2-3}
+& 4 & El usuario crea un nuevo proyecto.
+\\\cline{2-3}
+& 5 & El usuario comienza el análisis.
+\\\cline{2-3}
+& 6 & El usuario identifica uno de los datos.
+\\\cline{2-3}
+& 7 & El usuario establece una etiqueta al dato.
+\\\cline{2-3}
+& 8 & El usuario envía el dato al dashboard.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Etiqueta un dato identificado.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No se ha creado un proyecto.}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
 
-\begin{longtable}[H]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.23\columnwidth}\raggedright\strut
-\textbf{C-12}\strut
-\end{minipage} & \begin{minipage}[b]{0.71\columnwidth}\raggedright\strut
-\textbf{Monitorización de los datos}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Requisitos asociados}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-RF-4.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Descripción}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Permite monitorizar los datos que circulan por el bus CAN.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Precondición}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Existe un puerto serie en la máquina.
+\tablaSmallSinColores{Caso de uso 12: Monitorización de los datos}{p{3cm} p{.75cm} p{9.5cm}}{b1}{
+\multicolumn{3}{l}{Caso de uso 12: Monitorización de los datos} \\
+}
+{
+Descripción & \multicolumn{2}{p{10.25cm}}{Permite monitorizar los datos identificados} \\\hline
+\multirow{2}{3.5cm}{Requisitos} &\multicolumn{2}{p{10.25cm}}{RF-4.1} \\
+\\\hline
+Precondiciones & \multicolumn{2}{p{10.25cm}} {Existen datos identificados.}
+\\\hline
+\multirow{2}{3.5cm}{Secuencia normal} & Paso & Acción \\\cline{2-3}
+& 1 & El usuario ejecuta la aplicación.
+\\\cline{2-3}
+& 2 & El usuario configura una interfaz.
+\\\cline{2-3}
+& 4 & El usuario lista los proyectos disponibles.
+\\\cline{2-3}
+& 5 & El usuario abre uno de los proyectos.
+\\\cline{2-3}
+& 6 & El usuario comienza la monitorización de los datos.
+\\\hline
+Postcondiciones & \multicolumn{2}{p{10.25cm}}{Se muestran los datos que circulan por el bus.} \\\hline
+Excepciones & \multicolumn{2}{p{10.25cm}}{No existe un proyecto..}\\\hline
+Importancia & Alta \\\hline
+Urgencia & Alta \\\hline
+Comentarios & & \\
+}
 
-Existe una conexión con el bus CAN.
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Acciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-El usuario ejecuta la aplicación.
-\item
-El usuario configura una de las interfaces.
-\item
-El usuario lista los proyectos disponibles.
-\item
-El usuario abre uno de los proyectos.
-\item
-El usuario comienza la monitorización de los datos.
-\end{enumerate}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Excepciones}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-\begin{itemize}
-\item
-No existe conexión con la base de datos.
-\item
-No existe un puerto serie en el equipo.
-\item
-No se ha podido iniciar la comunicación con el bus CAN.
-\item
-No existe un proyecto.
-\end{itemize}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\raggedright\strut
-\textbf{Importancia}\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright\strut
-Alta\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\caption{C-12 Monitorización de los datos.}
-\end{longtable}
