@@ -1,33 +1,52 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \emph {Sprint} 0}}{2}{figure.Alph1.1}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces \emph {Sprint} 1}}{3}{figure.Alph1.2}% 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Resumen de horas dedicadas al proyecto.}}{5}{figure.Alph1.3}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces \emph {Sprint} 1.}}{3}{figure.Alph1.1}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces \emph {Sprint} 2.}}{3}{figure.Alph1.2}% 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \emph {Sprint} 3.}}{4}{figure.Alph1.3}% 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \emph {Sprint} 4.}}{4}{figure.Alph1.4}% 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \emph {Sprint} 5.}}{5}{figure.Alph1.5}% 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \emph {Sprint} 6.}}{5}{figure.Alph1.6}% 
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Resumen de horas dedicadas al proyecto.}}{6}{figure.Alph1.7}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Diagrama UML general de los casos de uso.}}{13}{figure.Alph2.1}% 
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Diagrama UML general de los casos de uso.}}{15}{figure.Alph2.1}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Diagrama relacional de la base de datos}}{24}{figure.Alph3.1}% 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Diagrama de secuencia de la aplicaci\IeC {\'o}n.}}{25}{figure.Alph3.2}% 
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Modelo MVC}}{26}{figure.Alph3.3}% 
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Arquitectura general del proyecto.}}{27}{figure.Alph3.4}% 
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Paquetes de la aplicaci\IeC {\'o}n}}{27}{figure.Alph3.5}% 
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Diagrama de clases y paquetes de la aplicaci\IeC {\'o}n.}}{28}{figure.Alph3.6}% 
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Diagrama de clases y paquetes de la interfaz gr\IeC {\'a}fica.}}{29}{figure.Alph3.7}% 
-\contentsline {figure}{\numberline {C.8}{\ignorespaces Diagrama UML de las clases general de la aplicaci\IeC {\'o}n.}}{30}{figure.Alph3.8}% 
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Diagrama UML de las clases dedicadas a la comunicaci\IeC {\'o}n con el bus CAN.}}{30}{figure.Alph3.9}% 
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Diagrama de navegabilidad}}{31}{figure.Alph3.10}% 
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Diagrama relacional de la base de datos}}{26}{figure.Alph3.1}% 
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Diagrama de secuencia de la aplicaci\IeC {\'o}n.}}{27}{figure.Alph3.2}% 
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Modelo MVC}}{28}{figure.Alph3.3}% 
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Arquitectura general del proyecto.}}{29}{figure.Alph3.4}% 
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Paquetes de la aplicaci\IeC {\'o}n}}{29}{figure.Alph3.5}% 
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Diagrama de clases y paquetes de la aplicaci\IeC {\'o}n.}}{30}{figure.Alph3.6}% 
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Diagrama de clases y paquetes de la interfaz gr\IeC {\'a}fica.}}{31}{figure.Alph3.7}% 
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Diagrama UML de las clases general de la aplicaci\IeC {\'o}n.}}{32}{figure.Alph3.8}% 
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Diagrama UML de las clases dedicadas a la comunicaci\IeC {\'o}n con el bus CAN.}}{32}{figure.Alph3.9}% 
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Diagrama de navegabilidad}}{33}{figure.Alph3.10}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Comando Git sobre WSL.}}{35}{figure.Alph4.1}% 
-\contentsline {figure}{\numberline {D.2}{\ignorespaces SceneBuilder 10.0}}{35}{figure.Alph4.2}% 
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Ejemplo del dise\IeC {\~n}o de uno de los elementos en el esquema.}}{38}{figure.Alph4.3}% 
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Icono para asignar las huellas al esquema.}}{38}{figure.Alph4.4}% 
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Relaci\IeC {\'o}n entre los componentes y su \emph {footprint}.}}{39}{figure.Alph4.5}% 
-\contentsline {figure}{\numberline {D.6}{\ignorespaces Icono para generar el fichero \emph {netlist}.}}{39}{figure.Alph4.6}% 
-\contentsline {figure}{\numberline {D.7}{\ignorespaces Dise\IeC {\~n}o inicial de la \emph {PCB}}}{40}{figure.Alph4.7}% 
-\contentsline {figure}{\numberline {D.8}{\ignorespaces Dise\IeC {\~n}o final de la \emph {PCB}.}}{40}{figure.Alph4.8}% 
-\contentsline {figure}{\numberline {D.9}{\ignorespaces \emph {Pinout} del \emph {PICKit3}.}}{42}{figure.Alph4.9}% 
-\contentsline {figure}{\numberline {D.10}{\ignorespaces Cargando \emph {firmware} en el PIC.}}{42}{figure.Alph4.10}% 
-\contentsline {figure}{\numberline {D.11}{\ignorespaces Configuraci\IeC {\'o}n avanzada de \emph {MPLAB}.}}{43}{figure.Alph4.11}% 
-\contentsline {figure}{\numberline {D.12}{\ignorespaces Salida del comando \emph {mphidflash}.}}{44}{figure.Alph4.12}% 
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Comando Git sobre WSL.}}{37}{figure.Alph4.1}% 
+\contentsline {figure}{\numberline {D.2}{\ignorespaces SceneBuilder 10.0}}{37}{figure.Alph4.2}% 
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Ejemplo del dise\IeC {\~n}o de uno de los elementos en el esquema.}}{40}{figure.Alph4.3}% 
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Icono para asignar las huellas al esquema.}}{40}{figure.Alph4.4}% 
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Relaci\IeC {\'o}n entre los componentes y su \emph {footprint}.}}{41}{figure.Alph4.5}% 
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Icono para generar el fichero \emph {netlist}.}}{41}{figure.Alph4.6}% 
+\contentsline {figure}{\numberline {D.7}{\ignorespaces Dise\IeC {\~n}o inicial de la \emph {PCB}}}{42}{figure.Alph4.7}% 
+\contentsline {figure}{\numberline {D.8}{\ignorespaces Dise\IeC {\~n}o final de la \emph {PCB}.}}{42}{figure.Alph4.8}% 
+\contentsline {figure}{\numberline {D.9}{\ignorespaces \emph {Pinout} del \emph {PICKit3}.}}{44}{figure.Alph4.9}% 
+\contentsline {figure}{\numberline {D.10}{\ignorespaces Cargando \emph {firmware} en el PIC.}}{44}{figure.Alph4.10}% 
+\contentsline {figure}{\numberline {D.11}{\ignorespaces Configuraci\IeC {\'o}n avanzada de \emph {MPLAB}.}}{45}{figure.Alph4.11}% 
+\contentsline {figure}{\numberline {D.12}{\ignorespaces Salida del comando \emph {mphidflash}.}}{46}{figure.Alph4.12}% 
 \addvspace {10pt}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Bot\IeC {\'o}n para abrir la configuraci\IeC {\'o}n}}{48}{figure.Alph5.1}% 
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Ventana de configuraci\IeC {\'o}n.}}{48}{figure.Alph5.2}% 
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Opciones de las interfaces.}}{49}{figure.Alph5.3}% 
+\contentsline {figure}{\numberline {E.4}{\ignorespaces Ventana de an\IeC {\'a}lisis de la aplicaci\IeC {\'o}n.}}{50}{figure.Alph5.4}% 
+\contentsline {figure}{\numberline {E.5}{\ignorespaces Monitorizaci\IeC {\'o}n de un dato en tiempo real.}}{51}{figure.Alph5.5}% 
+\contentsline {figure}{\numberline {E.6}{\ignorespaces Ventana para crear un nuevo proyecto.}}{52}{figure.Alph5.6}% 
+\contentsline {figure}{\numberline {E.7}{\ignorespaces Monitorizaci\IeC {\'o}n de un dato identificado en tiempo real.}}{52}{figure.Alph5.7}% 
+\contentsline {figure}{\numberline {E.8}{\ignorespaces Ventana para abrir proyectos.}}{53}{figure.Alph5.8}% 
+\contentsline {figure}{\numberline {E.9}{\ignorespaces Modo de monitorizaci\IeC {\'o}n.}}{54}{figure.Alph5.9}% 
+\contentsline {figure}{\numberline {E.10}{\ignorespaces Modo \emph {trace} de la aplicaci\IeC {\'o}n.}}{55}{figure.Alph5.10}% 
+\contentsline {figure}{\numberline {E.11}{\ignorespaces Modo \emph {monitor} de la aplicaci\IeC {\'o}n.}}{56}{figure.Alph5.11}% 
+\contentsline {figure}{\numberline {E.12}{\ignorespaces Opci\IeC {\'o}n de borrar proyecto.}}{57}{figure.Alph5.12}% 
+\contentsline {figure}{\numberline {E.13}{\ignorespaces Menu para importar proyectos a la aplicaci\IeC {\'o}n.}}{57}{figure.Alph5.13}% 
+\contentsline {figure}{\numberline {E.14}{\ignorespaces Ventana para importar proyectos.}}{58}{figure.Alph5.14}% 
+\contentsline {figure}{\numberline {E.15}{\ignorespaces Ventana para exportar proyectos.}}{59}{figure.Alph5.15}% 

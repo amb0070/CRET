@@ -2,20 +2,226 @@
 
 \section{Introducción}
 
-En el siguiente manual se definen los requerimientos de la aplicación, como instalarla y ejecutarla.
+En el siguiente manual se detallan los requerimientos de la aplicación, cómo ponerla en marcha en un equipo con \emph{Windows} y las indicaciones sobre cómo utilizarla correctamente.
 
 \section{Requisitos de usuarios}
 
 Los requisitos mínimos para la utilización de la aplicación son los siguientes:
 
-Hardware para conectarse al bus CAN (usbtin)
-Java ....
-
+\begin{itemize}
+\item
+Contar con un equipo con \emph{Windows} 7 o superior.
+\item
+En el equipo debe de estar instalada una versión de JRE igual o suprior a la 1.8.0.
+\item
+\textbf{Es necesario disponer del \emph{hardware} desarrollado para el uso de todas las funcionalidades de la aplicación.}
+\end{itemize}
 
 \section{Instalación}
 
-No es necesaria una instalación de la aplicación. Simplemente la utilización de una versión de Java compatible.
+No es necesaria una instalación de la aplicación. Simplemente tener permisos en el equipo para ejecutar una aplicación con JRE 1.8.0 o superior. Para ello se proporciona un fichero \emph{.jar}.
 
 \section{Manual del usuario}
+
+En esta sección se describe el uso de las diferentes funcionalidades de la aplicación.
+
+\subsection{Configuración general}
+
+Siempre va a ser el primer paso a realizar tras la ejecución de la aplicación. A través de esta funcionalidad vamos a configurar los parámetros de la interfaz CAN con la que vamos a conectarnos.
+
+Para ello hay que hacer \emph{click} en el siguiente botón:
+
+\imagen{botonConfig}{Botón para abrir la configuración}
+
+Por defecto, esta interfaz está deshabilitada. Para habilitarla, hacemos \emph{click} sobre el botón \emph{Enabled} y se nos permitirá modificar los parámetros.
+
+\imagen{enabled}{Ventana de configuración.}
+
+\begin{itemize}
+\item
+\textbf{Port:} Puerto asignado por el equipo a la interfaz CAN. En este caso nos reconocerá automáticamente los puertos detectados, y en caso de que no haya ninguno disponible, nos informará de ello.
+\item
+\textbf{Speed:} Velocidad a la que vamos a escuchar los datos del bus. En este caso tenemos una serie de velocidades preseleccionadas pero es posible introducir una velocidad diferente a las que están en la lista.
+\item
+\textbf{Mode:} Para un uso normal de la aplicación (conectarse a un bus y leer los datos), debemos seleccionar el modo \emph{LISTENONLY}.
+\end{itemize}
+
+Una vez configurado, podemos hacer \emph{click} en el botón guardar. Éste se marcará de color verde en caso de que la configuración haya sido almacenada de forma correcta.
+
+En caso de que la otra interfaz vaya a ser utilizada, deberíamos seguir los mismos pasos que con la primera.
+
+Por último tenemos la configuración de los filtros:
+
+\imagen{opciones}{Opciones de las interfaces.}
+
+\begin{itemize}
+\item
+\textbf{Ignore zero bytes}: Con esta opción la aplicación directamente ignorará los \emph{bytes} que no envíen ningún tipo de dato. De esta manera reducimos la carga de la aplicación.
+\item
+\textbf{Split bytes}: Con esta opción la aplicación dividirá los \emph{bytes} en dos grupos. De esa manera podemos analizar más en profundidad si más de un dato es enviado en el mismo \emph{byte}.
+
+\end{itemize}
+
+La aplicación tiene principalmente tres grandes funcionalidades o modos de uso las cuales se explican a continuación:
+
+\subsection{Modo de análisis}
+
+Para utilizar este modo debemos acceder a la pestaña de \emph{Analysis} de la interfaz configurada anteriormente.
+
+Una vez dentro, encontraremos los siguientes botones:
+\begin{itemize}
+\item
+\textbf{Start:} Inicia la captura de datos.
+\item
+\textbf{Stop:} Detiene la captura de datos.
+\item
+\textbf{Clear}: Nos elimina toda la información de la pantalla.
+\end{itemize}
+
+\imagen{analysis1}{Ventana de análisis de la aplicación.}
+
+Cada una de las celdas creadas en la tabla es un dato identificado. Corresponden a un \emph{byte} concreto de un \emph{frame} concreto como se puede apreciar en la parte superior.
+
+Por cada elemento identificado disponemos de tres opciones:
+\begin{itemize}
+\item
+\textbf{Dashboard:} Permite enviar el elemento identificado a la pestaña \emph{Dashboard} para su monitorización. Para ello, debemos etiquetar el dato que hemos identificado, con un nombre. Esta opción sólo está disponible si se ha creado un proyecto. 
+\item
+\textbf{View live:} Esta opción nos permite monitorizar en tiempo real el dato seleccionado. Se describe más adelante.
+\item
+\textbf{Remove}: Elimina la gráfica de la pantalla. Puede ser útil cuando tenemos demasiados datos innecesarios a la vista.
+\end{itemize}
+
+Si hacemos \emph{click} sobre la opción \textit{Live View}, podremos monitorizar el dato en tiempo real:
+
+\imagen{realtime}{Monitorización de un dato en tiempo real.}
+
+Como podemos observar en la parte inferior izquierda, no nos aparece ninguna información ya que el dato no ha sido etiquetado.
+
+Para enviar lo datos a la pestaña \emph{dashboard} debemos crear un proyecto. Para ello hacemos \emph{click} sobre el botón \textit{New project}.
+
+\imagen{newProject}{Ventana para crear un nuevo proyecto.}
+
+Una vez creado ya es posible etiquetar los datos.
+
+Una vez etiquetado uno de los datos, nos aparecerá en la pestaña \emph{Dashboard}. Cuando se finalice el proceso de análisis, hay que hacer \emph{click} sobre el botón \textit{Save project} para almacenar el proyecto en la base de datos.
+
+Si hemos etiquetado el dato, al hacer \emph{click} sobre \textit{Live view} en la pestaña \emph{dashboard} obtendremos el valor en tiempo real del dato junto a su etiqueta.
+
+\imagen{realtimeTag}{Monitorización de un dato identificado en tiempo real.}
+
+
+\subsection{Modo de monitorización}
+
+Una vez hemos analizado e identificado los datos que nos interesan, es interesante tenerlos almacenados para su uso en un futuro.
+
+Para acceder a esta información, hacemos \emph{click} sobre el botón \textit{Open project} en la pestaña \textit{Dashboard}.
+
+\imagen{openProject}{Ventana para abrir proyectos.}
+
+Seleccionamos el proyecto que deseamos abrir y comprobaremos en la parte superior derecha como nos indica el nombre del proyecto que hemos abierto.
+
+Para comenzar con la monitorización hacemos \emph{click} sobre el botón \textit{Start}.
+
+\imagen{projectOpened}{Modo de monitorización.}
+
+
+
+\subsection{Modo RAW (Lectura de datos en bruto)}.
+
+En este modo el usuario dispone de una vista de los datos en claro, es decir, en formato \emph{hexadecimal}.
+
+Disponemos de dos opciones para la visualización de estos datos:
+
+\begin{itemize}
+\item
+\textbf{Trace}: En este modo se visualiza una tabla guardando registro de todos los cambios detectados en el bus, es decir, de todos los datos que han sido capturados. Tiene un tamaño máximo de mil registros, a partir de ahí comenzará a borrar los más antiguos.
+
+Dispone de cinco columnas:
+\begin{itemize}
+\item
+\textbf{Time:} Identificador de la secuencia de tiempo. Es un valor generado por el programa, no recogido de los \emph{frames} del bus ya que el \emph{hardware} no soporta esa opción.
+\item
+\textbf{ID:} Identificador del \emph{frame}.
+\item
+\textbf{Length:} Longitud del campo de datos del \emph{frame}.
+\item
+\textbf{Data:} Campo de datos del \emph{frame}.
+\item
+\textbf{Ascii:} Representación ASCII de los valores identificados en el campo \textit{Data}.
+\end{itemize}
+
+
+\imagen{trace}{Modo \emph{trace} de la aplicación.}
+
+\item
+\textbf{Monitor}: En este modo se visualiza una tabla en la cual únicamente cambian los datos que han sido capturados. Este tipo de vista resulta bastante interesante ya que ayuda a la hora de percibir e interpretar los datos que cambian en el transcurso del tiempo.
+
+Dispone de cinco columnas:
+\begin{itemize}
+\item
+\textbf{Time:} Identificador de la secuencia de tiempo. Es un valor generado por el programa, no recogido de los \emph{frames} del bus ya que el \emph{hardware} no soporta esa opción.
+\item
+\textbf{ID:} Identificador del \emph{frame}.
+\item
+\textbf{Length:} Longitud del campo de datos del \emph{frame}.
+\item
+\textbf{Data:} Campo de datos del \emph{frame}. Este campo varía en caso de que se reciban nuevos datos con la ID correspondiente.
+\item
+\textbf{Ascii:} Representación ASCII de los valores identificados en el campo \textit{Data}. Este campo varía en caso de que se reciban nuevos datos con la ID correspondiente.
+\end{itemize}
+
+\imagen{monitor}{Modo \emph{monitor} de la aplicación.}
+\end{itemize}
+
+Ambos modos disponen de los siguientes botones:
+\begin{itemize}
+\item
+\textbf{Start:} Inicia la captura de datos.
+\item
+\textbf{Stop:} Detiene la captura de datos.
+\item
+\textbf{Clear:} Elimina toda la información de la tabla.
+\end{itemize}
+
+\subsection{Eliminar proyectos.}
+
+Si deseamos eliminar un proyecto, debemos hacer \emph{click} sobre el botón \textit{Open project} de la pestaña \textit{Dashboard} y nos aparecerá un listado con los proyectos.
+
+Seleccionamos el proyecto que deseamos eliminar y damos al botón \textit{Delete}. No pedirá confirmación y en caso de ser aceptada, el proyecto será borrado.
+
+\imagen{deleteProject}{Opción de borrar proyecto.}
+
+\subsection{Importar proyectos.}
+
+Existe la posibilidad de importar proyectos a la aplicación. Los ficheros que se van a importar a la aplicación tienen que estar en formato \emph{JSON}.
+
+Para ello, existen dos formas de hacerlo:
+
+\begin{itemize}
+\item
+Desde el menú superior \textit{Project} y hacemos \emph{click} sobre \textit{Import projects}.
+\imagen{import1}{Menu para importar proyectos a la aplicación.}
+\item
+Desde la lista de proyectos disponibles de la aplicación.
+\end{itemize}
+
+Se nos abrirá la siguiente ventana:
+
+\imagen{import}{Ventana para importar proyectos.}
+
+Nos aparecen todos los proyectos disponibles, simplemente debemos hacer \emph{click} sobre el botón import, seleccionar un fichero válido y abrirlo. Automáticamente será importado.
+
+\subsection{Exportar proyectos.}
+
+Al igual que existe la opción \emph{Importar proyectos}, también podemos exportarlos en el mismo formato.
+
+Para ello simplemente accedemos a la ventana de \emph{Export project} a través de los menús como se ha indicado en la sección anterior y seleccionamos el proyecto que queremos exportar.
+
+\imagen{export}{Ventana para exportar proyectos.}
+
+La aplicación nos solicitará una ruta en la que guardar el fichero y exportará el proyecto.
+
+
 
 
