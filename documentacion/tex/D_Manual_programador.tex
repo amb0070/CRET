@@ -41,6 +41,8 @@ Java JDK 8
 \item
 JavaFX
 \item
+Medusa\cite{javafx:medusa}
+\item
 Git
 \item
 SceneBuilder
@@ -267,20 +269,20 @@ El formato de todas las resistencias, condensadores y ferritas ha sido SMD 1206,
 
 Una vez disponemos de la PCB y de los componentes, es necesario realizar un paso previo antes de soldarlos. Es necesario programar los PIC con el \emph{bootloader} para posteriormente cargar el \emph{firmware} en los mismos.
 
-Para ello, teniendo en cuenta el \emph{datasheet} del microcontrolador, podemos realizar la siguiente conexión:
+Para ello, teniendo en cuenta el \emph{datasheet}\cite{datasheet} del microcontrolador, podemos realizar la siguiente conexión:
 
 
-\imagen{conexionPickit}{\emph{Pinout} del \emph{PICKit3}.}
+\imagen{conexionPickit}{\emph{Pinout} del \emph{PICKit3}\cite{PICKIT3:pinout}.}
 
 
 \imagen{cargaFirmware}{Cargando \emph{firmware} en el PIC.}
 
 
-Una vez detectado el dispositivo por el equipo, es necesario conectarse a el, e indicar el fichero .hex que queremos cargar, en este caso, el \emph{bootloader} referenciado en la página oficial.
+Una vez detectado el dispositivo por el equipo, es necesario conectarse a el, e indicar el fichero .hex\cite{hexfile} que queremos cargar, en este caso, el \emph{bootloader} referenciado en la página oficial.
 
 Es importante configurar el programador para que alimente el microcontrolador, sino la carga del \emph{bootloader} no será posible. Para ello, hay que acceder al modo avanzado del programador.
 
-\imagen{pickit3}{Configuración avanzada de \emph{MPLAB}.}
+\imagen{pickit3}{Configuración avanzada de \emph{MPLAB}\cite{mplab}.}
 
 Seleccionamos la opción para que el programador alimente el controlador.
 
@@ -294,7 +296,7 @@ Para ello, conectamos la placa al USB del equipo, con el \emph{jumper} JP3 o JP4
 
 mphidflash - \url{https://github.com/ApertureLabsLtd/mphidflash}
 
-\imagen{mphidflash}{Salida del comando \emph{mphidflash}.}
+\imagen{mphidflash}{Salida del comando \emph{mphidflash}\cite{mphidflash}.}
 
 
 Una vez completada la carga, podemos comprobar el dispositivo y estaría listo para su uso.

@@ -32,39 +32,40 @@
 \contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{25}{section.Alph3.1}% 
 \contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{25}{section.Alph3.2}% 
 \contentsline {subsection}{Base de datos}{25}{section*.20}% 
-\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{26}{section.Alph3.3}% 
-\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{27}{section.Alph3.4}% 
-\contentsline {subsection}{Model-View-Controller (MVC)}{27}{section*.21}% 
-\contentsline {subsection}{Arquitectura general}{28}{section*.22}% 
+\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{27}{section.Alph3.3}% 
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{28}{section.Alph3.4}% 
+\contentsline {subsection}{Model-View-Controller (MVC)}{28}{section*.21}% 
+\contentsline {subsection}{Arquitectura general}{29}{section*.22}% 
 \contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{29}{section*.23}% 
-\contentsline {subsection}{Dise\IeC {\~n}o de clases}{31}{section*.24}% 
-\contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de interfaces}{33}{section.Alph3.5}% 
-\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{35}{appendix.Alph4}% 
-\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{35}{section.Alph4.1}% 
-\contentsline {section}{\numberline {D.2}Estructura de directorios}{35}{section.Alph4.2}% 
-\contentsline {section}{\numberline {D.3}Manual del programador}{36}{section.Alph4.3}% 
-\contentsline {subsection}{Entorno de desarrollo}{36}{section*.25}% 
-\contentsline {subsection}{Java JDK 8}{36}{section*.26}% 
-\contentsline {subsection}{JavaFX}{36}{section*.27}% 
-\contentsline {subsection}{Git}{36}{section*.28}% 
-\contentsline {subsection}{SceneBuilder}{37}{section*.29}% 
-\contentsline {subsection}{Eclipse}{37}{section*.30}% 
-\contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{38}{section*.31}% 
-\contentsline {subsection}{Importar proyecto a Eclipse}{38}{section*.32}% 
-\contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{38}{section*.33}% 
-\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{39}{section.Alph4.4}% 
-\contentsline {subsection}{Compilaci\IeC {\'o}n}{39}{section*.34}% 
-\contentsline {subsection}{Ejecuci\IeC {\'o}n}{39}{section*.35}% 
-\contentsline {section}{\numberline {D.5}Producci\IeC {\'o}n del \emph {hardware}}{39}{section.Alph4.5}% 
-\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{47}{appendix.Alph5}% 
-\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{47}{section.Alph5.1}% 
-\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{47}{section.Alph5.2}% 
-\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{47}{section.Alph5.3}% 
-\contentsline {section}{\numberline {E.4}Manual del usuario}{48}{section.Alph5.4}% 
-\contentsline {subsection}{Configuraci\IeC {\'o}n general}{48}{section*.36}% 
-\contentsline {subsection}{Modo de an\IeC {\'a}lisis}{50}{section*.37}% 
-\contentsline {subsection}{Modo de monitorizaci\IeC {\'o}n}{52}{section*.38}% 
-\contentsline {subsection}{Modo RAW (Lectura de datos en bruto)}{54}{section*.39}% 
-\contentsline {subsection}{Eliminar proyectos.}{56}{section*.40}% 
-\contentsline {subsection}{Importar proyectos.}{57}{section*.41}% 
-\contentsline {subsection}{Exportar proyectos.}{58}{section*.42}% 
+\contentsline {subsection}{Dise\IeC {\~n}o de clases}{32}{section*.24}% 
+\contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de interfaces}{34}{section.Alph3.5}% 
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{37}{appendix.Alph4}% 
+\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{37}{section.Alph4.1}% 
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{37}{section.Alph4.2}% 
+\contentsline {section}{\numberline {D.3}Manual del programador}{38}{section.Alph4.3}% 
+\contentsline {subsection}{Entorno de desarrollo}{38}{section*.25}% 
+\contentsline {subsection}{Java JDK 8}{38}{section*.26}% 
+\contentsline {subsection}{JavaFX}{38}{section*.27}% 
+\contentsline {subsection}{Git}{38}{section*.28}% 
+\contentsline {subsection}{SceneBuilder}{39}{section*.29}% 
+\contentsline {subsection}{Eclipse}{40}{section*.30}% 
+\contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{40}{section*.31}% 
+\contentsline {subsection}{Importar proyecto a Eclipse}{40}{section*.32}% 
+\contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{40}{section*.33}% 
+\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{41}{section.Alph4.4}% 
+\contentsline {subsection}{Compilaci\IeC {\'o}n}{41}{section*.34}% 
+\contentsline {subsection}{Ejecuci\IeC {\'o}n}{41}{section*.35}% 
+\contentsline {section}{\numberline {D.5}Producci\IeC {\'o}n del \emph {hardware}}{41}{section.Alph4.5}% 
+\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{49}{appendix.Alph5}% 
+\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{49}{section.Alph5.1}% 
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{49}{section.Alph5.2}% 
+\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{49}{section.Alph5.3}% 
+\contentsline {section}{\numberline {E.4}Manual del usuario}{50}{section.Alph5.4}% 
+\contentsline {subsection}{Configuraci\IeC {\'o}n general}{50}{section*.36}% 
+\contentsline {subsection}{Modo de an\IeC {\'a}lisis}{52}{section*.37}% 
+\contentsline {subsection}{Modo de monitorizaci\IeC {\'o}n}{54}{section*.38}% 
+\contentsline {subsection}{Modo RAW (Lectura de datos en bruto)}{56}{section*.39}% 
+\contentsline {subsection}{Eliminar proyectos.}{58}{section*.40}% 
+\contentsline {subsection}{Importar proyectos.}{59}{section*.41}% 
+\contentsline {subsection}{Exportar proyectos.}{60}{section*.42}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{63}{appendix*.43}% 
