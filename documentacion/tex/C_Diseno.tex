@@ -49,7 +49,7 @@ Comenzar una lectura de los datos en formato \emph{bruto}.
 
 Para llegar a todas las opciones anteriores, es necesario haber configurado la interfaz con la que nos vamos a conectar al bus CAN.
 
-Tanto la primera como la segunda línea del procedimiento hacen uso de la base de datos y de la gestión de proyectos, sin embargo la última rama no hace uso de la base de datos, ya que simplemente se encarga de monitorizar todos los datos en tiempo real en una tabla, sin almacenarlos.
+Tanto la primera como la segunda línea del procedimiento hacen uso de la base de datos y de la gestión de proyectos, sin embargo la última rama no hace uso de la base de datos, ya que simplemente se encarga de monitorizar todos los datos en tiempo real en una tabla, sin realizar un almacenaje en disco.
 
 \section{Diseño arquitectónico}
 
@@ -110,10 +110,11 @@ A continuación se describen cada uno de los paquetes:
 
 En este apartado se describe cada una de las clases que forman la aplicación y su funcionamiento.
 
-\imagen{umlClases}{Diagrama UML de las clases general de la aplicación.}
+\begin{landscape}
+\imagenflotante{CRET}{Diagrama UML de la aplicación.}
+\end{landscape}
 
-\imagen{clasesCan}{Diagrama UML de las clases dedicadas a la comunicación con el bus CAN.}
-
+\newpage
 \section{Diseño de interfaces}
 
 El diseño de las interfaces se ha llevado a cabo a través de la utilidad SceneBuilder. Se ha intentado seguir una estructura limpia y clara, para facilitar su interacción con el usuario.

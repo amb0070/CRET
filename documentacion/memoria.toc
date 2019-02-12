@@ -27,10 +27,10 @@
 \contentsline {subsection}{Pomodoro}{19}{section*.16}% 
 \contentsline {section}{\numberline {4.2}Patrones de dise\IeC {\~n}o}{19}{section.4.2}% 
 \contentsline {subsection}{MVC (\emph {Model-View-Controller})}{19}{section*.17}% 
-\contentsline {subsection}{Arquitectura de la aplicaci\IeC {\'o}n}{20}{section*.18}% 
+\contentsline {subsection}{Arquitectura de la aplicaci\IeC {\'o}n}{21}{section*.18}% 
 \contentsline {section}{\numberline {4.3}Control de versiones}{21}{section.4.3}% 
 \contentsline {subsection}{Git}{21}{section*.19}% 
-\contentsline {subsection}{GitHub}{21}{section*.20}% 
+\contentsline {subsection}{GitHub}{22}{section*.20}% 
 \contentsline {section}{\numberline {4.4}Gesti\IeC {\'o}n del proyecto}{22}{section.4.4}% 
 \contentsline {subsection}{ZenHub}{22}{section*.21}% 
 \contentsline {section}{\numberline {4.5}Entorno de desarrollo}{22}{section.4.5}% 
@@ -52,7 +52,7 @@
 \contentsline {subsection}{KiCAD}{24}{section*.33}% 
 \contentsline {section}{\numberline {4.10}Bus CAN}{25}{section.4.10}% 
 \contentsline {subsection}{canAnalyser3 mini}{25}{section*.34}% 
-\contentsline {subsection}{SocketCAN}{25}{section*.35}% 
+\contentsline {subsection}{SocketCAN\cite {socket:can}}{25}{section*.35}% 
 \contentsline {subsection}{Can-Utils}{25}{section*.36}% 
 \contentsline {subsection}{candump}{25}{section*.37}% 
 \contentsline {subsection}{canplayer}{25}{section*.38}% 
@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {5.4}Desarrollo del \emph {hardware}}{28}{section.5.4}% 
 \contentsline {subsection}{Dise\IeC {\~n}o del esquema el\IeC {\'e}ctrico}{29}{section*.40}% 
 \contentsline {subsection}{Generaci\IeC {\'o}n del \emph {netlist}}{30}{section*.41}% 
-\contentsline {subsection}{Posicionamiento y \textit {enrutado} de los componentes y las pistas en la PCB}{30}{section*.42}% 
+\contentsline {subsection}{Posicionamiento y \textit {enrutado} de los componentes y las pistas en la PCB}{31}{section*.42}% 
 \contentsline {subsection}{Carga del \emph {firmware} en los IC}{32}{section*.43}% 
 \contentsline {section}{\numberline {5.5}Desarrollo del \emph {software}}{33}{section.5.5}% 
 \contentsline {subsection}{Generaci\IeC {\'o}n de gr\IeC {\'a}ficas de forma din\IeC {\'a}mica}{34}{section*.44}% 
@@ -74,5 +74,5 @@
 \contentsline {chapter}{Trabajos relacionados}{39}{chapter*.46}% 
 \contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{41}{chapter*.47}% 
 \contentsline {section}{\numberline {7.1}Conclusiones}{41}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}L\IeC {\'\i }neas de trabajo futuras}{41}{section.7.2}% 
+\contentsline {section}{\numberline {7.2}L\IeC {\'\i }neas de trabajo futuras}{42}{section.7.2}% 
 \contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.48}% 

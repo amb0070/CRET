@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  11 FEB 2019 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  12 FEB 2019 01:37
 entering extended mode
 **./anexos.tex
 (anexos.tex
@@ -461,6 +461,33 @@ File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ty"
 Package: placeins 2005/04/18  v 2.2
 )
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\pdflscape.
+sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lscape.sty
+"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.sty
 "
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
@@ -489,10 +516,6 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-)
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.s
 ty"
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
@@ -736,37 +759,55 @@ LaTeX Info: Redefining \] on input line 2845.
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
 ty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty"
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg"
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-)
 \Gin@req@height=\dimen179
 \Gin@req@width=\dimen180
-)
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+) ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count181
 \float@exts=\toks34
 \float@box=\box40
 \@float@everytoks=\toks35
 \@floatcapt=\box41
-)
-(anexos.aux
+) (anexos.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- (tex/A_Plan_proyecto.aux))
+ (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+
+LaTeX Warning: Label `tabla:b1' multiply defined.
+
+) (tex/C_Diseno.aux) (tex/D_Manual_programador.aux) (tex/E_Manual_usuario.aux))
 \openout1 = `anexos.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 359.
@@ -784,7 +825,6 @@ LaTeX Font Info:    ... okay on input line 359.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 359.
 LaTeX Font Info:    ... okay on input line 359.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 359.
-
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -859,7 +899,7 @@ LaTeX Info: Redefining \nameref on input line 359.
 \@outlinefile=\write4
 \openout4 = `anexos.out'.
 
-<./img/cabecera.pdf, id=27, 617.67549pt x 135.51413pt>
+<./img/cabecera.pdf, id=119, 617.67549pt x 135.51413pt>
 File: ./img/cabecera.pdf Graphic file (type pdf)
 <use ./img/cabecera.pdf>
 Package pdftex.def Info: ./img/cabecera.pdf  used on input line 361.
@@ -894,7 +934,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 361.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 361.
-<./img/escudoInfor.pdf, id=28, 618.11432pt x 737.07487pt>
+<./img/escudoInfor.pdf, id=120, 618.11432pt x 737.07487pt>
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
 Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 361.
@@ -974,17 +1014,17 @@ LaTeX Info: Redefining \% on input line 2.
  [3
 
 ]
-Overfull \hbox (0.2272pt too wide) detected at line 32
+Overfull \hbox (0.2272pt too wide) detected at line 33
 \T1/lmr/m/n/12 D.10. 
  []
 
 
-Overfull \hbox (0.2272pt too wide) detected at line 33
+Overfull \hbox (0.2272pt too wide) detected at line 34
 \T1/lmr/m/n/12 D.11. 
  []
 
 
-Overfull \hbox (0.2272pt too wide) detected at line 34
+Overfull \hbox (0.2272pt too wide) detected at line 35
 \T1/lmr/m/n/12 D.12. 
  []
 
@@ -1016,12 +1056,12 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 P
-      ara ello, se dividió el trabajo en \emph{sprints} los cuales iban sie...
+      ara ello, se dividió el trabajo en \emph{sprints} los cuales se plani...
 [1
 
 
 ]
-<./img/sprint1.png, id=612, 703.12688pt x 299.61937pt>
+<./img/sprint1.png, id=682, 703.12688pt x 299.61937pt>
 File: ./img/sprint1.png Graphic file (type png)
 <use ./img/sprint1.png>
 Package pdftex.def Info: ./img/sprint1.png  used on input line 50.
@@ -1041,7 +1081,7 @@ been already used, duplicate ignored
                    \relax 
 l.50 \imagen{sprint1}{\emph{Sprint} 1.}
                                         [2]
-<./img/sprint2.png, id=619, 703.12688pt x 299.61937pt>
+<./img/sprint2.png, id=689, 703.12688pt x 299.61937pt>
 File: ./img/sprint2.png Graphic file (type png)
 <use ./img/sprint2.png>
 Package pdftex.def Info: ./img/sprint2.png  used on input line 58.
@@ -1065,12 +1105,12 @@ lph1.2}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.65 
       <./img/sprint1.png> <./img/sprint2.png>]
-<./img/sprint3.png, id=628, 703.12688pt x 299.61937pt>
+<./img/sprint3.png, id=698, 703.12688pt x 299.61937pt>
 File: ./img/sprint3.png Graphic file (type png)
 <use ./img/sprint3.png>
 Package pdftex.def Info: ./img/sprint3.png  used on input line 66.
 (pdftex.def)             Requested size: 344.69766pt x 146.88335pt.
-<./img/sprint4.png, id=629, 696.35156pt x 288.3272pt>
+<./img/sprint4.png, id=699, 696.35156pt x 288.3272pt>
 File: ./img/sprint4.png Graphic file (type png)
 <use ./img/sprint4.png>
 Package pdftex.def Info: ./img/sprint4.png  used on input line 72.
@@ -1094,12 +1134,12 @@ lph1.4}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.77 
       <./img/sprint3.png> <./img/sprint4.png>]
-<./img/sprint5.png, id=637, 682.80093pt x 280.79906pt>
+<./img/sprint5.png, id=707, 682.80093pt x 280.79906pt>
 File: ./img/sprint5.png Graphic file (type png)
 <use ./img/sprint5.png>
 Package pdftex.def Info: ./img/sprint5.png  used on input line 78.
 (pdftex.def)             Requested size: 344.69766pt x 141.75742pt.
-<./img/sprint6.png, id=638, 686.565pt x 279.29344pt>
+<./img/sprint6.png, id=708, 686.565pt x 279.29344pt>
 File: ./img/sprint6.png Graphic file (type png)
 <use ./img/sprint6.png>
 Package pdftex.def Info: ./img/sprint6.png  used on input line 84.
@@ -1123,7 +1163,7 @@ lph1.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.89 
       <./img/sprint5.png> <./img/sprint6.png>]
-<./img/resumenHoras.png, id=649, 408.02437pt x 170.13562pt>
+<./img/resumenHoras.png, id=718, 408.02437pt x 170.13562pt>
 File: ./img/resumenHoras.png Graphic file (type png)
 <use ./img/resumenHoras.png>
 Package pdftex.def Info: ./img/resumenHoras.png  used on input line 137.
@@ -1174,8 +1214,8 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 31.
 
 [11]
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -1184,7 +1224,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
  [13]
-<./img/umlCasosUso.png, id=696, 362.10281pt x 484.05844pt>
+<./img/umlCasosUso.png, id=764, 362.10281pt x 484.05844pt>
 File: ./img/umlCasosUso.png Graphic file (type png)
 <use ./img/umlCasosUso.png>
 Package pdftex.def Info: ./img/umlCasosUso.png  used on input line 100.
@@ -1718,13 +1758,13 @@ l.396 \include{./tex/B_Requisitos}
 
 
 ]
-<./img/databaseDiagram.png, id=746, 381.67593pt x 213.04594pt>
+<./img/databaseDiagram.png, id=814, 381.67593pt x 213.04594pt>
 File: ./img/databaseDiagram.png Graphic file (type png)
 <use ./img/databaseDiagram.png>
 Package pdftex.def Info: ./img/databaseDiagram.png  used on input line 34.
 (pdftex.def)             Requested size: 344.69766pt x 192.41248pt.
  [25]
-<./img/processDiagram.png, id=752, 753.5653pt x 463.7325pt>
+<./img/processDiagram.png, id=820, 753.5653pt x 463.7325pt>
 File: ./img/processDiagram.png Graphic file (type png)
 <use ./img/processDiagram.png>
 Package pdftex.def Info: ./img/processDiagram.png  used on input line 38.
@@ -1746,8 +1786,8 @@ h3.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.38 ...{Diagrama de secuencia de la aplicación.}
                                                    <./img/databaseDiagram.png>]
-LaTeX Info: Redefining \. on input line 60.
-LaTeX Info: Redefining \% on input line 60.
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -1757,15 +1797,14 @@ h3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.60 P
-      or ejemplo, si modificamos la base de datos, solo modificaríamos el m...
- <./img/processDiagram.png>]
-<./img/modeloMVC.png, id=764, 583.42969pt x 181.42781pt>
+l.59 
+      <./img/processDiagram.png>]
+<./img/modeloMVC.png, id=832, 583.42969pt x 181.42781pt>
 File: ./img/modeloMVC.png Graphic file (type png)
 <use ./img/modeloMVC.png>
 Package pdftex.def Info: ./img/modeloMVC.png  used on input line 70.
 (pdftex.def)             Requested size: 344.69766pt x 107.19374pt.
-<./img/arquitectura.png, id=765, 804.75656pt x 450.9347pt>
+<./img/arquitectura.png, id=833, 804.75656pt x 450.9347pt>
 File: ./img/arquitectura.png Graphic file (type png)
 <use ./img/arquitectura.png>
 Package pdftex.def Info: ./img/arquitectura.png  used on input line 78.
@@ -1787,7 +1826,7 @@ h3.3}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.78 ...ctura}{Arquitectura general del proyecto.}
                                                    <./img/modeloMVC.png>]
-<./img/paquetes.png, id=772, 502.87875pt x 231.86626pt>
+<./img/paquetes.png, id=840, 502.87875pt x 231.86626pt>
 File: ./img/paquetes.png Graphic file (type png)
 <use ./img/paquetes.png>
 Package pdftex.def Info: ./img/paquetes.png  used on input line 84.
@@ -1813,12 +1852,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph3.
 l.94 \textbf
             {gui}: En este paquete se almacena todo lo relacionado con la in...
  <./img/arquitectura.png> <./img/paquetes.png>]
-<./img/paquetesClases.png, id=781, 693.59125pt x 402.50375pt>
+<./img/paquetesClases.png, id=849, 693.59125pt x 402.50375pt>
 File: ./img/paquetesClases.png Graphic file (type png)
 <use ./img/paquetesClases.png>
 Package pdftex.def Info: ./img/paquetesClases.png  used on input line 103.
 (pdftex.def)             Requested size: 344.69766pt x 200.04146pt.
-<./img/paquetesClasesGui.png, id=782, 663.47874pt x 522.95375pt>
+<./img/paquetesClasesGui.png, id=850, 663.47874pt x 522.95375pt>
 File: ./img/paquetesClasesGui.png Graphic file (type png)
 <use ./img/paquetesClasesGui.png>
 Package pdftex.def Info: ./img/paquetesClasesGui.png  used on input line 105.
@@ -1840,15 +1879,6 @@ h3.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.105 ...ases y paquetes de la interfaz gráfica.}
                                                    <./img/paquetesClases.png>]
-<./img/umlClases.png, id=788, 629.35126pt x 487.8225pt>
-File: ./img/umlClases.png Graphic file (type png)
-<use ./img/umlClases.png>
-Package pdftex.def Info: ./img/umlClases.png  used on input line 113.
-(pdftex.def)             Requested size: 344.69766pt x 267.17921pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
 
@@ -1860,16 +1890,15 @@ h3.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.113 ...de las clases general de la aplicación.}
-                                                   <./img/paquetesClasesGui.png
->]
-<./img/clasesCan.png, id=795, 520.19344pt x 210.03468pt>
-File: ./img/clasesCan.png Graphic file (type png)
-<use ./img/clasesCan.png>
-Package pdftex.def Info: ./img/clasesCan.png  used on input line 115.
-(pdftex.def)             Requested size: 344.69766pt x 139.17455pt.
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
+l.113 \begin{landscape}
+                        <./img/paquetesClasesGui.png>]
+<./img/CRET.png, id=862, 2509.375pt x 1307.88625pt>
+File: ./img/CRET.png Graphic file (type png)
+<use ./img/CRET.png>
+Package pdftex.def Info: ./img/CRET.png  used on input line 114.
+(pdftex.def)             Requested size: 574.5pt x 299.4305pt.
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -1879,26 +1908,21 @@ h3.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.121 A
-        continuación se muestran algunas de las vistas de la aplicación:pdfTe
-X warning (ext4): destination with the same identifier (name{figure.Alph3.9}) h
-as been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.121 A
-        continuación se muestran algunas de las vistas de la aplicación: <./i
-mg/umlClases.png> <./img/clasesCan.png>]
-<./img/navegacion.png, id=802, 804.00375pt x 472.76625pt>
+l.115 \end{landscape}
+                      <./img/CRET.png>]
+<./img/navegacion.png, id=867, 804.00375pt x 472.76625pt>
 File: ./img/navegacion.png Graphic file (type png)
 <use ./img/navegacion.png>
-Package pdftex.def Info: ./img/navegacion.png  used on input line 128.
+Package pdftex.def Info: ./img/navegacion.png  used on input line 129.
 (pdftex.def)             Requested size: 344.69766pt x 202.68677pt.
 )
 LaTeX Info: Redefining \. on input line 397.
 LaTeX Info: Redefining \% on input line 397.
- [33pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
-ph3.10}) has been already used, duplicate ignored
+ [33
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph3.
+9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1922,9 +1946,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (131.47755pt too wide) in paragraph at lines 55--56
-[][][]$\T1/lmtt/m/n/12 https : / / www . oracle . com / technetwork / java / ja
-vase / \downloads / jdk8-[]downloads-[]2133151 .
+Overfull \hbox (36.36795pt too wide) in paragraph at lines 55--56
+[]\T1/lmr/m/n/12 (-20) Se pue-de ob-te-ner del si-guien-te en-la-ce: [][]$\T1/l
+mtt/m/n/12 https : / / www . oracle . com / technetwork /
  []
 
 
@@ -1933,11 +1957,14 @@ Overfull \hbox (36.36795pt too wide) in paragraph at lines 61--63
 mtt/m/n/12 https : / / www . oracle . com / technetwork /
  []
 
-<./img/gitClone.png, id=819, 642.90187pt x 236.38312pt>
+<./img/gitClone.png, id=884, 642.90187pt x 236.38312pt>
 File: ./img/gitClone.png Graphic file (type png)
 <use ./img/gitClone.png>
 Package pdftex.def Info: ./img/gitClone.png  used on input line 70.
 (pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 
@@ -1945,41 +1972,44 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [36]
-<./img/sceneBuilder.png, id=831, 1204.5pt x 654.19406pt>
+<./img/sceneBuilder.png, id=896, 1204.5pt x 654.19406pt>
 File: ./img/sceneBuilder.png Graphic file (type png)
 <use ./img/sceneBuilder.png>
 Package pdftex.def Info: ./img/sceneBuilder.png  used on input line 76.
 (pdftex.def)             Requested size: 344.69766pt x 187.21587pt.
-
-Underfull \vbox (badness 1424) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 81.
-LaTeX Info: Redefining \% on input line 81.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
  [37pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 
+l.86 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.A
 lph4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 
+l.86 
       <./img/gitClone.png> <./img/sceneBuilder.png>]
-LaTeX Info: Redefining \. on input line 119.
-LaTeX Info: Redefining \% on input line 119.
+Underfull \vbox (badness 1590) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [38]
-<./img/esquemaAnexo.png, id=847, 613.54219pt x 395.22656pt>
+<./img/esquemaAnexo.png, id=912, 613.54219pt x 395.22656pt>
 File: ./img/esquemaAnexo.png Graphic file (type png)
 <use ./img/esquemaAnexo.png>
 Package pdftex.def Info: ./img/esquemaAnexo.png  used on input line 151.
 (pdftex.def)             Requested size: 344.69766pt x 222.043pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Info: Redefining \. on input line 151.
 LaTeX Info: Redefining \% on input line 151.
 
@@ -1987,12 +2017,12 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [39]
-<./img/iconoFootprint.png, id=854, 225.84375pt x 30.1125pt>
+<./img/iconoFootprint.png, id=919, 225.84375pt x 30.1125pt>
 File: ./img/iconoFootprint.png Graphic file (type png)
 <use ./img/iconoFootprint.png>
 Package pdftex.def Info: ./img/iconoFootprint.png  used on input line 158.
 (pdftex.def)             Requested size: 344.69766pt x 45.9658pt.
-<./img/asignamiento.png, id=855, 572.1375pt x 191.21437pt>
+<./img/asignamiento.png, id=920, 572.1375pt x 191.21437pt>
 File: ./img/asignamiento.png Graphic file (type png)
 <use ./img/asignamiento.png>
 Package pdftex.def Info: ./img/asignamiento.png  used on input line 162.
@@ -2022,7 +2052,7 @@ plicate ignored
 l.162 ...e los componentes y su \emph{footprint}.}
                                                    <./img/esquemaAnexo.png> <./
 img/iconoFootprint.png>]
-<./img/iconoNetlist.png, id=862, 225.84375pt x 26.34843pt>
+<./img/iconoNetlist.png, id=927, 225.84375pt x 26.34843pt>
 File: ./img/iconoNetlist.png Graphic file (type png)
 <use ./img/iconoNetlist.png>
 Package pdftex.def Info: ./img/iconoNetlist.png  used on input line 184.
@@ -2046,12 +2076,12 @@ Alph4.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.187 
        <./img/asignamiento.png> <./img/iconoNetlist.png>]
-<./img/firstFootprint.png, id=870, 583.42969pt x 278.54062pt>
+<./img/firstFootprint.png, id=935, 583.42969pt x 278.54062pt>
 File: ./img/firstFootprint.png Graphic file (type png)
 <use ./img/firstFootprint.png>
 Package pdftex.def Info: ./img/firstFootprint.png  used on input line 188.
 (pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
-<./img/finalFootprint.png, id=871, 642.90187pt x 411.78844pt>
+<./img/finalFootprint.png, id=936, 642.90187pt x 411.78844pt>
 File: ./img/finalFootprint.png Graphic file (type png)
 <use ./img/finalFootprint.png>
 Package pdftex.def Info: ./img/finalFootprint.png  used on input line 192.
@@ -2086,12 +2116,12 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [43]
-<./img/conexionPickit.png, id=886, 294.34969pt x 145.29282pt>
+<./img/conexionPickit.png, id=951, 294.34969pt x 145.29282pt>
 File: ./img/conexionPickit.png Graphic file (type png)
 <use ./img/conexionPickit.png>
 Package pdftex.def Info: ./img/conexionPickit.png  used on input line 272.
 (pdftex.def)             Requested size: 344.69766pt x 170.14708pt.
-<./img/cargaFirmware.png, id=887, 1459.4525pt x 780.9175pt>
+<./img/cargaFirmware.png, id=952, 1459.4525pt x 780.9175pt>
 File: ./img/cargaFirmware.png Graphic file (type png)
 <use ./img/cargaFirmware.png>
 Package pdftex.def Info: ./img/cargaFirmware.png  used on input line 275.
@@ -2115,12 +2145,12 @@ Alph4.10}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.281 
        <./img/conexionPickit.png> <./img/cargaFirmware.png>]
-<./img/pickit3.png, id=894, 619.56468pt x 395.97937pt>
+<./img/pickit3.png, id=959, 619.56468pt x 395.97937pt>
 File: ./img/pickit3.png Graphic file (type png)
 <use ./img/pickit3.png>
 Package pdftex.def Info: ./img/pickit3.png  used on input line 282.
 (pdftex.def)             Requested size: 344.69766pt x 220.30286pt.
-<./img/mphidflash.png, id=896, 374.90062pt x 109.1578pt>
+<./img/mphidflash.png, id=961, 374.90062pt x 109.1578pt>
 File: ./img/mphidflash.png Graphic file (type png)
 <use ./img/mphidflash.png>
 Package pdftex.def Info: ./img/mphidflash.png  used on input line 296.
@@ -2163,12 +2193,12 @@ l.398 \include{./tex/D_Manual_programador}
 
 
 ]
-<./img/botonConfig.png, id=912, 225.84375pt x 32.37094pt>
+<./img/botonConfig.png, id=977, 225.84375pt x 32.37094pt>
 File: ./img/botonConfig.png Graphic file (type png)
 <use ./img/botonConfig.png>
 Package pdftex.def Info: ./img/botonConfig.png  used on input line 34.
 (pdftex.def)             Requested size: 344.69766pt x 49.41325pt.
-<./img/enabled.png, id=913, 376.40625pt x 252.945pt>
+<./img/enabled.png, id=978, 376.40625pt x 252.945pt>
 File: ./img/enabled.png Graphic file (type png)
 <use ./img/enabled.png>
 Package pdftex.def Info: ./img/enabled.png  used on input line 38.
@@ -2194,7 +2224,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph5.
 l.44 \textbf
             {Speed:} Velocidad a la que vamos a escuchar los datos del bus. ...
  <./img/botonConfig.png> <./img/enabled.png>]
-<./img/opciones.png, id=921, 376.40625pt x 254.45062pt>
+<./img/opciones.png, id=986, 376.40625pt x 254.45062pt>
 File: ./img/opciones.png Graphic file (type png)
 <use ./img/opciones.png>
 Package pdftex.def Info: ./img/opciones.png  used on input line 55.
@@ -2208,7 +2238,7 @@ ph5.3}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.62 
       <./img/opciones.png>]
-<./img/analysis1.png, id=927, 1204.5pt x 654.19406pt>
+<./img/analysis1.png, id=992, 1204.5pt x 654.19406pt>
 File: ./img/analysis1.png Graphic file (type png)
 <use ./img/analysis1.png>
 Package pdftex.def Info: ./img/analysis1.png  used on input line 81.
@@ -2227,12 +2257,12 @@ h5.4}) has been already used, duplicate ignored
 l.90 \textbf
             {View live:} Esta opción nos permite monitorizar en tiempo real...
  <./img/analysis1.png>]
-<./img/realtime.png, id=934, 526.96875pt x 281.55188pt>
+<./img/realtime.png, id=999, 526.96875pt x 281.55188pt>
 File: ./img/realtime.png Graphic file (type png)
 <use ./img/realtime.png>
 Package pdftex.def Info: ./img/realtime.png  used on input line 97.
 (pdftex.def)             Requested size: 344.69766pt x 184.17508pt.
-<./img/newProject.png, id=935, 526.96875pt x 87.32625pt>
+<./img/newProject.png, id=1000, 526.96875pt x 87.32625pt>
 File: ./img/newProject.png Graphic file (type png)
 <use ./img/newProject.png>
 Package pdftex.def Info: ./img/newProject.png  used on input line 103.
@@ -2250,12 +2280,12 @@ h5.5}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.103 ...t}{Ventana para crear un nuevo proyecto.}
                                                    <./img/realtime.png>]
-<./img/realtimeTag.png, id=941, 1101.36469pt x 606.01407pt>
+<./img/realtimeTag.png, id=1006, 1101.36469pt x 606.01407pt>
 File: ./img/realtimeTag.png Graphic file (type png)
 <use ./img/realtimeTag.png>
 Package pdftex.def Info: ./img/realtimeTag.png  used on input line 111.
 (pdftex.def)             Requested size: 344.69766pt x 189.66559pt.
-<./img/openProject.png, id=942, 526.96875pt x 413.29407pt>
+<./img/openProject.png, id=1007, 526.96875pt x 413.29407pt>
 File: ./img/openProject.png Graphic file (type png)
 <use ./img/openProject.png>
 Package pdftex.def Info: ./img/openProject.png  used on input line 120.
@@ -2285,7 +2315,7 @@ plicate ignored
 l.120 ...enProject}{Ventana para abrir proyectos.}
                                                    <./img/newProject.png> <./im
 g/realtimeTag.png>]
-<./img/projectOpened.png, id=950, 1204.5pt x 654.94687pt>
+<./img/projectOpened.png, id=1015, 1204.5pt x 654.94687pt>
 File: ./img/projectOpened.png Graphic file (type png)
 <use ./img/projectOpened.png>
 Package pdftex.def Info: ./img/projectOpened.png  used on input line 126.
@@ -2303,7 +2333,7 @@ h5.8}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.126 ...{projectOpened}{Modo de monitorización.}
                                                    <./img/openProject.png>]
-<./img/trace.png, id=957, 1204.5pt x 656.4525pt>
+<./img/trace.png, id=1022, 1204.5pt x 656.4525pt>
 File: ./img/trace.png Graphic file (type png)
 <use ./img/trace.png>
 Package pdftex.def Info: ./img/trace.png  used on input line 155.
@@ -2325,7 +2355,7 @@ h5.9}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.155 ...ce}{Modo \emph{trace} de la aplicación.}
                                                    <./img/projectOpened.png>]
-<./img/monitor.png, id=964, 1204.5pt x 656.4525pt>
+<./img/monitor.png, id=1029, 1204.5pt x 656.4525pt>
 File: ./img/monitor.png Graphic file (type png)
 <use ./img/monitor.png>
 Package pdftex.def Info: ./img/monitor.png  used on input line 174.
@@ -2343,7 +2373,7 @@ h5.10}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.174 ...}{Modo \emph{monitor} de la aplicación.}
                                                    <./img/trace.png>]
-<./img/deleteProject.png, id=970, 526.96875pt x 411.78844pt>
+<./img/deleteProject.png, id=1035, 526.96875pt x 411.78844pt>
 File: ./img/deleteProject.png Graphic file (type png)
 <use ./img/deleteProject.png>
 Package pdftex.def Info: ./img/deleteProject.png  used on input line 193.
@@ -2365,12 +2395,12 @@ h5.11}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.193 ...leteProject}{Opción de borrar proyecto.}
                                                    <./img/monitor.png>]
-<./img/import1.png, id=977, 335.75438pt x 82.80937pt>
+<./img/import1.png, id=1042, 335.75438pt x 82.80937pt>
 File: ./img/import1.png Graphic file (type png)
 <use ./img/import1.png>
 Package pdftex.def Info: ./img/import1.png  used on input line 204.
 (pdftex.def)             Requested size: 344.69766pt x 85.01534pt.
-<./img/import.png, id=978, 376.40625pt x 395.22656pt>
+<./img/import.png, id=1043, 376.40625pt x 395.22656pt>
 File: ./img/import.png Graphic file (type png)
 <use ./img/import.png>
 Package pdftex.def Info: ./img/import.png  used on input line 211.
@@ -2406,7 +2436,7 @@ h5.14}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.220 
        <./img/import.png>]
-<./img/export.png, id=992, 376.40625pt x 395.97937pt>
+<./img/export.png, id=1057, 376.40625pt x 395.97937pt>
 File: ./img/export.png Graphic file (type png)
 <use ./img/export.png>
 Package pdftex.def Info: ./img/export.png  used on input line 221.
@@ -2448,29 +2478,23 @@ LaTeX Info: Redefining \% on input line 25.
 ual_programador.aux) (tex/E_Manual_usuario.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
+Package rerunfilecheck Info: File `anexos.out' has not changed.
+(rerunfilecheck)             Checksum: D6E6A7555C654888CD46ED892B667723;2196.
 
-
-Package rerunfilecheck Warning: File `anexos.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `anexos.out':
-(rerunfilecheck)             Before: C0F24464676B79A31D81BA25FB761E08;385
-(rerunfilecheck)             After:  D6E6A7555C654888CD46ED892B667723;2196.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 13399 strings out of 492946
- 200508 string characters out of 3126711
- 374928 words of memory out of 3000000
- 16696 multiletter control sequences out of 15000+200000
- 90719 words of font info for 119 fonts, out of 3000000 for 9000
+ 13460 strings out of 492946
+ 201905 string characters out of 3126711
+ 385221 words of memory out of 3000000
+ 16745 multiletter control sequences out of 15000+200000
+ 90757 words of font info for 119 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,43p,430b,710s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
@@ -2490,9 +2514,9 @@ ams/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Users/MS02/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/MS02/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on anexos.pdf (67 pages, 2800072 bytes).
+Output written on anexos.pdf (67 pages, 3165184 bytes).
 PDF statistics:
- 1089 PDF objects out of 1200 (max. 8388607)
- 197 named destinations out of 1000 (max. 500000)
- 22300 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 1154 PDF objects out of 1200 (max. 8388607)
+ 196 named destinations out of 1000 (max. 500000)
+ 22479 words of extra memory for PDF output out of 24883 (max. 10000000)
 

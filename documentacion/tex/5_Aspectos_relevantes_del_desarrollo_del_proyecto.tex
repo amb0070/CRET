@@ -10,7 +10,7 @@ Tras investigar y leer algunos manuales de reparación de esas máquinas, era de
 
 Una vez fue posible la lectura de dichos datos, quedaba clara la dificultad para la identificación de los mismos, ya que todos ellos estaban en hexadecimal, lo cual dificultaba su identificación.
 
-Tras el desarrollo de un pequeños \emph{script} en \emph{Python}, los cuales eran capaces de realizar una gráfica con los datos previamente adquiridos del bus CAN y detectar la mayor facilidad a la hora de identificar esos datos, surgió la idea de realizar este proyecto.
+Tras el desarrollo de unos pequeños \emph{scripts} en \emph{Python}, los cuales eran capaces de realizar una gráfica con los datos previamente adquiridos del bus CAN y detectar la mayor facilidad a la hora de identificar esos datos, surgió la idea de realizar este proyecto.
 
 Existía la necesidad de que, al contrario que en el caso anterior, este proyecto permitiera realizar ese proceso en tiempo real, no con una muestra de datos tomada anteriormente.
 
@@ -56,7 +56,7 @@ El elevado precio de las interfaces que existen actualmente en el mercado, las c
 La posibilidad de conectarse a dos buses distintos de forma simultanea. Una interfaz CAN únicamente puede conectarse a un bus de datos. Existen alternativas más baratas como \emph{USBtin}\cite{usbtin}, pero que únicamente permiten conectarse a un bus.
 \end{itemize}
 
-Con este desarrollo propio, se consigue la conexión a dos buses e datos de forma simultánea y económica.
+Con este desarrollo propio, se consigue la conexión a dos buses de datos de forma simultánea y económica.
 
 Se decidió comenzar por esta fase por los siguientes motivos:
 
@@ -96,7 +96,7 @@ El tipo de elemento que es cada componente.
 La huella (\emph{footprint}) que va a utilizar, es decir, en función de cada encapsulado (forma física del \emph{chip}), será necesario que la zona de soldadura de la PCB sea adaptada al mismo, tanto en tamaño como en forma.
 \end{itemize}
 
-
+\newpage
 \subsection{Posicionamiento y \textit{enrutado} de los componentes y las pistas en la PCB}\label{posicionamiento_y_enrutado_de_los_componentes_y_las_pistas_en_la_pcb}
 
 Una vez se ha generado el fichero \emph{Netlist}, este es cargado en el editor de PCBs.
@@ -146,7 +146,7 @@ Principalmente surgieron dos grandes problemas durante el desarrollo de la parte
 
 Era necesario que las gráficas se fueran creando de manera dinámica cuando existiera un nuevo dato a representar, no tener una estructura estática creada previamente. Para ello, cada vez que un nuevo \emph{Frame} del bus CAN fuera detectado, había que proceder a la creación de dichos elementos, así como de un \emph{listener} en ese objeto, el cual consultase la estructura en la que son almacenados los datos, para su posterior representación gráfica.
 
-Para ello se decidió utilizar una estructura gráfica de tipo \emph{GridPane}, dividiendo la pantalla en el eje horizontal en 3 celdas. Cada una de estas celdas se iría rellenando en función de las necesidades e iría incrementandose de arriba a abajo si fuera necesario. Para conseguir ese efecto, el elemento padre del \emph{GridPane} tenía que ser un \emph{ScrollPane} es decir, lo que conocemos como un \emph{Scroll}.
+Para ello se decidió utilizar una estructura gráfica de tipo \emph{GridPane}, dividiendo la pantalla en el eje horizontal en 3 celdas. Cada una de estas celdas se iría rellenando en función de las necesidades e iría incrementándose de arriba a abajo si fuera necesario. Para conseguir ese efecto, el elemento padre del \emph{GridPane} tenía que ser un \emph{ScrollPane} es decir, lo que conocemos como un \emph{Scroll}.
 
 Todo esto tenía que ir de la mano con una serie de estructuras, también generadas dinámicamente, para realizar la lectura y escritura de los datos que tienen que ser representados.
 
@@ -180,7 +180,6 @@ Además, en este fichero se indican las acciones que queremos que tengan los ele
 \end{itemize}
 
 
-
 \section{Testing}\label{testing}
 
 Para realizar las pruebas correspondientes durante el desarrollo de la aplicación y no depender del acceso físico a una máquina o vehículo, se ha desarrollado una pequeña placa la cual simularía una red CAN, en la que se pueden conectar dos nodos, uno para enviar datos al bus y el otro para recibir.
@@ -193,14 +192,12 @@ Para ello simplemente se han colocado dos resistencias de 120 \emph{ohmns} (defi
 
 Para la protección de \emph{hardware} desarrollado, se vio la necesidad de crear una caja la cual almacenase dentro la placa, pero que además permitiera la conexión de los elementos necesarios para su funcionamiento.
 
-Para ello se ha utilizado el \emph{software} \emph{SolidWorks} para el diseño de la misma.
+Para ello se ha utilizado el \emph{software} \emph{Blender} para el diseño de la misma.
 
-\imagen{render}{Renderizado de la caja en \emph{SolidWorks}}.
+\imagen{render}{Renderizado de la caja en \emph{Blender}}.
 
 Una vez concluido el diseño, el fichero 3D ha sido introducido en \emph{Ultimaker CURA}, un \emph{silicer} el cual nos transforma el objeto 3D en un fichero el cual la impresora 3D sea capaz de interpretar.
 
-Para realizar la impresión, se ha utilizado una impresora 3D \emph{BQ~Prusa~i3~Hephestos} y plástico de tipo ABS (\emph{Acrylonitrile Butadiene Styrene}) el cual resulta más difícil de imprimir, pero es adecuado para un uso intensivo como puede ser el de la industria, teniendo más resistencia a golpes y a temperatura que uno de sus competidores como puede ser el PLA ( Polylactic acid).
-
-
-FOTO DEL A CAJA TERMINADA
-
+Para realizar la impresión, se ha utilizado una impresora 3D \emph{BQ~Prusa~i3~Hephestos} y plástico de tipo ABS (\emph{Acrylonitrile Butadiene Styrene}) el cual resulta más difícil de imprimir, pero es adecuado para un uso intensivo como puede ser el de la industria, teniendo más resistencia a golpes y a temperatura que uno de sus competidores como puede ser el PLA (Polylactic acid).
+\imagen{caja1}{Caja impresa en 3D cerrada.}
+\imagen{caja2}{Caja impresa en 3D abierta.}

@@ -38,7 +38,7 @@
 \contentsline {subsection}{Arquitectura general}{28}{section*.22}% 
 \contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{29}{section*.23}% 
 \contentsline {subsection}{Dise\IeC {\~n}o de clases}{31}{section*.24}% 
-\contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de interfaces}{32}{section.Alph3.5}% 
+\contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de interfaces}{33}{section.Alph3.5}% 
 \contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{35}{appendix.Alph4}% 
 \contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{35}{section.Alph4.1}% 
 \contentsline {section}{\numberline {D.2}Estructura de directorios}{35}{section.Alph4.2}% 
@@ -48,7 +48,7 @@
 \contentsline {subsection}{JavaFX}{36}{section*.27}% 
 \contentsline {subsection}{Git}{36}{section*.28}% 
 \contentsline {subsection}{SceneBuilder}{37}{section*.29}% 
-\contentsline {subsection}{Eclipse}{38}{section*.30}% 
+\contentsline {subsection}{Eclipse}{37}{section*.30}% 
 \contentsline {subsection}{Obtenci\IeC {\'o}n del c\IeC {\'o}digo fuente}{38}{section*.31}% 
 \contentsline {subsection}{Importar proyecto a Eclipse}{38}{section*.32}% 
 \contentsline {subsection}{Importar librer\IeC {\'\i }as necesarias}{38}{section*.33}% 

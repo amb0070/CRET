@@ -134,7 +134,7 @@ Pistas
 \item
 Vías
 \end{itemize}
-
+\newpage
 \subsection{Pistas}\label{pistas}
 
 Cada una de las conexiones entre los componentes. Hacen el trabajo de un cable, solo que integrado en la placa.
@@ -190,9 +190,7 @@ Este tipo de datos no permite el acceso concurrente de varios \emph{threads} al 
 \item
 \textbf{FXML Document}: Se trata de documentos con un formato que extiende de XML. En estos documentos se encuentra la estructura de las interfaces gráficas y la distribución de los elementos en la misma. Este tipo de documentos pueden ser escritos a mano o generados con la ayuda de la herramienta \emph{SceneBuilder}.
 
-A este documento se le indica el \emph{Controller} que va a manejarlo, de forma que se crea la conexión \emph{View-Controller}.
-
-Esto se hace a través del campo \emph{fx:controller} del documento FXML.
+A este documento se le indica el \emph{Controller} que va a manejarlo, de forma que se crea la conexión \emph{View-Controller}. Esto se hace a través del campo \emph{fx:controller} del documento FXML.
 \item
 \textbf{Preloader}: Debido a la cantidad de tiempo requerido para el arranque de la aplicación (comprobación de la base de datos, preparación de la interfaz gráfica), se decidió introducir un \emph{preloader}. Este se encarga de mostrarnos una pantalla de carga mientras la aplicación realiza las tareas necesarias. En el momento en el que la pantalla principal está lista para mostrarse, esta manda una señal al \emph{preloader} para que se cierre.
 

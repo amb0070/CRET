@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustraci\IeC {\'o}n con 4 \emph {pads} en una PCB.}}{13}{figure.3.8}% 
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Visi\IeC {\'o}n de una v\IeC {\'\i }a a trav\IeC {\'e}s de un corte de una PCB.}}{14}{figure.3.9}% 
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de una huella de un IC \emph {(Integrated Circuit)}.}}{14}{figure.3.10}% 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejemplo del tipo \emph {LineChart} en JavaFX.}}{16}{figure.3.11}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejemplo del tipo \emph {LineChart} en JavaFX.}}{15}{figure.3.11}% 
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Etapas del arranque de una aplicaci\IeC {\'o}n JavaFX\cite {preloader:javafx}}}{17}{figure.3.12}% 
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Ejemplo de ToolTip en JavaFX}}{17}{figure.3.13}% 
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Modelo MVC}}{20}{figure.4.14}% 
@@ -21,4 +21,6 @@
 \contentsline {figure}{\numberline {5.19}{\ignorespaces PCB del proyecto con los componentes soldados}}{32}{figure.5.19}% 
 \contentsline {figure}{\numberline {5.20}{\ignorespaces Pines conectados al microcontrolador PIC para la carga del \emph {firmware}.}}{33}{figure.5.20}% 
 \contentsline {figure}{\numberline {5.21}{\ignorespaces Placa casera para simular una red CAN}}{36}{figure.5.21}% 
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Renderizado de la caja en \emph {SolidWorks}}}{36}{figure.5.22}% 
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Renderizado de la caja en \emph {Blender}}}{36}{figure.5.22}% 
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Caja impresa en 3D cerrada.}}{37}{figure.5.23}% 
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Caja impresa en 3D abierta.}}{38}{figure.5.24}% 
