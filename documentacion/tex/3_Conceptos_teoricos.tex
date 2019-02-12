@@ -14,7 +14,7 @@ Es utilizado en multitud de escenarios como la aviación, la navegación, la aut
 
 Una de las características que nos interesa conocer, es que al ser una topología de tipo BUS, todos los nodos tienen acceso a la información que es transmitida a través del bus, con lo que es suficiente con conectarnos a dicho bus y capturar los datos que viajan a través de él para analizarlos posteriormente.
 
-\imagen{canbusTopology}{Esquema de conexión de los nodos en el bus CAN}
+\imagen{canbusTopology}{Esquema de conexión de los nodos en el bus CAN.}
 
 El principal elemento que compone una red de tipo CAN son los nodos, además de los cables de conexión entre los mismos:
 
@@ -22,22 +22,22 @@ El principal elemento que compone una red de tipo CAN son los nodos, además de 
 \item
 \textbf{Nodo:} Cada uno de los dispositivos físicos que están conectados a la red CAN. Al menos es necesario que existan dos nodos conectados a la red para que se produzca una comunicación.
 \item
-\textbf{Cable:} Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables. Estos son identificados por CAN-H (CAN High) y CAN-L (CAN-Low).
+\textbf{Cable:} Se trata del cable a través del cual se envían y reciben los datos. Todos los nodos deben de estar conectados a estos dos cables. Estos son identificados por CAN-H (\emph{CAN-High}) y CAN-L (\emph{CAN-Low}).
 \end{itemize}
 
 Esto es debido a que las señales que circulan por los mismos, son señales diferenciales, de las cuales el valor efectivo interpretado por el nodo es extraído tras aplicar la diferencia entre ambas como se puede ver en la figura.
 
-\imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio \cite{marco:can}}
+\imagen{canSignals}{Señales eléctricas del bus CAN vistas por un osciloscopio.\cite{marco:can}}
 
 Cada uno de los nodos es capaz de enviar y recibir mensajes. La prioridad de los mensajes de un nodo viene dada por la ID(identificador) del \emph{Frame} enviado al bus.
 
-\imagen{canNode}{Anatomía de un nodo CAN}
+\imagen{canNode}{Anatomía de un nodo CAN.}
 
 A continuación se describen los elementos de una trama CAN, así como la descripción de la misma.
 
-\textbf{\emph{Frame} (Trama):} Cada uno de los mensajes enviados a través de la red CAN. En la Figura \ref{candump} puede asociarse a cada una de las líneas de datos horizontales.
+\textbf{\emph{Frame} (Trama):} Cada uno de los mensajes enviados a través de la red CAN.
 
-La estructura interna es más compleja, pero no nos centraremos en ella ya que no tiene relevancia en este caso. Únicamente nos centraremos en los tres elementos identificados en la figura.
+La estructura y el funcionamiento interno es más complejo, pero no nos centraremos en ellos ya que no tiene relevancia en este caso. Únicamente nos centraremos en los tres elementos identificados en la figura.
 
 Cada uno de los \emph{Frames} contiene tres campos en los que nos centraremos: ID, Length y Data.
 
@@ -83,7 +83,7 @@ Además, el estándar dispone de varias medidas para la detección de errores y 
 
 El desarrollo del \emph{hardware} con dos interfaces viene motivado a la posibilidad de que exista más de un bus en una misma máquina. De esta manera, sería posible el análisis de dos buses de forma simultánea.
 
-Siguiendo el modelo OSI\cite{osi:can}, el estándar bus CAN especifica únicamente las tres primeras capas:
+Siguiendo el modelo OSI\cite{osi:can}, el estándar bus CAN especifica únicamente las dos primeras capas:
 
 \begin{itemize}
 
@@ -99,7 +99,7 @@ Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
 
 \begin{itemize}
 \item
-\textbf{Active:} Cuando un nodo es conectado en modo \emph{active}, significa que si envía un mensaje a través del bus, al no ser que el \emph{transciver} esté conectado en modo \emph{Single Shot}, el mensaje será enviado continuamente por el bus hasta que se reciba un ACK \emph{(Acknonolowment)}. De manera que este modo si que tiene influencias sobre el bus.
+\textbf{Active:} Cuando un nodo es conectado en modo \emph{active}, significa que si envía un mensaje a través del bus. Al no ser que el \emph{transciver} esté conectado en modo \emph{Single Shot}, el mensaje será enviado continuamente por el bus hasta que se reciba un ACK \emph{(Acknonolowment)}. De manera que este modo si que tiene influencias sobre el bus.
 
 \item
 \textbf{Listen-Only:} Este modo no interfiere en el funcionamiento del bus CAN. Cuando un nodo es conectado en modo \emph{listenonly}, dicho nodo no tiene influencia sobre el resto. Si por ejemplo llega un \emph{Frame} erróneo, no genera \emph{flags} de error. Se podría decir que es un modo de escucha del bus, sin posibilidad de interacción con el mismo.
@@ -112,13 +112,13 @@ Existen 3 modos por los cuales los nodos pueden conectarse al bus CAN:
 
 \section{Desarrollo del hardware}\label{desarrollo_del_hardware}
 
-A continuación se describen distintos conceptos básicos sobre el hardware desarrollado y alguno de sus componentes:
+A continuación se describen distintos conceptos básicos sobre el \emph{hardware} desarrollado y algunos de sus componentes:
 
 \subsection{Esquema}\label{esquema}
 
 Representación esquemática de los componentes de un circuito, así como sus entradas y salidas, y conexión entre ellos.
 
-A continuación se muestra un ejemplo visual de un varios componentes en un esquema para el diseño de una PCB \emph{(Printed Circuit Board)}:
+A continuación se muestra un ejemplo visual de varios componentes en un esquema para el diseño de una PCB\emph{(Printed Circuit Board)}:
 
 \imagen{esquema}{Ejemplo de varios componentes a nivel esquemático.}
 
@@ -155,7 +155,7 @@ Al tratarse de una PCB de doble capa (es decir, que tiene pistas o elementos en 
 
 \subsection{Footprint}\label{footprint}
 
-Hace referencia al espacio necesario para colocar un elemento del hardware. Existen estándares que definen los tamaños y formas de dichos espacios.
+Hace referencia al espacio necesario para colocar un elemento del \emph{hardware}. Existen estándares que definen los tamaños y formas de dichos espacios.
 
 \imagen{footprint}{Ejemplo de una huella de un IC \emph{(Integrated Circuit)}.}
 
@@ -167,7 +167,7 @@ Estos ficheros son aceptados por todos los fabricantes de placas de circuito imp
 \section{Desarrollo del software}\label{desarrollo_del_software}
 
 
-Para el desarrollo del \emph{software} se ha utilizado el lenguaje de programación Java. Además, para la mejora de la interacción con el usuario también se ha utilizado el módulo JavaFX.
+Para el desarrollo del \emph{software} se ha utilizado el lenguaje de programación Java. Además, para la mejora de la interacción con el usuario también se ha utilizado el módulo JavaFX y la librería \emph{medusa}, un complemento para JavaFX.
 
 Existen distintos elementos utilizados durante el desarrollo de la aplicación los cuales es interesante destacar:
 
@@ -177,7 +177,7 @@ Existen distintos elementos utilizados durante el desarrollo de la aplicación l
 
 En cada una de las celdas de esta cuadrícula se incluyen distintos elementos que se mencionarán a continuación.
 \item
-\textbf{LineChart}: Se trata de un módulo perteneciente a JavaFX el cual nos permite representar gráficamente un dato. Es utilizado para mostrar los datos al usuario y que estos puedan ser identificados.
+\textbf{LineChart}: Se trata de un módulo perteneciente a JavaFX el cual nos permite generar una gráfica. Es utilizado para mostrar los datos al usuario y que estos puedan ser identificados.
 
 \emph{LineChart} recoge los datos de una estructura de tipo \emph{ObservableList}, en la cual se encuentran todos los datos a representar.
 
@@ -194,11 +194,11 @@ A este documento se le indica el \emph{Controller} que va a manejarlo, de forma 
 \item
 \textbf{Preloader}: Debido a la cantidad de tiempo requerido para el arranque de la aplicación (comprobación de la base de datos, preparación de la interfaz gráfica), se decidió introducir un \emph{preloader}. Este se encarga de mostrarnos una pantalla de carga mientras la aplicación realiza las tareas necesarias. En el momento en el que la pantalla principal está lista para mostrarse, esta manda una señal al \emph{preloader} para que se cierre.
 
-\imagen{preloaderArchitecture}{Etapas del arranque de una aplicación JavaFX\cite{preloader:javafx}}
+\imagen{preloaderArchitecture}{Etapas del arranque de una aplicación JavaFX.\cite{preloader:javafx}}
 \item
 \textbf{ToolTips}: Se trata de una descripción emergente de un elemento. Esta ayuda al usuario a entender la funcionalidad de un elemento simplemente arrastrando el cursor sobre el elemento.
 
-\imagen{tooltip}{Ejemplo de ToolTip en JavaFX}
+\imagen{tooltip}{Ejemplo de ToolTip en JavaFX.}
 
 \end{itemize}
 

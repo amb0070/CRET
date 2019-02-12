@@ -70,7 +70,7 @@ La producción de la PCB requiere de unas semanas desde que envías el pedido ha
 Era la parte más desconocida y en la cual habría que invertir más tiempo para aplicar la metodología sugerida a la hora del desarrollo de este tipo de proyectos.
 \end{itemize}
 
-Se podrían definir 4 etapas las cuales se han llevado a cabo para el desarrollo:
+Se podrían definir 4 etapas las cuales se han llevado a cabo para el desarrollo de este \emph{hardware}:
 
 \subsection{Diseño del esquema eléctrico}\label{diseño_del_esquema_electrico}
 
@@ -113,13 +113,13 @@ La posición de los componentes y el \textit{enrutado} de las pistas.
 \imagen{finalFootprint}{Esquema de la PCB del proyecto.}
 
 
-\imagen{fotoPCB}{PCB del proyecto sin los componentes}
+\imagen{fotoPCB}{PCB del proyecto sin los componentes.}
 
 
 Tras limpiar la PCB, posicionar y soldar los componentes, obtenemos el siguiente resultado:
 
 
-\imagen{finishedPCB}{PCB del proyecto con los componentes soldados}
+\imagen{finishedPCB}{PCB del proyecto con los componentes soldados.}
 
 \subsection{Carga del \emph{firmware} en los IC}\label{carga_firm_pic}
 
@@ -150,11 +150,11 @@ Para ello se decidió utilizar una estructura gráfica de tipo \emph{GridPane}, 
 
 Todo esto tenía que ir de la mano con una serie de estructuras, también generadas dinámicamente, para realizar la lectura y escritura de los datos que tienen que ser representados.
 
-De esa manera, se decidió utilizar estructuras de tipo \emph{HashMap}, las cuales identificaban el dato por el par \emph{ID} y \emph{número de byte representado}.
+De esa manera, se decidió utilizar estructuras de tipo \emph{HashMap}, las cuales identificaban el dato por el par \emph{ID} y número de \emph{byte} representado.
 
 \subsection{Problemas de concurrencia}\label{problemas_de_concurrencia}
 
-Los elementos que representan gráficamente los datos (LineChart), realizan una lectura de un tipo de datos llamado \emph{ObservableList}. Durante la ejecución de la aplicación existen dos \emph{threads}, uno para la ejecución de la parte gráfica, y el otro para la lectura de los datos del bus CAN.
+Los elementos que representan gráficamente los datos (\emph{LineChart}), realizan una lectura de un tipo de datos llamado \emph{ObservableList}. Durante la ejecución de la aplicación existen dos \emph{threads}, uno para la ejecución de la parte gráfica, y el otro para la lectura de los datos del bus CAN.
 
 El problema surge cuando se intenta realizar una escritura en el objeto de tipo \emph{ObservableList} desde el \emph{thread} que lee el bus CAN al mismo tiempo que el \emph{thread} de la interfaz gráfica realiza una lectura de los datos del mismo objeto.
 
@@ -186,7 +186,7 @@ Para realizar las pruebas correspondientes durante el desarrollo de la aplicaci�
 
 Para ello simplemente se han colocado dos resistencias de 120 \emph{ohmns} (definidas por el estándar del CAN), y unos conectores de tipo DB9, ya que son los más habituales en este tipo de \emph{hardware}.
 
-\imagen{hardwareRedCan}{Placa casera para simular una red CAN}.
+\imagen{hardwareRedCan}{Placa casera para simular una red CAN.}
 
 \section{Diseño e impresión 3D de una caja protectora}\label{desarrollo_e_impresion_3d_de_una_caja_protectora}
 
@@ -194,7 +194,7 @@ Para la protección de \emph{hardware} desarrollado, se vio la necesidad de crea
 
 Para ello se ha utilizado el \emph{software} \emph{Blender} para el diseño de la misma.
 
-\imagen{render}{Renderizado de la caja en \emph{Blender}}.
+\imagen{render}{Renderizado de la caja en \emph{Blender}.}
 
 Una vez concluido el diseño, el fichero 3D ha sido introducido en \emph{Ultimaker CURA}, un \emph{silicer} el cual nos transforma el objeto 3D en un fichero el cual la impresora 3D sea capaz de interpretar.
 

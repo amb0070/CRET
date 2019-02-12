@@ -40,7 +40,7 @@
 \contentsline {section}{\numberline {4.6}Documentaci\IeC {\'o}n}{23}{section.4.6}% 
 \contentsline {subsection}{TeXMaker}{23}{section*.25}% 
 \contentsline {section}{\numberline {4.7}Impresi\IeC {\'o}n 3D}{23}{section.4.7}% 
-\contentsline {subsection}{SolidWorks}{23}{section*.26}% 
+\contentsline {subsection}{Blender}{23}{section*.26}% 
 \contentsline {subsection}{Ultimaker Cura}{23}{section*.27}% 
 \contentsline {section}{\numberline {4.8}Librer\IeC {\'\i }as}{23}{section.4.8}% 
 \contentsline {subsection}{USBtinLib}{23}{section*.28}% 

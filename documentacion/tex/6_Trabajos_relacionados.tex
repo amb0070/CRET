@@ -23,12 +23,8 @@ Las principales desventajas son:
 \begin{itemize}
 \item
 Actualmente solo funciona con un \emph{hardware} en concreto. Como se menciona en la sección Líneas futuras de trabajo \ref{lineas_de_trabajo_futuras}, el desarrollo de este proyecto continuaría con la incorporación de un módulo para el soporte de los \emph{drivers} \emph{SocketCAN} en sistemas \emph{Linux}.
-\item
-A parte, cabe destacar la presencia del proyecto \emph{CANalyzat0r}\cite{ canalyzator:can}, el cual nos permite también el análisis de los datos que pasan por el bus CAN, pero que no nos permite una rápida identificación a través de la visualización de los datos. 
-\item
-Además a través de CRET, se facilita mucho la identificación de las señales, pudiendo etiquetarlas y almacenarlas en el \emph{dashboard}, y a su vez en una base de datos, para su utilización más adelante. En \emph{CANalyzat0r}, el etiquetado de los datos identificados tiene que hacerse introduciendo la ID específica, además de que no nos permite separar los \emph{bytes} del campo de datos.
 \end{itemize}
-
+\newpage
 A continuación se realiza una pequeña comparación entre las herramientas:
 
 \tablaSmall{Comparación entre CRET y otras herramientas del mercado}{p{3cm} c c c c}{herramientasportipodeuso}
@@ -40,3 +36,8 @@ Representación gráfica de los datos & X & & X\\
 Etiquetado con un \emph{click} & X & &\\
 Importar y exportar proyectos JSON & X & &\\
 } 
+
+
+Cabe destacar la presencia del proyecto \emph{CANalyzat0r}\cite{ canalyzator:can}, el cual nos permite también el análisis de los datos que pasan por el bus CAN, pero que no nos permite una rápida identificación a través de la visualización de los datos. 
+
+Además a través de CRET, se facilita mucho la identificación de las señales, pudiendo etiquetarlas y almacenarlas en el \emph{dashboard}, y a su vez en una base de datos, para su utilización más adelante. En \emph{CANalyzat0r}, el etiquetado de los datos identificados tiene que hacerse introduciendo la ID específica, además de que no nos permite separar los \emph{bytes} del campo de datos.

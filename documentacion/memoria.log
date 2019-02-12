@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  12 FEB 2019 03:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  13 FEB 2019 00:16
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -992,23 +992,24 @@ l.17
 
 
 ]
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74   R
+        epositorio del proyecto: \url{https://github.com/amb0070/CRET/}
+[2]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 74.
-
-("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+ ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75 \end{itemize}
-                   [2])
+)
 LaTeX Info: Redefining \. on input line 479.
 LaTeX Info: Redefining \% on input line 479.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
@@ -1079,13 +1080,9 @@ File: ./img/canNode.png Graphic file (type png)
 <use ./img/canNode.png>
 Package pdftex.def Info: ./img/canNode.png  used on input line 34.
 (pdftex.def)             Requested size: 344.69766pt x 163.68172pt.
-
-
-LaTeX Warning: Reference `candump' on page 9 undefined on input line 38.
-
 LaTeX Info: Redefining \. on input line 48.
 LaTeX Info: Redefining \% on input line 48.
-[9 <./img/canSignals.png> <./img/canNode.png>]
+ [9 <./img/canSignals.png> <./img/canNode.png>]
 <./img/candump.png, id=727, 583.42969pt x 278.54062pt>
 File: ./img/candump.png Graphic file (type png)
 <use ./img/candump.png>
@@ -1093,11 +1090,11 @@ Package pdftex.def Info: ./img/candump.png  used on input line 53.
 (pdftex.def)             Requested size: 344.69766pt x 164.57129pt.
 LaTeX Info: Redefining \. on input line 83.
 LaTeX Info: Redefining \% on input line 83.
- [10 <./img/candump.png>]
+
+[10 <./img/candump.png>]
 LaTeX Info: Redefining \. on input line 117.
 LaTeX Info: Redefining \% on input line 117.
-
-[11]
+ [11]
 <./img/esquema.png, id=739, 602.25pt x 278.54062pt>
 File: ./img/esquema.png Graphic file (type png)
 <use ./img/esquema.png>
@@ -1141,10 +1138,14 @@ File: ./img/lineChart.png Graphic file (type png)
 <use ./img/lineChart.png>
 Package pdftex.def Info: ./img/lineChart.png  used on input line 186.
 (pdftex.def)             Requested size: 344.69766pt x 214.97217pt.
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
- [15 <./img/lineChart.png>]
-<./img/preloaderArchitecture.png, id=774, 552.0625pt x 488.82625pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[15]
+<./img/preloaderArchitecture.png, id=773, 552.0625pt x 488.82625pt>
 File: ./img/preloaderArchitecture.png Graphic file (type png)
 <use ./img/preloaderArchitecture.png>
 Package pdftex.def Info: ./img/preloaderArchitecture.png  used on input line 19
@@ -1156,7 +1157,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 197.
 LaTeX Info: Redefining \% on input line 197.
-[16]
+[16 <./img/lineChart.png>]
 <./img/tooltip.png, id=781, 314.67563pt x 90.3375pt>
 File: ./img/tooltip.png Graphic file (type png)
 <use ./img/tooltip.png>
@@ -1168,8 +1169,7 @@ LaTeX Info: Redefining \% on input line 481.
  [17 <./img/preloaderArchitecture.png> <./img/tooltip.png>]
 \openout2 = `./tex/4_Tecnicas_y_herramientas.aux'.
 
-
-(tex/4_Tecnicas_y_herramientas.tex [18
+ (tex/4_Tecnicas_y_herramientas.tex [18
 
 
 
@@ -1189,7 +1189,6 @@ Package pdftex.def Info: ./img/arquitectura.png  used on input line 38.
 (pdftex.def)             Requested size: 344.69766pt x 193.14125pt.
 LaTeX Info: Redefining \. on input line 55.
 LaTeX Info: Redefining \% on input line 55.
-
 [21 <./img/arquitectura.png>]
 LaTeX Info: Redefining \. on input line 83.
 LaTeX Info: Redefining \% on input line 83.
@@ -1313,61 +1312,56 @@ File: ./img/render.png Graphic file (type png)
 <use ./img/render.png>
 Package pdftex.def Info: ./img/render.png  used on input line 197.
 (pdftex.def)             Requested size: 344.69766pt x 156.19867pt.
-LaTeX Info: Redefining \. on input line 200.
-LaTeX Info: Redefining \% on input line 200.
- [36 <./img/hardwareRedCan.png> <./img/render.png>]
-<./img/caja1.png, id=955, 1003.75pt x 642.4pt>
+<./img/caja1.png, id=950, 1003.75pt x 642.4pt>
 File: ./img/caja1.png Graphic file (type png)
 <use ./img/caja1.png>
 Package pdftex.def Info: ./img/caja1.png  used on input line 202.
 (pdftex.def)             Requested size: 344.69766pt x 220.60881pt.
+LaTeX Info: Redefining \. on input line 202.
+LaTeX Info: Redefining \% on input line 202.
+ [36 <./img/hardwareRedCan.png> <./img/render.png>]
 <./img/caja2.png, id=956, 1284.8pt x 642.4pt>
 File: ./img/caja2.png Graphic file (type png)
 <use ./img/caja2.png>
 Package pdftex.def Info: ./img/caja2.png  used on input line 203.
 (pdftex.def)             Requested size: 344.69766pt x 172.34267pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 203.
-LaTeX Info: Redefining \% on input line 203.
+)
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[37 <./img/caja1.png>])
-LaTeX Info: Redefining \. on input line 483.
-LaTeX Info: Redefining \% on input line 483.
- [38 <./img/caja2.png>]
+[37 <./img/caja1.png> <./img/caja2.png>]
 \openout2 = `./tex/6_Trabajos_relacionados.aux'.
 
- (tex/6_Trabajos_relacionados.tex [39
+ (tex/6_Trabajos_relacionados.tex
+[38
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
 []|\T1/lmr/m/n/12 (+20) Visualización
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
 []|\T1/lmr/m/n/12 (+20) Representación
  []
 
 
-Underfull \hbox (badness 7981) in paragraph at lines 42--42
+Underfull \hbox (badness 7981) in paragraph at lines 38--38
 \T1/lmr/m/n/12 (+20) grá-fi-ca de los
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 42--42
+Underfull \hbox (badness 2469) in paragraph at lines 38--38
 []|\T1/lmr/m/n/12 (+20) Etiquetado con
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 42--42
+Underfull \hbox (badness 1789) in paragraph at lines 38--38
 []|\T1/lmr/m/n/12 (+20) Importar y ex-
  []
 
@@ -1485,19 +1479,16 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
  ) 
 Here is how much of TeX's memory you used:
- 13578 strings out of 492946
- 203131 string characters out of 3126711
- 379297 words of memory out of 3000000
- 16863 multiletter control sequences out of 15000+200000
- 104780 words of font info for 142 fonts, out of 3000000 for 9000
+ 13579 strings out of 492946
+ 203139 string characters out of 3126711
+ 379301 words of memory out of 3000000
+ 16862 multiletter control sequences out of 15000+200000
+ 104863 words of font info for 143 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,42p,583b,710s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
@@ -1516,7 +1507,7 @@ ts/type1/public/lm/lmri12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/lm/lmro12.pfb><C:/Users/MS02/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on memoria.pdf (56 pages, 5766158 bytes).
+Output written on memoria.pdf (56 pages, 5765813 bytes).
 PDF statistics:
  1117 PDF objects out of 1200 (max. 8388607)
  171 named destinations out of 1000 (max. 500000)
