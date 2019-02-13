@@ -113,7 +113,7 @@ public class DbUtils {
 			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
-			GuiUtils.generateAlert(AlertType.ERROR, "FATAL ERROR", "Error checking DB");
+			GuiUtils.generateAlert(AlertType.ERROR, "INTERNAL ERROR", "Error checking database");
 			return false;
 		}
 		
