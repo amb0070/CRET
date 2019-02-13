@@ -37,7 +37,7 @@ public class CanConnection{
 	/**
 	 * Object to connect to CAN network.
 	 */
-	protected USBtin connection;
+	private USBtin connection;
 	
 	/**
 	 * Listener for analysis connection.
@@ -103,17 +103,17 @@ public class CanConnection{
 		/*
 		 * Sets the listener.
 		 */
-		if (structures.mode.equals("Dashboard")) {
+		if (structures.modeInterface1.equals("Dashboard")) {
 			
 			listenerDashboard = new CanListenerDashboard(controller);
 			connection.addMessageListener(listenerDashboard);
 			
-		} else if (structures.mode.equals("Analysis")) {
+		} else if (structures.modeInterface1.equals("Analysis")) {
 			
 			listenerAnalysis = new CanListenerAnalysis(controller);
 			connection.addMessageListener(listenerAnalysis);
 			
-		} else if (structures.mode.equals("RAW")) {
+		} else if (structures.modeInterface1.equals("RAW")) {
 			
 			listenerRAW = new CanListenerRAW();
 			connection.addMessageListener(listenerRAW);
@@ -136,7 +136,7 @@ public class CanConnection{
 			connection.openCANChannel(speed, mode);
 			
 		} catch (USBtinException e) {
-			GuiUtils.generateAlert(AlertType.ERROR, "COM PORT ERROR", "COM Port is busy.");
+			GuiUtils.generateAlert(AlertType.ERROR, "PORT ERROR", "Port is busy.");
 		}
 		
 	}

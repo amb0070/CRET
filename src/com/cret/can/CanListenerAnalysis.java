@@ -1,40 +1,53 @@
 package com.cret.can;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 import com.cret.gui.RootViewController;
 import com.cret.staticData.structures;
-
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
-import javafx.concurrent.Task;
-import javafx.scene.chart.XYChart;
 
+/**
+ * 
+ * CAN Message listener for analysis option.
+ * 
+ * Two main options, ignore bytes with value 0 and split bytes.
+ * 
+ * @author Adrian Marcos
+ * @version 1.0
+ * 
+ */
 public class CanListenerAnalysis implements CANMessageListener {
 
+	/**
+	 * Index of the data field.
+	 */
 	private int index = 0;
 
+	/**
+	 * Byte with 00 value.
+	 */
 	private Byte zero = new Byte("00");
 
+	/**
+	 * Message length
+	 */
 	private int len = 0;
 
+	/**
+	 * Main controller to modify elements from another thread.
+	 */
 	private RootViewController controller;
-	
+
 	private String id = "";
-	
-	List<String> keySet;
 
 	
+	/**
+	 * Constructor
+	 * 
+	 * Get's the controller of RootView to modify from another thread.
+	 * 
+	 * @param controller RootViewController of the application.
+	 */
 	public CanListenerAnalysis(RootViewController controller) {
 		this.controller = controller;
 	}
@@ -42,163 +55,191 @@ public class CanListenerAnalysis implements CANMessageListener {
 	@Override
 	public void receiveCANMessage(CANMessage message) {
 
-			storeCanId(message);
+		filterMessage(message);
 
 	}
-	
 
-	private void storeCanId(CANMessage msg) {
-
-
+	/**
+	 * 
+	 * Applyes filters to the message. 
+	 * 
+	 * Options: Ignore byte with value 00 or split bytes.
+	 * 
+	 * @param msg CAN Message to filter.
+	 */
+	private void filterMessage(CANMessage msg) {
+		
+		//Get the ID of the message.
 		id = CanUtils.decToHex(msg.getId());
 		
-		
-		if (CanUtils.getSplitBytes()) { // Split
-			len = msg.getData().length * 2;
-		} else {
-			len = msg.getData().length;
-		}
-		
 		index = 0;
-		
-		
-		//For every byte
+
+		//For every byte in data field
 		for (Byte b : msg.getData()) {
 
-			if (!b.equals(zero)) {
+			/**
+			 * If option "split bytes" is selected
+			 */
+			if (CanUtils.getSplitBytesInterface1()) { // SPLIT BYTES
+
+				//Length * 2 (bytes are splitted
+				len = msg.getData().length * 2;
 				
-			
-			//Check if known id
-			if (!CanUtils.isIdentifiedInterface1Len(id)) { // ID NO IDENTIFICADA
-				controller.addID(id, len + 5);
-				System.out.println("ID NO IDENTIFICADA: " + id);
-				CanUtils.setIdentifiedIdInterface1Len(id, len);
-
-			}
-			
-			
-			//IF BYTES SPLITTED
-			if (CanUtils.getSplitBytes()) {
-
-				if (!CanUtils.isIdentifiedInterface1(id, index * 2)) {// ID - BYTE NO IDENTIFICADOS
-
-					if (CanUtils.getIgnoreZeroBytes()) { // Bytes que son 0 y e ignorar.
-
-						CanUtils.setIdentifiedIdInterface1(id, index * 2);
-						CanUtils.setIdentifiedIdInterface1(id, (index * 2) + 1);
-
-						System.out.println("New ID!: " + id);
-						System.out.println("Byte: " + index);
-						System.out.println("Length: " + len);
+				//Not identified ID
+				if (!CanUtils.isIdentifiedInterface1Len(id)) {
+					//Add id to structures
+					controller.addID(id, len);
+					System.out.println("ID NO IDENTIFICADA: " + id);
+					CanUtils.setIdentifiedIdInterface1Len(id, len);
+				}
+				/**
+				 * If option ignore zero bytes is selected.
+				 */
+				if (CanUtils.getIgnoreZeroBytesInterface1()) { // IGNORE ZERO - SPLIT
+					
+					String strByte = String.format("%02x", b);
+					final int middle = strByte.length() / 2;
+					String firstNibble = strByte.substring(0, middle);
+					String secondNibble = strByte.substring(middle);
+					
+					//NOT 0
+					if (!CanUtils.isIdentifiedInterface1(id, (index*2)) && !firstNibble.equals("0") && !secondNibble.equals("0")) {
+						
+						CanUtils.setIdentifiedIdInterface1(id, (index*2));
+						CanUtils.setIdentifiedIdInterface1(id, ((index * 2)+1));
 
 						Platform.runLater(() -> {
-							controller.addNewCell(id, index * 2);
-							controller.addNewCell(id, (index * 2) + 1);
-
+							controller.addNewCell(id, (index*2));
+							controller.addNewCell(id, ((index*2)+1));
 						});
 
 						try {
-							Thread.sleep(200);
+							Thread.sleep(700);
 						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
 						}
-					} else { // No ignore zero bytes
-						CanUtils.setIdentifiedIdInterface1(id, index * 2);
-						CanUtils.setIdentifiedIdInterface1(id, (index * 2) + 1);
+					} else { // BYTE IS KNOWN
+						
+						controller.progressRoot.setVisible(false);
+						
 
-						System.out.println("New ID!: " + id);
-						System.out.println("Byte: " + index);
-						System.out.println("Length: " + len);
-
-						Platform.runLater(() -> {
-							controller.addNewCell(id, index * 2);
-							controller.addNewCell(id, (index * 2) + 1);
-
-						});
-
-						try {
-							Thread.sleep(200);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						structures.dataQ1.get(id).get((index*2)).add(CanUtils.hexToDec(firstNibble));
+					    structures.dataQ1.get(id).get(((index*2)+1)).add(CanUtils.hexToDec(secondNibble));
 					}
-
-				} else { // Ya esta añadido, solo meto los datos en el observablelist
+					
+					/**
+					 * If option ignore zero bytes is not selected.
+					 */
+				} else { // DON IGNORE ZERO BYTES
 
 					String strByte = String.format("%02x", b);
 					final int middle = strByte.length() / 2;
 					String firstNibble = strByte.substring(0, middle);
 					String secondNibble = strByte.substring(middle);
-
-					structures.dataQ1.get(id).get(index * 2).add(CanUtils.hexToDec(firstNibble));
-					structures.dataQ1.get(id).get((index * 2) + 1).add(CanUtils.hexToDec(secondNibble));
-
-				}
-				index++;
-				
-			} else { //BYTES WITHOUT SPLIT
-				
-				
-				if (!CanUtils.isIdentifiedInterface1(id, index)) {// ID - BYTE NO IDENTIFICADOS
 					
-					if (CanUtils.getIgnoreZeroBytes()) { // Bytes que son 0 y e ignorar.
+					if (!CanUtils.isIdentifiedInterface1(id, (index*2))) {
 						
-						CanUtils.setIdentifiedIdInterface1(id, index);
-
-						System.out.println("New ID!: " + id);
-						System.out.println("Byte: " + index);
-						System.out.println("Length: " + len);
+						CanUtils.setIdentifiedIdInterface1(id, (index*2));
+						CanUtils.setIdentifiedIdInterface1(id, ((index*2)+1));
 
 						Platform.runLater(() -> {
-							controller.addNewCell(id, index);
-						});
-
-						try {
-							Thread.sleep(200);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-					} else { // No ignore zero bytes
-						/*
-						CanUtils.setIdentifiedIdInterface1(id, index);
-
-						System.out.println("New ID!: " + id);
-						System.out.println("Byte: " + index);
-						System.out.println("Length: " + len);
-
-						Platform.runLater(() -> {
+							controller.addNewCell(id,(index *2));
+							controller.addNewCell(id,((index*2)+1));
 							
-							controller.addNewCell(id, index);
-
+						//	System.out.println(">>>>>>>>>>>>>> AÑADIENDO " + id + " " + (index*2));
+							//System.out.println(">>>>>>>>>>>>>> AÑADIENDO " + id + " " + ((index*2)+1));
 						});
-
+						
 						try {
-							Thread.sleep(200);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						*/
+
+					} else { // BYTE IS KNOWN
+						
+						//Hides the progress indicator of the main controller.
+						controller.progressRoot.setVisible(false);
+						
+						//Add data to structure
+						structures.dataQ1.get(id).get((index*2)).add(CanUtils.hexToDec(firstNibble));
+					    structures.dataQ1.get(id).get(((index*2)+1)).add(CanUtils.hexToDec(secondNibble));
+					}
+					
+				}
+
+				/**
+				 * If option split bytes is not selected.
+				 */
+			} else { // DON'T SPLIT BYTES
+
+				len = msg.getData().length;
+
+				if (!CanUtils.isIdentifiedInterface1Len(id)) {
+					controller.addID(id, len);
+					System.out.println("ID NO IDENTIFICADA DONT SPLIT: " + id);
+					CanUtils.setIdentifiedIdInterface1Len(id, len);
+				}
+				
+				/**
+				 * If option ignore zero bytes is selected.
+				 */
+				if (CanUtils.getIgnoreZeroBytesInterface1()) { // IGNORE ZERO  - NO SPLIT
+					
+					if (!CanUtils.isIdentifiedInterface1(id, index) && !b.equals(zero)) {
+
+						CanUtils.setIdentifiedIdInterface1(id, index);
+
+						Platform.runLater(() -> {
+							controller.addNewCell(id, index);
+						});
+
+						try {
+							Thread.sleep(700);
+						} catch (InterruptedException e) {
+
+						}
+					} else { // BYTE IS KNOWN
+						
+						controller.progressRoot.setVisible(false);
+						
+						//Add data to structure
+						structures.dataQ1.get(id).get(index).add(CanUtils.hexToDec(b));
 					}
 
-				} else { // Ya esta añadido, solo meto los datos en el observablelist
-
-					controller.progressRoot.setVisible(false);
-					//RootViewController.dataQ1.get(id).get(index * 2).add(CanUtils.hexToDec(firstNibble));
-					//RootViewController.dataQ1.get(id).get((index * 2) + 1).add(CanUtils.hexToDec(secondNibble));
-					structures.dataQ1.get(id).get(index).add(CanUtils.hexToDec(b));
-					//System.out.println("Añadiendo datos a " + id + " y byte " + String.valueOf(index));
+					/**
+					 * If option ignore zero bytes is not selected.
+					 */
+				} else { // DON IGNORE ZERO BYTES
 					
-				}
-				
-			}
-			
-		}// END OF ZERO COMPARATION
+					if (!CanUtils.isIdentifiedInterface1(id, index)) {
+
+						CanUtils.setIdentifiedIdInterface1(id, index);
+
+						System.out.println("New ID!: " + id);
+						System.out.println("Byte: " + index);
+						System.out.println("Length: " + len);
+
+						Platform.runLater(() -> {
+							controller.addNewCell(id, index);
+						});
+
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+
+						}
+					} else { // BYTE IS KNOWN
+						// ADD DATA
+						controller.progressRoot.setVisible(false);
+						structures.dataQ1.get(id).get(index).add(CanUtils.hexToDec(b));
+					}
+
+				} // END OF IF IGNORE ZERO
+
+			} //END OF SPLIT BYTES
 			index++;
-		}
-	}
-}
+
+		} //END OF BUCLE FOR
+	} //END OF FUNCITON
+} //END OF CLASS

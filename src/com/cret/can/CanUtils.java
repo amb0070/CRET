@@ -515,9 +515,7 @@ public class CanUtils {
 	 * @return Decimal value.
 	 */
 	public static int hexToDec(Byte hex) {
-		int value = 0;
-		value = (value << 8) | hex;
-		return value;
+		return ((int) hex & 0xFF);
 	}
 	
 	/**

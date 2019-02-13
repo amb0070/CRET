@@ -57,6 +57,8 @@ public class CanTable {
 		this.ascii = new SimpleStringProperty(ascii);
 	}
 	
+	
+	
 	/**
 	 * Public method to set the ASCII value.
 	 * 
@@ -126,7 +128,7 @@ public class CanTable {
 	 * 
 	 */
 	public void setTime(long time) {
-		this.time.set(time);
+		this.time.setValue(time);
 	}
 	
 	/**
@@ -136,7 +138,7 @@ public class CanTable {
 	 * 
 	 */
 	public void setId(String id) {
-		this.id.set(id);
+		this.id.setValue(id);
 	}
 	
 	/**
@@ -146,7 +148,7 @@ public class CanTable {
 	 * 
 	 */
 	public void setLength(String length) {
-		this.length.set(length);
+		this.length.setValue(length);
 	}
 	
 	/**
@@ -156,7 +158,7 @@ public class CanTable {
 	 * 
 	 */
 	public void setData(String data) {
-		this.data.set(data);
+		this.data.setValue(data);
 	}
 	
 }
