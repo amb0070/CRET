@@ -3,6 +3,7 @@
 CRET - Can Bus Reverse Engineering Toolkit
 
 Author: Adrian Marcos Batlle
+
 Tutors: Álvar Arnaiz Gonzalez and César Represa Pérez
 
 # Why another CAN tool?
@@ -38,28 +39,63 @@ Tutors: Álvar Arnaiz Gonzalez and César Represa Pérez
 - Comfortable and intuitive GUI.
 
 # Screenshots
-CAPTURITAS DEL PROGRAMA
 
 
-# PoC VIDEOS
+ - Data view mode.
+
+  ![Image1](https://github.com/amb0070/CRET/blob/master/documentacion/img/monitor.png?raw=true)
+
+ - Analysis mode.
+
+  ![Image2](https://github.com/amb0070/CRET/blob/master/documentacion/img/analysis1.png?raw=true)
+
+ - Dashboard mode.
+
+  ![Image3](https://github.com/amb0070/CRET/blob/master/documentacion/img/realtimeTag.png?raw=true)
+
+ - Real time frame viewer.
+
+  ![Image4](https://github.com/amb0070/CRET/blob/master/documentacion/img/realtime.png?raw=true)
+
+
+# PoC videos
 
 - Analysis mode.
+
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=8Ipb9t-G_pU"><img src="https://img.youtube.com/vi/8Ipb9t-G_pU/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
+
 - Dashboard mode. Demo 1.
+
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=r4Fte3iZ_Ng"><img src="https://img.youtube.com/vi/r4Fte3iZ_Ng/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
+
 - Dashboard mode. Demo 2.
+
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=Vt_gwQsivE8"><img src="https://img.youtube.com/vi/Vt_gwQsivE8/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
+
+
+# Hardware
+
+ Here are some pictures of the produced hardware:
+
+
+![Image5](https://github.com/amb0070/CRET/blob/master/documentacion/img/finishedPCB.png?raw=true)
+
+
+
+![Image6](https://github.com/amb0070/CRET/blob/master/documentacion/img/backPCB.png?raw=true)
+
+
 
 # License
 
