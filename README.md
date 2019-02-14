@@ -37,15 +37,30 @@ Tutors: Álvar Arnaiz Gonzalez and César Represa Pérez
 - Clean tabs option for each analysis.
 - Comfortable and intuitive GUI.
 
-# Screenshot
+# Screenshots
 CAPTURITAS DEL PROGRAMA
 
 
-#POC
+# PoC VIDEOS
 
-VIDEOS
+- Analysis mode.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8Ipb9t-G_pU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=8Ipb9t-G_pU"><img src="https://img.youtube.com/vi/8Ipb9t-G_pU/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+
+- Dashboard mode. Demo 1.
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=r4Fte3iZ_Ng"><img src="https://img.youtube.com/vi/r4Fte3iZ_Ng/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+
+- Dashboard mode. Demo 2.
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=Vt_gwQsivE8"><img src="https://img.youtube.com/vi/Vt_gwQsivE8/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
+
 # License
 
 Copyright (c) 2018 - 2019 Adrian Marcos
