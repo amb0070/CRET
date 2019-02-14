@@ -45,7 +45,9 @@ CAPTURITAS DEL PROGRAMA
 
 VIDEOS
 
-(https://youtu.be/8Ipb9t-G_pU)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=8Ipb9t-G_pU
+" target="_blank"><img src="http://img.youtube.com/vi/8Ipb9t-G_pU/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 # License
 
