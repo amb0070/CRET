@@ -45,11 +45,9 @@ CAPTURITAS DEL PROGRAMA
 
 VIDEOS
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/8Ipb9t-G_pU" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=8Ipb9t-G_pU"><img src="https://img.youtube.com/vi/8Ipb9t-G_pU/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
 # License
 
