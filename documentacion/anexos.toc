@@ -39,7 +39,7 @@
 \contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{29}{section*.23}% 
 \contentsline {subsection}{Dise\IeC {\~n}o de clases}{32}{section*.24}% 
 \contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de interfaces}{34}{section.Alph3.5}% 
-\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{37}{appendix.Alph4}% 
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n de programaci\IeC {\'o}n}{37}{appendix.Alph4}% 
 \contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{37}{section.Alph4.1}% 
 \contentsline {section}{\numberline {D.2}Estructura de directorios}{37}{section.Alph4.2}% 
 \contentsline {section}{\numberline {D.3}Manual del programador}{38}{section.Alph4.3}% 

@@ -1,5 +1,4 @@
-\apendice{Documentación técnica de programación}
-
+\chapter[Documentación de programación]{Documentación técnica de programación}
 \section{Introducción}
 
 En este anexo se describe la documentación técnica de programación, incluyendo la preparación del entorno de desarrollo, la estructura de la aplicación y las configuraciones necesarias.
@@ -130,7 +129,8 @@ Seleccionamos \emph{Java} > \emph{Runnable JAR file}.
 
 Incluimos las librerías en el fichero .jar, y exportamos.
 
-MAVEN
+También es posible la compilación del proyecto con el uso de \emph{Maven}.
+Para ello se ha creado un fichero \textit{pom.xml} en el cual se definen las dependencias con las cuales tiene que ser compilado el código y todas ellas son incluidas en el \textit{.jar} generado. De esta manera se asegura que el programa no tenga dependencias sin cumplir durante la ejecución en cualquier equipo.
 
 \subsection{Ejecución}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  12 FEB 2019 04:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.9)  14 FEB 2019 02:15
 entering extended mode
 **./anexos.tex
 (anexos.tex
@@ -1996,7 +1996,7 @@ l.400 \include{./tex/C_Diseno}
 
 
 ] [37]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 57.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 56.
 
 ("C:\Users\MS02\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2006,19 +2006,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (36.36795pt too wide) in paragraph at lines 57--58
+Overfull \hbox (36.36795pt too wide) in paragraph at lines 56--57
 []\T1/lmr/m/n/12 (-20) Se pue-de ob-te-ner del si-guien-te en-la-ce: [][]$\T1/l
 mtt/m/n/12 https : / / www . oracle . com / technetwork /
  []
 
 
-Overfull \hbox (36.36795pt too wide) in paragraph at lines 63--65
+Overfull \hbox (36.36795pt too wide) in paragraph at lines 62--64
 []\T1/lmr/m/n/12 (-20) Se pue-de ob-te-ner del si-guien-te en-la-ce: [][]$\T1/l
 mtt/m/n/12 https : / / www . oracle . com / technetwork /
  []
 
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -2027,50 +2027,50 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 <./img/gitClone.png, id=934, 642.90187pt x 236.38312pt>
 File: ./img/gitClone.png Graphic file (type png)
 <use ./img/gitClone.png>
-Package pdftex.def Info: ./img/gitClone.png  used on input line 72.
+Package pdftex.def Info: ./img/gitClone.png  used on input line 71.
 (pdftex.def)             Requested size: 344.69766pt x 126.74324pt.
 <./img/sceneBuilder.png, id=935, 1204.5pt x 654.19406pt>
 File: ./img/sceneBuilder.png Graphic file (type png)
 <use ./img/sceneBuilder.png>
-Package pdftex.def Info: ./img/sceneBuilder.png  used on input line 78.
+Package pdftex.def Info: ./img/sceneBuilder.png  used on input line 77.
 (pdftex.def)             Requested size: 344.69766pt x 187.21587pt.
 
 Underfull \vbox (badness 1424) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
  [39pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.83 
+l.82 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.A
 lph4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.83 
+l.82 
       <./img/gitClone.png> <./img/sceneBuilder.png>]
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [40]
-<./img/esquemaAnexo.png, id=951, 613.54219pt x 395.22656pt>
-File: ./img/esquemaAnexo.png Graphic file (type png)
-<use ./img/esquemaAnexo.png>
-Package pdftex.def Info: ./img/esquemaAnexo.png  used on input line 153.
-(pdftex.def)             Requested size: 344.69766pt x 222.043pt.
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
+LaTeX Info: Redefining \. on input line 151.
+LaTeX Info: Redefining \% on input line 151.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [41]
+<./img/esquemaAnexo.png, id=958, 613.54219pt x 395.22656pt>
+File: ./img/esquemaAnexo.png Graphic file (type png)
+<use ./img/esquemaAnexo.png>
+Package pdftex.def Info: ./img/esquemaAnexo.png  used on input line 153.
+(pdftex.def)             Requested size: 344.69766pt x 222.043pt.
 <./img/iconoFootprint.png, id=959, 225.84375pt x 30.1125pt>
 File: ./img/iconoFootprint.png Graphic file (type png)
 <use ./img/iconoFootprint.png>
@@ -2535,9 +2535,15 @@ LaTeX Info: Redefining \% on input line 25.
 (tex/C_Diseno.aux) (tex/D_Manual_programador.aux) (tex/E_Manual_usuario.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 408.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 408.
-Package rerunfilecheck Info: File `anexos.out' has not changed.
-(rerunfilecheck)             Checksum: 4C666994D984A6B71A24BFB8B1FBBA33;2251.
 
+
+Package rerunfilecheck Warning: File `anexos.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `anexos.out':
+(rerunfilecheck)             Before: 4C666994D984A6B71A24BFB8B1FBBA33;2251
+(rerunfilecheck)             After:  32CDD5AB18FC5F934D14F6E220F3E8B6;2240.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2547,11 +2553,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 408.
  ) 
 Here is how much of TeX's memory you used:
- 13834 strings out of 492946
- 206720 string characters out of 3126711
+ 13836 strings out of 492946
+ 206742 string characters out of 3126711
  391425 words of memory out of 3000000
  17094 multiletter control sequences out of 15000+200000
- 90757 words of font info for 119 fonts, out of 3000000 for 9000
+ 90886 words of font info for 120 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,43p,430b,710s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/MS02/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
@@ -2571,7 +2577,7 @@ ams/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/MS02/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Users/MS02/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/MS02/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on anexos.pdf (71 pages, 3345037 bytes).
+Output written on anexos.pdf (71 pages, 3345511 bytes).
 PDF statistics:
  1227 PDF objects out of 1440 (max. 8388607)
  213 named destinations out of 1000 (max. 500000)
