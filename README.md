@@ -4,7 +4,7 @@ CRET - Can Bus Reverse Engineering Toolkit
 
 Author: Adrian Marcos Batlle
 
-Tutors: Álvar Arnaiz Gonzalez and César Represa Pérez
+Tutors: Álvar Arnaiz González and César Represa Pérez
 
 # Why another CAN tool?
 
