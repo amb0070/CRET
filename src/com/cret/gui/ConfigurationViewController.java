@@ -145,7 +145,7 @@ public class ConfigurationViewController {
 	@FXML
 	private ToggleButton btnEnableInterface1;
 
-	/** 
+	/**
 	 * FXML element.
 	 * 
 	 * Button to enable elements to configure interface 2.
@@ -206,6 +206,7 @@ public class ConfigurationViewController {
 	 */
 
 	private final String buttonStyle = "-fx-base: rgb(0, 255, 0);";
+
 	@FXML
 	public void initialize() {
 
@@ -360,47 +361,49 @@ public class ConfigurationViewController {
 		if (btnEnableInterface1.isSelected()) {
 
 			CanUtils.setInterface1State(true);
-			
+
 			/**
 			 * Check port.
 			 */
-			if (!comboxPortsInterface1.getSelectionModel().getSelectedItem().equals("")) {
+
+			if (comboxPortsInterface1.getSelectionModel().isEmpty()) {
+				CanUtils.setInterface1State(false);
+				GuiUtils.generateAlert(AlertType.WARNING, "No port selected", "Must select a port to connect.");
+			} else if (comboxPortsInterface1.getSelectionModel().getSelectedItem().equals("No ports found")) {
+
+				GuiUtils.generateAlert(AlertType.INFORMATION, "Option not valid", "Selected option is not valid.");
+
+			} else {
 				if (inUseCOMPorts.contains(comboxPortsInterface1.getValue())) {
 					GuiUtils.generateAlert(AlertType.WARNING, "Port used", "Port used by another interface");
 				} else {
 					CanUtils.setConfigurationPortInterface1(comboxPortsInterface1.getValue());
+					btnSaveInterface1.setStyle(buttonStyle);
+					inUseCOMPorts.add(comboxPortsInterface1.getValue());
 				}
-			} else if (comboxPortsInterface1.getSelectionModel().getSelectedItem().equals("No ports found")) {
 
-				GuiUtils.generateAlert(AlertType.INFORMATION, "Option not valid", "Selected option is not valid.");
- 
-			} else {
-				CanUtils.setInterface1State(false);
-				GuiUtils.generateAlert(AlertType.WARNING, "No port selected", "Must select a port to connect.");
 			}
 
 			/**
 			 * Check speed.
 			 */
-			if (!comboxSpeedInterface1.getValue().equals("")) {
+			if (!comboxSpeedInterface1.getSelectionModel().isEmpty()) {
 				CanUtils.setConfigurationSpeedInterface1(comboxSpeedInterface1.getValue());
 			} else {
 				CanUtils.setInterface1State(false);
 				GuiUtils.generateAlert(AlertType.WARNING, "No speed selected", "Must select a speed to connect.");
 			}
-			
+
 			/**
 			 * Check mode.
 			 */
-			if (!comboxModeInterface1.getValue().equals("")) {
+			if (!comboxModeInterface1.getSelectionModel().isEmpty()) {
 				CanUtils.setConfigurationModeInterface1(comboxModeInterface1.getValue());
+
 			} else {
 				CanUtils.setInterface1State(false);
 				GuiUtils.generateAlert(AlertType.WARNING, "No mode selected", "Must select a mode to connect.");
 			}
-
-			btnSaveInterface1.setStyle(buttonStyle);
-			inUseCOMPorts.add(comboxPortsInterface1.getValue());
 
 		} else {
 			// Not enabled
@@ -421,54 +424,59 @@ public class ConfigurationViewController {
 	public void saveInterface2(ActionEvent event) {
 
 		if (btnEnableInterface2.isSelected()) {
-			
+
 			CanUtils.setInterface2State(true);
-			
+
 			/**
 			 * Check port.
 			 */
-			if (!comboxPortsInterface2.getValue().equals("")) {
+
+			if (comboxPortsInterface2.getSelectionModel().isEmpty()) {
+				CanUtils.setInterface2State(false);
+				GuiUtils.generateAlert(AlertType.WARNING, "No port selected", "Must select a port to connect.");
+			} else if (comboxPortsInterface2.getSelectionModel().getSelectedItem().equals("No ports found")) {
+
+				GuiUtils.generateAlert(AlertType.INFORMATION, "Option not valid", "Selected option is not valid.");
+
+			} else {
 				if (inUseCOMPorts.contains(comboxPortsInterface2.getValue())) {
 					GuiUtils.generateAlert(AlertType.WARNING, "Port used", "Port used by another interface");
 				} else {
 					CanUtils.setConfigurationPortInterface2(comboxPortsInterface2.getValue());
+					btnSaveInterface2.setStyle(buttonStyle);
+					inUseCOMPorts.add(comboxPortsInterface2.getValue());
 				}
-			} else {
-				CanUtils.setInterface2State(false);
-				GuiUtils.generateAlert(AlertType.WARNING, "No port selected", "Must select a port to connect");
+
 			}
-			
+
 			/**
 			 * Check speed.
 			 */
-			if (!comboxSpeedInterface1.getValue().equals("")) {
+			if (!comboxSpeedInterface2.getSelectionModel().isEmpty()) {
 				CanUtils.setConfigurationSpeedInterface2(comboxSpeedInterface2.getValue());
 			} else {
 				CanUtils.setInterface2State(false);
-				GuiUtils.generateAlert(AlertType.WARNING, "No speed selected", "Must select a speed to connect");
+				GuiUtils.generateAlert(AlertType.WARNING, "No speed selected", "Must select a speed to connect.");
 			}
-			
+
 			/**
 			 * Check mode.
 			 */
-			if (!comboxModeInterface2.getValue().equals("")) {
-				CanUtils.setConfigurationModeInterface2(comboxModeInterface2.getValue());
+			if (!comboxModeInterface2.getSelectionModel().isEmpty()) {
+				CanUtils.setConfigurationModeInterface2(comboxModeInterface1.getValue());
+
 			} else {
 				CanUtils.setInterface2State(false);
-				GuiUtils.generateAlert(AlertType.WARNING, "No mode selected", "Must select a mode to connect");
+				GuiUtils.generateAlert(AlertType.WARNING, "No mode selected", "Must select a mode to connect.");
 			}
 
-			/**
-			 * Sets green button;
-			 */
-			btnSaveInterface2.setStyle(buttonStyle);
-			inUseCOMPorts.add(comboxPortsInterface2.getValue());
-
 		} else {
+			// Not enabled
 			CanUtils.setInterface2State(false);
+			GuiUtils.generateAlert(AlertType.INFORMATION, "Disabled interface", "This interface has been disabled.");
 		}
-	}
 
+	}
 	/**
 	 * FXML function.
 	 * 
