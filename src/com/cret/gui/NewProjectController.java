@@ -1,55 +1,69 @@
 package com.cret.gui;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import com.cret.gui.GuiUtils;
 
+/**
+ * @author Adrian Marcos
+ *
+ */
 public class NewProjectController {
-
-	public String newProjectName = "";
 	
+	/**
+	 * FXML element.
+	 * Button to cancel.
+	 */
 	@FXML
-	private Button btnClose;
+	private Button btnCancel;
 	
+	/**
+	 * FXML element.
+	 * Button to save project.
+	 */
 	@FXML
-	private Button btnOk;
+	private Button btnSaveProjectName;
 	
+	/**
+	 * FXML element.
+	 * TextField to enter the project name.
+	 */
 	@FXML
 	private TextField txtProjectName;
 	
-	
-	//DONE
+	/**
+	 * FXML function.
+	 * Closes the current window.
+	 * @param event
+	 * @throws Exception
+	 */
 	@FXML
 	private void closeWindow(ActionEvent event) throws Exception{
-		Platform.exit();
+		Stage stage = (Stage) btnCancel.getScene().getWindow();
+		stage.close();
 	}
 	
-	//DONE
+	/**
+	 * FXML function.
+	 * Checks the project name, and if it's valid, returns the project name and closes window.
+	 * @param event
+	 * @throws Exception
+	 */
 	@FXML
 	private void createProject(ActionEvent event) throws Exception{
 		
 		String projectName = txtProjectName.getText().trim();
 		
-		
-		//Empty project
+		//Check if project name is not empty.
 		if (projectName.equals("")) {
-			
 			GuiUtils.generateAlert(AlertType.INFORMATION, "Invalid project name", "An empty text is not a valid project name");
 		} else {
-			
 			RootViewController.returnNewName(projectName);
-			Stage stage = (Stage) btnClose.getScene().getWindow();
+			Stage stage = (Stage) btnCancel.getScene().getWindow();
             stage.close();
-		}
-		
-	}
-	
-	
+		}	
+	}	
 }

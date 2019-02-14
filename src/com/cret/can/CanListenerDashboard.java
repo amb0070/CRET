@@ -2,11 +2,14 @@ package com.cret.can;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.cret.gui.GuiUtils;
 import com.cret.gui.RootViewController;
-import com.cret.staticData.structures;
+import com.cret.staticdata.structures;
+
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
 import javafx.application.Platform;
+import javafx.scene.control.Alert.AlertType;
 
 /**
  * 
@@ -18,6 +21,9 @@ import javafx.application.Platform;
  */
 public class CanListenerDashboard implements CANMessageListener {
 
+	
+	private static final String INTERNAL_ERROR = "INTERNAL ERROR";
+	
 	private int index = 0;
 
 	private int len = 0;
@@ -28,6 +34,10 @@ public class CanListenerDashboard implements CANMessageListener {
 
 	List<String> keySet;
 
+	/**
+	 * Constructor of CanListenerDashboard
+	 * @param controller RootViewController to modify elements from other thread.
+	 */
 	public CanListenerDashboard(RootViewController controller) {
 		this.controller = controller;
 
@@ -38,9 +48,8 @@ public class CanListenerDashboard implements CANMessageListener {
 		
 		for (String key : keys) {
 			
-			String id = structures.valuesInDashboard1.get(key).get(0);
-			System.out.println("Aqui andamios: " + id);
-			controller.addIDDash(id, 20);
+			String tempId = structures.valuesInDashboard1.get(key).get(0);
+			controller.addIDDashboard1(tempId, 20);
 		}
 		
 		keySet.addAll(structures.valuesInDashboard1.keySet());
@@ -53,6 +62,10 @@ public class CanListenerDashboard implements CANMessageListener {
 		filterCanId(arg0);
 	}
 
+	/**
+	 * Filters every CAN Frame.
+	 * @param msg CANMessage to filter.
+	 */
 	private void filterCanId(CANMessage msg) {
 
 
@@ -71,8 +84,7 @@ public class CanListenerDashboard implements CANMessageListener {
 
 						if (!CanUtils.isIdentifiedInterface1Len(id)) {
 
-							controller.addIDDash(id, len);
-							System.out.println("Añadiendo: " + id + " " + len);
+							controller.addIDDashboard1(id, len);
 
 							CanUtils.setIdentifiedIdInterface1Len(id, len);
 						}
@@ -80,24 +92,19 @@ public class CanListenerDashboard implements CANMessageListener {
 						if (!CanUtils.isIdentifiedInterface1(id, index)) {// ID - BYTE NO IDENTIFICADOS
 
 							CanUtils.setIdentifiedIdInterface1(id, index);
-
-							System.out.println("New ID!: " + id);
-							System.out.println("Byte: " + index);
-							System.out.println("Length: " + len);
-
+							
 							Platform.runLater(() -> {
-								controller.addNewCellToDashboard(id, index, key);
+								controller.addNewCellToDashboard1(id, index, key);
 							});
 
 							try {
 								Thread.sleep(500);
 							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
+								GuiUtils.generateAlert(AlertType.ERROR, INTERNAL_ERROR, "Thread error.");
+								Thread.currentThread().interrupt();
 							}
 						} else {
 							controller.progressRoot.setVisible(false);
-							
 							structures.dataQ1Dash1.get(id).get(index).add(CanUtils.hexToDec(b));
 						}
 					}

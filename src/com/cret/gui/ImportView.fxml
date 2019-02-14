@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="507.0" maxWidth="348.0" minHeight="486.0" minWidth="348.0" prefHeight="486.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.ImportController">
+<AnchorPane maxHeight="507.0" maxWidth="348.0" minHeight="486.0" minWidth="348.0" prefHeight="486.0" prefWidth="348.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.ImportController">
    <children>
       <ListView fx:id="listProjects" layoutX="10.0" layoutY="14.0" prefHeight="424.0" prefWidth="328.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0" />
       <Button fx:id="btnImport" layoutX="286.0" layoutY="447.0" mnemonicParsing="false" onAction="#importProject" text="Import" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="10.0" />

@@ -1,5 +1,7 @@
 package com.cret.gui;
 
+import java.net.URL;
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
@@ -39,11 +41,12 @@ public class GuiUtils {
 	
     /**
      * Returns ImageView object taking it from a path of the system.
-     * @param imgPatch
+     * @param imgPath
      * @return
      */
-    public static ImageView buildImage(String imgPatch) {
-        Image i = new Image(imgPatch);
+    public static ImageView buildImage(String imgPath) {
+
+    	Image i = new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream(imgPath));
         ImageView imageView = new ImageView();
         //You can set width and height
         imageView.setFitHeight(16);

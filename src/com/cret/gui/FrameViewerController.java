@@ -1,128 +1,176 @@
 package com.cret.gui;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import com.cret.staticdata.structures;
 
 import eu.hansolo.medusa.Gauge;
+import eu.hansolo.medusa.TickLabelOrientation;
+import eu.hansolo.medusa.skins.ModernSkin;
 import javafx.animation.Animation;
-import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.concurrent.Task;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class FrameViewerController {
+/**
+ * @author Adrian Marcos
+ * @version 1.0
+ *
+ */
+class FrameViewerController {
 
-	Thread thread;
-	ExecutorService executor;
-	
+	/**
+	 * 
+	 */
 	@FXML
 	private Button btnClose;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Button btnCloseHistory;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Label lblMaxValue;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Label lblID;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Label lblByte;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Label lblValue;
-	
+
+	/**
+	 * 
+	 */
 	@FXML
-	private ProgressBar progressBar;
-	
+	private Label lblName;
+
+	/**
+	 * 
+	 */
 	@FXML
 	private Gauge gauge;
-	
-	public String id = "-";
-	public int byteNumber = 0;
 
-	
-	
+	String id = "-";
+	int byteNumber = 0;
+	String valueName = "-";
+	private Number data;
+	private Timeline timeline2;
+	private DoubleProperty value = new SimpleDoubleProperty();
+
+	/**
+	 * @param id
+	 */
 	public void setId(String id) {
 		this.id = id;
-
 	}
-	
+
+	/**
+	 * @param byteNumber
+	 */
 	public void setByteNumber(int byteNumber) {
 		this.byteNumber = byteNumber;
-		
 	}
-	
+
+	/**
+	 * @param value
+	 */
+	public void setValue(String value) {
+		this.valueName = value;
+	}
+
+	/**
+	 * @param event
+	 */
 	@FXML
 	private void closeWindow(ActionEvent event) {
-	    Stage stage = (Stage) btnClose.getScene().getWindow();
-	    stage.close();
+		timeline2.stop();
+		Stage stage = (Stage) btnClose.getScene().getWindow();
+		stage.close();
 	}
-	
-	 Task <Void> task = new Task<Void>() {
-	      @Override public Void call() throws InterruptedException {
-	        // "message2" time consuming method (this message will be seen).
-	    	  System.out.println("DENTRO");
-	    	  
 
-	    	  while (true) {
-	    		  
-	    		  Number data = RootViewController.xySeries.get(id).get(byteNumber).getData().get(RootViewController.xySeries.get(id).get(byteNumber).getData().size()-1).getYValue();
-	    		  String last = data.toString();
-	    		  updateMessage(last);
-	    		  if (data.intValue() > 0) {
-	    			  
-	    		  }
-	    		  updateProgress(data.doubleValue(), 100.0);
-	    		 
-	    		  Thread.sleep(100);
-	    	  }
-	        // this will never be actually be seen because we also set a message 
-	        // in the task::setOnSucceeded handler.
-	      }
-	    };
-	    
+
+	/**
+	 * 
+	 */
 	private void update() {
 		lblID.setText(id);
 		lblByte.setText(Integer.toString(byteNumber));
+
+		lblName.setText(valueName);
 	}
-	
+
+	/**
+	 * 
+	 */
 	private void update2() {
-		gauge.setValue(progressBar.getProgress()*100);
-		//System.out.println(progressBar.getProgress());
+
+		if (structures.modeInterface1.equals("Dashboard")) {
+			data = structures.xySeriesDash1.get(id).get(byteNumber).getData()
+					.get(structures.xySeriesDash1.get(id).get(byteNumber).getData().size() - 1).getYValue();
+		} else {
+			data = structures.xySeries1.get(id).get(byteNumber).getData()
+					.get(structures.xySeries1.get(id).get(byteNumber).getData().size() - 1).getYValue();
+
+		}
+
+		value.setValue(data.intValue());
+
 	}
-	
+
+	/**
+	 * @throws InterruptedException
+	 */
 	@FXML
 	private void initialize() throws InterruptedException {
-		
-			    lblValue.textProperty().bind(task.messageProperty());
-			    progressBar.progressProperty().bind(task.progressProperty());
-			    executor = Executors.newSingleThreadExecutor();
-		        executor.submit(task);
-		       // gauge.setAngleRange(10.0);
-		        //gauge.setAngleRange(90.0);
-		       // gauge.valueProperty().bind(task.progressProperty());
-		        
-		        Timeline timeline = new Timeline(new KeyFrame(
-		                Duration.millis(1000),
-		                ae -> update()));
-		        timeline.play();
-		        
-		    	Timeline timeline2 = new Timeline(new KeyFrame(
-		    	        Duration.millis(100),
-		    	        ae -> update2()));
-		    	timeline2.setCycleCount(Animation.INDEFINITE);
-		    	timeline2.play();
 
+		gauge.valueProperty().bind(value);
+
+		Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), ae -> update()));
+		timeline.play();
+
+		gauge.setSkin(new ModernSkin(gauge));
+		gauge.setDecimals(0);
+		gauge.setBackgroundPaint(Color.BLACK);
+		gauge.setValueColor(Color.WHITE);
+		gauge.setTitleColor(Color.RED);
+		gauge.setSubTitleColor(Color.WHITE);
+		gauge.setBarColor(Color.rgb(0, 214, 215));
+		gauge.setNeedleColor(Color.rgb(0, 214, 215));
+		gauge.setThresholdColor(Color.rgb(204, 0, 0));
+		gauge.setTickLabelColor(Color.rgb(151, 151, 151));
+		gauge.setTickLabelsVisible(false);
+		gauge.setTickMarkColor(Color.BLACK);
+		gauge.setTickLabelOrientation(TickLabelOrientation.ORTHOGONAL);
+		gauge.setMinValue(0);
+		gauge.setMaxValue(260);
+
+		timeline2 = new Timeline(new KeyFrame(Duration.millis(50), ae -> update2()));
+
+		timeline2.setCycleCount(Animation.INDEFINITE);
+		timeline2.play();
 	}
-
 
 }

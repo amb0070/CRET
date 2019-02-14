@@ -1,10 +1,13 @@
 package com.cret.can;
 
+import com.cret.gui.GuiUtils;
 import com.cret.gui.RootViewController;
-import com.cret.staticData.structures;
+import com.cret.staticdata.structures;
+
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
 import javafx.application.Platform;
+import javafx.scene.control.Alert.AlertType;
 
 /**
  * 
@@ -16,8 +19,11 @@ import javafx.application.Platform;
  * @version 1.0
  * 
  */
-public class CanListenerAnalysis implements CANMessageListener {
-
+class CanListenerAnalysis implements CANMessageListener {
+	
+	
+	static final String INTERNAL_ERROR = "INTERNAL ERROR";
+	
 	/**
 	 * Index of the data field.
 	 */
@@ -38,9 +44,6 @@ public class CanListenerAnalysis implements CANMessageListener {
 	 */
 	private RootViewController controller;
 
-	private String id = "";
-
-	
 	/**
 	 * Constructor
 	 * 
@@ -48,7 +51,7 @@ public class CanListenerAnalysis implements CANMessageListener {
 	 * 
 	 * @param controller RootViewController of the application.
 	 */
-	public CanListenerAnalysis(RootViewController controller) {
+	CanListenerAnalysis(RootViewController controller) {
 		this.controller = controller;
 	}
 
@@ -61,20 +64,20 @@ public class CanListenerAnalysis implements CANMessageListener {
 
 	/**
 	 * 
-	 * Applyes filters to the message. 
+	 * Applyes filters to the message.
 	 * 
 	 * Options: Ignore byte with value 00 or split bytes.
 	 * 
 	 * @param msg CAN Message to filter.
 	 */
 	private void filterMessage(CANMessage msg) {
-		
-		//Get the ID of the message.
-		id = CanUtils.decToHex(msg.getId());
-		
+
+		// Get the ID of the message.
+		String id = CanUtils.decToHex(msg.getId());
+
 		index = 0;
 
-		//For every byte in data field
+		// For every byte in data field
 		for (Byte b : msg.getData()) {
 
 			/**
@@ -82,50 +85,51 @@ public class CanListenerAnalysis implements CANMessageListener {
 			 */
 			if (CanUtils.getSplitBytesInterface1()) { // SPLIT BYTES
 
-				//Length * 2 (bytes are splitted
+				// Length * 2 (bytes are splitted
 				len = msg.getData().length * 2;
-				
-				//Not identified ID
+
+				// Not identified ID
 				if (!CanUtils.isIdentifiedInterface1Len(id)) {
-					//Add id to structures
+					// Add id to structures
 					controller.addID(id, len);
-					System.out.println("ID NO IDENTIFICADA: " + id);
 					CanUtils.setIdentifiedIdInterface1Len(id, len);
 				}
 				/**
 				 * If option ignore zero bytes is selected.
 				 */
 				if (CanUtils.getIgnoreZeroBytesInterface1()) { // IGNORE ZERO - SPLIT
-					
+
 					String strByte = String.format("%02x", b);
 					final int middle = strByte.length() / 2;
 					String firstNibble = strByte.substring(0, middle);
 					String secondNibble = strByte.substring(middle);
-					
-					//NOT 0
-					if (!CanUtils.isIdentifiedInterface1(id, (index*2)) && !firstNibble.equals("0") && !secondNibble.equals("0")) {
-						
-						CanUtils.setIdentifiedIdInterface1(id, (index*2));
-						CanUtils.setIdentifiedIdInterface1(id, ((index * 2)+1));
+
+					// NOT 0
+					if (!CanUtils.isIdentifiedInterface1(id, (index * 2)) && !firstNibble.equals("0")
+							&& !secondNibble.equals("0")) {
+
+						CanUtils.setIdentifiedIdInterface1(id, (index * 2));
+						CanUtils.setIdentifiedIdInterface1(id, ((index * 2) + 1));
 
 						Platform.runLater(() -> {
-							controller.addNewCell(id, (index*2));
-							controller.addNewCell(id, ((index*2)+1));
+							controller.addNewCell(id, (index * 2));
+							controller.addNewCell(id, ((index * 2) + 1));
 						});
 
 						try {
 							Thread.sleep(700);
 						} catch (InterruptedException e) {
+							GuiUtils.generateAlert(AlertType.ERROR, INTERNAL_ERROR, "Thread error.");
+							Thread.currentThread().interrupt();
 						}
 					} else { // BYTE IS KNOWN
-						
-						controller.progressRoot.setVisible(false);
-						
 
-						structures.dataQ1.get(id).get((index*2)).add(CanUtils.hexToDec(firstNibble));
-					    structures.dataQ1.get(id).get(((index*2)+1)).add(CanUtils.hexToDec(secondNibble));
+						controller.progressRoot.setVisible(false);
+
+						structures.dataQ1.get(id).get((index * 2)).add(CanUtils.hexToDec(firstNibble));
+						structures.dataQ1.get(id).get(((index * 2) + 1)).add(CanUtils.hexToDec(secondNibble));
 					}
-					
+
 					/**
 					 * If option ignore zero bytes is not selected.
 					 */
@@ -135,37 +139,35 @@ public class CanListenerAnalysis implements CANMessageListener {
 					final int middle = strByte.length() / 2;
 					String firstNibble = strByte.substring(0, middle);
 					String secondNibble = strByte.substring(middle);
-					
-					if (!CanUtils.isIdentifiedInterface1(id, (index*2))) {
-						
-						CanUtils.setIdentifiedIdInterface1(id, (index*2));
-						CanUtils.setIdentifiedIdInterface1(id, ((index*2)+1));
+
+					if (!CanUtils.isIdentifiedInterface1(id, (index * 2))) {
+
+						CanUtils.setIdentifiedIdInterface1(id, (index * 2));
+						CanUtils.setIdentifiedIdInterface1(id, ((index * 2) + 1));
 
 						Platform.runLater(() -> {
-							controller.addNewCell(id,(index *2));
-							controller.addNewCell(id,((index*2)+1));
-							
-						//	System.out.println(">>>>>>>>>>>>>> AÑADIENDO " + id + " " + (index*2));
-							//System.out.println(">>>>>>>>>>>>>> AÑADIENDO " + id + " " + ((index*2)+1));
+							controller.addNewCell(id, (index * 2));
+							controller.addNewCell(id, ((index * 2) + 1));
+
 						});
-						
+
 						try {
 							Thread.sleep(500);
 						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
+							GuiUtils.generateAlert(AlertType.ERROR, INTERNAL_ERROR, "Thread error.");
+							Thread.currentThread().interrupt();
 						}
 
 					} else { // BYTE IS KNOWN
-						
-						//Hides the progress indicator of the main controller.
+
+						// Hides the progress indicator of the main controller.
 						controller.progressRoot.setVisible(false);
-						
-						//Add data to structure
-						structures.dataQ1.get(id).get((index*2)).add(CanUtils.hexToDec(firstNibble));
-					    structures.dataQ1.get(id).get(((index*2)+1)).add(CanUtils.hexToDec(secondNibble));
+
+						// Add data to structure
+						structures.dataQ1.get(id).get((index * 2)).add(CanUtils.hexToDec(firstNibble));
+						structures.dataQ1.get(id).get(((index * 2) + 1)).add(CanUtils.hexToDec(secondNibble));
 					}
-					
+
 				}
 
 				/**
@@ -177,15 +179,14 @@ public class CanListenerAnalysis implements CANMessageListener {
 
 				if (!CanUtils.isIdentifiedInterface1Len(id)) {
 					controller.addID(id, len);
-					System.out.println("ID NO IDENTIFICADA DONT SPLIT: " + id);
 					CanUtils.setIdentifiedIdInterface1Len(id, len);
 				}
-				
+
 				/**
 				 * If option ignore zero bytes is selected.
 				 */
-				if (CanUtils.getIgnoreZeroBytesInterface1()) { // IGNORE ZERO  - NO SPLIT
-					
+				if (CanUtils.getIgnoreZeroBytesInterface1()) { // IGNORE ZERO - NO SPLIT
+
 					if (!CanUtils.isIdentifiedInterface1(id, index) && !b.equals(zero)) {
 
 						CanUtils.setIdentifiedIdInterface1(id, index);
@@ -197,13 +198,14 @@ public class CanListenerAnalysis implements CANMessageListener {
 						try {
 							Thread.sleep(700);
 						} catch (InterruptedException e) {
-
+							GuiUtils.generateAlert(AlertType.ERROR, INTERNAL_ERROR, "Thread error.");
+							Thread.currentThread().interrupt();
 						}
 					} else { // BYTE IS KNOWN
-						
+
 						controller.progressRoot.setVisible(false);
-						
-						//Add data to structure
+
+						// Add data to structure
 						structures.dataQ1.get(id).get(index).add(CanUtils.hexToDec(b));
 					}
 
@@ -211,14 +213,10 @@ public class CanListenerAnalysis implements CANMessageListener {
 					 * If option ignore zero bytes is not selected.
 					 */
 				} else { // DON IGNORE ZERO BYTES
-					
+
 					if (!CanUtils.isIdentifiedInterface1(id, index)) {
 
 						CanUtils.setIdentifiedIdInterface1(id, index);
-
-						System.out.println("New ID!: " + id);
-						System.out.println("Byte: " + index);
-						System.out.println("Length: " + len);
 
 						Platform.runLater(() -> {
 							controller.addNewCell(id, index);
@@ -227,7 +225,8 @@ public class CanListenerAnalysis implements CANMessageListener {
 						try {
 							Thread.sleep(500);
 						} catch (InterruptedException e) {
-
+							GuiUtils.generateAlert(AlertType.ERROR, INTERNAL_ERROR, "Thread error.");
+							Thread.currentThread().interrupt();
 						}
 					} else { // BYTE IS KNOWN
 						// ADD DATA
@@ -237,9 +236,9 @@ public class CanListenerAnalysis implements CANMessageListener {
 
 				} // END OF IF IGNORE ZERO
 
-			} //END OF SPLIT BYTES
+			} // END OF SPLIT BYTES
 			index++;
 
-		} //END OF BUCLE FOR
-	} //END OF FUNCITON
-} //END OF CLASS
+		} // END OF BUCLE FOR
+	} // END OF FUNCITON
+} // END OF CLASS

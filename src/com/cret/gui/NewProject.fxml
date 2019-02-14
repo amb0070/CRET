@@ -5,11 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="362.0" style="-fx-border-color: black; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.NewProjectController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="362.0" style="-fx-border-color: black; -fx-border-width: 1;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.NewProjectController">
    <children>
       <Label layoutX="24.0" layoutY="36.0" text="Project Name:" />
       <TextField fx:id="txtProjectName" layoutX="114.0" layoutY="32.0" prefHeight="25.0" prefWidth="195.0" />
-      <Button fx:id="btnOk" layoutX="174.0" layoutY="67.0" mnemonicParsing="false" onAction="#createProject" prefHeight="25.0" prefWidth="75.0" text="OK" />
-      <Button fx:id="btnClose" layoutX="257.0" layoutY="67.0" mnemonicParsing="false" onAction="#closeWindow" text="Cancel" />
+      <Button fx:id="btnSaveProjectName" layoutX="144.0" layoutY="67.0" mnemonicParsing="false" onAction="#createProject" prefHeight="25.0" prefWidth="75.0" text="OK" />
+      <Button fx:id="btnCancel" layoutX="234.0" layoutY="67.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
    </children>
 </AnchorPane>

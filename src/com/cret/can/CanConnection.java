@@ -2,7 +2,8 @@ package com.cret.can;
 
 import com.cret.gui.GuiUtils;
 import com.cret.gui.RootViewController;
-import com.cret.staticData.structures;
+import com.cret.staticdata.structures;
+
 import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtin.OpenMode;
 import javafx.scene.control.Alert.AlertType;
@@ -53,12 +54,7 @@ public class CanConnection{
 	 * Listener for RAW connection.
 	 */
 	private CanListenerRAW listenerRAW;
-	
-	/**
-	 * Main controller. Used to set elements from another thread.
-	 */
-	private RootViewController controller;
-	
+
 	
 	/**
 	 * 
@@ -71,9 +67,6 @@ public class CanConnection{
 	 * @throws USBtinException Exception if there is any error connecting to the port.
 	 */
 	public CanConnection(String port, String speed, String mode, RootViewController controller) throws USBtinException {
-		
-		
-		this.controller = controller;
 		
 		this.port = port;
 		
@@ -138,7 +131,6 @@ public class CanConnection{
 		} catch (USBtinException e) {
 			GuiUtils.generateAlert(AlertType.ERROR, "PORT ERROR", "Port is busy.");
 		}
-		
 	}
 	
 	/**

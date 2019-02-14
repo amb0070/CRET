@@ -3,7 +3,7 @@ package com.cret.can;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cret.staticData.structures;
+import com.cret.staticdata.structures;
 
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;

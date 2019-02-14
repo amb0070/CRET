@@ -3,37 +3,29 @@
 <?import eu.hansolo.medusa.Gauge?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="319.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.FrameViewerController">
+<AnchorPane prefHeight="333.0" prefWidth="502.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.FrameViewerController">
    <children>
       <TabPane layoutX="9.0" layoutY="19.0" prefHeight="234.0" prefWidth="289.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
           <Tab text="Live viewer">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="502.0">
                      <children>
-                        <Label fx:id="lblMinValue" layoutX="81.0" layoutY="137.0" text="-" />
-                        <Label layoutX="10.0" layoutY="107.0" text="Max Value:" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="10.0" />
                         <Label layoutX="14.0" layoutY="14.0" text="ID:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <ProgressBar fx:id="progressBar" layoutX="349.0" layoutY="94.0" prefHeight="60.0" prefWidth="218.0" progress="0.0" rotate="-90.0" />
                         <Label layoutX="17.0" layoutY="44.0" text="Byte:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="44.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblMaxValue" layoutX="81.0" layoutY="107.0" prefHeight="17.0" prefWidth="5.0" text="-" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="107.0" />
-                        <Label layoutX="11.0" layoutY="137.0" text="Min Value:" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="11.0" />
                         <Button fx:id="btnClose" layoutX="443.0" layoutY="258.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="60.0" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
                         <Label fx:id="lblID" layoutX="51.0" layoutY="14.0" text="-" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="14.0">
                            <font>
@@ -45,33 +37,12 @@
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label layoutX="16.0" layoutY="195.0" text="Current value:" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="16.0">
+                        <Gauge fx:id="gauge" layoutX="146.0" layoutY="14.0" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="14.0" />
+                        <Label fx:id="lblName" layoutX="21.0" layoutY="254.0" text="-">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="32.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblValue" layoutX="21.0" layoutY="222.0" text="-" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="21.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Gauge fx:id="gauge" layoutX="163.0" layoutY="12.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="12.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="History viewer">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="229.0" prefWidth="474.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="ID" />
-                            <TableColumn prefWidth="75.0" text="Byte" />
-                              <TableColumn prefWidth="75.0" text="Value" />
-                          </columns>
-                        </TableView>
-                        <Button fx:id="btnCloseHistory" layoutX="428.0" layoutY="246.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="60.0" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
                      </children>
                   </AnchorPane>
             </content>

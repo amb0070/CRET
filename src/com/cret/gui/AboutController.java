@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 /**
  * 
@@ -23,6 +25,9 @@ public class AboutController {
 	@FXML
 	private Button btnClose;
 	
+	@FXML
+	private ImageView ImageLogo;
+	
 	/**
 	 * FXML function.
 	 * 
@@ -34,5 +39,11 @@ public class AboutController {
 	private void closeWindow(ActionEvent event) {
 	    Stage stage = (Stage) btnClose.getScene().getWindow();
 	    stage.close();
+	}
+	
+	@FXML
+	private void initialize() {
+		ImageLogo.setImage(new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream("resources/LOGO.png")));
+
 	}
 }

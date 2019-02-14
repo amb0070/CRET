@@ -7,7 +7,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="507.0" maxWidth="348.0" minHeight="507.0" minWidth="348.0" prefHeight="507.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.ProjectListController">
+<AnchorPane maxHeight="507.0" maxWidth="348.0" minHeight="507.0" minWidth="348.0" prefHeight="507.0" prefWidth="348.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.ProjectListController">
    <children>
       <ListView fx:id="listProjects" layoutX="14.0" layoutY="38.0" prefHeight="419.0" prefWidth="328.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="38.0" />
       <Button fx:id="btnOpenProject" layoutX="292.0" layoutY="468.0" mnemonicParsing="false" onAction="#openProject" text="Open" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="10.0" />

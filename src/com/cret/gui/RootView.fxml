@@ -9,25 +9,19 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="711.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.RootViewController">
+<VBox prefHeight="711.0" prefWidth="949.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cret.gui.RootViewController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
             <Menu mnemonicParsing="false" text="Project">
                <items>
-                  <MenuItem fx:id="menuImportJson" mnemonicParsing="false" onAction="#importProjects" text="Import projects" />
-                  <MenuItem fx:id="menuExportJson" mnemonicParsing="false" onAction="#exportProjects" text="Export projects" />
+                  <MenuItem fx:id="menuImportJson" mnemonicParsing="false" onAction="#importProject" text="Import projects" />
+                  <MenuItem fx:id="menuExportJson" mnemonicParsing="false" onAction="#exportProject" text="Export projects" />
                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Tools">
-              <items>
-                <MenuItem fx:id="menuSpeedDetector" mnemonicParsing="false" text="Speed detection" />
-              </items>
             </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
@@ -46,9 +40,8 @@
                            <children>
                               <ScrollPane fx:id="scrollAnalysisInterface1" layoutX="210.0" layoutY="174.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
                               <Button fx:id="btnStartAnalysis1" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" onAction="#startAnalysisInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" />
-                              <Button fx:id="btnStopAnalysis1" layoutX="99.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopAnalysisInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" />
-                              <Button fx:id="btnClearAnalysis1" layoutX="883.0" layoutY="13.0" mnemonicParsing="false" onAction="#clearGraphs" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
-                              <Button fx:id="btnPauseAnalysis1" layoutX="188.0" layoutY="13.0" mnemonicParsing="false" onAction="#pauseAnalysisInterface1" prefHeight="25.0" prefWidth="69.0" text="Pause" />
+                              <Button fx:id="btnStopAnalysis1" layoutX="99.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" />
+                              <Button fx:id="btnClearAnalysis1" layoutX="883.0" layoutY="13.0" mnemonicParsing="false" onAction="#clearAnalysisInterface1" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -60,9 +53,9 @@
                               <ScrollPane fx:id="scrollDashboardInterface1" layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
                               <Button fx:id="btnSaveProjectDashboard1" layoutX="139.0" layoutY="15.0" mnemonicParsing="false" onAction="#saveProjectDashboard1" text="Save project" />
                               <Button fx:id="btnOpenProjectDashboard1" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProjectListDashboard1" text="Open project" />
-                              <Button fx:id="btnStartDashboard1" layoutX="679.0" layoutY="15.0" mnemonicParsing="false" onAction="#startDashboardInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="15.0" />
-                              <Button fx:id="btnStopDashboard1" layoutX="774.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopDashboardInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="15.0" />
-                              <Button fx:id="btnPauseDashboard1" layoutX="866.0" layoutY="15.0" mnemonicParsing="false" onAction="#pauseDashboardInterface1" prefHeight="25.0" prefWidth="69.0" text="Pause" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                              <Button fx:id="btnStartDashboard1" layoutX="770.0" layoutY="15.0" mnemonicParsing="false" onAction="#startDashboardInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="15.0" />
+                              <Button fx:id="btnStopDashboard1" layoutX="866.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                              <Button fx:id="btnCloseProjectDashboard1" layoutX="252.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeProjectDashboard1" text="Close project" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -81,8 +74,7 @@
                                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                    </columnResizePolicy></TableView>
                                                 <Button fx:id="btnStartTraceRAW1" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#startTraceRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0" />
-                                                <Button fx:id="btnPauseTraceRAW1" layoutX="217.0" layoutY="15.0" mnemonicParsing="false" onAction="#pauseTraceRAWInterace1" prefHeight="25.0" prefWidth="69.0" text="Pause" AnchorPane.leftAnchor="217.0" AnchorPane.topAnchor="15.0" />
-                                                <Button fx:id="btnStopTraceRAW1" layoutX="117.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopTraceRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.leftAnchor="117.0" AnchorPane.topAnchor="15.0" />
+                                                <Button fx:id="btnStopTraceRAW1" layoutX="117.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.leftAnchor="117.0" AnchorPane.topAnchor="15.0" />
                                                 <Button fx:id="btnClearTraceRAW1" layoutX="866.0" layoutY="14.0" mnemonicParsing="false" onAction="#clearTraceRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
                                              </children>
                                           </AnchorPane>
@@ -93,17 +85,13 @@
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
                                                 <TableView fx:id="tableMonitorInterface1" layoutX="12.0" layoutY="11.0" prefHeight="557.0" prefWidth="925.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
-                                                   <columns>
-                                                      <TableColumn prefWidth="101.0" text="Time (ms)" />
-                                                      <TableColumn prefWidth="70.0" text="ID" />
-                                                      <TableColumn prefWidth="85.0" text="Length" />
-                                                      <TableColumn prefWidth="174.0" text="Data" />
-                                                   </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
                                                 </TableView>
                                                 <Button fx:id="btnClearMonitorRAW1" layoutX="866.0" layoutY="14.0" mnemonicParsing="false" onAction="#clearMonitorRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
                                                 <Button fx:id="btnStartMonitorRAW1" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#startMonitorRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" />
-                                                <Button fx:id="btnPauseMonitorRAW1" layoutX="219.0" layoutY="15.0" mnemonicParsing="false" onAction="#pauseMonitorRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Pause" />
-                                                <Button fx:id="btnStopMonitorRAW1" layoutX="116.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopMonitorRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" />
+                                                <Button fx:id="btnStopMonitorRAW1" layoutX="116.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface1" prefHeight="25.0" prefWidth="69.0" text="Stop" />
                                              </children>
                                           </AnchorPane>
                                     </content>
@@ -114,23 +102,82 @@
                         </AnchorPane>
                     </content>
                   </Tab>
-                  <Tab fx:id="tabAnalysisInterface2" text="Analysis - Interface 2" />
+                  <Tab fx:id="tabAnalysisInterface2" text="Analysis - Interface 2">
+                     <content>
+                        <AnchorPane fx:id="testAnchor2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane fx:id="scrollAnalysisInterface2" layoutX="210.0" layoutY="174.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                              <Button fx:id="btnStartAnalysis2" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" onAction="#startAnalysisInterface2" prefHeight="25.0" prefWidth="69.0" text="Start" />
+                              <Button fx:id="btnStopAnalysis2" layoutX="99.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopInterface2" prefHeight="25.0" prefWidth="69.0" text="Stop" />
+                              <Button fx:id="btnClearAnalysis2" layoutX="883.0" layoutY="13.0" mnemonicParsing="false" onAction="#clearAnalysisInterface2" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
                   <Tab fx:id="tabDashboardInterface2" text="Dashboard - Interface 2">
                      <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane fx:id="scrollDashboardInterface2" layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                              <Button fx:id="btnSaveProjectDashboard2" layoutX="139.0" layoutY="15.0" mnemonicParsing="false" onAction="#saveProjectDashboard2" text="Save project" />
+                              <Button fx:id="btnOpenProjectDashboard2" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProjectListDashboard1" text="Open project" />
+                              <Button fx:id="btnStartDashboard2" layoutX="770.0" layoutY="15.0" mnemonicParsing="false" onAction="#startDashboardInterface2" prefHeight="25.0" prefWidth="69.0" text="Start" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="15.0" />
+                              <Button fx:id="btnStopDashboard2" layoutX="866.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface2" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                              <Button fx:id="btnCloseProjectDashboard2" layoutX="252.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeProjectDashboard2" text="Close project" />
+                           </children>
+                        </AnchorPane>
                      </content>
                   </Tab>
                   <Tab fx:id="tabRAWInterface2" text="RAW - Interface 2">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane layoutX="14.0" layoutY="14.0" prefHeight="585.0" prefWidth="925.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab fx:id="tabTraceRAW2" text="Trace">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableTraceInterface2" layoutX="14.0" layoutY="14.0" prefHeight="557.0" prefWidth="925.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                                <Button fx:id="btnStartTraceRAW2" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#startTraceRAWInterface1" prefHeight="25.0" prefWidth="69.0" text="Start" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                                                <Button fx:id="btnStopTraceRAW2" layoutX="117.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface2" prefHeight="25.0" prefWidth="69.0" text="Stop" AnchorPane.leftAnchor="117.0" AnchorPane.topAnchor="15.0" />
+                                                <Button fx:id="btnClearTraceRAW2" layoutX="866.0" layoutY="14.0" mnemonicParsing="false" onAction="#clearTraceRAWInterface2" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="tabMonitorRAW2" text="Monitor">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableMonitorInterface2" layoutX="12.0" layoutY="11.0" prefHeight="557.0" prefWidth="925.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                                <Button fx:id="btnClearMonitorRAW2" layoutX="866.0" layoutY="14.0" mnemonicParsing="false" onAction="#clearMonitorRAWInterface2" prefHeight="25.0" prefWidth="69.0" text="Clear" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                                                <Button fx:id="btnStartMonitorRAW2" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#startMonitorRAWInterface2" prefHeight="25.0" prefWidth="69.0" text="Start" />
+                                                <Button fx:id="btnStopMonitorRAW2" layoutX="116.0" layoutY="15.0" mnemonicParsing="false" onAction="#stopInterface2" prefHeight="25.0" prefWidth="69.0" text="Stop" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
                   </Tab>
               </tabs>
             </TabPane>
             <Button fx:id="btnConfigureRoot" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#openConfiguration" text="Configure" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0" />
             <Label fx:id="lblProjectNameRoot" layoutX="796.0" layoutY="19.0" text="Project: No project loaded" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="19.0" />
             <Button fx:id="btnNewProjectRoot" layoutX="122.0" layoutY="15.0" mnemonicParsing="false" onAction="#openNewProject" text="New project" />
-            <ProgressIndicator fx:id="progressRoot" layoutX="225.0" layoutY="15.0" prefHeight="25.0" prefWidth="23.0" />
+            <ProgressIndicator fx:id="progressRoot" layoutX="264.0" layoutY="15.0" prefHeight="25.0" prefWidth="23.0" />
          </children>
     </AnchorPane>
   </children>
